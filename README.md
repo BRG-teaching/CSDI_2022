@@ -1,6 +1,6 @@
 # About
 
-<figure><img src=".gitbook/assets/CSDI_HS22.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/CSDI_HS22 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Welcome to the course Computational Structural Design I: Computational Graphic Statics!
 
@@ -11,8 +11,8 @@ This course presents new structural design opportunities that emerge when graphi
 * **Name**: 063-0605-22L : Computational Structural Design I ([ETH course catalogue](http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=164546\&semkez=2022W\&ansicht=LEHRVERANSTALTUNGEN\&lang=en))
 * **Semester**: Autumn Semester 2022
 * **Lecturer**: Dr. Lluis Enrique
-* **Date/time:** Fridays, 09:45 - 12:00&#x20;
+* **Date/time:** Fridays, 09:45 - 12:00
 * **Location**: [HPT](http://www.mapsearch.ethz.ch/map/mapSearchPre.do?gebaeudeMap=HPT\&geschossMap=C\&raumMap=103\&farbcode=c010\&lang=en) [C 103](http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=HPT\&geschoss=C\&raumNr=103\&lang=en)
 * **Language of instruction**: English
 * **Periodicity**: yearly recurring
-* **Comment**: In order to participate in this course, it is recommended that the student has previously taken the courses Structural Design I and II. You can find information and teaching materials about these courses [**here**](https://block.arch.ethz.ch/eq/course).&#x20;
+* **Comment**: In order to participate in this course, it is recommended that the student has previously taken the courses Structural Design I and II. You can find information and teaching materials about these courses [**here**](https://block.arch.ethz.ch/eq/course).
