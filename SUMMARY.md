@@ -13,42 +13,15 @@
   * [Tutorial](course-material/i.-introduction/tutorial-1.md)
   * [Exercise](course-material/i.-introduction/exercise-1.md)
 * [I. Procedural GS I](course-material/ii.-procedural-gs-i/README.md)
-  * [Lecture](course-material/ii.-procedural-gs-i/lecture-2.md)
-  * [Tutorial](course-material/ii.-procedural-gs-i/tutorial-2.md)
-  * [Exercise](course-material/ii.-procedural-gs-i/exercise-2.md)
+
 * [II. Procedural GS II](course-material/iii.-procedural-gs-ii/README.md)
-  * [Lecture](course-material/iii.-procedural-gs-ii/lecture-3.md)
-  * [Tutorial](course-material/iii.-procedural-gs-ii/tutorial-3.md)
-  * [Exercise](course-material/iii.-procedural-gs-ii/exercise-3.md)
+
 * [III. Procedural GS III](course-material/iii.-procedural-gs-ii-1/README.md)
-  * [Lecture](course-material/iii.-procedural-gs-ii-1/lecture-3.md)
-  * [Tutorial](course-material/iii.-procedural-gs-ii-1/tutorial-3.md)
-  * [Exercise](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
+
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
-  * [Lecture](course-material/iv.-algebraic-gs/lecture-4.md)
-  * [Tutorial](course-material/iv.-algebraic-gs/tutorial-4/README.md)
-    * [0. Intro to IGS](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
-    * [1. Analysis with IGS](course-material/iv.-algebraic-gs/tutorial-4/1.-analysis-with-ags/README.md)
-      * [1.1. Single Panel](course-material/iv.-algebraic-gs/tutorial-4/1.-analysis-with-ags/1.1.-single-panel.md)
-      * [1.2. Complete Truss](course-material/iv.-algebraic-gs/tutorial-4/1.-analysis-with-ags/1.2.-complete-truss.md)
-      * [1.3. Force Control](course-material/iv.-algebraic-gs/tutorial-4/1.-analysis-with-ags/1.3.-force-control.md)
-    * [2. Bi-directional GS](course-material/iv.-algebraic-gs/tutorial-4/2.-interactive-gs/README.md)
-      * [2.1. Funicular arch](course-material/iv.-algebraic-gs/tutorial-4/2.-interactive-gs/2.1.-funicular-arch.md)
-      * [2.2. Constant Force](course-material/iv.-algebraic-gs/tutorial-4/2.-interactive-gs/2.2.-constant-force.md)
-    * [3. Extra Examples](course-material/iv.-algebraic-gs/tutorial-4/3.-extra-examples/README.md)
-      * [3.1. Concentrated load on arch](course-material/iv.-algebraic-gs/tutorial-4/3.-extra-examples/additional-examples.md)
-      * [3.2. Suspended Bridge and Staircase](course-material/iv.-algebraic-gs/tutorial-4/3.-extra-examples/3.2.-suspended-bridge-and-staircase.md)
-      * [3.3. Formfinding Maillart's Truss](course-material/iv.-algebraic-gs/tutorial-4/3.-extra-examples/4.-extra-examples.md)
-  * [Exercise](course-material/iv.-algebraic-gs/exercise-4.md)
+
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
-  * [Lecture](course-material/v.-rhinovault-2/lecture-5.md)
-  * [Tutorial](course-material/v.-rhinovault-2/tutorial-5/README.md)
-    * [0. Intro to TNA and RV2](course-material/v.-rhinovault-2/tutorial-5/0.-intro-to-tna-and-rv2.md)
-    * [1. Degrees of Freedom as RV2 designer](course-material/v.-rhinovault-2/tutorial-5/1.-degrees-of-freedom-as-rv2-designer.md)
-    * [2. RV2 workflow & UI](course-material/v.-rhinovault-2/tutorial-5/2.-rv2-workflow-and-ui.md)
-    * [3. RV2 tutorial](course-material/v.-rhinovault-2/tutorial-5/3.-rv2-tutorial.md)
-    * [4. RV2 FAQ](course-material/v.-rhinovault-2/tutorial-5/4.-rv2-faq.md)
-  * [Exercise](course-material/v.-rhinovault-2/exercise-5.md)
+
 
 ## appendix
 
