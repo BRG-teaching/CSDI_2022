@@ -21,4 +21,4 @@
 ## appendix
 
 * [References](appendix/references.md)
-* [Slack](https://join.slack.com/t/csd12021/shared\_invite/zt-w7so4l0k-qo3pGvce6Tiaj8FwVimLwA)
+* [Slack](https://join.slack.com/t/csd12022/shared\_invite/zt-1fkf0zpba-06Fwf2L2JuHA0IcsCwRNDg)

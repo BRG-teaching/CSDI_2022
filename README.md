@@ -1,6 +1,6 @@
 # About
 
-<figure><img src=".gitbook/assets/CSDI_HS22 (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/CSDI_HS22.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Welcome to the course Computational Structural Design I: Computational Graphic Statics!
 
