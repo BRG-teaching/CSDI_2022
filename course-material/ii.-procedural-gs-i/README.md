@@ -1,7 +1,7 @@
 # I. Procedural GS I
 
 {% content-ref url="lecture-2.md" %}
-[lecture-2](course-material/ii.-procedural-gs-i/lecture-2.md)
+[lecture-2.md](lecture-2.md)
 {% endcontent-ref %}
 
 {% content-ref url="tutorial-2.md" %}
