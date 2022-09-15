@@ -9,7 +9,7 @@ In this tutorial, participants will learn:
 * The most elementary components in Grasshopper and how to assemble them to execute simple algorithms.
 * The most common data structures in Grasshopper.&#x20;
 
-## 1. Application Interface
+## Grasshopper
 
 Grasshopper is a visual programming language that runs within the Rhinoceros 3D computer-aided design (CAD) application. It allows to set up parametric models in an intuitive and visual way.
 
@@ -17,7 +17,11 @@ Let's get started: open Rhinoceros 7 on Windows and Grasshopper. To launch Grass
 
 ![](<../../.gitbook/assets/image (208).png>)
 
+### 1. User Interface (UI)
+
 In Grasshopper, algorithms can be built by connecting components with wires on the Grasshopper canvas. **** If the components contain geometric information, they are previewed in the Rhino Viewport, thus both, Rhino and Grasshopper, always work in parallel.
+
+In Grasshopper you can create programs by dragging components onto canvas. The outputs to these components are connected to the inputs of subsequent components — creating a graph of information which can be read from left to right. Let’s get started with the basics.
 
 ![](<../../.gitbook/assets/image (391).png>)
 
