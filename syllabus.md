@@ -53,7 +53,7 @@ This course is conceived to take place in the classroom, where interaction betwe
 The students will be evaluated based on the completion of 5 exercises. There is no final exam. Each exercise will be assigned at the beginning of each work session and will be due at the beginning of the next lecture.
 
 {% hint style="danger" %}
-**Late submission will NOT be accepted.**
+**Late submission will NOT be accepted**
 
 In case of medical or family emergencies that force a delay in your submission, you must show a medical report.
 {% endhint %}
@@ -62,13 +62,13 @@ Each exercise will be evaluated based on two criteria:
 
 **1. Complete solution** - **** For each task of the exercise, completed and working Rhino files and also supporting Grasshopper files must be submitted. &#x20;
 
-**2. Communicating the process and results with clarity** - In computational research, communicating one's abstract ideas, technical procedures/approach and results are just as important as the research itself. For each exercise, the files mentioned above should be accompanied by a document (using the template provided, for each exercise), which answers the questions of the exercises and include any additional comments or remarks. The questions need to be answered with clear writing and supported by images, screenshots, hand sketches, or any other additional material.&#x20;
+**2. Clear communication of results** - In computational research, communicating one's abstract ideas, technical procedures/approach and results are just as important as the research itself. For each exercise, the files mentioned above should be accompanied by a document (using the template provided, for each exercise), which answers the questions of the exercises and include any additional comments or remarks. The questions need to be answered with clear writing and supported by images, screenshots, hand-sketches, or any other additional material.&#x20;
 
 ### Submissions
 
 For each exercise, the students will be asked to submit a zipped folder that contains:
 
-1. Complete and working Rhino, Grashopper, script, or other files
+1. Complete and working Rhino, Grasshopper, script, or other files
 2. a PDF summarizing and presenting the results of the exercise, through text and images
 
 {% hint style="info" %}
@@ -85,7 +85,7 @@ Example:&#x20;
 
 ### Slack
 
-Due to the hands-on, technical nature of the course's tutorial and exercises, [Slack](https://slack.com/intl/en-ch/) will be used to provide real-time technical support, communication, and feedback. You can join the dedicated Slack workspace for the course [**here**](https://join.slack.com/t/csd12022/shared\_invite/zt-1fkf0zpba-06Fwf2L2JuHA0IcsCwRNDg).
+Due to the hands-on, technical nature of the course's tutorial and exercises, Slack will be used to provide real-time technical support, communication, and feedback. You can join the dedicated Slack workspace for the course [**here**](https://join.slack.com/t/csd12022/shared\_invite/zt-1fkf0zpba-06Fwf2L2JuHA0IcsCwRNDg).
 
 ### Email
 
