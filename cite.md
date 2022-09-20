@@ -7,11 +7,11 @@ If the contents of this resource are used for research or practice, please cite 
 Block Research Group (2022). Computational structural design I: Computational graphic statics. [https://blockresearchgroup.gitbook.io/csd-1](https://blockresearchgroup.gitbook.io/csd1-2021/-MdXOXU84OQpjdga4mEf/)
 
 ```
-@misc{csd1,
-    title = {{Computational structural design 1}: computational graphic statics},
+@misc{csdI,
+    title = {{Computational structural design I}: computational graphic statics},
     author = {Block Research Group},
     year = {2022},
     doi = {},
-    url = {https://blockresearchgroup.gitbook.io/csd-1
+    url = {https://blockresearchgroup.gitbook.io/csd1-2022
 }
 ```
