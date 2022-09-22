@@ -8,7 +8,3 @@ For modules IV and V, we will be using Rhino 7 with two add-on packages of the [
 
 <figure><img src="../.gitbook/assets/tools.jpg" alt=""><figcaption></figcaption></figure>
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
