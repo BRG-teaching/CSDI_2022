@@ -1,5 +1,7 @@
 # Lecture
 
+<figure><img src="../../.gitbook/assets/CSD1_HS22 (1).jpg" alt=""><figcaption></figcaption></figure>
+
 In this lecture, the following topics are presented:
 
 * Origins and evolution of graphic statics
