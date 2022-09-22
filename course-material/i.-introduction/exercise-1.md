@@ -1,15 +1,15 @@
 # Exercise
 
 {% hint style="info" %}
-Complete the tasks below, and submit a zipped folder that includes the following three files by **9:00am on Friday, September 30th**.
+Complete the tasks below, and submit a zipped folder that includes the following three files by 9:00am on Friday, September 30th.
 
-1. Part 1 - **Rhino file** with completed tasks
-2. Part 2 - completed **Grasshopper definition**
-3. Summarising **PDF**
+1. Part 1 - Rhino file with completed tasks
+2. Part 2 - completed Grasshopper definition
+3. Summarising PDF
 
-Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
+Please follow the file naming convention as shown in the [Syllabus](../../syllabus.md#submissions).
 
-#### [Submit Exercise 1 here](https://www.dropbox.com/request/iMMgttjL5ZG9PBpksF3d).
+#### [Submit here](https://polybox.ethz.ch/index.php/s/sYq8E48z8HC6ot5)
 {% endhint %}
 
 ## Part 1 - Graphic statics in Rhino
@@ -125,19 +125,3 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 Answer the question(s) on the following document.
 
 {% file src="../../.gitbook/assets/CSD1_2021_exercise-1_template.docx" %}
-
-## Solutions
-
-### Part 1 - Graphic statics in Rhino
-
-![](../../.gitbook/assets/JL\_UE01\_Solution-01.png)
-
-![](../../.gitbook/assets/JL\_UE01\_Solution-02.png)
-
-### Part 2 - Grasshopper Basics
-
-This is one possible solution for the letters. It is not the most straightforward solution as it was meant to include all the different components and logic from the tutorial. However, it's completely fine if you solved it with a different strategy.
-
-{% file src="../../.gitbook/assets/ex1_gh_name.gh.zip" %}
-Solution File Initial Letters in Grasshopper
-{% endfile %}
