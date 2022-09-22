@@ -1,7 +1,5 @@
 # Lecture
 
-![](<../../.gitbook/assets/CSD1\_2021\_lecture-1 (1).jpg>)
-
 In this lecture, the following topics are presented:
 
 * Origins and evolution of graphic statics
@@ -51,4 +49,3 @@ Graphic statics gradually disappeared from structural engineering practice over 
 In recent years, there has been a rise of interest and research within the field of graphic statics. This is mainly due to the new design and research possibilities that arise when graphic statics is combined with advanced parametric and computer-aided design (CAD) software, which are readily available today. The three-dimensional modelling capabilities of most CAD software used in architectural design allows structural design explorations using 3D graphic statics based on polyhedral reciprocal diagrams, which was challenging with 2D drafting tools or software. Over the past three decades, the annual number of publications written in English on graphic statics has increased at an almost exponential rate (Figure 1.3). Although the origins of graphic statics date back to the 18th century, computational graphic statics and 3D graphic statics, in particular, are new emerging areas of research with countless design and research opportunities yet to be discovered.
 
 ![History of graphic statics related publications in English by year, where “graphic statics” or “graphical statics” is included in either the title or within the document. Some of the notable publications on Goolge Scholar (2018)](../../.gitbook/assets/gs\_publications-01.png)
-
