@@ -74,11 +74,12 @@ For each exercise, the students will be asked to submit a zipped folder that con
 {% hint style="info" %}
 #### File naming convention: module\_task\_firstname-lastname.extension
 
-Example:&#x20;
+Examples:
 
+* intro\_1\_jane-smith.3dm
 * I\_1\_jane-smith.3dm
-* I\_1\_jane-smith.gh
-* I\_1\_jane-smith.pdf
+* IV\_2\_jane-smith.gh
+* V\_1\_jane-smith.pdf
 {% endhint %}
 
 ## 6. Communication
