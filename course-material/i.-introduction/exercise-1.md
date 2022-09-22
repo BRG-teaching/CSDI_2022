@@ -1,7 +1,7 @@
 # Exercise
 
 {% hint style="info" %}
-Complete the tasks below, and submit a zipped folder that includes the following three files by **9:00am on Friday, October 1st**.
+Complete the tasks below, and submit a zipped folder that includes the following three files by **9:00am on Friday, September 30th**.
 
 1. Part 1 - **Rhino file** with completed tasks
 2. Part 2 - completed **Grasshopper definition**
