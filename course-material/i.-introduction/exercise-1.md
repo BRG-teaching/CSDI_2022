@@ -5,7 +5,7 @@ Complete the tasks below, and submit a zipped folder that includes the following
 
 1. Part 1 - Rhino file with completed tasks
 2. Part 2 - completed Grasshopper definition
-3. Summarising PDF
+3. Part 3 - Summarising PDF
 
 Please follow the file naming convention as shown in the [Syllabus](../../syllabus.md#submissions).
 
@@ -14,9 +14,9 @@ Please follow the file naming convention as shown in the [Syllabus](../../syllab
 
 ## Part 1 - Graphic statics in Rhino
 
-Complete the following 4 tasks using this Rhino file.
+Complete the following 4 tasks using this Rhino file:
 
-{% file src="../../.gitbook/assets/CSD1_exercise-1.3dm" %}
+{% file src="../../.gitbook/assets/CSDI_intro_exercise.3dm" %}
 
 ### Task 0 - Review eQUILIBRIUM drawings
 
@@ -42,7 +42,7 @@ Find the magnitude and direction (indicate using the `ArrowHead` command in Rhin
 
 Given is a shape of stacked boxes glued together. Each acting force corresponds to the weight of one box. Find the magnitude and the direction of the resultant (indicate direction using the `ArrowHead` command in Rhino) in the force diagram as well as its position in the form diagram by using a trial funicular and check whether the arrangement is stable. In the PDF, briefly describe the construction procedure and the solution.
 
-![](<../../.gitbook/assets/image (177).png>)
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Task 4 - Drawing subsystems
 
@@ -90,7 +90,7 @@ All these components were introduced to you in [Tutorial 1](tutorial-1.md) step-
 
 ### Example
 
-This is how it looks like for the initials of CSD1: (for you 2 letters are enough)
+This is how it looks like for the initials of CSDI: (for you 2 letters are enough)
 
 **1.** This is how your letters should look with auxiliary points of construction and the lines/curves connecting them:
 
@@ -124,4 +124,4 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 Answer the question(s) on the following document.
 
-{% file src="../../.gitbook/assets/CSD1_2021_exercise-1_template.docx" %}
+{% file src="../../.gitbook/assets/CSDI_intro_exercise (2).docx" %}

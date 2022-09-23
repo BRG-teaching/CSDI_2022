@@ -273,6 +273,6 @@ Also the **colour** of the group can be modified by _**right-click on the group 
 
 Another manner to name things, write titles or comments is with the `Scribble` component.
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 **Now, you should have the basic knowledge for the exercise to get Grasshopper skills to later apply to graphic statics.**
