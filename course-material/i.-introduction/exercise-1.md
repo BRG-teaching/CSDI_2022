@@ -62,10 +62,6 @@ To practise your Grasshopper skills and parametric thinking, write your name ini
 * Build it up in a way that you can change the height, width and distance between letters, and scale it all, move it all, and rotate it all.
 * Pipe the letters to make them look balloony and colour them in a colour pattern of your choice (to practise datastructure handling).
 
-{% hint style="danger" %}
-Do not use the `Scale` component but instead scale your letters with the multiplication of your vectors!
-{% endhint %}
-
 {% hint style="success" %}
 These components should be part of your script (possibly amongst others):
 
