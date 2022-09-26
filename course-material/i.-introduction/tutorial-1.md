@@ -276,3 +276,9 @@ Another manner to name things, write titles or comments is with the `Scribble` c
 ![](<../../.gitbook/assets/image (4) (1).png>)
 
 **Now, you should have the basic knowledge for the exercise to get Grasshopper skills to later apply to graphic statics.**
+
+You can also download the Grasshopper definition of this tutorial in the following file:
+
+{% file src="../../.gitbook/assets/CSDI_Grasshopper intro.gh" %}
+
+&#x20;****&#x20;
