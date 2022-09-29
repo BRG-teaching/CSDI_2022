@@ -52,7 +52,7 @@ Draw a corresponding force diagram for each subsystem (a-f). Determine the magni
 
 ## Part 2 - Grasshopper basics
 
-![](../../.gitbook/assets/csd1\_ex1\_balloons.png)
+![](<../../.gitbook/assets/csd1\_ex1\_balloons (1).png>)
 
 ### Task Description
 
@@ -94,7 +94,7 @@ This is how it looks like for the initials of CSDI: (for you 2 letters are enoug
 
 **2.** This is how they should look like as balloons with a colour pattern:
 
-![](<../../.gitbook/assets/csd1\_ex1\_balloons (1).png>)
+![](../../.gitbook/assets/csd1\_ex1\_balloons.png)
 
 {% hint style="info" %}
 Task: What is the boolean input pattern in numbers of 0 and 1.
@@ -120,4 +120,4 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 Answer the question(s) on the following document.
 
-{% file src="../../.gitbook/assets/CSDI_intro_exercise (2).docx" %}
+{% file src="../../.gitbook/assets/CSDI_intro_exercise (1) (1).docx" %}
