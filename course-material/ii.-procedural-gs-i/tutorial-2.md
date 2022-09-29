@@ -44,12 +44,8 @@ This can be achieved with the following Grasshopper definition. It is structured
 
 The Rhinoceros file for the canyon can be downloaded below:
 
-{% file src="../../.gitbook/assets/Tut2_gs_bridge_rhino6.3dm.zip" %}
+{% file src="../../.gitbook/assets/CSDI_I_tutorial_rhino6&7.zip" %}
 Rhino6 file for Tutorial 2
-{% endfile %}
-
-{% file src="../../.gitbook/assets/Tut2_gs_bridge_rhino7.3dm.zip" %}
-Rhino7 file for Tutorial 2
 {% endfile %}
 
 ### 1. Parametric input
@@ -96,12 +92,6 @@ In this group, we will define the external load. To describe a force, we need to
 
 ![](<../../.gitbook/assets/1c\_input load\_.png>)
 
-In case you could not follow, here is the Grasshopper definition up to here:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force_1.gh.zip" %}
-Grasshopper step 1. Parametric Input
-{% endfile %}
-
 ### 2. Form diagram
 
 In this group, we will build the form diagram in the context of the canyon. We will construct three edge lines spanning from the internal centre node to the three external nodes, the bridge deck anchor point, the left support point, and the right support.
@@ -126,12 +116,6 @@ Now play with the position of the centre and support nodes and verify if the scr
 {% hint style="success" %}
 The edge lines of the form diagram represent the lines of action and can be converted to vectors.
 {% endhint %}
-
-In case you could not follow, here is the Grasshopper definition up to here:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force_2.gh.zip" %}
-Grasshopper step 2. Form Diagram
-{% endfile %}
 
 ### 3. Force diagram
 
@@ -177,12 +161,6 @@ The edges in the force diagram indicate the magnitude of forces in the elements 
 
 Now play again with the nodal positions from Section 1. and verify if for all cases the force and form diagram correspond to each other, meaning they are parallel.
 
-In case you could not follow, here is the Grasshopper definition up to here:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force_3.gh.zip" %}
-Grasshopper step 3. Force Diagram
-{% endfile %}
-
 ### 4. Sense and magnitude
 
 #### 4.a Sense (compression vs. tension)
@@ -219,12 +197,6 @@ Now we have determined the sense for one edge, however, we want the result for a
 
 ![](../../.gitbook/assets/4a\_sense\_3\_.png)
 
-In case you could not follow, here is the Grasshopper definition up to here:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force_4a.gh.zip" %}
-Grasshopper step 4.a Sense of Forces
-{% endfile %}
-
 #### 4.b Magnitude of forces
 
 In this step, we want to determine the magnitude of forces: The length of an edge in the force diagram represents the force magnitude.
@@ -235,12 +207,6 @@ In this step, we want to determine the magnitude of forces: The length of an edg
 4. _Output:_ Magnitude of forces as float type ( in Grasshopper `number` container).
 
 ![](../../.gitbook/assets/4b\_magnitude\_.png)
-
-In case you could not follow, here is the Grasshopper definition up to here:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force_4b.gh.zip" %}
-Grasshopper step 4.b Magnitude of Forces
-{% endfile %}
 
 ### 5. Visualisation
 
@@ -297,7 +263,7 @@ Now your Grasshopper file should be completed. Play around with the input parame
 
 In case you could not follow, here is the completed Grasshopper definition. This should only serve as a reference if you want to look up things, but really try to **assemble it by yourself** to understand and practise! Otherwise the exercise next week will be very hard for you to tackle.
 
-{% file src="../../.gitbook/assets/gs_tut2_form to force.gh (1).zip" %}
+{% file src="../../.gitbook/assets/CSDI_I_tutorial.gh" %}
 Grasshopper completed!
 {% endfile %}
 
