@@ -16,7 +16,7 @@ In this tutorial, participants will learn:
 
 Thus, **interactive drawings** enable exploring and understanding the relation of form and forces for various designs in a **playful manner** (see video below). \*\*\*\* More examples can be found on the [eQuilibrium](https://block.arch.ethz.ch/eq/drawing) platform.
 
-![eQuilibrium  |  Van Mele et al. 2009](<../../.gitbook/assets/intro\_gs\_interactive\_1\_video (1).mov>)
+<figure><img src="../../.gitbook/assets/intro_gs_interactive_1_video-_1_.gif" alt=""><figcaption><p>eQuilibrium | Van Mele et al. 2009</p></figcaption></figure>
 
 These **interactive drawings** can be constructed with two methods: either with **procedural geometric** construction or with **automated algebraic** construction. The latter will be subject to [session IV](../iv.-algebraic-gs). And today, we will focus on the procedural geometric construction using **Grasshopper**. There, we basically follow the same logic as in the manual geometric construction but **parametric** to respond to changing input variables.
 
@@ -42,7 +42,7 @@ More nodal configurations in a 2D space are not possible, however, they can have
 
 ### 0. Overview of Procedural Geometric Construction
 
-![](../../.gitbook/assets/aim.mov)
+<figure><img src="../../.gitbook/assets/aim.gif" alt=""><figcaption></figcaption></figure>
 
 This can be achieved with the following Grasshopper definition. It is structured into multiple groups. These are: The parametric input such as the nodal position (1.a), the support position (1.b) and the input load (1.c). From these inputs, the form diagram (2.) and force diagrams ( 3.) can be computed. Finally, the force sense (4.a) and force magnitude (4.b) are calculated and then visualised (5.).
 
