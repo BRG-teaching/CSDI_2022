@@ -10,17 +10,13 @@ In this tutorial, participants will learn:
 
 ## Introduction to Procedural Graphic Statics
 
-[Last week](../i.-introduction) the concept of **Graphic Statics** was introduced/revised with **manual construction** on the blackboard. It should have become clear, how **powerful** this method is for designing and understanding structures and how this approach can enhance architectural expression bringing form and forces in relation. However, the manual construction of form and force diagrams can be **tedious**, in particular for exploring design variations.
+Last week the concept of **Graphic Statics** was introduced/revised with **manual construction** on the blackboard. It should have become clear, how **powerful** this method is for designing and understanding structures and how this approach can enhance architectural expression bringing form and forces in relation.&#x20;
 
-![Graphic Statics | source: Wolfe, 1921](<../../.gitbook/assets/image (222).png>)
-
-Thus, **interactive drawings** enable exploring and understanding the relation of form and forces for various designs in a **playful manner** (see video below). \*\*\*\* More examples can be found on the [eQuilibrium](https://block.arch.ethz.ch/eq/drawing) platform.
+By combining graphic statics with computation it is possible to create **interactive drawings,** which allow us to explore and understand the relation of form and forces for various designs in a rapid and **playful manner** (see video below). More examples can be found in the [eQuilibrium](https://block.arch.ethz.ch/eq/drawing) platform.
 
 <figure><img src="../../.gitbook/assets/intro_gs_interactive_1_video-_1_.gif" alt=""><figcaption><p>eQuilibrium | Van Mele et al. 2009</p></figcaption></figure>
 
-These **interactive drawings** can be constructed with two methods: either with **procedural geometric** construction or with **automated algebraic** construction. The latter will be subject to [session IV](../iv.-algebraic-gs). And today, we will focus on the procedural geometric construction using **Grasshopper**. There, we basically follow the same logic as in the manual geometric construction but **parametric** to respond to changing input variables.
-
-![](<../../.gitbook/assets/image (401).png>)
+In this tutorial, we will study how to build interactive graphic statics drawings following a procedural geometric construction. This is basically the same logic as in the manual geometric construction but **parametric** so that the model responds to changing input variables.
 
 ## Introduction to the Single-Node Bridge
 
