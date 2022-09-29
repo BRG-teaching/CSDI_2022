@@ -13,6 +13,8 @@
   * [Tutorial](course-material/i.-introduction/tutorial-1.md)
   * [Exercise](course-material/i.-introduction/exercise-1.md)
 * [I. Procedural GS I](course-material/ii.-procedural-gs-i/README.md)
+  * [Lecture](course-material/ii.-procedural-gs-i/lecture-2.md)
+  * [Tutorial](course-material/ii.-procedural-gs-i/tutorial-2.md)
 * [II. Procedural GS II](course-material/iii.-procedural-gs-ii/README.md)
 * [III. Programming GS](course-material/iii.-procedural-gs-ii-1/README.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
