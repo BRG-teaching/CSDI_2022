@@ -18,7 +18,7 @@ By combining graphic statics with computation it is possible to create **interac
 
 In this tutorial, we will study how to build interactive graphic statics drawings following a procedural geometric construction. This is basically the same logic as in the manual geometric construction but **parametric** so that the model responds to changing input variables.
 
-## Introduction to the Single-Node Bridge
+## Introduction to the single-node bridge
 
 In this tutorial, we will create an interactive form and force diagram of a bridge with a single node. The single-node bridge is defined solely by three cables (left, right and centre), a single node in which they all connect, and an external force from the bridge deck (defined in the centre and with a magnitude of 15 kN).
 
@@ -32,11 +32,9 @@ Basically, it all comes down to the four basic node types:
 
 ![](<../../.gitbook/assets/image (219).png>)
 
-More nodal configurations in a 2D space are not possible, however, they can have unlimited variations in the angles of the elements. But how can we explore these interactively?
-
 ## Implementation in Grasshopper
 
-### 0. Overview of Procedural Geometric Construction
+### 0. Overview of procedural geometric construction
 
 <figure><img src="../../.gitbook/assets/aim.gif" alt=""><figcaption></figcaption></figure>
 
@@ -54,9 +52,9 @@ Rhino6 file for Tutorial 2
 Rhino7 file for Tutorial 2
 {% endfile %}
 
-### 1. Parametric Input
+### 1. Parametric input
 
-#### 1.a Nodal Position
+#### 1.a Nodal position
 
 This group will define as input for the form diagram the position of the node of the bridge by moving the midpoint of the deck upwards or downwards.
 
@@ -69,7 +67,7 @@ This group will define as input for the form diagram the position of the node of
 
 ![](<../../.gitbook/assets/1a\_nodal position\_.png>)
 
-#### 1.b Support Position
+#### 1.b Support position
 
 This group will define as input for the form diagram the position of the anchor points on the two cliffs of the canyon by selecting a point item from a list of points on the canyon cliff on each side.
 
@@ -83,12 +81,10 @@ This group will define as input for the form diagram the position of the anchor 
 ![](<../../.gitbook/assets/1b\_support position\_.png>)
 
 {% hint style="danger" %}
-The colour code (of pink and turquoise) in the next steps does not indicate the state of internal forces in the structure (the typical red and blue). It is just a way to label the elements in terms of left and right positions!
+The colour code (of pink and turquoise) in the next steps does not indicate the state of internal forces in the structure (the typical red and blue). It is just a way to label the elements in terms of left and right position!
 {% endhint %}
 
-####
-
-#### 1.c Input Load
+#### 1.c Input load
 
 In this group, we will define the external load. To describe a force, we need to define the force magnitude (15kN), the sense (downwards) and the direction. The external force acts in the direction of gravity (here: negative Y-direction) and at the midpoint of the bridge deck.
 
@@ -106,7 +102,7 @@ In case you could not follow, here is the Grasshopper definition up to here:
 Grasshopper step 1. Parametric Input
 {% endfile %}
 
-### 2. Form Diagram
+### 2. Form diagram
 
 In this group, we will build the form diagram in the context of the canyon. We will construct three edge lines spanning from the internal centre node to the three external nodes, the bridge deck anchor point, the left support point, and the right support.
 
@@ -137,7 +133,7 @@ In case you could not follow, here is the Grasshopper definition up to here:
 Grasshopper step 2. Form Diagram
 {% endfile %}
 
-### 3. Force Diagram
+### 3. Force diagram
 
 Now let's construct the force diagram by translating the lines of actions to the force diagram. We will do so in steps, let's start with the centre edge:
 
@@ -187,9 +183,9 @@ In case you could not follow, here is the Grasshopper definition up to here:
 Grasshopper step 3. Force Diagram
 {% endfile %}
 
-### 4. Sense and Magnitude of Forces
+### 4. Sense and magnitude
 
-#### 4.a Sense of Forces (Compression vs. Tension)
+#### 4.a Sense (compression vs. tension)
 
 Now we want to determine the sense of the forces, meaning if it's a compressive or tensile force.
 
@@ -216,7 +212,7 @@ Compare the two following figures:
 
 ![edge in compression (opposite direction)](../../.gitbook/assets/4a\_sense\_2\_.png)
 
-Now we have determined the sense for one edge, however, we want the result for all three edges - here, **lists** come in handy (for more information on lists see [Section 1.9](../i.-introduction/tutorial-1.md#8-data-structures)). We have already combined the data of the form diagram edges with the `merge` component into one list with all form diagram edges and the same for the force diagram. Double-check that the elements are in the same order in the list!
+Now we have determined the sense for one edge, however, we want the result for all three edges - here, **lists** come in handy. We have already combined the data of the form diagram edges with the `merge` component into one list with all form diagram edges and the same for the force diagram. Double-check that the elements are in the same order in the list!
 
 1. connect them as input into the previous group instead of the single item edge input. Grasshopper automatically treats both lists in parallel, so that always the corresponding edges are compared.
 2. only the `weave` component must be modified so that pattern input is grafted and the output is flattened again.
@@ -229,12 +225,12 @@ In case you could not follow, here is the Grasshopper definition up to here:
 Grasshopper step 4.a Sense of Forces
 {% endfile %}
 
-#### 4.b Magnitude of Forces
+#### 4.b Magnitude of forces
 
 In this step, we want to determine the magnitude of forces: The length of an edge in the force diagram represents the force magnitude.
 
 1. _Input_: the list of all edges from the force diagram.
-2. calculate the length of all using the `length` component to receivve the force magnitudes.
+2. calculate the length of all using the `length` component to receive the force magnitudes.
 3. this result might contain many decimal digits so let's round it to 2 decimal digits using the `expression` component with _**round(x, 2).**_
 4. _Output:_ Magnitude of forces as float type ( in Grasshopper `number` container).
 
@@ -250,7 +246,7 @@ Grasshopper step 4.b Magnitude of Forces
 
 Now we have solved the form and force diagram, so let's visualise the results.
 
-#### 5.a Visualise Force Magnitudes
+#### 5.a Visualise force magnitudes
 
 We start displaying the force magnitude as text in the force diagram:
 
@@ -267,7 +263,7 @@ You can either repeat exactly the same for the edges of the form diagram or use 
 
 ![](../../.gitbook/assets/5a\_vis\_text\_2\_.png)
 
-#### 5.b Visualise Force Vectors
+#### 5.b Visualise force vectors
 
 The forces in the force diagram are visualised as vectors in red if in tension and in blue if in compression.
 
@@ -279,7 +275,7 @@ The forces in the force diagram are visualised as vectors in red if in tension a
 
 ![](../../.gitbook/assets/5b\_vis\_forcevectors\_.png)
 
-#### 5.c Visualise Form Diagram
+#### 5.c Visualise form diagram
 
 You can follow the same principle to display the form diagram as described in the previous section, but just use the lines directly and don't convert them to vectors.
 
@@ -291,7 +287,7 @@ To express the force magnitude in the edges visually, use pipes that vary their 
 
 1. _Input_: list of lines of all edges of the form diagram and list of magnitudes of forces. Add a scale factor for the pipe dimension either as a `panel` component or `number slider` and set it to 30.
 2. scale the force magnitude with the scale factor using the `division` component into values for the pipe radii.
-3. create pipes with the `pipes` component around the form edges. Flatten the output. (more information on flattening in [section 1.9](../i.-introduction/tutorial-1.md#8-data-structures)).
+3. create pipes with the `pipes` component around the form edges. Flatten the output.
 4. add a `dispatch` component with a `boolean toggle` component so that the pipes can also be turned off. It's like closing a valve.
 5. combine the pipes with the `entwine` component with the lines and use the tree as input for the group from the beginning of this section.
 
@@ -299,10 +295,10 @@ To express the force magnitude in the edges visually, use pipes that vary their 
 
 Now your Grasshopper file should be completed. Play around with the input parameters in various configurations and verify if the results make sense.
 
-In case you could not follow, here is the completed Grasshopper definition. This should only serve as a reference if you want to look up things, but really try to **assemble it by yourself** to understand and practise! Otherwise the Exercise next week will be impossible to tackle.
+In case you could not follow, here is the completed Grasshopper definition. This should only serve as a reference if you want to look up things, but really try to **assemble it by yourself** to understand and practise! Otherwise the exercise next week will be very hard for you to tackle.
 
 {% file src="../../.gitbook/assets/gs_tut2_form to force.gh (1).zip" %}
 Grasshopper completed!
 {% endfile %}
 
-**That's it! You made it.**
+**You made it! :)**
