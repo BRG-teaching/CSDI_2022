@@ -116,8 +116,24 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 ![](<../../.gitbook/assets/csd1\_ex1\_rotate (1).gif>)
 
-## Part 3 -Summarising PDF
+## Part 3 - Summarising PDF
 
-Answer the question(s) on the following document.
+Answer the questions in the following document.
 
 {% file src="../../.gitbook/assets/CSDI_intro_exercise (1) (1).docx" %}
+
+## Solutions
+
+### Part 1 - Graphic statics in Rhino
+
+<figure><img src="../../.gitbook/assets/CSDI_intro_exercise_solution_1.jpg" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/CSDI_intro_exercise_solution_2 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+### Part 2 - Grasshopper basics
+
+In the following zip you will find two possible solutions for this exercise. There are surely many more possible solutions so it is ok if you solved the problem in a different way.&#x20;
+
+{% file src="../../.gitbook/assets/CSDI_intro_exercise_part2_solutions.zip" %}
+
+&#x20;
