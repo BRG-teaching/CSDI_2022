@@ -1,25 +1,19 @@
 # Exercise
 
 {% hint style="warning" %}
-Complete the tasks below, and submit a zipped folder that includes
+Complete the tasks below, and submit **by 9:00am on Friday, October 14th one zipped folder** that includes:
 
-1. the completed Grasshopper definition file (single file!)
+1. the Grasshopper definition file (only one file!)
 2. and the PDF
 
-by **9:00am on Friday, October 15th**.
+Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions). \\
-
-#### [Submit exercise 2 here.](https://www.dropbox.com/request/RFkNngClc7uiIkWML3o5)
+****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)**.**
 {% endhint %}
 
 ## Tasks
 
 Complete the following 5 tasks using this Grasshopper file as a starting point:
-
-{% file src="../../.gitbook/assets/gs_tut2_form to force.gh (1).zip" %}
-Grasshopper starting file
-{% endfile %}
 
 Then answer the questions on the following document:
 

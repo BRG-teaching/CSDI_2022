@@ -7,7 +7,7 @@ Complete the tasks below, and submit a zipped folder that includes the following
 2. Part 2 - completed Grasshopper definition
 3. Part 3 - Summarising PDF
 
-Please follow the file naming convention as shown in the [Syllabus](../../syllabus.md#submissions).
+Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
 #### [Submit here](https://polybox.ethz.ch/index.php/s/sYq8E48z8HC6ot5)
 {% endhint %}
