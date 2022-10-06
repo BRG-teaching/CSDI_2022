@@ -15,13 +15,17 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 Complete the following 5 tasks using this Grasshopper file as a starting point:
 
-Then answer the questions on the following document:
+{% file src="../../.gitbook/assets/CSDI_I_exercise.gh" %}
+
+Then, answer the questions on the following document:
+
+{% file src="../../.gitbook/assets/CSDI_I_exercise.docx" %}
 
 ### 1. Control of force diagram for single-node bridge
 
-In tutorial a Grasshopper definition prescribes a single-node bridge spanning over a canyon with interactive control of the **form diagram.** Now in the exercise, the task is to modify the definition to the **interactive control** of the **force diagram.**
+In the tutorial, we saw how to create an interactive graphic statics model of a single-node bridge spanning over a canyon with interactive control of the **form diagram.** Now, in the exercise, the task is to modify the definition to allow for the **interactive control** of the **force diagram.**
 
-_Implement the interactive **force** control in your Grasshopper definition!_
+Implement the interactive **force** control in your Grasshopper definition!
 
 {% hint style="info" %}
 This means that instead of defining the lines of action as directions through the form diagram, the lines of actions are determined through the modification of the force diagram which thus dictates the form diagram: the point can be dragged in the force diagram and thus the form diagram adapts accordingly (see video below).
