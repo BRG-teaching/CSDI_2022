@@ -55,7 +55,7 @@ Think of the two mixed-tension-and-compression basic nodal configurations and ho
 
 ### 4. Check for fractured rocks
 
-Further, the geotechnical engineer identified **regions** of **fractured rocks**, where it is not possible to anchor the cables. (But it can be anchored on both cliff sides again).
+Further, the geotechnical engineer identified **regions** of **fractured rocks**, where it is not possible to anchor the cables.&#x20;
 
 _Implement a **warning display** if the anchors are in the fractured region in your Grasshopper definition!_
 
