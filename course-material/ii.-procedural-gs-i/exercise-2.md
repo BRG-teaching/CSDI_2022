@@ -13,7 +13,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Tasks
 
-Complete the following 5 tasks using this Grasshopper file as a starting point:
+Use the Rhinoceros file from the tutorial section and complete the following 5 tasks using the Grasshopper file below as a starting point:
 
 {% file src="../../.gitbook/assets/CSDI_I_exercise.gh" %}
 
@@ -40,7 +40,7 @@ A geotechnical engineer examined the cliffs of the canyon and thus dictates that
 _Implement the limit of the support forces **graphically** in your force diagram with a **warning** symbol in your Grasshopper definition!_
 
 {% hint style="danger" %}
-The solution must be **graphical**, mathematical checks with the `<` component checking if the value of the force magnitude is below the threshold will not be graded!
+**The solution must be graphical.** Mathematical checks with the `<` component checking if the value of the force magnitude is below the threshold will not be graded!
 {% endhint %}
 
 ### 3. Single-sided bridge
