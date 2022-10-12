@@ -124,7 +124,7 @@ We will now create three lines in the force diagram connecting O' with the loads
 
 ### 4. Data for visualization
 
-In steps 1-3 we found the geometry of our funicular structure as well as the geometry of the forces (force diagram). However, we still need to find out if the internal forces within the funicular are in tension or compression. To do this, we will use exactly the definition from Tutorial 2. This compares the line of an element in the form diagram with the line defining the force within it in the force diagram (remember that in Grasshopper a line is not only a geometric element, but it also has a beginning and end just like a vector). Measuring the angle between these two lines will indicate the sense of the force. If the angle is 0° the internal force will be in tension. If 180°, it will be in compression. For this reason, it is very important to construct correctly the lines in the form and force diagrams. And that is why we will dedicate one section in our algorithm to redraw the lines correctly.
+In steps 1-3 we found the geometry of our funicular structure as well as the geometry of the forces (force diagram). However, we still need to find out if the internal forces within the funicular are in tension or compression. To do this, we will use exactly the definition from the previous tutorial. This compares the line of an element in the form diagram with the line defining the force within it in the force diagram (remember that in Grasshopper a line is not only a geometric element, but it also has a beginning and end just like a vector). Measuring the angle between these two lines will indicate the sense of the force. If the angle is 0° the internal force will be in tension. If 180°, it will be in compression. For this reason, it is very important to construct correctly the lines in the form and force diagrams. And that is why we will dedicate one section in our algorithm to redraw the lines correctly.
 
 ![](<../../.gitbook/assets/4 (1).jpg>)
 
@@ -140,4 +140,4 @@ We will copy\&paste "sense", "force magnitude" and "visualization" from the Gras
 
 #### You made it! :) You can now explore the design space of your parametric model!
 
-{% file src="../../.gitbook/assets/gs_tutorial_procedural_II.zip" %}
+{% file src="../../.gitbook/assets/CSDI_II_tutorial (1).zip" %}
