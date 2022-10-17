@@ -91,3 +91,7 @@ Further, the `Curve | Curve` component will be useful to find the intersection o
 
 Almost all other components required to solve the tasks should be familiar from the tutorials.
 
+## Solutions
+
+You can find the solutions of the Module I exercise here:&#x20;
+
