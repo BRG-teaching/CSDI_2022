@@ -12,6 +12,7 @@
   * [Lecture](course-material/i.-introduction/lecture-1.md)
   * [Tutorial](course-material/i.-introduction/tutorial-1.md)
   * [Exercise](course-material/i.-introduction/exercise-1.md)
+  * [Solution](course-material/i.-introduction/exercise-1-1.md)
 * [I. Procedural GS I](course-material/ii.-procedural-gs-i/README.md)
   * [Lecture](course-material/ii.-procedural-gs-i/lecture-2.md)
   * [Tutorial](course-material/ii.-procedural-gs-i/tutorial-2.md)
