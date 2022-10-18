@@ -42,7 +42,7 @@ This can be achieved with the following Grasshopper definition. It is structured
 
 ![](../../.gitbook/assets/overview.png)
 
-The Rhinoceros file of the canyon can be downloaded below:
+The Rhinoceros file for the canyon can be downloaded below:
 
 {% file src="../../.gitbook/assets/CSDI_I_tutorial_rhino6&7.zip" %}
 Rhino6 file for Tutorial 2

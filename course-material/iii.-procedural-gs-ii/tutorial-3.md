@@ -72,6 +72,10 @@ Before starting it is important to emphasize that there are many possible ways o
 The color code in the Grasshopper definition below highlights the sort of elements we use: points will be highlighted in yellow, vectors in green and lines/curves in blue. This will help us identifying quickly the elements of our definition.
 {% endhint %}
 
+{% hint style="info" %}
+Use the Rhinoceros file from module I.&#x20;
+{% endhint %}
+
 ### 1. Input loads and resultant
 
 1.a We will create two vectors, one for each of the two input loads, and a line representing their lines of action.
