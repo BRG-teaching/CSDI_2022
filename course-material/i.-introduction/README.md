@@ -12,7 +12,7 @@
 [exercise-1.md](exercise-1.md)
 {% endcontent-ref %}
 
-## Files
+## Files <a href="#intro_files" id="intro_files"></a>
 
 In this module, you will use the following files:
 
@@ -20,5 +20,7 @@ In this module, you will use the following files:
 
 {% file src="../../.gitbook/assets/CSDI_intro_tutorial.gh" %}
 
-{% file src="../../.gitbook/assets/CSDI_intro_exercise (2).3dm" %}
+{% file src="../../.gitbook/assets/CSDI_intro_exercise (1).3dm" %}
+
+{% file src="../../.gitbook/assets/CSDI_intro_exercise.docx" %}
 
