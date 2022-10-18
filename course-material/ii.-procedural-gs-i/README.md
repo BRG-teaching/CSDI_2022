@@ -12,4 +12,6 @@
 [exercise-2.md](exercise-2.md)
 {% endcontent-ref %}
 
-## Files
+## Files <a href="#files" id="files"></a>
+
+{% file src="../../.gitbook/assets/CSDI_I_lecture.pdf" %}
