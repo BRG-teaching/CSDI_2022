@@ -23,7 +23,7 @@ Funicular form is the shape that a tensile structure such as a cable or a chain 
 
 ![Fig. 1: Golden Gate bridge (left) and Salginatobel bridge (right)](../../.gitbook/assets/bridges.jpg)
 
-Despite their elegant simplicity, designing this type of structures using numerical methods is not straightforward (check [here](https://en.wikipedia.org/wiki/Catenary) for more info). However, graphic statics offers a simple and intuitive way to find the form of funicular structures.
+Despite their elegant simplicity, designing this type of structures using numerical methods is not straightforward (check [**here**](https://en.wikipedia.org/wiki/Catenary) for more info). However, graphic statics offers a simple and intuitive way to find the form of funicular structures.
 
 ## Form-finding of 2D Funicular Structures using Graphic Statics
 
@@ -144,4 +144,6 @@ We will copy\&paste "sense", "force magnitude" and "visualization" from the Gras
 
 #### You made it! :) You can now explore the design space of your parametric model!
 
-{% file src="../../.gitbook/assets/CSDI_II_tutorial (1).zip" %}
+{% hint style="info" %}
+You will find the Grasshopper definition [**here**](./).
+{% endhint %}
