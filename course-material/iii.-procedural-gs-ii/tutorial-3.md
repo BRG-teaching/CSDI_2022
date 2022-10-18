@@ -69,6 +69,10 @@ Studying the problem carefully "by hand" has helped us identifying its many step
 Before starting it is important to emphasize that there are many possible ways of implementing this problem in Grasshopper. And that some implementations will be more efficient than others, meaning that they will need less steps, less components, less links...Creating an efficient definition will depend greatly on how well you understand the problem and also the possibilities and features of the tool you are using. In any case, creating an efficient model often requires an iterative process. You will first create a first prototype and then work over it again and again until you get the most of each of its parts.
 
 {% hint style="info" %}
+You will find the Rhinoceros file of the canyon with two loads [**here**](./#files). Or you can simply add one more load in the Rhino file from module I.&#x20;
+{% endhint %}
+
+{% hint style="info" %}
 The color code in the Grasshopper definition below highlights the sort of elements we use: points will be highlighted in yellow, vectors in green and lines/curves in blue. This will help us identifying quickly the elements of our definition.
 {% endhint %}
 
