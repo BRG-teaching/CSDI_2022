@@ -9,7 +9,7 @@ Complete the tasks below, and submit a zipped folder that includes the following
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-#### [Submit here](https://polybox.ethz.ch/index.php/s/sYq8E48z8HC6ot5)
+### [Submit here](https://polybox.ethz.ch/index.php/s/sYq8E48z8HC6ot5)
 {% endhint %}
 
 ## Part 1 - Graphic statics in Rhino
