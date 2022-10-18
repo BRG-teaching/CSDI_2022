@@ -8,18 +8,16 @@ Complete the tasks below, and submit **by 9:00am on Friday, October 14th one zip
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)**.**
+### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)**.**
 {% endhint %}
 
 ## Tasks
 
-Use the Rhinoceros file from the tutorial section and complete the following 5 tasks using the Grasshopper file below as a starting point:
+Complete the following five tasks.
 
-{% file src="../../.gitbook/assets/CSDI_I_exercise.gh" %}
-
-Then, answer the questions on the following document:
-
-{% file src="../../.gitbook/assets/CSDI_I_exercise.docx" %}
+{% hint style="info" %}
+Use the Rhinoceros file from the tutorial as a base to solve the tasks. You can also use the Grasshopper file from the tutorial as a starting point or simply solve the tasks from scratch. Then, answer the questions in the docx file. You will find all these files [**here**](./#files).&#x20;
+{% endhint %}
 
 ### 1. Control of force diagram for single-node bridge
 

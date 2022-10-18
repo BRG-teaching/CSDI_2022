@@ -14,7 +14,11 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Part 1 - Graphic statics in Rhino
 
-Complete the following 4 tasks using the Rhino file you will find [**here**](./#files).
+Complete the following four graphic statics tasks in Rhino. &#x20;
+
+{% hint style="info" %}
+Use the Rhinoceros file you will find [**here**](./#files)
+{% endhint %}
 
 ### Task 0 - Review eQUILIBRIUM drawings
 
@@ -94,10 +98,6 @@ This is how it looks like for the initials of CSDI: (for you 2 letters are enoug
 
 ![](../../.gitbook/assets/csd1\_ex1\_balloons.png)
 
-{% hint style="info" %}
-Task: What is the boolean input pattern in numbers of 0 and 1.
-{% endhint %}
-
 **3.** This is how you should be able to change the height, width and distance of the letters:
 
 ![](../../.gitbook/assets/csd1\_ex1\_height-width-distance.gif)
@@ -116,6 +116,8 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 ## Part 3 - Summarising PDF
 
-Answer the questions in the docx file you will find [**here**](./#files).&#x20;
+{% hint style="info" %}
+Answer the questions in the docx file you will find [**here**](./#files)
+{% endhint %}
 
 &#x20;

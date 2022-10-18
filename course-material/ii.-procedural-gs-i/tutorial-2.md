@@ -44,7 +44,9 @@ This can be achieved with the following Grasshopper definition. It is structured
 
 ### 1. Parametric input
 
+{% hint style="info" %}
 You will find the Rhinoceros file of the canyon [**here**](./#files).
+{% endhint %}
 
 #### 1.a Nodal position
 
@@ -259,6 +261,8 @@ Now your Grasshopper file should be completed. Play around with the input parame
 
 In case you could not follow, here is the completed Grasshopper definition. This should only serve as a reference if you want to look up things, but really try to **assemble it by yourself** to understand and practise! Otherwise the exercise next week will be very hard for you to tackle.
 
+{% hint style="info" %}
 You will find the Grasshopper definition [**here**](./#files).
+{% endhint %}
 
 **You made it! :)**

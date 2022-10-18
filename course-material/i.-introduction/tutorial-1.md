@@ -277,6 +277,10 @@ Another manner to name things, write titles or comments is with the `Scribble` c
 
 **Now, you should have the basic knowledge for the exercise to get Grasshopper skills to later apply to graphic statics.**
 
-You can download the Grasshopper definition of this tutorial [**here**](./#files).&#x20;
+{% hint style="info" %}
+You can download the Grasshopper definition of this tutorial [**here**](./#files)
+{% endhint %}
+
+
 
 &#x20;****&#x20;

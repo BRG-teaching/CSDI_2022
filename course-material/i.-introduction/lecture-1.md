@@ -2,11 +2,15 @@
 
 <figure><img src="../../.gitbook/assets/intro.jpg" alt=""><figcaption></figcaption></figure>
 
-In this [**lecture**](./#files), the following topics are presented:
+In this lecture, the following topics are presented:
 
 * Origins and evolution of graphic statics
 * The revival of graphic statics with computation
 * Basic principles of graphic statics
+
+{% hint style="info" %}
+You will find the lecture pdf [**here**](./#files)****
+{% endhint %}
 
 ## 1. Origins of graphic statics
 
