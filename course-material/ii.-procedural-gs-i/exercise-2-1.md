@@ -14,9 +14,13 @@ In Task 2, you need to constrain the force diagram so that the forces at the sup
 
 <figure><img src="../../.gitbook/assets/CSDI_I_T2_solution_3.jpg" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/CSDI_I_T2_solution_3 (1).jpg" alt=""><figcaption></figcaption></figure>
+
 ## Task 3
 
 In Task 3 you are asked to find a way to generate single-sided bridges and that way can be as short as inputting twice the curve of the left cliff.&#x20;
+
+<figure><img src="../../.gitbook/assets/CSDI_I_T3_solution_1.jpg" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/CSDI_I_T3_solution_2.jpg" alt=""><figcaption></figcaption></figure>
 
