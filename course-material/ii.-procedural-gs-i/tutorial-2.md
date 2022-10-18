@@ -12,9 +12,9 @@ In this tutorial, participants will learn:
 
 Last week the concept of **Graphic Statics** was introduced/revised with **manual construction** on the blackboard. It should have become clear, how **powerful** this method is for designing and understanding structures and how this approach can enhance architectural expression bringing form and forces in relation.&#x20;
 
-By combining graphic statics with computation it is possible to create **interactive drawings,** which allow us to explore and understand the relation of form and forces for various designs in a rapid and **playful manner** (see video below). More examples can be found in the [eQuilibrium](https://block.arch.ethz.ch/eq/drawing) platform.
+By combining graphic statics with computation it is possible to create **interactive drawings,** which allow us to explore and understand the relation of form and forces for various designs in a rapid and **playful manner** (see video below). More examples can be found in the [**eQUILIBRIUM**](https://block.arch.ethz.ch/eq/drawing) platform.
 
-<figure><img src="../../.gitbook/assets/intro_gs_interactive_1_video-_1_.gif" alt=""><figcaption><p>eQuilibrium | Van Mele et al. 2009</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/intro_gs_interactive_1_video-_1_.gif" alt=""><figcaption><p>eQUILIBRIUM | Van Mele et al. 2009</p></figcaption></figure>
 
 In this tutorial, we will study how to build interactive graphic statics drawings following a procedural geometric construction. This is basically the same logic as in the manual geometric construction but **parametric** so that the model responds to changing input variables.
 
@@ -42,13 +42,9 @@ This can be achieved with the following Grasshopper definition. It is structured
 
 ![](../../.gitbook/assets/overview.png)
 
-The Rhinoceros file of the canyon can be downloaded below:
-
-{% file src="../../.gitbook/assets/CSDI_I_tutorial_rhino6&7.zip" %}
-Rhino6 file for Tutorial 2
-{% endfile %}
-
 ### 1. Parametric input
+
+You will find the Rhinoceros file of the canyon [**here**](./#files).
 
 #### 1.a Nodal position
 
@@ -263,8 +259,6 @@ Now your Grasshopper file should be completed. Play around with the input parame
 
 In case you could not follow, here is the completed Grasshopper definition. This should only serve as a reference if you want to look up things, but really try to **assemble it by yourself** to understand and practise! Otherwise the exercise next week will be very hard for you to tackle.
 
-{% file src="../../.gitbook/assets/CSDI_I_tutorial.gh" %}
-Grasshopper completed!
-{% endfile %}
+You will find the Grasshopper definition [**here**](./#files).
 
 **You made it! :)**
