@@ -8,7 +8,7 @@ Complete the tasks below, and submit **by 9:00am on Friday, October 14th one zip
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)**.**
+### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)
 {% endhint %}
 
 ## Tasks
