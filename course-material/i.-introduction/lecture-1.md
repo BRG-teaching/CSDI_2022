@@ -9,7 +9,7 @@ In this lecture, the following topics are presented:
 * Basic principles of graphic statics
 
 {% hint style="info" %}
-You will find the lecture pdf [**here**](./#files)****
+You will find the lecture pdf [**here**](./#files)**.**
 {% endhint %}
 
 ## 1. Origins of graphic statics

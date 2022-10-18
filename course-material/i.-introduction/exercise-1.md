@@ -17,7 +17,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 Complete the following four graphic statics tasks in Rhino. &#x20;
 
 {% hint style="info" %}
-Use the Rhinoceros file you will find [**here**](./#files)
+Use the Rhinoceros file you will find [**here**](./#files)**.**
 {% endhint %}
 
 ### Task 0 - Review eQUILIBRIUM drawings
@@ -117,7 +117,7 @@ This is how it looks like for the initials of CSDI: (for you 2 letters are enoug
 ## Part 3 - Summarising PDF
 
 {% hint style="info" %}
-Answer the questions in the docx file you will find [**here**](./#files)
+Answer the questions in the docx file you will find [**here**](./#files)**.**
 {% endhint %}
 
 &#x20;
