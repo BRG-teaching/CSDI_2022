@@ -81,7 +81,7 @@ These components should be part of your script (possibly amongst others):
 * [ ] Colour Swatch
 * [ ] Custom Preview
 
-All these components were introduced to you in [Tutorial 1](tutorial-1.md) step-by-step so it's a good opportunity to revise the tutorial.
+All these components were introduced to you in the tutorial step-by-step so it's a good opportunity to revise the tutorial.
 {% endhint %}
 
 ### Example
@@ -120,7 +120,7 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 Answer the questions in the following document.
 
-{% file src="../../.gitbook/assets/CSDI_intro_exercise (1) (1) (1).docx" %}
+{% file src="../../.gitbook/assets/CSDI_intro_exercise (1) (1) (1) (1).docx" %}
 
 ## Solutions
 

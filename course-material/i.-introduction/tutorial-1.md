@@ -1,6 +1,6 @@
 # Tutorial
 
-## Learning Goals
+## Learning goals
 
 In this tutorial, participants will learn:
 
@@ -17,7 +17,7 @@ Let's get started: open Rhinoceros 7 on Windows and Grasshopper. To launch Grass
 
 ![](<../../.gitbook/assets/image (208).png>)
 
-### 1. User Interface (UI)
+### 1. User interface (UI)
 
 In Grasshopper, algorithms can be built by connecting components with wires on the Grasshopper canvas. If the components contain geometric information, they are previewed in the Rhino Viewport, thus both, Rhino and Grasshopper, always work in parallel.
 
@@ -33,7 +33,7 @@ To add a component to the canvas, drag onto the canvas the component from the co
 
 ![](<../../.gitbook/assets/image (172).png>)
 
-## 2. Basic Principles
+## 2. Basic principles
 
 Writing an algorithm is like writing the recipe for baking a cake: first, you describe the ingredients (input); then, the instructions on how to process them; finally, you get the result (output), which may be the final cake or just a processed ingredient that you may want to use for the next step of the recipe. In Grasshopper, each instruction step is represented by a component.
 
@@ -53,7 +53,7 @@ But before we get started, let's make sure, we have the same display settings: I
 
 ![](<../../.gitbook/assets/image (68).png>)
 
-## 3. Maths Operators
+## 3. Maths operators
 
 We can use Grasshopper to execute basic math operations: `Addition`, `Subtraction`, `Multiplication` and `Division`. Other important components are the `Negative` and `Absolute` components to compute the negative and absolute value of a number, respectively. The number values can be input either with a `Panel` component, that requires a manual change of the number or with a `Number Slider` component, that allows for a flexible modification.
 
@@ -67,7 +67,7 @@ Mathematical operations can also be carried out with the `Expression` component.
 
 ![](<../../.gitbook/assets/Screenshot 2021-09-23 at 10.01.15.png>)
 
-## 4. Wire Connection Management
+## 4. Wire connection management
 
 Multiple wires can connect the same parameter of a component. To **add** a wire to a parameter, press `shift` and connect the wire. (Then, the same action is applied to both input elements.)
 
@@ -81,7 +81,7 @@ To **change** all wires from one parameter of a component to another, press `shi
 
 ![](<../../.gitbook/assets/image (232).png>)
 
-## 5. Geometry Display Control
+## 5. Geometry display control
 
 Components that contain geometric information **preview** this geometry by default in **red** colour in the _Rhino Viewport_. If the component on the _Grasshopper Canvas_ is `selected` it will appear **green** itself as well as its geometric representation is the _Rhino Viewport_. In this manner, you can verify which component represents what.
 
@@ -123,7 +123,7 @@ A **line** is bounded by a start- and endpoint. Thus in Grasshopper, it can be c
 
 ![](<../../.gitbook/assets/image (178).png>)
 
-## 7. Geometric Operations
+## 7. Geometric operations
 
 Any type of geometrical object can be **moved** with the `Move` component along a translation vector. (This basically creates a copy and does not modify the initial point).
 
@@ -171,7 +171,7 @@ Check out the `PLine` and `IntCrv` component to connect multiple points in Grass
 
 ![](<../../.gitbook/assets/pline crv rhino.png>)
 
-## 8. Data Structures
+## 8. Data structures
 
 ![Grasshopper](<../../.gitbook/assets/image (15).png>)
 
@@ -227,7 +227,7 @@ So let's put the division points from the left curve into one and from the right
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-17 at 15.57.29.png>)
 
-## 9. Logical Operations
+## 9. Logical operations
 
 To sort elements according to certain criteria, **logical operators** in combination with **list sorting** components are powerful. Logical operators can be the `Larger Than` component, `Smaller Than` component, and `Equality` component (or better the `Similarity` component to react to rounding errors). These can test a list of numeric values against a threshold value and return booleans (either True or False). With the boolean list, the initial list of items can be sorted with the `Dispatch` component into one list containing all the 'False' items and one list containing all the 'True' items. Basically, it **splits 1 list into 2 lists** depending on a boolean pattern:
 
@@ -253,7 +253,7 @@ To determine, how many items of a list are True or False, use the `Mass Addition
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-17 at 16.51.58.png>)
 
-## 10. Organise your Definitions
+## 10. Organise your definitions
 
 To keep Grasshopper scripts easy to read and for a better overview, wire connections can be either hidden completely or faint. To **hide** or **faint** wire connections _**right click on input > wire display > hidden or faint**_.
 
@@ -279,6 +279,6 @@ Another manner to name things, write titles or comments is with the `Scribble` c
 
 You can also download the Grasshopper definition of this tutorial in the following file:
 
-{% file src="../../.gitbook/assets/CSDI_Grasshopper intro.gh" %}
+{% file src="../../.gitbook/assets/CSDI_intro_tutorial.gh" %}
 
 &#x20;****&#x20;
