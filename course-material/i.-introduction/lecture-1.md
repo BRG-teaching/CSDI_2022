@@ -2,7 +2,7 @@
 
 <figure><img src="../../.gitbook/assets/intro.jpg" alt=""><figcaption></figcaption></figure>
 
-In this **lecture**, the following topics are presented:
+In this [**lecture**](./#files), the following topics are presented:
 
 * Origins and evolution of graphic statics
 * The revival of graphic statics with computation
