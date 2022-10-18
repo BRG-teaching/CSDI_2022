@@ -12,7 +12,7 @@
 [exercise-1.md](exercise-1.md)
 {% endcontent-ref %}
 
-## Files <a href="#intro_files" id="intro_files"></a>
+## Files <a href="#files" id="files"></a>
 
 In this module, you will use the following files:
 
