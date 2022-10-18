@@ -12,3 +12,13 @@
 [exercise-1.md](exercise-1.md)
 {% endcontent-ref %}
 
+## Files
+
+In this module, you will use the following files:
+
+{% file src="../../.gitbook/assets/CSDI_intro_lecture.pdf" %}
+
+{% file src="../../.gitbook/assets/CSDI_intro_tutorial.gh" %}
+
+{% file src="../../.gitbook/assets/CSDI_intro_exercise (2).3dm" %}
+

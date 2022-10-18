@@ -4,7 +4,6 @@
 * [Syllabus](syllabus.md)
 * [Instructors](instructors.md)
 * [Tools](tools/README.md)
-* [Files](files.md)
 * [Cite](cite.md)
 
 ## course material
