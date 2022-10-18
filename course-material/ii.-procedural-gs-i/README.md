@@ -12,11 +12,15 @@
 [exercise-2.md](exercise-2.md)
 {% endcontent-ref %}
 
+{% content-ref url="exercise-2-1.md" %}
+[exercise-2-1.md](exercise-2-1.md)
+{% endcontent-ref %}
+
 ## Files <a href="#files" id="files"></a>
 
 In this module, you will use the following files:
 
-{% file src="../../.gitbook/assets/CSDI_I_lecture.pdf" %}
+{% file src="../../.gitbook/assets/CSDI_I_lecture (1).pdf" %}
 
 {% file src="../../.gitbook/assets/CSDI_I_tutorial.3dm" %}
 

@@ -12,6 +12,10 @@
 [exercise-1.md](exercise-1.md)
 {% endcontent-ref %}
 
+{% content-ref url="exercise-1-1.md" %}
+[exercise-1-1.md](exercise-1-1.md)
+{% endcontent-ref %}
+
 ## Files
 
 In this module, you will use the following files:
