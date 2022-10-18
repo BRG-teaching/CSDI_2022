@@ -116,9 +116,7 @@ Task: What is the boolean input pattern in numbers of 0 and 1.
 
 ## Part 3 - Summarising PDF
 
-Answer the questions in the following document.
-
-{% file src="../../.gitbook/assets/CSDI_intro_exercise (1) (1) (1) (1).docx" %}
+Answer the questions in the docx file you will find [**here**](./#files).&#x20;
 
 ## Solutions
 
