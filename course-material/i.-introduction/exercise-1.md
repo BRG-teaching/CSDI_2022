@@ -14,9 +14,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Part 1 - Graphic statics in Rhino
 
-Complete the following 4 tasks using this Rhino file:
-
-{% file src="../../.gitbook/assets/CSDI_intro_exercise.3dm" %}
+Complete the following 4 tasks using the Rhino file you will find [**here**](./#files).
 
 ### Task 0 - Review eQUILIBRIUM drawings
 
