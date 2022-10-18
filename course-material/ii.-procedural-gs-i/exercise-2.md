@@ -87,11 +87,7 @@ To display a warning at a certain condition/location, the `Symbol Display` compo
 
 ![](<../../.gitbook/assets/image (169).png>)
 
-Further, the `Curve | Curve` component will be useful to find the intersection of two curves.
+Further, the `Curve | Curve` component will be useful to find the intersection of two curves. Almost all other components required to solve the tasks should be familiar from the tutorials.
 
-Almost all other components required to solve the tasks should be familiar from the tutorials.
 
-## Solutions
-
-You can find the solutions of the Module I exercise here:&#x20;
 
