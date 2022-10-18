@@ -14,4 +14,12 @@
 
 ## Files <a href="#files" id="files"></a>
 
+In this module, you will use the following files:
+
 {% file src="../../.gitbook/assets/CSDI_I_lecture.pdf" %}
+
+{% file src="../../.gitbook/assets/CSDI_I_tutorial.3dm" %}
+
+{% file src="../../.gitbook/assets/CSDI_I_tutorial.gh" %}
+
+{% file src="../../.gitbook/assets/CSDI_I_exercise.docx" %}
