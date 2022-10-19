@@ -36,7 +36,7 @@ When in a structure there is more than one acting load, we must first find the r
 1. Force diagram: draw the vectors F1 and F2 in the force diagram with their corresponding force magnitudes. Then, draw the vector R. Pick a random pole "O" and construct the auxiliary lines 1, 2 and 3.
 2. Form diagram: create a parallel of aux. line 1 that intersects the line of action of F1. Why F1 and not F2? because in the force diagram aux. line 1 is connected to F1. Through the intersecting point you now found, draw a parallel of aux. line 2 until it intersects the line of action of F2. Note that aux. line 2 in the force diagram touches both F1 and F2 and in the form diagram it now intersects both the line of action of F1 and that of F2. Finally, through the intersecting point you now found, draw a parallel of aux. line 3. Intersect now the aux.lines 1 and 3. The line of action of the resultant will go through that point. The vector R in the force diagram indicates that the line of action of R is vertical.
 
-![](../../.gitbook/assets/1\_lr.jpg)
+![](<../../.gitbook/assets/1\_lr (1).jpg>)
 
 ### 2. Reactions
 
@@ -54,7 +54,7 @@ In steps 1 and 2 we solved the global equilibrium. We will now complete the form
 1. Force diagram. In the previous step, the resultant force was useful to find out the reaction forces at the supports and therefore to define the global equilibrium of our funicular structure. Now, in order to define the internal forces, we will consider again the forces F1 and F2 in the force diagram. Connecting O' with F1 and F2 we define three lines (1,2 and 3). By doing this, we define four polygons of forces for four nodes in equilibrium in our form diagram (I,II,III and IV). Two of these nodes (I and IV) are composed of only two forces in equilibrium, which have the same magnitude and different sense. This is the case of B-1 and A-3. Looking at these two nodes in the form diagram we see that 1 and 3 are internal forces in tension because they pull from the center of their respective nodes. The other two nodes (II and III) are composed of three forces in equilibrium. One of these is 1-F1-2 and the other 2-F2-3.
 2. Form diagram. We will now use the lines 1,2 and 3 from the force diagram to find our the geometry of our funicular structure. To do this, first we will create a parallel of line 1 passing through support B until this intersects with the line of action of F1. Then, through the intersecting point we just found, we will draw a parallel of 2 until this intersects the line of action of F2. Finally, through the intersecting point we just found we will draw a parallel of 3 and this must pass through the left support. As F1 and F2 are not applied directly in nodes II and III respectively but in the bridge deck, we must define two nodes more in our form diagram V and VI, which creates two more polygons of forces in our force diagram.
 
-![](<../../.gitbook/assets/3\_lr (4).jpg>)
+![](<../../.gitbook/assets/3\_lr (1).jpg>)
 
 ### 4. Changing the rise
 
@@ -88,11 +88,11 @@ Variables:
 * the sense of the external loads.
 {% endhint %}
 
-![](<../../.gitbook/assets/1a (1).jpg>)
+![](<../../.gitbook/assets/1a (1) (1) (1) (1) (1) (1) (1) (1) (3).jpg>)
 
 1.b We now want to find out the position of the resultant. To do this we will construct the force diagram. We will first draw F1 and F2 using as a starting point a point from Rhinoceros. Then we will define, also in Rhinoceros, the random pole "O" and we will create the auxiliary lines connecting "O" with F1 and F2.
 
-![](../../.gitbook/assets/1b.jpg)
+![](<../../.gitbook/assets/1b (1).jpg>)
 
 1.c We will use the auxiliary lines from the force diagram to find out the position of the line of action of the resultant in the form diagram. In this step, we will need the auxiliary lines from 1.b, the curve of the right cliff and the lines of action of the F1 and F2.
 
@@ -140,7 +140,7 @@ In the previous tutorial, drawing the main lines of the form and force diagrams 
 
 We will copy\&paste "sense", "force magnitude" and "visualization" from the Grasshopper definition of the previous tutorial.
 
-![](<../../.gitbook/assets/5&6 (1).jpg>)
+![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (3).jpg>)
 
 #### You made it! :) You can now explore the design space of your parametric model!
 

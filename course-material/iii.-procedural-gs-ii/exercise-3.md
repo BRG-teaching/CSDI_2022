@@ -5,7 +5,7 @@ Please complete the tasks below, and submit a zipped folder that includes one Rh
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-#### [Submit exercise 3 here.](https://www.dropbox.com/request/QPlohOgdeTLfv4Vb2Gfa)
+[**Submit exercise 3 here.**](https://www.dropbox.com/request/QPlohOgdeTLfv4Vb2Gfa)
 {% endhint %}
 
 ## Tasks
@@ -64,28 +64,6 @@ Design two bridge structures and explain why you find these interesting. Finally
 {% hint style="warning" %}
 Take into account that the largest design space is in the model that includes Tasks 1, 2 and 3.
 {% endhint %}
-
-## Solutions
-
-You can download the solutions in the link below. For every task of this exercise, there is surely more than one possible solution, so don't worry if your Grasshopper definitions do not exactly match ours.
-
-{% file src="../../.gitbook/assets/gs_tutorial_procedural_II_solutions (4).zip" %}
-
-### Task 1
-
-Task 1 asks you to add one more load on the bridge deck. To do this, you must modify the following parts of the initial definition: 1.a Input loads, 1.b\&c Resultant, 3. Internal forces and 4.a\&b Data for visualization.
-
-![](<../../.gitbook/assets/1 (1).jpg>)
-
-### Task 2
-
-To solve Task 2 you only need to move the polo O' in the force diagram along the direction of the closing string.
-
-![](<../../.gitbook/assets/2 (2).jpg>)
-
-### Task 3
-
-Task 3 asks you to consider the tributary areas, which affects the part 1.a. Input loads. In the initial Grasshopper definition, the magnitude of the loads is defined using a number slider that has nothing to do with the tributary areas. The solution shown below consists on measuring the distance of the part of the bridge that each anchor supports. As the area load of the bridge is 1kN/m2, we can directly use the numeric value of the distance as the load magnitude.
 
 ![](<../../.gitbook/assets/3 (2).jpg>)
 
