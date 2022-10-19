@@ -21,6 +21,7 @@
 * [II. Procedural GS II](course-material/iii.-procedural-gs-ii/README.md)
   * [Lecture](course-material/iii.-procedural-gs-ii/lecture-3.md)
   * [Tutorial](course-material/iii.-procedural-gs-ii/tutorial-3.md)
+  * [Exercise](course-material/iii.-procedural-gs-ii/exercise-3.md)
 * [III. Programming GS](course-material/iii.-procedural-gs-ii-1/README.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
