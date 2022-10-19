@@ -8,12 +8,12 @@ Complete the tasks below, and submit **by 9:00am on Friday, November 4th one zip
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)
+### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/8RZsMPMEJtOrDho)****
 {% endhint %}
 
 ## Tasks
 
-Complete the following 5 tasks using the Grasshopper file from Tutorial 3 as a starting point. Then answer the questions on the following document:
+Complete the following five tasks using the Grasshopper file from Tutorial 3 as a starting point. Then answer the questions on the following document:
 
 {% file src="../../.gitbook/assets/CSD1_2021_exercise-3_template.zip" %}
 
