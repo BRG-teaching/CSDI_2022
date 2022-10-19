@@ -13,9 +13,11 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Tasks
 
-Complete the following five tasks using the Grasshopper file from Tutorial 3 as a starting point. Then answer the questions on the following document:
+Complete the following five tasks.
 
-{% file src="../../.gitbook/assets/CSD1_2021_exercise-3_template.zip" %}
+{% hint style="info" %}
+Use the Rhinoceros and Grasshopper files from the tutorial as a base to solve the tasks. Then, answer the questions in the docx file. You will find all these files [**here**](./#files).&#x20;
+{% endhint %}
 
 ### 1. Additional load
 

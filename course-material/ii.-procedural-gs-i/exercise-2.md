@@ -16,7 +16,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 Complete the following five tasks.
 
 {% hint style="info" %}
-Use the Rhinoceros file from the tutorial as a base to solve the tasks. You can also use the Grasshopper file from the tutorial as a starting point or simply solve the tasks from scratch. Then, answer the questions in the docx file. You will find all these files [**here**](./#files).&#x20;
+Use the Rhinoceros file from the tutorial as a base to solve the tasks. You can also use the Grasshopper file from the tutorial as a starting point or simply solve the tasks creating a new Grasshopper definition. Then, answer the questions in the docx file. You will find all these files [**here**](./#files).&#x20;
 {% endhint %}
 
 ### 1. Control of force diagram for single-node bridge
