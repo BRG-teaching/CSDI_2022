@@ -21,15 +21,15 @@ Use the Rhinoceros and Grasshopper files from the tutorial as a base to solve th
 
 ### 1. Additional load
 
-In tutorial 3 we created a parametric model, which, using graphic statics, finds the form of a funicular structure supporting a bridge deck. In this first model, we considered two loads representing the self-weight of the bridge. This exercise consists of adding a third load on the bridge deck.
+In the tutorial we created a parametric model, which, using graphic statics, finds the form of a funicular structure supporting a bridge deck. In this first model, we considered two loads representing the self-weight of the bridge. This task consists of adding a third load on the bridge deck.
 
 {% hint style="warning" %}
-Before adding the anchor point of the third load, pay attention first to how the loads are ordered along the bridge deck in tutorial 2.
+Before adding the anchor point of the third load, pay attention first to how the loads are ordered along the bridge deck in the tutorial.
 {% endhint %}
 
 ### 2. Change of rise
 
-In tutorial 3 we showed how to change the rise of the funicular structure modifying the geometry of the form diagram. Find now a way to achieve the same thing this time by modifying the geometry of the force diagram. The key to do this is explained in [tutorial 3](tutorial-3.md#4.-changing-the-rise).
+In the tutorial we showed how to change the rise of the funicular structure modifying the geometry of the form diagram. Find now a way to achieve the same thing this time by modifying the geometry of the force diagram.
 
 {% hint style="warning" %}
 You can use the initial Grasshopper file to solve this task. However, if you use the Grasshopper definition with three loads you created in Task 1 as a base you will get more interesting results.
@@ -37,7 +37,7 @@ You can use the initial Grasshopper file to solve this task. However, if you use
 
 ### 3. Tributary areas
 
-In the algorithm shown in tutorial 3, the magnitude of the loads is defined with a number slider. For this reason, this value is valid no matter where along the bridge deck this load is located. Find out how the magnitude of the loads can respond to the tributary areas, so that each cable supports its respective part of the bridge deck. The scheme below shows you how to calculate the tributary areas for the different cables. Consider a self-weight of 1kN/m2.
+In the algorithm shown in the tutorial, the magnitude of the loads is defined with a number slider. For this reason, this value is valid no matter where along the bridge deck this load is located. Find out how the magnitude of the loads can respond to the tributary areas, so that each cable supports its respective part of the bridge deck. The scheme below shows you how to calculate the tributary areas for the different cables. Consider a self-weight of 1kN/m2.
 
 ![](../../.gitbook/assets/5.png)
 
@@ -47,11 +47,11 @@ You can use the initial Grasshopper file to solve this task. However, if you use
 
 ### 4. Constrained force diagram
 
-In addition to the pedestrian bridge, the hanging funicular structure, along its curved shape, will also be used as a bridge for a via ferrata as shown in the reference picture below.
+The funicular cable system will serve to support the bridge deck, but it will also be used as a lightweight bridge, along its curved shape, for a via ferrata as shown in the reference picture below.
 
-![](<../../.gitbook/assets/stairway to heaven.jpg>)
+!["Stairway to Heaven" bridge in Austria](<../../.gitbook/assets/stairway to heaven.jpg>)
 
-To design our "stairway to heaven", we will consider two constraints:
+To design your "Stairway to Heaven", apply the following constraints:
 
 1. The angle of the steepest sections must not exceed 60 degrees in relation to the horizontal (see sketch below).
 2. The funicular must work fully in tension.
