@@ -4,6 +4,7 @@
 * [Syllabus](syllabus.md)
 * [Instructors](instructors.md)
 * [Tools](tools/README.md)
+  * [Anaconda](tools/anaconda.md)
 * [Cite](cite.md)
 
 ## course material
