@@ -109,7 +109,7 @@ By definition, the edge lines must be oriented **away** from the centre node!
 
 Now play with the position of the centre and support nodes and verify if the script works for all cases.
 
-![](<../../.gitbook/assets/2\_form diagram\_ (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/2\_form diagram\_ (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="success" %}
 The edge lines of the form diagram represent the lines of action and can be converted to vectors.

@@ -12,10 +12,6 @@ In this tutorial, you will:
 * learn how the Grasshopper algorithm from module 2 is translated to Python.
 * understand the advantages that programming in Python has over creating an algorithm in Grasshopper.
 
-## Content
-
-In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: resultant - reactions - internal forces. We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.
-
 {% hint style="warning" %}
 The purpose of this course is to give you a brief introduction to the topic of programming but not to teach you all what is needed for you to write algorithms by yourself. For this reason, in this tutorial we will only cover the very basics of this wild field.
 {% endhint %}
@@ -450,9 +446,11 @@ cf7cff22-7a0f-42bc-b1b8-68c8344d7093
 14.1421356237
 ```
 
+
+
 ## Translating to Python module 2 algorithm
 
-We can now start with the main part of this tutorial, which deals with translating to Python the Grasshopper algorithm we built in Module 2. To do this, we will follow exactly the same steps.
+In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: 1. Resultant, 2. Reactions and 3. Internal forces. We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.
 
 ### 1. Input loads and resultant
 
@@ -461,7 +459,7 @@ In this section we will create the following variables and lists:
 
 * **Lp\_anc\_in** (List of points/anchors/initial)
 * **Ln\_mag\_in** (List of numbers/magnitudes/initial)
-* **Lp\_ach** (List of points/anchors)
+* **Lp\_anc** (List of points/anchors)
 * **Ln\_mag** (List of numbers/magnitudes)
 * **Lv\_load** (List of vectors/loads)
 * **Ll\_LOA** (List of lines/lines of action)
@@ -478,7 +476,7 @@ In this section we will create the following variables and lists:
 1.a In this step we will store all the necessary data regarding the input loads:
 
 * First, we will first store in two lists all the initial anchor points and magnitudes (Lp\_anc\_in and Ln\_mag\_in).
-* Then, we will create another two lists (Lp\_ach and Ln\_mag) where we will only store the anchor points and magnitudes if the magnitudes are different than zero.
+* Then, we will create another two lists (Lp\_anc and Ln\_mag) where we will only store the anchor points and magnitudes if the magnitudes are different than zero.
 * After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
 
 ```python
