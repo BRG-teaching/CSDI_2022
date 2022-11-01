@@ -8,16 +8,16 @@ description: Form-finding of funicular structures using graphic statics in Pytho
 
 In this tutorial, you will:
 
-* learn the basics of linear programming **** in Python**.**
-* learn how the Grasshopper algorithm from module 2 is translated to Python.&#x20;
+* learn the basics of linear programming in Python
+* learn how the Grasshopper algorithm from module 2 is translated to Python.
 * understand the advantages that programming in Python has over creating an algorithm in Grasshopper.
 
 ## Content
 
-In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: resultant - reactions - internal forces.  We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.&#x20;
+In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: resultant - reactions - internal forces. We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.
 
 {% hint style="warning" %}
-The purpose of this course is to give you a brief introduction to the topic of programming but not to teach you all what is needed for you to write algorithms by yourself. For this reason, in this tutorial we will only cover the very basics of this wild field.&#x20;
+The purpose of this course is to give you a brief introduction to the topic of programming but not to teach you all what is needed for you to write algorithms by yourself. For this reason, in this tutorial we will only cover the very basics of this wild field.
 {% endhint %}
 
 ## Python
@@ -54,10 +54,10 @@ hello
 
 Lists are a type of data structure that allows you to store items. Lists have the following characteristics:
 
-* Lists can store objects, values and also other lists.&#x20;
+* Lists can store objects, values and also other lists.
 * Items are stored in a sequence.
 * Items can be accessed by their index.
-* Lists can be modified along your algorithm.&#x20;
+* Lists can be modified along your algorithm.
 
 Below you will find implementation of lists showing only the most basic features:
 
@@ -103,7 +103,6 @@ L_1=[[5,3],[3,-1],[7,6]]
 print L_1[0]
 print L_1[0][1]
 print L_1[1][1]
-
 ```
 
 Output:
@@ -124,16 +123,16 @@ Output:
 ```
 
 {% hint style="info" %}
-In this tutorial the only type of data structure we will learn are lists. However, if you are interested in learning more about data structures, check tuples, sets and dictionaries. &#x20;
+In this tutorial the only type of data structure we will learn are lists. However, if you are interested in learning more about data structures, check tuples, sets and dictionaries.
 {% endhint %}
 
-### 2. Flow control&#x20;
+### 2. Flow control
 
 One crucial aspect of programming is to learn to control the execution flow. In this section we will look at the default execution flow, often referred to as "sequential", and two flow control statements: conditionals and loops.
 
-#### 2.1. Sequential&#x20;
+#### 2.1. Sequential
 
-Sequential execution is the most simple and common structure. In sequential execution the computer executes every single line of code one after another as shown in the example below. &#x20;
+Sequential execution is the most simple and common structure. In sequential execution the computer executes every single line of code one after another as shown in the example below.
 
 ```python
 #SEQUENTIAL EXECUTION
@@ -208,7 +207,7 @@ Output:
 
 #### 2.3 Loops
 
-Loops (often called "for" loops) allow you to execute multiple times a series of instructions. The example below shows the implementation of a common loop structure.&#x20;
+Loops (often called "for" loops) allow you to execute multiple times a series of instructions. The example below shows the implementation of a common loop structure.
 
 ```python
 #LOOPS
@@ -296,9 +295,9 @@ hello
 
 ### 3. RhinoScriptSyntax
 
-RhinoScriptSyntax is a library of functions that allows us to execute many of the common commands in Rhinoceros. Luckily, this is installed by default in Grasshopper Python. In the example below only the most usual functions are shown. However, feel free to explore other functions by yourself. In this [link](https://developer.rhino3d.com/api/RhinoScriptSyntax/) you can find the complete list of functions.&#x20;
+RhinoScriptSyntax is a library of functions that allows us to execute many of the common commands in Rhinoceros. Luckily, this is installed by default in Grasshopper Python. In the example below only the most usual functions are shown. However, feel free to explore other functions by yourself. In this [link](https://developer.rhino3d.com/api/RhinoScriptSyntax/) you can find the complete list of functions.
 
-In order to run one of the functions from the library, we will type "rs." and the name of the function, which we can find in a drop-down list. After selecting the function from the list, we will open a parenthesis and in this moment some information will appear indicating us the sort of data the function needs to work. The example below shows how to run the most common  RhinoScriptSyntax functions.
+In order to run one of the functions from the library, we will type "rs." and the name of the function, which we can find in a drop-down list. After selecting the function from the list, we will open a parenthesis and in this moment some information will appear indicating us the sort of data the function needs to work. The example below shows how to run the most common RhinoScriptSyntax functions.
 
 #### 3.1 Creating points, lines and vectors
 
@@ -332,7 +331,7 @@ Output:
 ```
 
 {% hint style="info" %}
-These very long codes with numbers and letters in the output are the object ID. Python creates new ID everytime you run the code so do not get surprised if you don't get this exact number when you run the code.&#x20;
+These very long codes with numbers and letters in the output are the object ID. Python creates new ID everytime you run the code so do not get surprised if you don't get this exact number when you run the code.
 {% endhint %}
 
 #### 3.2 Basic point and line functions
@@ -458,28 +457,28 @@ We can now start with the main part of this tutorial, which deals with translati
 ### 1. Input loads and resultant
 
 {% hint style="info" %}
-In this section we will create the following variables and lists:&#x20;
+In this section we will create the following variables and lists:
 
-* **Lp\_anc\_in** (List of points/anchors/initial)&#x20;
-* **Ln\_mag\_in** (List of numbers/magnitudes/initial)&#x20;
-* **Lp\_ach** (List of points/anchors)&#x20;
-* **Ln\_mag** (List of numbers/magnitudes)&#x20;
-* **Lv\_load** (List of vectors/loads)&#x20;
+* **Lp\_anc\_in** (List of points/anchors/initial)
+* **Ln\_mag\_in** (List of numbers/magnitudes/initial)
+* **Lp\_ach** (List of points/anchors)
+* **Ln\_mag** (List of numbers/magnitudes)
+* **Lv\_load** (List of vectors/loads)
 * **Ll\_LOA** (List of lines/lines of action)
-* **X** (first point load line in force diagram)&#x20;
-* **O1** (random pole to find resultant)&#x20;
-* **Lp\_loadline** (List of points/loadline)&#x20;
-* **Ll\_loadline** (List of lines/loadline)&#x20;
+* **X** (first point load line in force diagram)
+* **O1** (random pole to find resultant)
+* **Lp\_loadline** (List of points/loadline)
+* **Ll\_loadline** (List of lines/loadline)
 * **Lal\_force** (List of auxiliary lines/force diagram)
-* **p\_right** (point/right cliff)&#x20;
-* **Lal\_form** (List of auxiliary lines/form diagram)&#x20;
+* **p\_right** (point/right cliff)
+* **Lal\_form** (List of auxiliary lines/form diagram)
 * **p\_R** (point/resultant)
 {% endhint %}
 
-1.a In this step we will store all the necessary data regarding the input loads:&#x20;
+1.a In this step we will store all the necessary data regarding the input loads:
 
-* First, we will first store in two lists all the initial anchor points and magnitudes (Lp\_anc\_in and Ln\_mag\_in).&#x20;
-* Then, we will create another two lists (Lp\_ach and Ln\_mag) where we will only store the anchor points and magnitudes if the magnitudes are different than zero.&#x20;
+* First, we will first store in two lists all the initial anchor points and magnitudes (Lp\_anc\_in and Ln\_mag\_in).
+* Then, we will create another two lists (Lp\_ach and Ln\_mag) where we will only store the anchor points and magnitudes if the magnitudes are different than zero.
 * After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
 
 ```python
@@ -510,12 +509,11 @@ for i in range (0,len(Lp_anc)):
     rs.MoveObject(p,[0,-10,0])
     LOA=rs.AddLine(Lp_anc[i],p)
     Ll_LOA.append(LOA)
-
 ```
 
 1.b We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
 
-* First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).&#x20;
+* First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).
 * Then, we will make a copy a X (p), move it according to the first vector in Lv\_load and create a line representing the external force (X to p). As we want to do the same for all the external loads we will need a loop.
 
 {% hint style="warning" %}
@@ -546,10 +544,10 @@ for i in range (0,len(Lp_loadline)):
     Lal_force.append(al)
 ```
 
-1.c And we will continue the construction of the resultant in the form diagram. These are the steps:&#x20;
+1.c And we will continue the construction of the resultant in the form diagram. These are the steps:
 
 * First, we will define a point a long the curve of the right cliff (p\_right). We will do this in Grasshopper as the component "Point On Curve" makes it very easy.
-* Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.&#x20;
+* Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.
 
 {% hint style="warning" %}
 If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads, there are three auxiliary lines in the force diagram. When we move these three auxiliary lines to the form diagram, as there are only two loads and therefore two lines of action, we will only move and intersect the first two auxiliary lines, while for the third auxiliary line we will only move it. To achieve this we will use a conditional within the loop.
@@ -560,10 +558,10 @@ In the loops we created in the previous steps "i" was a number that we were usin
 {% endhint %}
 
 {% hint style="warning" %}
-Notice that in the loop vector v is not always the same. The first vector v goes from O1 to p\_right. However, in the next iterations of the loop, v goes from O1 to the intersection points we find. Therefore we must update the value of p\_right at the end of the loop. &#x20;
+Notice that in the loop vector v is not always the same. The first vector v goes from O1 to p\_right. However, in the next iterations of the loop, v goes from O1 to the intersection points we find. Therefore we must update the value of p\_right at the end of the loop.
 {% endhint %}
 
-* Finally, we will intersect the first and last auxiliary line in the form diagram to find the point p\_R across which the vertical line of action of the resultant goes through.&#x20;
+* Finally, we will intersect the first and last auxiliary line in the form diagram to find the point p\_R across which the vertical line of action of the resultant goes through.
 
 ```python
 import rhinoscriptsyntax as rs
@@ -585,7 +583,6 @@ for i in Lal_force:
         Lal_form.append(al)
 
 p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
-
 ```
 
 ### 2. Reactions
@@ -593,15 +590,15 @@ p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 {% hint style="info" %}
 In this section we will create the following variables:
 
-* **sp\_left** (support point/left cliff)&#x20;
-* **sp\_right** (support point/right cliff)&#x20;
+* **sp\_left** (support point/left cliff)
+* **sp\_right** (support point/right cliff)
 * **O2** (this point defines the triangular polygon of forces of the global equilibrium)
 {% endhint %}
 
 In this section we will calculate the reaction forces at the supports. These are the steps:
 
 * First, we will define the position of the supports (sp\_left and sp\_right) along the curves of the cliffs using once again the Grasshopper component "Point On Curve".
-* Then, we will create two lines in the form diagram connecting the supports with the anchor of the resultant (p\_R).&#x20;
+* Then, we will create two lines in the form diagram connecting the supports with the anchor of the resultant (p\_R).
 * Finally, we will move these lines from the form diagram to the force diagram and intersect them finding point O2 and closing the polygon of forces representing the global equilibrium of the structure.
 
 ```python
@@ -619,7 +616,6 @@ v2=rs.VectorCreate(Lp_loadline[0],p_R)
 l2_m=rs.MoveObject(l2,v2)
 
 O2=rs.LineLineIntersection(l1_m,l2_m)[0]
-
 ```
 
 ### 3. Internal forces
@@ -627,14 +623,14 @@ O2=rs.LineLineIntersection(l1_m,l2_m)[0]
 {% hint style="info" %}
 In this section we will create the following lists:
 
-* **Ll\_int\_force** (List of lines/internal forces/force diagram)&#x20;
-* **Ll\_int\_form** (List of lines/internal forces/form diagram)&#x20;
+* **Ll\_int\_force** (List of lines/internal forces/force diagram)
+* **Ll\_int\_form** (List of lines/internal forces/form diagram)
 * **Lip\_form** (List of points of intersection/form diagram)
 {% endhint %}
 
-In this section we will construct the funicular. Thes are the steps:&#x20;
+In this section we will construct the funicular. Thes are the steps:
 
-* First, we will create the lines of the internal forces in the force diagram (Ll\_int\_force) connecting O2 with Lp\_loadline.&#x20;
+* First, we will create the lines of the internal forces in the force diagram (Ll\_int\_force) connecting O2 with Lp\_loadline.
 * Then, we will construct the geometry of the funicular in the form diagram using a loop. This process is basically the same as when we constructed the trial funicular in step 1.c.
 
 ```python
@@ -674,7 +670,7 @@ In this section we will create the following lists:
 * **Ll\_force** (List of lines/force diagram)
 * **Ll\_form1** (List of lines/form diagram/the verticals)
 * **Ll\_form2** (List of lines/form diagram/the actual funicular)
-* **Ll\_form** (List of lines/form diagram)&#x20;
+* **Ll\_form** (List of lines/form diagram)
 {% endhint %}
 
 In this section we will create the data for visualization according to the convention shown below, just like we did in modules 1 and 2.
