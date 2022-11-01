@@ -701,7 +701,7 @@ Ll_form=Ll_form1+Ll_form2
 
 Just like we did in module 2, we will copy\&paste "sense", "force magnitude" and "visualization" from the Grasshopper definition from module 1.
 
-![](<../../.gitbook/assets/5&6 (1).jpg>)
+![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (4).jpg>)
 
 #### You made it! :) You can now explore the design space of your parametric model!
 
