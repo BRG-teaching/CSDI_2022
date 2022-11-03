@@ -11,10 +11,6 @@ In this tutorial, you will:
 * learn how the Grasshopper algorithm from module 2 is translated to Python.
 * understand the advantages that programming in Python has over creating an algorithm in Grasshopper.
 
-{% hint style="warning" %}
-The purpose of this course is to give you a brief introduction to the topic of programming but not to teach you all what is needed for you to write algorithms by yourself. For this reason, in this tutorial we will only cover the very basics of this wild field.
-{% endhint %}
-
 ## Translating to Python module 2 algorithm
 
 In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: 1. Resultant, 2. Reactions and 3. Internal forces. We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.
@@ -44,7 +40,7 @@ In this section we will create the following variables and lists:
 * After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
 
 ```python
-import rhinoscriptsyntax as rs
+#1.a INPUT LOADS
 
 #input
 Lp_anc=[p1,p2]
@@ -53,7 +49,7 @@ Ln_mag=[n1,n2]
 #vector loads
 Lv_load=[]
 for i in range (0,len(Lp_anc)):
-    v=([0,Ln_mag[i],0])
+    v=[0,Ln_mag[i],0]
     Lv_load.append(v)
 
 #LOA (Line Of Action)
@@ -77,13 +73,12 @@ In order to add the loads one after another we must update the value of the star
 * After, we will define, also in Rhinoceros, the random pole O1 and we will create using a loop the auxiliary lines connecting O1 with the points along the load line. We will store these lines in Lal\_force.
 
 ```python
-import rhinoscriptsyntax as rs
+#1.b RESULTANT (FORCE DIAGRAM)
 
 #force diagram load line
 Lp_loadline=[]
 Lp_loadline.append(X)
 Ll_loadline=[]
-
 for i in range (0,len(Lv_load)):
     p=rs.CopyObject(X,Lv_load[i])
     l=rs.AddLine(X,p)
@@ -104,11 +99,7 @@ for i in range (0,len(Lp_loadline)):
 * Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.
 
 {% hint style="warning" %}
-If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads, there are three auxiliary lines in the force diagram. When we move these three auxiliary lines to the form diagram, as there are only two loads and therefore two lines of action, we will only move and intersect the first two auxiliary lines, while for the third auxiliary line we will only move it. To achieve this we will use a conditional within the loop.
-{% endhint %}
-
-{% hint style="warning" %}
-In the loops we created in the previous steps "i" was a number that we were using as the index to access items from a list. In this case however "i" are the actual items within Lal\_force. Because of this we can't write Ll\_LOA\[i]. In order to access the items within Ll\_LOA we will create an additional variable (a), we will say its initial value its 0 and at te end of the loop we will add +1 to it to allow us to access all the items.
+&#x20;If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads with two lines of action, there are three auxiliary lines in the force diagram. We now want to create a loop that **moves** and **intersects**, but we have three auxiliary lines and only two lines of action. With which line do we intersect the last auxiliary line? Let's go around this problem by simply adding again the last line of action in Ll\_LOA. We don't really need that last intersection point, but in this way we can use the loop for all three auxiliary lines.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -118,23 +109,17 @@ Notice that in the loop vector v is not always the same. The first vector v goes
 * Finally, we will intersect the first and last auxiliary line in the form diagram to find the point p\_R across which the vertical line of action of the resultant goes through.
 
 ```python
-import rhinoscriptsyntax as rs
+#1.c. RESULTANT (FORM DIAGRAM)
+
+Ll_LOA.append(Ll_LOA[-1])
 
 Lal_form=[]
-a=0
-for i in Lal_force:
-    if i != Lal_force[-1]:
-        v=rs.VectorCreate(p_right,O1)
-        al=rs.CopyObject(i,v)
-        ip=rs.LineLineIntersection(al,Ll_LOA[a])
-        Lal_form.append(al)
-        p_right=ip[0]
-        a=a+1
-    else:
-        p_right=ip[0]
-        v=rs.VectorCreate(p_right,O1)
-        al=rs.CopyObject(i,v)
-        Lal_form.append(al)
+for i in range (0,len(Lal_force)):
+    v=rs.VectorCreate(p_right,O1)
+    al=rs.CopyObject(Lal_force[i],v)
+    ip=rs.LineLineIntersection(al,Ll_LOA[i])
+    Lal_form.append(al)
+    p_right=ip[0]
 
 p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 ```
@@ -146,7 +131,6 @@ In this section we will create the following variables:
 
 * **sp\_left** (support point/left cliff)
 * **sp\_right** (support point/right cliff)
-* **O2** (this point defines the triangular polygon of forces of the global equilibrium)
 {% endhint %}
 
 In this section we will calculate the reaction forces at the supports. These are the steps:
@@ -156,7 +140,7 @@ In this section we will calculate the reaction forces at the supports. These are
 * Finally, we will move these lines from the form diagram to the force diagram and intersect them finding point O2 and closing the polygon of forces representing the global equilibrium of the structure.
 
 ```python
-import rhinoscriptsyntax as rs
+#2.SUPPORTS AND REACTIONS
 
 #creating lines of reaction forces in form diagram
 l1=rs.AddLine(p_R,sp_left)
@@ -178,17 +162,16 @@ O2=rs.LineLineIntersection(l1_m,l2_m)[0]
 In this section we will create the following lists:
 
 * **Ll\_int\_force** (List of lines/internal forces/force diagram)
-* **Ll\_int\_form** (List of lines/internal forces/form diagram)
 * **Lip\_form** (List of points of intersection/form diagram)
 {% endhint %}
 
-In this section we will construct the funicular. Thes are the steps:
+In this section we will construct the funicular. These are the steps:
 
 * First, we will create the lines of the internal forces in the force diagram (Ll\_int\_force) connecting O2 with Lp\_loadline.
 * Then, we will construct the geometry of the funicular in the form diagram using a loop. This process is basically the same as when we constructed the trial funicular in step 1.c.
 
 ```python
-import rhinoscriptsyntax as rs
+#3.INTERNAL FORCES
 
 #creating lines of internal forces in force diagram
 Ll_int_force=[]
@@ -197,23 +180,14 @@ for i in range (0,len(Lp_loadline)):
     Ll_int_force.append(l)
 
 #building form diagram of funicular
-Ll_int_form=[]
 Lip_form=[]
-a=0
-for i in Ll_int_force:
-    if i != Ll_int_force[-1]:
-        v=rs.VectorCreate(sp_right,O2)
-        l=rs.CopyObject(i,v)
-        ip=rs.LineLineIntersection(l,Ll_LOA[a])
-        Ll_int_form.append(l)
-        Lip_form.append(ip[0])
-        sp_right=ip[0]
-        a=a+1
-    else:
-        sp_right=ip[0]
-        v=rs.VectorCreate(sp_right,O2)
-        l=rs.CopyObject(i,v)
-        Ll_int_form.append(l)
+ap=sp_right
+for i in range (0,len(Ll_LOA)):
+    v=rs.VectorCreate(ap,O2)
+    l=rs.CopyObject(Ll_int_force[i],v)
+    ip=rs.LineLineIntersection(l,Ll_LOA[i])
+    Lip_form.append(ip[0])
+    ap=ip[0]
 ```
 
 ### 4. Data for visualization
@@ -232,7 +206,7 @@ In this section we will create the data for visualization according to the conve
 ![](../../.gitbook/assets/directions.jpg)
 
 ```python
-import rhinoscriptsyntax as rs
+#4.DATA FOR VISUALIZATION
 
 #data for visualization (force diagram)
 Ll_force=Ll_loadline+Ll_int_force
@@ -246,7 +220,7 @@ for i in range (0,len(Lip_form)):
 Lip_form.insert(0,sp_right)
 Lip_form.append(sp_left)
 Ll_form2=[]
-for i in range (0,len(Lip_form)-1):
+for i in range (0,len(Ll_int_force)):
     l=rs.AddLine(Lip_form[i+1],Lip_form[i])
     Ll_form2.append(l)
 
@@ -255,10 +229,31 @@ Ll_form=Ll_form1+Ll_form2
 
 ### 5&6. Sense, force magnitude and visualization
 
-Just like we did in module 2, we will copy\&paste "sense", "force magnitude" and "visualization" from the Grasshopper definition from module 1.
+Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
 
-![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (4).jpg>)
+```python
+#5&6. SENSE AND VISUALIZATION
+
+#check angle
+Langle=[]
+for i in range (0,len(Ll_form)):
+    angle=rs.Angle2(Ll_form[i],Ll_force[i])
+    Langle.append(round(angle[0]))
+
+#colors in force diagram and pipes in form diagram
+x=0.03
+Ll_force_ten=[]
+Ll_force_com=[]
+Lpi_ten=[]
+Lpi_com=[]
+for i in range (0,len(Ll_form)):
+    pi=rs.AddPipe(Ll_form[i],0,x*rs.CurveLength(Ll_force[i]),0,1)
+    if Langle[i] ==0:
+        Ll_force_ten.append(Ll_force[i])
+        Lpi_ten.append(pi[0])
+    else:
+        Ll_force_com.append(Ll_force[i])
+        Lpi_com.append(pi[0])
+```
 
 #### You made it! :) You can now explore the design space of your parametric model!
-
-{% file src="../../.gitbook/assets/gs_tutorial_procedural_II.zip" %}
