@@ -15,6 +15,10 @@ In this tutorial, you will:
 
 In the previous module we built a linear algorithm in Grasshopper for the form-finding of a two-dimensional funicular cable structure. To do this the steps we followed the same as when we build the funicular with paper and pencil: 1. Resultant, 2. Reactions and 3. Internal forces. We will now program using Python (within Grasshopper) the same algorithm following those same steps. This will allow you to learn the basics of linear programming and identify its main advantages over Grasshopper.
 
+{% hint style="info" %}
+You will find the Rhinoceros and Grasshopper files for this tutorial **here**.&#x20;
+{% endhint %}
+
 ### 1. Input loads and resultant
 
 {% hint style="info" %}
