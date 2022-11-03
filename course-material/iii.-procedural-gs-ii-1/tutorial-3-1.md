@@ -128,7 +128,7 @@ for i in range (0,len(Lal_force)):
 p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 ```
 
-### 2. Reactions
+### 2. Supports and reactions
 
 {% hint style="info" %}
 In this section we will create the following variables:
