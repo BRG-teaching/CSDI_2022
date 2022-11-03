@@ -109,7 +109,7 @@ Notice that in the loop vector v is not always the same. The first vector v goes
 * Finally, we will intersect the first and last auxiliary line in the form diagram to find the point p\_R across which the vertical line of action of the resultant goes through.
 
 ```python
-#1.c. RESULTANT (FORM DIAGRAM)
+#1.c RESULTANT (FORM DIAGRAM)
 
 Ll_LOA.append(Ll_LOA[-1])
 
@@ -140,7 +140,7 @@ In this section we will calculate the reaction forces at the supports. These are
 * Finally, we will move these lines from the form diagram to the force diagram and intersect them finding point O2 and closing the polygon of forces representing the global equilibrium of the structure.
 
 ```python
-#2.SUPPORTS AND REACTIONS
+#2. SUPPORTS AND REACTIONS
 
 #creating lines of reaction forces in form diagram
 l1=rs.AddLine(p_R,sp_left)
@@ -171,7 +171,7 @@ In this section we will construct the funicular. These are the steps:
 * Then, we will construct the geometry of the funicular in the form diagram using a loop. This process is basically the same as when we constructed the trial funicular in step 1.c.
 
 ```python
-#3.INTERNAL FORCES
+#3. INTERNAL FORCES
 
 #creating lines of internal forces in force diagram
 Ll_int_force=[]
@@ -206,7 +206,7 @@ In this section we will create the data for visualization according to the conve
 ![](../../.gitbook/assets/directions.jpg)
 
 ```python
-#4.DATA FOR VISUALIZATION
+#4. DATA FOR VISUALIZATION
 
 #data for visualization (force diagram)
 Ll_force=Ll_loadline+Ll_int_force
