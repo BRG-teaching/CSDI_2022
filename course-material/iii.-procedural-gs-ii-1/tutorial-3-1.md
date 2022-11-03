@@ -24,8 +24,6 @@ In the previous module we built a linear algorithm in Grasshopper for the form-f
 {% hint style="info" %}
 In this section we will create the following variables and lists:
 
-* **Lp\_anc\_in** (List of points/anchors/initial)
-* **Ln\_mag\_in** (List of numbers/magnitudes/initial)
 * **Lp\_anc** (List of points/anchors)
 * **Ln\_mag** (List of numbers/magnitudes)
 * **Lv\_load** (List of vectors/loads)
@@ -42,24 +40,15 @@ In this section we will create the following variables and lists:
 
 1.a In this step we will store all the necessary data regarding the input loads:
 
-* First, we will first store in two lists all the initial anchor points and magnitudes (Lp\_anc\_in and Ln\_mag\_in).
-* Then, we will create another two lists (Lp\_anc and Ln\_mag) where we will only store the anchor points and magnitudes if the magnitudes are different than zero.
+* First, we will first store in two lists the anchor points and magnitudes (Lp\_anc and Ln\_mag).
 * After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
 
 ```python
 import rhinoscriptsyntax as rs
 
 #input
-Lp_anc_in=[p1,p2]
-Ln_mag_in=[n1,n2]
-
-#store only the anchors and magnitudes if they are different than zero 
-Lp_anc=[]
-Ln_mag=[]
-for i in range (0,len(Ln_mag_in)):
-    if Ln_mag_in[i] !=0:
-        Lp_anc.append(Lp_anc_in[i])
-        Ln_mag.append(Ln_mag_in[i])
+Lp_anc=[p1,p2]
+Ln_mag=[n1,n2]
 
 #vector loads
 Lv_load=[]
