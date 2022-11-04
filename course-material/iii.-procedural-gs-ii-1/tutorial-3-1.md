@@ -23,6 +23,11 @@ You will find the Rhinoceros and Grasshopper files for this tutorial [**here**](
 
 <figure><img src="../../.gitbook/assets/drawings_1_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+In this step we will store all the necessary data regarding the input loads:
+
+* First, we will first store in two lists the anchor points and magnitudes (Lp\_anc and Ln\_mag).
+* After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
+
 {% hint style="info" %}
 Input**:**
 
@@ -31,16 +36,13 @@ Input**:**
 
 Output:
 
-* **Lp\_anc** (List of points/anchors)
-* **Ln\_mag** (List of numbers/magnitudes)
 * **Lv\_load** (List of vectors/loads)
 * **Ll\_LOA** (List of lines/lines of action)
+* **Lp\_anc** (List of points/anchors)
+* **Ln\_mag** (List of numbers/magnitudes)
 {% endhint %}
 
-In this step we will store all the necessary data regarding the input loads:
-
-* First, we will first store in two lists the anchor points and magnitudes (Lp\_anc and Ln\_mag).
-* After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
+****
 
 ```python
 #1.a INPUT LOADS
@@ -68,6 +70,17 @@ for i in range (0,len(Lp_anc)):
 
 <figure><img src="../../.gitbook/assets/drawings_2_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
+
+* First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).
+* Then, we will make a copy a X (p), move it according to the first vector in Lv\_load and create a line representing the external force (X to p). As we want to do the same for all the external loads we will need a loop.
+
+{% hint style="warning" %}
+In order to add the loads one after another we must update the value of the starting point (X) with that of the moved point in the previous iteration (p), so at the end of the loop we must write X=p. We will store the points along the load line (Lp\_loadline) as well as the lines representing the external loads (Ll\_loadline).
+{% endhint %}
+
+* After, we will define, also in Rhinoceros, the random pole O1 and we will create using a loop the auxiliary lines connecting O1 with the points along the load line. We will store these lines in Lal\_force.
+
 {% hint style="info" %}
 Input:
 
@@ -81,17 +94,6 @@ Output:
 * **Ll\_loadline** (List of lines/loadline)
 * **Lal\_force** (List of auxiliary lines/force diagram)
 {% endhint %}
-
-We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
-
-* First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).
-* Then, we will make a copy a X (p), move it according to the first vector in Lv\_load and create a line representing the external force (X to p). As we want to do the same for all the external loads we will need a loop.
-
-{% hint style="warning" %}
-In order to add the loads one after another we must update the value of the starting point (X) with that of the moved point in the previous iteration (p), so at the end of the loop we must write X=p. We will store the points along the load line (Lp\_loadline) as well as the lines representing the external loads (Ll\_loadline).
-{% endhint %}
-
-* After, we will define, also in Rhinoceros, the random pole O1 and we will create using a loop the auxiliary lines connecting O1 with the points along the load line. We will store these lines in Lal\_force.
 
 ```python
 #1.b RESULTANT (FORCE DIAGRAM)
@@ -118,19 +120,6 @@ for i in range (0,len(Lp_loadline)):
 
 <figure><img src="../../.gitbook/assets/drawings_3_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-Input:
-
-* **p\_right** (point/right cliff)
-* **O1** (random pole to find resultant
-* **Ll\_LOA** (List of lines/lines of action)
-* **Lal\_force** (List of auxiliary lines/force diagram)
-
-Output:
-
-* **p\_R** (point/resultant)
-{% endhint %}
-
 We will continue the construction of the resultant in the form diagram. These are the steps:
 
 * First, we will define a point a long the curve of the right cliff (p\_right). We will do this in Grasshopper as the component "Point On Curve" makes it very easy.
@@ -145,6 +134,19 @@ Notice that in the loop vector v is not always the same. The first vector v goes
 {% endhint %}
 
 * Finally, we will intersect the first and last auxiliary line in the form diagram to find the point p\_R across which the vertical line of action of the resultant goes through.
+
+{% hint style="info" %}
+Input:
+
+* **p\_right** (point/right cliff)
+* **O1** (random pole to find resultant
+* **Ll\_LOA** (List of lines/lines of action)
+* **Lal\_force** (List of auxiliary lines/force diagram)
+
+Output:
+
+* **p\_R** (point/resultant)
+{% endhint %}
 
 ```python
 #1.c RESULTANT (FORM DIAGRAM)
@@ -166,6 +168,12 @@ p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 
 <figure><img src="../../.gitbook/assets/drawings_4_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+In this section we will calculate the reaction forces at the supports. These are the steps:
+
+* First, we will define the position of the supports (sp\_left and sp\_right) along the curves of the cliffs using once again the Grasshopper component "Point On Curve".
+* Then, we will create two lines in the form diagram connecting the supports with the anchor of the resultant (p\_R).
+* Finally, we will move these lines from the form diagram to the force diagram and intersect them finding point O2 and closing the polygon of forces representing the global equilibrium of the structure.
+
 {% hint style="info" %}
 Input:
 
@@ -178,12 +186,6 @@ Output:
 
 * **O2** (point to create the global equilibrium polygon)
 {% endhint %}
-
-In this section we will calculate the reaction forces at the supports. These are the steps:
-
-* First, we will define the position of the supports (sp\_left and sp\_right) along the curves of the cliffs using once again the Grasshopper component "Point On Curve".
-* Then, we will create two lines in the form diagram connecting the supports with the anchor of the resultant (p\_R).
-* Finally, we will move these lines from the form diagram to the force diagram and intersect them finding point O2 and closing the polygon of forces representing the global equilibrium of the structure.
 
 ```python
 #2. SUPPORTS AND REACTIONS
@@ -206,6 +208,11 @@ O2=rs.LineLineIntersection(l1_m,l2_m)[0]
 
 <figure><img src="../../.gitbook/assets/drawings_5_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+In this section we will construct the funicular. These are the steps:
+
+* First, we will create the lines of the internal forces in the force diagram (Ll\_int\_force) connecting O2 with Lp\_loadline.
+* Then, we will construct the geometry of the funicular in the form diagram using a loop. This process is basically the same as when we constructed the trial funicular in step 1.c.
+
 {% hint style="info" %}
 Input:
 
@@ -219,11 +226,6 @@ Output:
 * **Ll\_int\_force** (List of lines/internal forces/force diagram)
 * **Lip\_form** (List of points of intersection/form diagram)
 {% endhint %}
-
-In this section we will construct the funicular. These are the steps:
-
-* First, we will create the lines of the internal forces in the force diagram (Ll\_int\_force) connecting O2 with Lp\_loadline.
-* Then, we will construct the geometry of the funicular in the form diagram using a loop. This process is basically the same as when we constructed the trial funicular in step 1.c.
 
 ```python
 #3. INTERNAL FORCES
@@ -249,7 +251,9 @@ for i in range (0,len(Ll_LOA)):
 
 <figure><img src="../../.gitbook/assets/drawings_6_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+In this section we will create the data for visualization according to the convention shown below, just like we did in modules 1 and 2.
 
+![](../../.gitbook/assets/directions.jpg)
 
 {% hint style="info" %}
 Input:
@@ -266,10 +270,6 @@ Output:
 * **Ll\_force** (List of lines/force diagram)
 * **Ll\_form** (List of lines/form diagram)
 {% endhint %}
-
-In this section we will create the data for visualization according to the convention shown below, just like we did in modules 1 and 2.
-
-![](../../.gitbook/assets/directions.jpg)
 
 ```python
 #4. DATA FOR VISUALIZATION
@@ -297,6 +297,8 @@ Ll_form=Ll_form1+Ll_form2
 
 <figure><img src="../../.gitbook/assets/drawings_7_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
+
 {% hint style="info" %}
 Input:
 
@@ -310,10 +312,6 @@ Output:
 * **Lpi\_ten** (List of pipes/tension)
 * **Lpi\_com** (List of pipes/compression)
 {% endhint %}
-
-
-
-Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
 
 ```python
 #5&6. SENSE AND VISUALIZATION
