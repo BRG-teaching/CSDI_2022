@@ -21,6 +21,8 @@ You will find the Rhinoceros and Grasshopper files for this tutorial [**here**](
 
 ### 1. Input loads and resultant
 
+<figure><img src="../../.gitbook/assets/drawings_1_no-titles.jpg" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 In this section we will create the following variables and lists:
 
@@ -65,6 +67,8 @@ for i in range (0,len(Lp_anc)):
     Ll_LOA.append(LOA)
 ```
 
+<figure><img src="../../.gitbook/assets/drawings_2_no-titles.jpg" alt=""><figcaption></figcaption></figure>
+
 1.b We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
 
 * First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).
@@ -96,6 +100,8 @@ for i in range (0,len(Lp_loadline)):
     al=rs.AddLine(O1,Lp_loadline[i])
     Lal_force.append(al)
 ```
+
+<figure><img src="../../.gitbook/assets/drawings_3_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 1.c And we will continue the construction of the resultant in the form diagram. These are the steps:
 
@@ -130,6 +136,8 @@ p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 
 ### 2. Supports and reactions
 
+<figure><img src="../../.gitbook/assets/drawings_4_no-titles.jpg" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 In this section we will create the following variables:
 
@@ -161,6 +169,8 @@ O2=rs.LineLineIntersection(l1_m,l2_m)[0]
 ```
 
 ### 3. Internal forces
+
+<figure><img src="../../.gitbook/assets/drawings_5_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 In this section we will create the following lists:
@@ -195,6 +205,8 @@ for i in range (0,len(Ll_LOA)):
 ```
 
 ### 4. Data for visualization
+
+<figure><img src="../../.gitbook/assets/drawings_6_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 In this section we will create the following lists:
@@ -232,6 +244,8 @@ Ll_form=Ll_form1+Ll_form2
 ```
 
 ### 5&6. Sense, force magnitude and visualization
+
+<figure><img src="../../.gitbook/assets/drawings_7_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
 
