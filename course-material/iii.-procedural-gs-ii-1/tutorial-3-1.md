@@ -36,10 +36,9 @@ Input**:**
 
 Output:
 
+* **Lp\_anc** (List of points/anchors)
 * **Lv\_load** (List of vectors/loads)
 * **Ll\_LOA** (List of lines/lines of action)
-* **Lp\_anc** (List of points/anchors)
-* **Ln\_mag** (List of numbers/magnitudes)
 {% endhint %}
 
 ```python
