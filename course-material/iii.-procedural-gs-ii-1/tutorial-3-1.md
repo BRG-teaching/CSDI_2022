@@ -19,28 +19,20 @@ In the previous module we built a linear algorithm in Grasshopper for the form-f
 You will find the Rhinoceros and Grasshopper files for this tutorial [**here**](./#files).&#x20;
 {% endhint %}
 
-### 1. Input loads and resultant
+### 1.a Input loads
 
 <figure><img src="../../.gitbook/assets/drawings_1_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-In this section we will create the following variables and lists:
+In this step we will create the following lists:
 
 * **Lp\_anc** (List of points/anchors)
 * **Ln\_mag** (List of numbers/magnitudes)
 * **Lv\_load** (List of vectors/loads)
 * **Ll\_LOA** (List of lines/lines of action)
-* **X** (first point load line in force diagram)
-* **O1** (random pole to find resultant)
-* **Lp\_loadline** (List of points/loadline)
-* **Ll\_loadline** (List of lines/loadline)
-* **Lal\_force** (List of auxiliary lines/force diagram)
-* **p\_right** (point/right cliff)
-* **Lal\_form** (List of auxiliary lines/form diagram)
-* **p\_R** (point/resultant)
 {% endhint %}
 
-1.a In this step we will store all the necessary data regarding the input loads:
+In this step we will store all the necessary data regarding the input loads:
 
 * First, we will first store in two lists the anchor points and magnitudes (Lp\_anc and Ln\_mag).
 * After, we we will create a vector (v) and a line of action (LOA) for each of the loads and we will store these in lists (Lv\_load and Ll\_LOA).
@@ -67,9 +59,24 @@ for i in range (0,len(Lp_anc)):
     Ll_LOA.append(LOA)
 ```
 
+### 1.b Resultant (force diagram)
+
 <figure><img src="../../.gitbook/assets/drawings_2_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
-1.b We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
+{% hint style="info" %}
+Variables used in this step:
+
+* **X** (first point load line in force diagram)
+* **O1** (random pole to find resultant)
+
+Lists created in this step:
+
+* **Lp\_loadline** (List of points/loadline)
+* **Ll\_loadline** (List of lines/loadline)
+* **Lal\_force** (List of auxiliary lines/force diagram)
+{% endhint %}
+
+We now want to find out the position of the resultant in the form diagram using the trial funicular. To do this, we will build the force diagram. These are the steps:
 
 * First, we will create the load line of the force diagram using as a starting point one point from Rhinoceros (X) and we will already store this first point in a list (Lp\_loadline).
 * Then, we will make a copy a X (p), move it according to the first vector in Lv\_load and create a line representing the external force (X to p). As we want to do the same for all the external loads we will need a loop.
@@ -101,9 +108,11 @@ for i in range (0,len(Lp_loadline)):
     Lal_force.append(al)
 ```
 
+### 1.c Resultant (force diagram)
+
 <figure><img src="../../.gitbook/assets/drawings_3_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
-1.c And we will continue the construction of the resultant in the form diagram. These are the steps:
+We will continue the construction of the resultant in the form diagram. These are the steps:
 
 * First, we will define a point a long the curve of the right cliff (p\_right). We will do this in Grasshopper as the component "Point On Curve" makes it very easy.
 * Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.
