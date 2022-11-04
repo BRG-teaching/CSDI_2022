@@ -295,7 +295,7 @@ Ll_form=Ll_form1+Ll_form2
 
 <figure><img src="../../.gitbook/assets/drawings_7_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
-Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
+Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by comparing the angle between corresponding lines in form/force diagrams.&#x20;
 
 {% hint style="info" %}
 Input:
