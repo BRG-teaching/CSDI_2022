@@ -122,10 +122,12 @@ for i in range (0,len(Lp_loadline)):
 Input:
 
 * **p\_right** (point/right cliff)
+* **O1** (random pole to find resultant
+* **Ll\_LOA** (List of lines/lines of action)
+* **Lal\_force** (List of auxiliary lines/force diagram)
 
 Output:
 
-* **Lal\_form** (List of auxiliary lines/form diagram)
 * **p\_R** (point/resultant)
 {% endhint %}
 
@@ -205,7 +207,14 @@ O2=rs.LineLineIntersection(l1_m,l2_m)[0]
 <figure><img src="../../.gitbook/assets/drawings_5_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-In this section we will create the following lists:
+Input:
+
+* **O2** (point to create the global equilibrium polygon)
+* **Lp\_loadline** (List of points/loadline)
+* **sp\_right** (support point/right cliff)
+* **Ll\_LOA** (List of lines/lines of action)
+
+Output:
 
 * **Ll\_int\_force** (List of lines/internal forces/force diagram)
 * **Lip\_form** (List of points of intersection/form diagram)
@@ -240,12 +249,21 @@ for i in range (0,len(Ll_LOA)):
 
 <figure><img src="../../.gitbook/assets/drawings_6_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
+
+
 {% hint style="info" %}
-In this section we will create the following lists:
+Input:
+
+* **Lp\_anc** (List of points/anchors)
+* **Ll\_loadline** (List of lines/loadline)
+* **sp\_left** (support point/left cliff)
+* **sp\_right** (support point/right cliff)
+* **Ll\_int\_force** (List of lines/internal forces/force diagram)
+* **Lip\_form** (List of points of intersection/form diagram)
+
+Output:
 
 * **Ll\_force** (List of lines/force diagram)
-* **Ll\_form1** (List of lines/form diagram/the verticals)
-* **Ll\_form2** (List of lines/form diagram/the actual funicular)
 * **Ll\_form** (List of lines/form diagram)
 {% endhint %}
 
@@ -278,6 +296,22 @@ Ll_form=Ll_form1+Ll_form2
 ### 5&6. Sense, force magnitude and visualization
 
 <figure><img src="../../.gitbook/assets/drawings_7_no-titles.jpg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Input:
+
+* **Ll\_force** (List of lines/force diagram)
+* **Ll\_form** (List of lines/form diagram)
+
+Output:
+
+* **Ll\_force\_ten** (List of lines/force diagram/tension)
+* **Ll\_force\_com** (List of lines/force diagram/compression)
+* **Lpi\_ten** (List of pipes/tension)
+* **Lpi\_com** (List of pipes/compression)
+{% endhint %}
+
+
 
 Just like we did in the previous module, we will find out whether the internal forces are in tension or compression by measuring the angle between corresponding lines in form/force diagrams.&#x20;
 
