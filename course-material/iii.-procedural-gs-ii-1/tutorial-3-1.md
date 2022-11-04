@@ -165,10 +165,16 @@ p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
 <figure><img src="../../.gitbook/assets/drawings_4_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-In this section we will create the following variables:
+Input:
 
 * **sp\_left** (support point/left cliff)
 * **sp\_right** (support point/right cliff)
+* **p\_R** (point/resultant)
+* **Lp\_loadline** (List of points/loadline)
+
+Output:
+
+* **O2** (point to create the global equilibrium polygon)
 {% endhint %}
 
 In this section we will calculate the reaction forces at the supports. These are the steps:
