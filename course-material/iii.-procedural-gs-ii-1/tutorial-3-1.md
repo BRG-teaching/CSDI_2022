@@ -42,8 +42,6 @@ Output:
 * **Ln\_mag** (List of numbers/magnitudes)
 {% endhint %}
 
-****
-
 ```python
 #1.a INPUT LOADS
 
