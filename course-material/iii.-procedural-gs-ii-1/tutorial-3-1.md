@@ -24,7 +24,12 @@ You will find the Rhinoceros and Grasshopper files for this tutorial [**here**](
 <figure><img src="../../.gitbook/assets/drawings_1_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-In this step we will create the following lists:
+Input**:**
+
+* **p1** and **p2** (anchor points)
+* **n1** and **n2** (magnitudes)
+
+Output:
 
 * **Lp\_anc** (List of points/anchors)
 * **Ln\_mag** (List of numbers/magnitudes)
@@ -64,12 +69,13 @@ for i in range (0,len(Lp_anc)):
 <figure><img src="../../.gitbook/assets/drawings_2_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Variables used in this step:
+Input:
 
+* **Lv\_load** (List of vectors/loads)
 * **X** (first point load line in force diagram)
 * **O1** (random pole to find resultant)
 
-Lists created in this step:
+Output:
 
 * **Lp\_loadline** (List of points/loadline)
 * **Ll\_loadline** (List of lines/loadline)
@@ -111,6 +117,17 @@ for i in range (0,len(Lp_loadline)):
 ### 1.c Resultant (force diagram)
 
 <figure><img src="../../.gitbook/assets/drawings_3_no-titles.jpg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Input:
+
+* **p\_right** (point/right cliff)
+
+Output:
+
+* **Lal\_form** (List of auxiliary lines/form diagram)
+* **p\_R** (point/resultant)
+{% endhint %}
 
 We will continue the construction of the resultant in the form diagram. These are the steps:
 
