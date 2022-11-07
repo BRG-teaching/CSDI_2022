@@ -23,6 +23,7 @@
   * [Lecture](course-material/iii.-procedural-gs-ii/lecture-3.md)
   * [Tutorial](course-material/iii.-procedural-gs-ii/tutorial-3.md)
   * [Exercise](course-material/iii.-procedural-gs-ii/exercise-3.md)
+  * [Solution](course-material/iii.-procedural-gs-ii/solution.md)
 * [III. Programming GS](course-material/iii.-procedural-gs-ii-1/README.md)
   * [Tutorial 1](course-material/iii.-procedural-gs-ii-1/tutorial-3.md)
   * [Tutorial 2](course-material/iii.-procedural-gs-ii-1/tutorial-3-1.md)
