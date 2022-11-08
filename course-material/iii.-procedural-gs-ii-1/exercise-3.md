@@ -18,17 +18,23 @@ Complete the following five tasks.
 
 
 
-### 1. Ten external loads
+### 1. Add many external loads
 
-### 2. Change of rise
+
+
+### 2. Modify the rise
+
+
+
+### 3. Fixed horizontal thrust
+
+
+
+### 4. Display a moving asymmetric load
 
 ###
 
-### 3. Asymmetric load
-
-
-
-### 4. New design
+### 5. New design
 
 
 
