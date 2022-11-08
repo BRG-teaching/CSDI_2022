@@ -14,23 +14,37 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Tasks
 
-Complete the following five tasks.
+Complete the following five tasks.&#x20;
 
-### 1. External loads
+{% hint style="info" %}
+
+{% endhint %}
+
+### 1. Add loads
 
 Add multiple external loads to the current algorithm.
 
-### 2. Horizontal thrust
+### 2. "Zero" loads
 
-Constrain the design space to those funiculars in compression whose horizontal thrust is smaller or equal to 15 kN. &#x20;
+The current algorithm crashes when the external loads have zero magnitude. Modify the algorithm so that when an external load has zero magnitude that load is not considered during the form-finding process.&#x20;
+
+{% hint style="info" %}
+Use the solution from Task 1 as a base to solve this task.&#x20;
+{% endhint %}
 
 ### 3. Asymmetric load
 
-Display an asymmetric load as if a group of people would be crossing the bridge.&#x20;
+A large group of people is crossing together the bridge. Add to the algorithm this asymmetric load and display it as if it would be moving from one anchor point to the other as shown in the video below. &#x20;
 
 {% hint style="info" %}
 Hint: use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
 {% endhint %}
+
+### 4. Horizontal thrust
+
+Constrain the design space to those funiculars in compression whose horizontal thrust is smaller or equal to 15 kN.
+
+###
 
 ### 4. Compact program
 
