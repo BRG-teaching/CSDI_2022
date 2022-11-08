@@ -18,6 +18,16 @@ Complete the following five tasks.
 
 
 
+### 1. Add ten external loads
+
+
+
+### 2. Change rise using the force diagram
+
+
+
+
+
 
 
 
