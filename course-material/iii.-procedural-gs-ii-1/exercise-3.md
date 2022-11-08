@@ -16,27 +16,33 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 Complete the following five tasks.
 
+### 1. External loads
+
+Add multiple external loads to the current algorithm.
+
+### 2. Rise
+
+Just like you did in the exercise from module II, modify the rise of the funicular using the force diagram.
+
+### 3. Horizontal thrust
+
+Constrain the design space to those funiculars in compression whose horizontal thrust is no larger than 15 kN. &#x20;
+
+### 4. Asymmetric load
+
+Display a changing asymmetric load as if a truck would be crossing the bridge. Use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
+
+### 5. Compact program
 
 
-### 1. Add multiple external loads
 
+### 6. Program a new design
 
+Using the tutorial algorithm as a base, reproduce the algorithm of the structure below.&#x20;
 
-### 2. Modify the rise
-
-
-
-### 3. Fix the horizontal thrust
-
-
-
-### 4. Display a moving asymmetric load
-
-
-
-### 5. Create a new design
-
-
+{% hint style="info" %}
+Hint: use twice the Python&#x20;
+{% endhint %}
 
 
 
