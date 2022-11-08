@@ -18,7 +18,7 @@ Complete the following five tasks.
 
 
 
-### 1. Add many external loads
+### 1. Add multiple external loads
 
 
 
@@ -26,15 +26,15 @@ Complete the following five tasks.
 
 
 
-### 3. Fixed horizontal thrust
+### 3. Fix the horizontal thrust
 
 
 
 ### 4. Display a moving asymmetric load
 
-###
 
-### 5. New design
+
+### 5. Create a new design
 
 
 
