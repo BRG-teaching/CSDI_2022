@@ -18,11 +18,21 @@ Complete the following five tasks.
 
 
 
-### 1. Add ten external loads
+### 1. Ten external loads
+
+### 2. Change of rise
+
+###
+
+### 3. Asymmetric load
 
 
 
-### 2. Change rise using the force diagram
+### 4. New design
+
+
+
+
 
 
 
