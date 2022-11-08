@@ -17,7 +17,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 Complete the following five tasks.&#x20;
 
 {% hint style="info" %}
-
+Use the Grasshopper file from the tutorial and the new Rhinoceros files as a base to solve this exercise. Then, answer the questions in the docx file. You will find all these files [**here**](../iii.-procedural-gs-ii/#files).&#x20;
 {% endhint %}
 
 ### 1. Add loads
