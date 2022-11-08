@@ -26,7 +26,11 @@ Constrain the design space to those funiculars in compression whose horizontal t
 
 ### 3. Asymmetric load
 
-Display a changing asymmetric load as if a truck would be crossing the bridge. Use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
+Display an asymmetric load as if a group of people would be crossing the bridge.&#x20;
+
+{% hint style="info" %}
+Hint: use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
+{% endhint %}
 
 ### 4. Compact program
 
