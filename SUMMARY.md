@@ -29,7 +29,7 @@
   * [Tutorial 2](course-material/iii.-procedural-gs-ii-1/tutorial-3-1.md)
   * [Exercise 1](course-material/iii.-procedural-gs-ii-1/exercise-1.md)
   * [Exercise 2](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
-* [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
+* [IV. Algebraic GS](course-material/iv.-algebraic-gs/tutorial-4/README.md)
   * [Tutorial1](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
   * [Tutorial2](course-material/iv.-algebraic-gs/tutorial-4/1_analysis.md)
   * [Tutorial3](course-material/iv.-algebraic-gs/tutorial-4/2_form_finding.md)
