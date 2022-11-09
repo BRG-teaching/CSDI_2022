@@ -2,7 +2,7 @@
 
 ## Motivation for Algebraic Graphic Statics
 
-The two initial topics of our course ([Procedural GS I](../../ii.-procedural-gs-i) and [Procedural GS II](../../iii.-procedural-gs-ii)) showed that graphic statics can be a powerful tool in architecture, allowing the exploration of different forms in equilibrium by modifying two diagrams: **form** (representing the frame structure) and **force** (representing the equilibrium on the nodes). By following procedural rules one the equilibrium can be verified and the force diagram is drawn.
+Procedure graphic statics has shown us that graphic statics can be a powerful tool in architecture, allowing the exploration of different forms in equilibrium by modifying two diagrams: **form** (representing the frame structure) and **force** (representing the equilibrium on the nodes). By following procedural rules one the equilibrium can be verified and the force diagram is drawn.
 
 ![Fibure 1: Procedure vs. Algebraic Graphic statics construction](<../../../.gitbook/assets/image (140).png>)
 
