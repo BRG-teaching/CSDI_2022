@@ -26,6 +26,9 @@
 * [III. Programming GS](course-material/iii.-procedural-gs-ii-1/README.md)
   * [Tutorial](course-material/iii.-procedural-gs-ii-1/tutorial-3.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
+  * [Tutorial1](course-material/iii.-algebraic/intro_ags.md)
+  * [Tutorial2](course-material/iii.-algebraic/1_analysis.md)
+  * [Tutorial3](course-material/iii.-algebraic/2_form_finding.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
 
 ## appendix
