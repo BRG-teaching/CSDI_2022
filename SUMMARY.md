@@ -16,7 +16,7 @@
   * [Solution](course-material/i.-introduction/exercise-1-1.md)
 * [I. Procedural GS I](course-material/ii.-procedural-gs-i/README.md)
   * [Lecture](course-material/ii.-procedural-gs-i/lecture-2.md)
-  * [Tutorial](course-material/ii.-procedural-gs-i/tutorial-2.md)
+  * [Tutorial](course-material/ii.-procedural-gs-i/tutorial-2.md)s
   * [Exercise](course-material/ii.-procedural-gs-i/exercise-2.md)
   * [Solution](course-material/ii.-procedural-gs-i/exercise-2-1.md)
 * [II. Procedural GS II](course-material/iii.-procedural-gs-ii/README.md)
@@ -30,9 +30,9 @@
   * [Exercise 1](course-material/iii.-procedural-gs-ii-1/exercise-1.md)
   * [Exercise 2](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
-  * [Tutorial1](course-material/iv.-algebraic-gs/intro_ags.md)
-  * [Tutorial2](course-material/iv.-algebraic-gs/1_analysis.md)
-  * [Tutorial3](course-material/iv.-algebraic-gs/2_form_finding.md)
+  * [Tutorial1](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
+  * [Tutorial2](course-material/iv.-algebraic-gs/tutorial-4/1_analysis.md)
+  * [Tutorial3](course-material/iv.-algebraic-gs/tutorial-4/2_form_finding.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
 
 ## appendix
