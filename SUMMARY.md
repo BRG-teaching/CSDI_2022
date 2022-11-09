@@ -4,7 +4,7 @@
 * [Syllabus](syllabus.md)
 * [Instructors](instructors.md)
 * [Tools](tools/README.md)
-  * [Anaconda](tools/anaconda.md)
+  * [Anaconda 3](tools/anaconda.md)
 * [Cite](cite.md)
 
 ## course material
@@ -23,8 +23,12 @@
   * [Lecture](course-material/iii.-procedural-gs-ii/lecture-3.md)
   * [Tutorial](course-material/iii.-procedural-gs-ii/tutorial-3.md)
   * [Exercise](course-material/iii.-procedural-gs-ii/exercise-3.md)
+  * [Solution](course-material/iii.-procedural-gs-ii/solution.md)
 * [III. Programming GS](course-material/iii.-procedural-gs-ii-1/README.md)
-  * [Tutorial](course-material/iii.-procedural-gs-ii-1/tutorial-3.md)
+  * [Tutorial 1](course-material/iii.-procedural-gs-ii-1/tutorial-3.md)
+  * [Tutorial 2](course-material/iii.-procedural-gs-ii-1/tutorial-3-1.md)
+  * [Exercise 1](course-material/iii.-procedural-gs-ii-1/exercise-1.md)
+  * [Exercise 2](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/README.md)
   * [Tutorial1](course-material/iii.-algebraic/intro_ags.md)
   * [Tutorial2](course-material/iii.-algebraic/1_analysis.md)
