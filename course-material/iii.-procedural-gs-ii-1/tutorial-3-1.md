@@ -148,6 +148,7 @@ Output:
 ```python
 #1.c RESULTANT (FORM DIAGRAM)
 
+#add duplicate of last LOA
 Ll_LOA.append(Ll_LOA[-1])
 
 Lal_form=[]
@@ -158,7 +159,17 @@ for i in range (0,len(Lal_force)):
     Lal_form.append(al)
     p_right=ip[0]
 
-p_R=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
+ip=rs.LineLineIntersection(Lal_form[0],Lal_form[-1])[0]
+
+#creating the line of action of the resultant
+LOA_R=rs.AddLine([ip[0],-1000,0],[ip[0],1000,0])
+Lp_LOA_R=rs.DivideCurve(LOA_R,1000)
+
+#choosing the anchor point of the resultant
+p_R=Lp_LOA_R[int(z)]
+
+#remove duplicate of last LOA
+del Ll_LOA[-1]
 ```
 
 ### 2. Supports and reactions
