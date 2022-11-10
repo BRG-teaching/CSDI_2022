@@ -121,6 +121,7 @@ We will continue the construction of the resultant in the form diagram. These ar
 
 * First, we will define a point a long the curve of the right cliff (p\_right). We will do this in Grasshopper as the component "Point On Curve" makes it very easy.
 * Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.
+* Finally, we will create a line in the form diagram representing the line of action of the resultant. And we will choose the anchor point of the resultant using a variable from Grasshopper.&#x20;
 
 {% hint style="warning" %}
 &#x20;If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads with two lines of action, there are three auxiliary lines in the force diagram. We now want to create a loop that **moves** and **intersects**, but we have three auxiliary lines and only two lines of action. With which line do we intersect the last auxiliary line? Let's go around this problem by simply adding to Ll\_LOA a duplicate of the last line of action in Ll\_LOA and at the end of this part we will delete this.
