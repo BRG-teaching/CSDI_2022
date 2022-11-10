@@ -113,7 +113,7 @@ for i in range (0,len(Lp_loadline)):
     Lal_force.append(al)
 ```
 
-### 1.c Resultant (force diagram)
+### 1.c Resultant (form diagram)
 
 <figure><img src="../../.gitbook/assets/drawings_3_no-titles.jpg" alt=""><figcaption></figcaption></figure>
 
@@ -123,7 +123,7 @@ We will continue the construction of the resultant in the form diagram. These ar
 * Then, we will copy the auxiliary lines of the force diagram, move them to the form diagram and intersect them with the lines of action of the external loads. In order to repeat these actions we will create a loop.
 
 {% hint style="warning" %}
-&#x20;If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads with two lines of action, there are three auxiliary lines in the force diagram. We now want to create a loop that **moves** and **intersects**, but we have three auxiliary lines and only two lines of action. With which line do we intersect the last auxiliary line? Let's go around this problem by simply adding again the last line of action in Ll\_LOA. We don't really need that last intersection point, but in this way we can use the loop for all three auxiliary lines.
+&#x20;If you construct the resultant by hand, as shown in the tutorial of module 2, you will see that when a structure has two external loads with two lines of action, there are three auxiliary lines in the force diagram. We now want to create a loop that **moves** and **intersects**, but we have three auxiliary lines and only two lines of action. With which line do we intersect the last auxiliary line? Let's go around this problem by simply adding to Ll\_LOA a duplicate of the last line of action in Ll\_LOA and at the end of this part we will delete this.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -136,9 +136,10 @@ Notice that in the loop vector v is not always the same. The first vector v goes
 Input:
 
 * **p\_right** (point/right cliff)
-* **O1** (random pole to find resultant
+* **O1** (random pole to find resultant)
 * **Ll\_LOA** (List of lines/lines of action)
 * **Lal\_force** (List of auxiliary lines/force diagram)
+* **z** (number/selecting anchor point of the resultant)
 
 Output:
 
