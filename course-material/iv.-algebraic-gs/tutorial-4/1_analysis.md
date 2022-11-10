@@ -1,10 +1,11 @@
-# Tutorial 1
+# Tutorial
 
-## Analysis with IGS
+## Learning Goals
 
 
 
-In this tutorial you will learn how to analysize **two-dimensional frame structures** with graphic statics.
+* &#x20;analysize 2-dimensional truss structures with algebraic graphic statics
+* form-find furnicular and arch-cable structures with restrained algebraic graphic statics
 
 
 
