@@ -36,6 +36,8 @@ Use the solution from Task 1 as a base to solve this task.&#x20;
 
 A large group of people is crossing together the bridge. Add to the algorithm this asymmetric load and display it as if it would be moving from one anchor point to the other as shown in the video below. &#x20;
 
+{% embed url="https://vimeo.com/769584331" %}
+
 {% hint style="info" %}
 Use the solution from Task 2 as a base to solve this task.&#x20;
 {% endhint %}
@@ -65,6 +67,8 @@ Use the solution from Tasks 2 as a base to solve this task.
 ### 6. Golden Gate bridge
 
 Using the algorithm from Task 5 as a base, create the structure below.&#x20;
+
+{% embed url="https://vimeo.com/769584393" %}
 
 {% hint style="success" %}
 Hints:&#x20;
