@@ -52,10 +52,16 @@ Hints:
 
 ### 4. Constrain the force diagram
 
-Constrain the design space to those funiculars in compression whose horizontal thrust is smaller or equal to 50 kN.
+Constrain the design space to those funiculars in compression whose horizontal thrust is equal to 50 kN.
 
 {% hint style="info" %}
 Use the solution from Tasks 2 as a base to solve this task.&#x20;
+{% endhint %}
+
+{% hint style="success" %}
+Hint:&#x20;
+
+* Use the closing string to find the new position of O2 in the force diagram that fulfills both constraints.&#x20;
 {% endhint %}
 
 ### 5. Compact algorithm
