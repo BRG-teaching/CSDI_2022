@@ -30,6 +30,16 @@ Given the following list L1=\[\[3,4],\[5,3,4,5,1],\[0,3,-2,3],\[0,7],\[6,-6,1],\
 * a new list (L3) only with the lists from L1 that have 3 or more items and whose items add up to 5 or more.&#x20;
 * a new list (L4) only with the lists from L1 that have 3 or more items and whose items add up to less than 5.&#x20;
 
+{% hint style="info" %}
+Use the sum() function to add all the items from a list. For example:&#x20;
+
+L=\[3,4,-4]&#x20;
+
+print sum (L)
+
+Output: 3
+{% endhint %}
+
 
 
 
