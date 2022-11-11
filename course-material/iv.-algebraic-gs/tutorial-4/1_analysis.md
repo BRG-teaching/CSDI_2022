@@ -86,70 +86,41 @@ After setting the loads we can compute the equilibrium by calculating the force 
 
 ![](../../../.gitbook/assets/truss_force.png)
 
+The sum of external forces are `10 * 5 = 50 kN`. Turn on the hidden Rhino layer `Tutorial >> Guides`, you will find a 5m*5m box. Now scale the force diagram so that 1m represents 10kN. The scale and location of the diagram can be set in the **IGS Menu** (not IGS Toolbar) on `Display` > `ForceDiagram location` / `ForceDiagram scale` as shown in the Fig_XXX. 
 
-The scale and location of the diagram can be set in the IGS Menu on `Display` > `ForceDiagram location` / `ForceDiagram scale` as shown in the image below. By using these you can position the force diagram in the box indicated.
+![](../../../.gitbook/assets/truss_scale_pipe.png)
 
-![](../../../.gitbook/assets/truss_scale.png)
-
-Once the diagram is placed in the required location and scale, the maximum force in one edge can be easily calculated using the `inspector`, which is 45 kN and given the scale used 0.2 the edge in the force diagram has real length`L=45x0.2 = 9.0`
-
-![](<../../../.gitbook/assets/image (38).png>)
-
-#### 6. Exploring sturctural geometry
+#### 2.3 Modification of Form Diagram
 
 Geometric modifications, such as dragging nodes in the form diagram can be executed with the button `Move FormDiagram Nodes`. Once one modification is performed, the form diagram can be updated by pressing the button `Update ForceDiagram from FormDiagram`.
 
-One example of modification is done below: we move up one of the nodes of the structure, and as a result, a large force is attracted to the edge connected to it. This higher magnitude can be seen due to the increased size shown by it in the force diagram. The force magnitude rises from initially 7.1 kN to 37.9 kN.
+One example of modification is done below: we move up one of the nodes of the structure, and as a result, a large force is attracted to the edge connected to it. This higher magnitude can be seen due to the increased size shown by it in the force diagram(Fig_XXX). 
 
-![](<../../../.gitbook/assets/image (112).png>)
+![](../../../.gitbook/assets/truss_form_mod.png)
 
-![](<../../../.gitbook/assets/image (271).png>)
-
-![](<../../../.gitbook/assets/image (405).png>)
-
-(In the figure above, _forcepipes_ are activated so the new magnitude of the forces can be seen directly in the form diagram. To better visualise the pipes, the view is selected as ghosted with opacity 80%).
-
-Additionally, feedback on the cost of the structure can be assessed by activating the option`Compute loadpath` that shows an increase in the cost/loadpath of the structure:
-
-> The total load-path of the structure is 1962.3 kNm.
-
-Further dragging of nodes can be executed, such as, increasing the structural height of the structure, what results in a global decrease on the forces in the members and also a reduction in the cost of the structure.
-
-![](<../../../.gitbook/assets/image (242).png>)
-
-> The total load-path of the structure is 1326.6 kNm.
-
-![](<../../../.gitbook/assets/image (265).png>)
-
-> The total load-path of the structure is 1425.3 kNm.
+If we increase the height of our truss, the internal forces decrease(Fig_XXX). 
+![](../../../.gitbook/assets/truss_form_mod2.png)
 
 {% hint style="info" %}
 An option to **auto-update** the diagrams is available in the display settings tabs and it is turned `OFF` by default. If `ON`, this function update the force diagram at each node movement of the form diagram.
 {% endhint %}
 
-#### 7. Analysis of different Load Cases.
+#### Special Case
+The following geometry shows the desired force property to have a constant force in the bottom chord. The forces in the diagonal struts are zero because these nodes are overlaid in the force diagram. These members can be eliminated from the structure if the chords have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements. 
 
-To finish we show how the load case could be changed. Since this corresponds to a triangulated (isostatic) structure different loads can be carried without changing its shape (unlike the [funicular arch](../2.-interactive-gs)). Here the force applied in the highlighted position is increased from 10 kN to 30 kN to simulate the hanging of a very heavy object on the truss. We can see the increase in the loads in the internal edges. (In the following figure, _force pipes_ are also activated so the new magnitude of the forces can be seen directly in the form diagram).
+TODO: Image:
 
-![](<../../../.gitbook/assets/image (352).png>)
+Now change the uniform load to ununiform load. 
+
+TODO: Image
 
 
-#### 2.5. Display Settings
+#### 2.4 Load Path (maybe delete??)
+Additionally, feedback on the cost of the structure can be assessed by activating the option`Compute loadpath` that shows an increase in the cost/loadpath of the structure. For Fig_XXX, 
 
-A series of display options can be modified to help to visualise the diagrams. These options are organised in the two tabs of the `Display Settings` menu: FormObject and Force Object, as depicted below:
+> The total load-path of the structure is 1860.0 kNm.
 
-![](<../../../.gitbook/assets/image (274).png>)
+For Fig_XXX(high one), 
+> The total load-path of the structure is 1892.0 kNm.
 
-Therefore, the red/blue colouring can be turned on and off (_forcecolors_). Equally the edge and vertex labels can be turned on and off. Additionally, force labels, indicating the magnitude the force on the edges are available for both diagrams. For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried. The scale of these pipes can also be modified in the display settings panel.
-
-The scale and the location of the Force diagram can be modified in the appropriate functions over the **IGS** Menu Display > `ForceDiagram Location` and `ForceDiagram Scale` .
-
-#### 2.6. Inspect Diagrams.
-
-To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
-
-![](<../../../.gitbook/assets/image (150).png>)
-
-![](<../../../.gitbook/assets/image (97).png>)
-
-![](<../../../.gitbook/assets/image (2).png>)
+## 2. Form finding of cable / cabnle-strut structures
