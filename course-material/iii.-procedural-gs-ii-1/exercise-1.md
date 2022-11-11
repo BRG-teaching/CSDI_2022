@@ -16,11 +16,13 @@ Given the following list L1=\[\[5,3],\[0,3],\[0,7],\[6,-6],\[10,-3],\[11,8],\[6,
 
 ## Task 3: geometry
 
-Create an algorithm that draws a spiral in 2D. To do this create a for loop that adds a point, rotates it around \[0,0,0] and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the spiral dots.&#x20;
+Create an algorithm that draws a spiral in 2D. To do this create a for loop that adds a point, rotates it around \[0,0,0] and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the spiral dots.
 
 
 
+### Solutions:
 
+{% file src="../../.gitbook/assets/CSDI_III_exercise1_solution (1).gh" %}
 
 
 
