@@ -30,9 +30,9 @@
   * [Exercise 1](course-material/iii.-procedural-gs-ii-1/exercise-1.md)
   * [Exercise 2](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/tutorial-4/README.md)
-  * [Lecture](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
+  <!-- * [Lecture](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
   * [Tutorial](course-material/iv.-algebraic-gs/tutorial-4/1\_analysis.md)
-  * [Tutorial 2](course-material/iv.-algebraic-gs/tutorial-4/2\_form\_finding.md)
+  * [Tutorial 2](course-material/iv.-algebraic-gs/tutorial-4/2\_form\_finding.md) -->
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
 
 ## appendix
