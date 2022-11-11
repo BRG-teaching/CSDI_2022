@@ -16,7 +16,17 @@ Given the following list L1=\[\[5,3],\[0,3],\[0,7],\[6,-6],\[10,-3],\[11,8],\[6,
 
 ## Task 3: geometry
 
-Create an algorithm that draws a spiral in 2D. To do this create a for loop that adds a point, rotates it around \[0,0,0] and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the spiral dots.
+Create an algorithm that draws a spiral in 2D as shown in the image below:&#x20;
+
+<figure><img src="../../.gitbook/assets/CSDI_III_ex1_T3.jpg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+Spoiler:
+
+Create a for loop that adds a point, rotates it around \[0,0,0] and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the spiral dots.
+
+
+{% endhint %}
 
 ## Task 4: loop and conditional
 
@@ -44,7 +54,17 @@ Output: 3
 
 ## Task 6: geometry
 
-Create an algorithm that draws a 3D helicoidal curve as the one shown in the mage below. To do this, create a "for" loop that adds a point, rotates it around another point, moves it in the z direction, and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the helicoid dots.
+Create an algorithm that draws a 3D helicoidal curve as the one shown in the mage below.&#x20;
+
+
+
+<figure><img src="../../.gitbook/assets/CSDI_III_ex1.jpg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+Spoiler:&#x20;
+
+Create a for loop that adds a point, rotates it around another point, moves it in the z direction, and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the helicoid dots.
+{% endhint %}
 
 
 
