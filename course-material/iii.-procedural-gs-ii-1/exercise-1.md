@@ -18,6 +18,20 @@ Given the following list L1=\[\[5,3],\[0,3],\[0,7],\[6,-6],\[10,-3],\[11,8],\[6,
 
 Create an algorithm that draws a spiral in 2D. To do this create a for loop that adds a point, rotates it around \[0,0,0] and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the spiral dots.
 
+## Task 4: loop and conditional
+
+Given the following list L1=\[\[3,4],\[5,3,4,5,1],\[0,3,-2,3],\[0,7],\[6,-6,1],\[10,-3],\[11],\[6,0,5,6],\[1,1,3],\[0,8]], create a new list (L2) only with the lists from L1 that have 3 or more items.
+
+## Task 5:  loop and conditional
+
+Given the following list L1=\[\[3,4],\[5,3,4,5,1],\[0,3,-2,3],\[0,7],\[6,-6,1],\[10,-3],\[11],\[6,0,5,6],\[1,1,3],\[0,8]], create **inside of one single loop**:&#x20;
+
+* a new list (L2) only with the lists from L1 that have 3 or more items.&#x20;
+* a new list (L3) only with the lists from L1 that have 3 or more items and whose items add up to 5 or more.&#x20;
+* a new list (L4) only with the lists from L1 that have 3 or more items and whose items add up to less than 5.&#x20;
+
+
+
 
 
 ### Solutions:
