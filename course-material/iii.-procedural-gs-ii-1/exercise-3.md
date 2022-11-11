@@ -43,9 +43,11 @@ Use the solution from Task 2 as a base to solve this task.&#x20;
 {% endhint %}
 
 {% hint style="success" %}
-Hint:&#x20;
+Hints:
 
-Use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
+* Define Q as the asymmetric load.
+* Create a condition that adds Q to the magnitude of the external loads.
+* Use a number slider in Grasshopper to change the anchor point of the asymmetric load.&#x20;
 {% endhint %}
 
 ### 4. Constrain the force diagram
