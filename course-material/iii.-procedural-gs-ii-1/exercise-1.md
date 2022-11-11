@@ -30,7 +30,9 @@ Given the following list L1=\[\[3,4],\[5,3,4,5,1],\[0,3,-2,3],\[0,7],\[6,-6,1],\
 * a new list (L3) only with the lists from L1 that have 3 or more items and whose items add up to 5 or more.&#x20;
 * a new list (L4) only with the lists from L1 that have 3 or more items and whose items add up to less than 5.&#x20;
 
-{% hint style="info" %}
+{% hint style="success" %}
+Hint:&#x20;
+
 Use the sum() function to add all the items from a list. For example:&#x20;
 
 L=\[3,4,-4]&#x20;
@@ -39,6 +41,10 @@ print sum (L)
 
 Output: 3
 {% endhint %}
+
+## Task 6: geometry
+
+Create an algorithm that draws a 3D helicoidal curve as the one shown in the mage below. To do this, create a "for" loop that adds a point, rotates it around another point, moves it in the z direction, and stores it in a list. After, outside the for loop, use rs.AddPolyline to create a polyline connecting the helicoid dots.
 
 
 
