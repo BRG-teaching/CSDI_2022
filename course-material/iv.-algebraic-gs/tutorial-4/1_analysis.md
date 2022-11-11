@@ -17,145 +17,79 @@ We have learned how to find a form under variable loads using procedure graphic 
 
 
 
-
-
-
-
-
-
-
-
-The tutorial will use the following template with the structures, please download and open it in Rhino 7.0:
-
-{% file src="../../../.gitbook/assets/CSDI_2021_tutorial.3dm" %}
-
 ###
 
-## 1. Single Panel
+---
 
-Let's start with the following simple example of a single panel truss. The geometry, loads and support conditions are depicted in the figure below:
+## 1. Analysis of a Simple Truss
 
-![](<../../../.gitbook/assets/image (110).png>)
+Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in the Fig-XXX. The left load is 30 kN and the right one 10 kN. 
 
-The hypothesis of our analysis will be:
+<p align="center">
+    <img src="../../../.gitbook/assets/simple_truss_diagram.png" alt="drawing" width="600"/>
+</p>
 
-* The force applied on the top has magnitude of **10 kN**.
-* The left support is a pin (restraint on x, y) and the right support a roller (restraint on y)
+#### 1.1 Making the Form Diagram
+In the Rhino file, lines of of this truss are already drawn as Fig-XXX(top-left). The fixed support is represented by two reaction forces in x and y directions. The roller support is represented by a reaction force in y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces. 
 
-The set of lines for this exercise is available in the previous [page](./). As mentioned before, the load (blue) and reaction directions (green) are repressented as lines:
+In the toolbar of IGS go to the function `Create Form Diagram` and select the option `FromLines`.  The FormDiagram will be created as Fig-XXX(top-right). You can notice a difference in the colour of **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are stored in a new Rhino layer - `IGS >> FormDiagram`.
 
-![](<../../../.gitbook/assets/image (305).png>)
+![](<../../../.gitbook/assets/simple_truss_form.jpg>)
 
-#### 1. Making the Form Diagram
-
-In the toolbar of IGS go to the function `Create Form Diagram` and select the option `FromLines` . The FormDiagram will be created and you can notice a difference in the colour of **internal edges** (structure) and **external edges** (loads and reactions).
-
-![](<../../../.gitbook/assets/image (116).png>)
-
-The Form Diagram edges will be stored in a new layer created, at `IGS >> FormDiagram`. The future Force Diagram will also be drawn in the dedicated created layer `IGS >> ForceDiagram`.
-
-![](<../../../.gitbook/assets/image (33).png>)
 
 {% hint style="info" %}
 The input lines will be hidden from the canvas, to avoid overlap with the newly created Form Diagram. If you need to view them again you need to type the command `Show` in Rhino, or click with the right button in the icon over the main toolbar, as shown below. The input edges should remain hidden during this tutorial.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (227).png>)
 
-#### 2.2. Setting loaded edges
+The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS you can also click the button `Check DoF` to check the required number of forces that should be selected.
+Click over the Assign Forces button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the right node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown in the edges with an arrow(Fig-XXX(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
 
-The truss is an isostatic example in which there's only one load applied. We can chose the magnitude of this force freely. We could also apply the equation explained in the first part, here we have `m=7` edges and `ni=3` internal nodes (`DOF = m - 2*ni = 1`).
 
-Click over the Assign Forces button. Select the edge representing the load and apply a magnitude of **-10 kN** since the force should push the panel. The edges will display numered and in this case you should apply the force to the edge #0.
+Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-XXX(bottom-right)).
 
-![](<../../../.gitbook/assets/image (376).png>)
+#### 1.2. Computing the Force Diagram
 
-After we hit OK, the forces applied are shown in the edges with an arrow. Verify that the arrow direction corresponds to the desired direction of the applied loads.
+After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as FigXXX:
 
-![](<../../../.gitbook/assets/image (371).png>)
-
-#### 2.3. Setting supports
-
-Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red as in the figure below:
-
-![](<../../../.gitbook/assets/image (323).png>)
-
-#### 2.4. Compute the Force Diagram
-
-After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as below:
-
-![](../../../.gitbook/assets/image.png)
+![](../../../.gitbook/assets/simple_truss_force.png)
 
 Note that the reaction forces now display also the value and direction. The default visualisation for form and force is the red-blue colouring. **Blue** represents **compression** and **red** **tension**. At this point, the scale and location of the force diagram is automatically set by IGS.
 
-#### 2.5. Display Settings
+In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled in case the user accidently assign a gigantic force magnitude. To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
 
-A series of display options can be modified to help to visualise the diagrams. These options are organised in the two tabs of the `Display Settings` menu: FormObject and Force Object, as depicted below:
+![](../../../.gitbook/assets/simple_truss_force_inspector.png)
 
-![](<../../../.gitbook/assets/image (274).png>)
+For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried.
 
-Therefore, the red/blue colouring can be turned on and off (_forcecolors_). Equally the edge and vertex labels can be turned on and off. Additionally, force labels, indicating the magnitude the force on the edges are available for both diagrams. For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried. The scale of these pipes can also be modified in the display settings panel.
+![](../../../.gitbook/assets/simple_truss_force_pipes.png)
 
-The scale and the location of the Force diagram can be modified in the appropriate functions over the **IGS** Menu Display > `ForceDiagram Location` and `ForceDiagram Scale` .
+---
 
-#### 2.6. Inspect Diagrams.
+## 2. Analysis of a Warren Truss with Vertical Supports
+The second example analyses a warren truss with vertical supports(Fig-XXX). The forces applied at each node have a magnitude of 10 kN.
 
-To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
+<p align="center">
+    <img src="../../../.gitbook/assets/truss.png" alt="drawing" width="800"/>
+</p>
 
-![](<../../../.gitbook/assets/image (150).png>)
 
-![](<../../../.gitbook/assets/image (97).png>)
+#### 2.1 Making the Form Diagram
 
-![](<../../../.gitbook/assets/image (2).png>)
+As in the first example, at IGS toolbar go to `Create Form Diagram` and select the option `FromLines` . This formdiagram is composed of `m=33` edges and `ni=14` internal nodes. Therefore we are able to specify the force in 5 edges (`DOF = m - 2*ni = 33 - 2*14 = 5`). Therefore, we use `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. Use `Identify Anchors` to select the support nodes. (Fig_XXX)
 
-## 1.2. Complete Truss
+![](../../../.gitbook/assets/truss_fixed.png)
 
-The second example analyses a truss structure to represent the following structure:
+#### 2.2. Computing the Force Diagram
 
-![](<../../../.gitbook/assets/image (175).png>)
+After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as below(Fig_XXX). 
 
-The hypothesis of our analysis will be:
+![](../../../.gitbook/assets/truss_force.png)
 
-* Forces applied at each node have a magnitude of **10 kN**.
-* Reaction forces should be considered in the extreme left (vertical and horizontal) and extreme right (horizontal only).
 
-#### 1. Making Form Diagram.
+The scale and location of the diagram can be set in the IGS Menu on `Display` > `ForceDiagram location` / `ForceDiagram scale` as shown in the image below. By using these you can position the force diagram in the box indicated.
 
-As in the first example at IGS toolbar go to `Create Form Diagram` and select the option `FromLines` . The created diagram should look like this:
-
-![](<../../../.gitbook/assets/image (386).png>)
-
-#### 2. Setting loaded edges.
-
-The truss is an isostatic example. It is composed of `m=33` edges and `ni=14` internal nodes. Therefore we are able to specify the force in 5 edges (`DOF = m - 2*ni = 5`) as explained in [Section 1,](./) which matches the number of externally applied loads. In IGS you can click the button `Check DoF` to check the required number of forces that should be selected.
-
-We go to the command `Assign Forces` and we are asked to choose the independent edges, therefore we select the applied forces and input the corresponding force of +**10 kN** in each \*\*\*\* with the help of the table. This table shows the index of each edge in the column "Name" and the force should be assigned to the column "Value". The edge indices are shown in the diagram while the table is open to help the identification. Note the positive sign because the forces applied in the bottom chord tend to pull the structure down. Once we press `OK`, and the forces are assigned, and this can be checked by the colour-coding having the independent edges with **cyan** colour.
-
-![](<../../../.gitbook/assets/image (185).png>)
-
-After we hit OK, the forces applied are shown in the edges with an arrow. Verify that the arrow direction corresponds to the desired direction of the applied loads. The supports don't show any value since the equilibrium has not been calculated yet.
-
-![](<../../../.gitbook/assets/image (373).png>)
-
-#### 3. Set the support points.
-
-Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two extreme nodes in the base of the truss. These nodes will be highlighted in red as in the figure below:
-
-![](<../../../.gitbook/assets/image (86).png>)
-
-#### 4. Compute the Force Diagram.
-
-After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as below:
-
-![](<../../../.gitbook/assets/image (59).png>)
-
-Note that the reaction forces now show the value and direction of its non-null resultants (25 kN up vertically). The default visualisation for form and force is the red-blue colouring. **Blue** represents **compression** and **red** for the edges in **tension**. At this point, the scale and location of the force diagram is automatically set by IGS. In the next section we will learn how to scale and position the diagram as required in this tutorial.
-
-#### 5. Scale and Location of the Force Diagram.
-
-The scale and location of the diagram can be set in the IGS Menu on Display > ForceDiagram location / ForceDiagram scale as shown in the image below. By using these you can position the force diagram in the box indicated.
-
-![](<../../../.gitbook/assets/image (337).png>)
+![](../../../.gitbook/assets/truss_scale.png)
 
 Once the diagram is placed in the required location and scale, the maximum force in one edge can be easily calculated using the `inspector`, which is 45 kN and given the scale used 0.2 the edge in the force diagram has real length`L=45x0.2 = 9.0`
 
@@ -198,3 +132,24 @@ An option to **auto-update** the diagrams is available in the display settings t
 To finish we show how the load case could be changed. Since this corresponds to a triangulated (isostatic) structure different loads can be carried without changing its shape (unlike the [funicular arch](../2.-interactive-gs)). Here the force applied in the highlighted position is increased from 10 kN to 30 kN to simulate the hanging of a very heavy object on the truss. We can see the increase in the loads in the internal edges. (In the following figure, _force pipes_ are also activated so the new magnitude of the forces can be seen directly in the form diagram).
 
 ![](<../../../.gitbook/assets/image (352).png>)
+
+
+#### 2.5. Display Settings
+
+A series of display options can be modified to help to visualise the diagrams. These options are organised in the two tabs of the `Display Settings` menu: FormObject and Force Object, as depicted below:
+
+![](<../../../.gitbook/assets/image (274).png>)
+
+Therefore, the red/blue colouring can be turned on and off (_forcecolors_). Equally the edge and vertex labels can be turned on and off. Additionally, force labels, indicating the magnitude the force on the edges are available for both diagrams. For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried. The scale of these pipes can also be modified in the display settings panel.
+
+The scale and the location of the Force diagram can be modified in the appropriate functions over the **IGS** Menu Display > `ForceDiagram Location` and `ForceDiagram Scale` .
+
+#### 2.6. Inspect Diagrams.
+
+To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
+
+![](<../../../.gitbook/assets/image (150).png>)
+
+![](<../../../.gitbook/assets/image (97).png>)
+
+![](<../../../.gitbook/assets/image (2).png>)
