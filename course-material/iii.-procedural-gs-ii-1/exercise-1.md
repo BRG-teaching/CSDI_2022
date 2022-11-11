@@ -18,7 +18,7 @@ Given the following list L1=\[\[5,3],\[0,3],\[0,7],\[6,-6],\[10,-3],\[11,8],\[6,
 
 Create an algorithm that draws a spiral in 2D as shown in the image below:&#x20;
 
-<figure><img src="../../.gitbook/assets/CSDI_III_ex1_T3.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSDI_III_ex1_T3 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Spoiler:
@@ -70,7 +70,7 @@ Create a for loop that adds a point, rotates it around another point, moves it i
 
 
 
-### Solutions:
+### Solutions of the first three tasks:
 
 {% file src="../../.gitbook/assets/CSDI_III_exercise1_solution (1).gh" %}
 
