@@ -56,7 +56,8 @@ After setting the loads we can compute the equilibrium by calculating the force 
 
 Note that the reaction forces now display also the value and direction. The default visualisation for form and force is the red-blue colouring. **Blue** represents **compression** and **red** **tension**. At this point, the scale and location of the force diagram is automatically set by IGS.
 
-In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled in case the user accidently assign a gigantic force magnitude. To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
+In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidently assign a gigantic axial force. 
+To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
 
 ![](../../../.gitbook/assets/simple_truss_force_inspector.png)
 
@@ -99,20 +100,21 @@ One example of modification is done below: we move up one of the nodes of the st
 ![](../../../.gitbook/assets/truss_form_mod.png)
 
 If we increase the height of our truss, the internal forces decrease(Fig_XXX). 
-![](../../../.gitbook/assets/truss_form_mod2.png)
+![](../../../.gitbook/
+assets/truss_form_mod2.png)
 
 {% hint style="info" %}
 An option to **auto-update** the diagrams is available in the display settings tabs and it is turned `OFF` by default. If `ON`, this function update the force diagram at each node movement of the form diagram.
 {% endhint %}
 
 #### Special Case
-The following geometry shows the desired force property to have a constant force in the bottom chord. The forces in the diagonal struts are zero because these nodes are overlaid in the force diagram. These members can be eliminated from the structure if the chords have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements. 
+The following geometry shows a truss that is designed by the desired force property. It has constant axial forces in the bottom chord. The forces in the diagonal struts are zero. In the force diagram, the end points representing these diagonal struts are overlaid, which means the edges are of 0 length. Thus, these members can be eliminated from the structure if the chords have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements. 
 
-TODO: Image:
+![](../../../.gitbook/assets/truss_cons.png)
 
 Now change the uniform load to ununiform load. 
 
-TODO: Image
+![](../../../.gitbook/assets/truss_cons_unsymmetrical.png)
 
 
 #### 2.4 Load Path (maybe delete??)
