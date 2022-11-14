@@ -26,7 +26,7 @@ We have learned how to find a form under variable loads using procedure graphic 
 Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in the Fig-XXX. The left load is 30 kN and the right one 10 kN. 
 
 <p align="center">
-    <img src="../../../.gitbook/assets/simple_truss_diagram.png" alt="drawing" width="600"/>
+    <img src="../../.gitbook/assets/simple_truss_diagram.png" alt="drawing" width="600"/>
 </p>
 
 #### 1.1 Making the Form Diagram
@@ -34,7 +34,7 @@ In the Rhino file, lines of of this truss are already drawn as Fig-XXX(top-left)
 
 In the toolbar of IGS go to the function `Create Form Diagram` and select the option `FromLines`.  The FormDiagram will be created as Fig-XXX(top-right). You can notice a difference in the colour of **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are stored in a new Rhino layer - `IGS >> FormDiagram`.
 
-![](<../../../.gitbook/assets/simple_truss_form.jpg>)
+![](<../../.gitbook/assets/simple_truss_form.jpg>)
 
 
 {% hint style="info" %}
@@ -52,18 +52,18 @@ Supports should be assigned to the nodes where reaction forces are applied. Go t
 
 After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as FigXXX:
 
-![](../../../.gitbook/assets/simple_truss_force.png)
+![](../../.gitbook/assets/simple_truss_force.png)
 
 Note that the reaction forces now display also the value and direction. The default visualisation for form and force is the red-blue colouring. **Blue** represents **compression** and **red** **tension**. At this point, the scale and location of the force diagram is automatically set by IGS.
 
 In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidently assign a gigantic axial force. 
 To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
 
-![](../../../.gitbook/assets/simple_truss_force_inspector.png)
+![](../../.gitbook/assets/simple_truss_force_inspector.png)
 
 For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried.
 
-![](../../../.gitbook/assets/simple_truss_force_pipes.png)
+![](../../.gitbook/assets/simple_truss_force_pipes.png)
 
 ---
 
@@ -79,17 +79,17 @@ The second example analyses a warren truss with vertical supports(Fig-XXX). The 
 
 As in the first example, at IGS toolbar go to `Create Form Diagram` and select the option `FromLines` . This formdiagram is composed of `m=33` edges and `ni=14` internal nodes. Therefore we are able to specify the force in 5 edges (`DOF = m - 2*ni = 33 - 2*14 = 5`). Therefore, we use `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. Use `Identify Anchors` to select the support nodes. (Fig_XXX)
 
-![](../../../.gitbook/assets/truss_fixed.png)
+![](../../.gitbook/assets/truss_fixed.png)
 
 #### 2.2. Computing the Force Diagram
 
 After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as below(Fig_XXX). 
 
-![](../../../.gitbook/assets/truss_force.png)
+![](../../.gitbook/assets/truss_force.png)
 
 The sum of external forces are `10 * 5 = 50 kN`. Turn on the hidden Rhino layer `Tutorial >> Guides`, you will find a 5m*5m box. Now scale the force diagram so that 1m represents 10kN. The scale and location of the diagram can be set in the **IGS Menu** (not IGS Toolbar) on `Display` > `ForceDiagram location` / `ForceDiagram scale` as shown in the Fig_XXX. 
 
-![](../../../.gitbook/assets/truss_scale_pipe.png)
+![](../../.gitbook/assets/truss_scale_pipe.png)
 
 #### 2.3 Modification of Form Diagram
 
@@ -97,10 +97,10 @@ Geometric modifications, such as dragging nodes in the form diagram can be execu
 
 One example of modification is done below: we move up one of the nodes of the structure, and as a result, a large force is attracted to the edge connected to it. This higher magnitude can be seen due to the increased size shown by it in the force diagram(Fig_XXX). 
 
-![](../../../.gitbook/assets/truss_form_mod.png)
+![](../../.gitbook/assets/truss_form_mod.png)
 
 If we increase the height of our truss, the internal forces decrease(Fig_XXX). 
-![](../../../.gitbook/assets/truss_form_mod2.png)
+![](../../.gitbook/assets/truss_form_mod2.png)
 
 {% hint style="info" %}
 An option to **auto-update** the diagrams is available in the display settings tabs and it is turned `OFF` by default. If `ON`, this function update the force diagram at each node movement of the form diagram.
@@ -109,11 +109,11 @@ An option to **auto-update** the diagrams is available in the display settings t
 #### Special Case
 The following geometry shows a truss that is designed by the desired force property. It has constant axial forces in the bottom chord. The forces in the diagonal struts are zero. In the force diagram, the end points representing these diagonal struts are overlaid, which means the edges are of 0 length. Thus, these members can be eliminated from the structure if the chords have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements. 
 
-![](../../../.gitbook/assets/truss_cons.png)
+![](../../.gitbook/assets/truss_cons.png)
 
 Now change the uniform loading to ununiform loading. 
 
-![](../../../.gitbook/assets/truss_cons_unsymmetrical.png)
+![](../../.gitbook/assets/truss_cons_unsymmetrical.png)
 
 
 #### 2.4 Load Path (maybe delete??)
@@ -128,18 +128,18 @@ For Fig_XXX(high one),
 
 In procedure graphic statics, we use both the form diagram and force diagram to find a funicular structure in equilibrium. Here we will use algebric graphic statics to find an arch under uniformly distributed load. 
 
-![](<../../../.gitbook/assets/arch_q.png>)
+![](<../../.gitbook/assets/arch_q.png>)
 
 
 In algebric graphic statics, we always need to start from a desired topology. 
-![](<../../../.gitbook/assets/arch_circle.jpg>)
+![](<../../.gitbook/assets/arch_circle.jpg>)
 
 
 
 find the funicular form for a uniformly distributed load
 The input geometry is the following circular arch:
 
-![](<../../../../.gitbook/assets/image (238).png>)
+![](<../../../.gitbook/assets/image (238).png>)
 
 We are going to assume that:
 
