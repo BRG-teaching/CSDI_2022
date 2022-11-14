@@ -129,7 +129,7 @@ In algebric graphic statics, we always need to start from a desired topology. Th
 
 ![](<../../.gitbook/assets/arch_circle.jpg>)
 
-### 1.1 Analysis of the circular arch
+### 3.1 Analysis of the circular arch
 In this case, we have a funicular circular arch system, but the load is unknown. As long as we know one axial force in our system, we can draw the force diagram with the correct scale. We can double check this argument via the definition of static determinacy. The system has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`. We need to assign only one forces. 
 
 Create FormDiagram with the function `Crerate Form Diagram` from the lines. Assign one load, -10 kN, with the button `Assign Forces`. Restrain the two extremity vertices assigning it as supports/anchors with the button `Identify Anchors`. Press the button `Create Force Diagram` which generated the ForceDiagram highlighted in Fig-XX.
@@ -138,7 +138,7 @@ Create FormDiagram with the function `Crerate Form Diagram` from the lines. Assi
 
 We observe that the force 10 kN is only applied to the edge selected as independent and the edge mirrored in the form diagram. The rest of applied loads are different to 10 kN. 
 
-### 1.2 Constrained Equilibrium under Uniformilly Distributed Load 
+### 3.2 Constrained Equilibrium under Uniformilly Distributed Load 
 
 In algebric graphic statics, modifing a force diagram to update the form diagram sometimes is not as straight-forward. These constraints will help the user to update the diagrams more easily, and 
 our algorithm to converge more sufficiently. 
@@ -180,10 +180,6 @@ Now that the bi-directional module is activated you click on  <img src="../../..
 
 The funicular form for a uniformly distributed load is shalower than the original. The geometry is a parabola instead of an arc of a circle. 
 
-
-![](<../../.gitbook/assets/igs_force_without_constraint.png>)
-
-
 {% hint style="info" %}
 
 The constraints can be turned on and off, in the latter the original force in the edge is displayed. Aditionally in the `Inspect diagrams > ConstraintsTable` a table is called showing all constraints and the current force in the edges, as well as the constraints in the vertices applied.
@@ -191,30 +187,25 @@ The constraints can be turned on and off, in the latter the original force in th
 The constraints can be erased from the form on the Menu function `IGS> Constraints> Remove all constraints.`
 {% endhint %}
 
+{% hint style="info" %}
+If you use insufficient constriant, sometimes you will achieve some solutions in equilibrium, but not the solutions you want. However, in most cases, the solver will not converge properly and you will receive a warning. 
+![](<../../.gitbook/assets/arch_insuf_constraint.png>)
+{% endhint %}
 
+3.2 Additional modifications
+If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig_XXX). 
 
+![](<../../.gitbook/assets/arch_move_support.png>)
+
+We then press in the button `Update Both Diagrams` and both diagrams are matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformelly distributed load case but with supports in different elevations which make the vertical reaction forces unbalanced (Fig_XXX). 
+
+![](<../../.gitbook/assets/arch_support.png>)
+
+The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig_XXX, Fig_XXX).
+
+![](<../../.gitbook/assets/arch_edge.png>)
+![](<../../.gitbook/assets/arch_edge_25.png>)
 ---
-
-
-
-
-### 4. Additional modifications
-
-If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move one of the supports as in the image below:
-
-![](<../../.gitbook/assets/image (314).png>)
-
-We then press in the button Update both diagrams and both diagrams are matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformelly distributed load case but with supports in different elevations which make the vertical reaction forces unbalanced: 38.3kN and 21.7 kN as shown in the next figure:
-
-![](<../../.gitbook/assets/image (109).png>)
-
-The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 30 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications.
-
-![](<../../.gitbook/assets/image (120).png>)
-
-![](<../../.gitbook/assets/image (363).png>)
-
-Many more modifications are possible and playing around with the previous unidirectional is still possible.
 
 ## 2.2. Constant Force
 
