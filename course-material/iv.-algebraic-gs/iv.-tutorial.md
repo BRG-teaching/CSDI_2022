@@ -1,13 +1,11 @@
 # Tutorial
 
-## Tutorial
-
-### Learning Goals
+## Learning Goals
 
 * analyze 2-dimensional truss structures using algebraic graphic statics
 * form-find funicular arch-cable structures using restrained algebraic graphic statics
 
-### Content
+## Content
 
 We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch structures.
 
@@ -17,13 +15,13 @@ We have learned how to find a form under variable loads using procedure graphic 
 
 ***
 
-### 1. Analysis of a Simple Truss
+## 1. Analysis of a Simple Truss
 
 Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in the Fig-XXX. The left load is 30 kN and the right one 10 kN.
 
 ![drawing](../../.gitbook/assets/simple\_truss\_diagram.png)
 
-**1.1 Making the Form Diagram**
+### **1.1 Making the Form Diagram**
 
 In the Rhino file, lines of of this truss are already drawn as Fig-XXX(top-left). The fixed support is represented by two reaction forces in x and y directions. The roller support is represented by a reaction force in y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
@@ -39,7 +37,9 @@ The system has `m=10` edges and `ni=4` internal nodes. According to the definiti
 
 Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-XXX(bottom-right)).
 
-**1.2. Computing the Force Diagram**
+
+
+### **1.2 Computing the Force Diagram**
 
 After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as FigXXX:
 
@@ -57,19 +57,21 @@ For the Form Diagram, pipes can be drawn in the edges with thickness proportiona
 
 ***
 
-### 2. Analysis of a Warren Truss with Vertical Supports
+###
+
+## 2. Analysis of a Warren Truss with Vertical Supports
 
 The second example analyses a warren truss with vertical supports(Fig-XXX). The forces applied at each node have a magnitude of 10 kN.
 
 ![drawing](../../.gitbook/assets/truss.png)
 
-**2.1 Making the Form Diagram**
+### **2.1 Making the Form Diagram**
 
 As in the first example, at IGS toolbar go to `Create Form Diagram` and select the option `FromLines` . This formdiagram is composed of `m=33` edges and `ni=14` internal nodes. Therefore we are able to specify the force in 5 edges (`DOF = m - 2*ni = 33 - 2*14 = 5`). Therefore, we use `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. Use `Identify Anchors` to select the support nodes. (Fig\_XXX)
 
 ![](../../.gitbook/assets/truss\_fixed.png)
 
-**2.2. Computing the Force Diagram**
+### **2.2. Computing the Force Diagram**
 
 After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as below(Fig\_XXX).
 
@@ -79,7 +81,7 @@ The sum of external forces are `10 * 5 = 50 kN`. Turn on the hidden Rhino layer 
 
 ![](../../.gitbook/assets/truss\_scale\_pipe.png)
 
-**2.3 Modification of Form Diagram**
+### **2.3 Modification of Form Diagram**
 
 Geometric modifications, such as dragging nodes in the form diagram can be executed with the button `Move FormDiagram Nodes`. Once one modification is performed, the form diagram can be updated by pressing the button `Update ForceDiagram from FormDiagram`.
 
@@ -95,7 +97,7 @@ If we increase the height of our truss, the internal forces decrease(Fig\_XXX).
 An option to **auto-update** the diagrams is available in the display settings tabs and it is turned `OFF` by default. If `ON`, this function update the force diagram at each node movement of the form diagram.
 {% endhint %}
 
-**Special Case**
+### **2.4 Special Case**
 
 The following geometry shows a truss that is designed by the desired force property. It has constant axial forces in the bottom chord. The forces in the diagonal struts are zero. In the force diagram, the end points representing these diagonal struts are overlaid, which means the edges are of 0 length. Thus, these members can be eliminated from the structure if the chords have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements.
 
@@ -105,7 +107,7 @@ Now change the uniform loading to ununiform loading.
 
 ![](../../.gitbook/assets/truss\_cons\_unsymmetrical.png)
 
-**2.4 Load Path (maybe delete??)**
+### **2.5 Load Path (maybe delete??)**
 
 Additionally, feedback on the cost of the structure can be assessed by activating the option`Compute loadpath` that shows an increase in the cost/loadpath of the structure. For Fig\_XXX,
 
@@ -195,7 +197,9 @@ If you use insufficient constriant, sometimes you will achieve some solutions in
 
 <figure><img src="../../.gitbook/assets/arch_insuf_constraint.png" alt=""><figcaption></figcaption></figure>
 
-3.2 Additional modifications If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig\_XXX).
+### 3.3 Additional modifications&#x20;
+
+If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig\_XXX).
 
 ![](../../.gitbook/assets/arch\_move\_support.png)
 
@@ -205,7 +209,9 @@ We then press in the button `Update Both Diagrams` and both diagrams are matched
 
 The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig\_XXX, Fig\_XXX).
 
-## ![](../../.gitbook/assets/arch\_edge.png) ![](../../.gitbook/assets/arch\_edge\_25.png)
+<figure><img src="../../.gitbook/assets/arch_edge.png" alt=""><figcaption><p> </p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/arch_edge_25.png" alt=""><figcaption></figcaption></figure>
 
 ## 2.2. Constant Force
 
@@ -284,15 +290,3 @@ One additional modification will be performed. The top and bottom chord are cons
 Now, we can apply the update to form and force diagrams and the result is the double constant truss below:
 
 ![](<../../.gitbook/assets/image (156).png>)
-
-#### 5. Advanced visualisation
-
-To finalise we show a few advanced visualisations available in IGS. On the settings menu the diagram can be rotated of 90 degrees. In this way when the diagrams are in equilibrium the form and force corresponding edges are perpendicular to each other instead of parallel. The figure below shows how to activate this function on the ForceObject Settings.
-
-![](<../../.gitbook/assets/image (43).png>)
-
-An extra visualisation is available with the Unified Diagram. This diagram unifies form and force diagram in the same plot. Different unified diagrams can be drawn for different values of alpha. Alpha is de parameter that changes the shape of the unified diagram to follow form or force. On the figure below you see the final example of this page with the unified diagram for different alphas. More about this topic will be studied in our last module [3D graphic statics](broken-reference/).
-
-![](<../../.gitbook/assets/image (29).png>)
-
-That's it! You made the tutorial 4. If you want to learn even more dive in the [extra examples](../3.-extra-examples).
