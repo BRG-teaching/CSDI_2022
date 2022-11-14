@@ -87,7 +87,7 @@ One example of modification is done below: we move up one of the nodes of the st
 
 ![](../../.gitbook/assets/truss\_form\_mod.png)
 
-If we increase the height of our truss, the internal forces decrease(Fig\_XXX).&#x20;
+If we increase the height of our truss, the internal forces decrease(Fig\_XXX).
 
 <figure><img src="../../.gitbook/assets/truss_form_mod2.png" alt=""><figcaption></figcaption></figure>
 
@@ -115,7 +115,7 @@ For Fig\_XXX(high one),
 
 > The total load-path of the structure is 1892.0 kNm.
 
----
+***
 
 ## 3. Form finding of arch under uniformly distributed load
 
@@ -123,89 +123,89 @@ In procedure graphic statics, we use both the form diagram and force diagram to 
 
 ![](../../.gitbook/assets/arch\_q.png)
 
-In algebric graphic statics, we always need to start from a desired topology.&#x20;
+In algebric graphic statics, we always need to start from a desired topology.
 
-In algebric graphic statics, we always need to start from a desired topology. The following steps are shown in Fig-XX. We assume that the two extremities are pin supports. We divide the line between two supports into 7 segments, and the points indicates the line of action of the vertical loads. Here we will use an arc of a circle as an initial guess. Intersect the vertial lines with the arc and redraw the arc as line segments. Hide auxiliary geometries and add lines that represent external forces on the nodes. This is our input geometry for the force diagram. 
+In algebric graphic statics, we always need to start from a desired topology. The following steps are shown in Fig-XX. We assume that the two extremities are pin supports. We divide the line between two supports into 7 segments, and the points indicates the line of action of the vertical loads. Here we will use an arc of a circle as an initial guess. Intersect the vertial lines with the arc and redraw the arc as line segments. Hide auxiliary geometries and add lines that represent external forces on the nodes. This is our input geometry for the force diagram.
 
-![](<../../.gitbook/assets/arch_circle.jpg>)
+![](../../.gitbook/assets/arch\_circle.jpg)
 
 ### 3.1 Analysis of the circular arch
-In this case, we have a funicular circular arch system, but the load is unknown. As long as we know one axial force in our system, we can draw the force diagram with the correct scale. We can double check this argument via the definition of static determinacy. The system has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`. We need to assign only one forces. 
+
+In this case, we have a funicular circular arch system, but the load is unknown. As long as we know one axial force in our system, we can draw the force diagram with the correct scale. We can double check this argument via the definition of static determinacy. The system has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`. We need to assign only one forces.
 
 Create FormDiagram with the function `Crerate Form Diagram` from the lines. Assign one load, -10 kN, with the button `Assign Forces`. Restrain the two extremity vertices assigning it as supports/anchors with the button `Identify Anchors`. Press the button `Create Force Diagram` which generated the ForceDiagram highlighted in Fig-XX.
 
-![](<../../.gitbook/assets/arch_force.png>)
+![](../../.gitbook/assets/arch\_force.png)
 
-We observe that the force 10 kN is only applied to the edge selected as independent and the edge mirrored in the form diagram. The rest of applied loads are different to 10 kN. 
+We observe that the force 10 kN is only applied to the edge selected as independent and the edge mirrored in the form diagram. The rest of applied loads are different to 10 kN.
 
-### 3.2 Constrained Equilibrium under Uniformilly Distributed Load 
+### 3.2 Constrained Equilibrium under Uniformilly Distributed Load
 
-In algebric graphic statics, modifing a force diagram to update the form diagram sometimes is not as straight-forward. These constraints will help the user to update the diagrams more easily, and 
-our algorithm to converge more sufficiently. 
+In algebric graphic statics, modifing a force diagram to update the form diagram sometimes is not as straight-forward. These constraints will help the user to update the diagrams more easily, and our algorithm to converge more sufficiently.
 
-Four types of constraints are possible in the current version of IGS (Fig_XX)
-  1. **Anchor a vertex**, fixing its x, y coordinates;
-  2. Constraint a vertex to a **line of action**;
-  3. Constraint **edge direction**; and&#x20;
-  4. Apply **target forces** in the form diagram which reflect in target lengths in the force diagram.
+Four types of constraints are possible in the current version of IGS (Fig\_XX)
 
-![](<../../.gitbook/assets/image(408).png>)
+1. **Anchor a vertex**, fixing its x, y coordinates;
+2. Constraint a vertex to a **line of action**;
+3. Constraint **edge direction**; and
+4. Apply **target forces** in the form diagram which reflect in target lengths in the force diagram.
+
+![](../../.gitbook/assets/image\(408\).png)
 
 {% hint style="info" %}
 Since white is the default color for the constraints remember to change your backgroud color. Grey is prefered. The visualisation of the arch after the default constrains should look as follows:
 {% endhint %}
 
-To achieve the geometry corresponding to the uniformilly distributed load from our hypothesis, we will firstly add default constraints. Default constraint is implicit when we do graphic statics by hand. On the form diagram (Fig_XXX): 
-   - the vertices in the form diagram with an externally applied load are constrained to remain on the line of action of the load (constraint type 2);
-   - the leaf-edges (reactions or loads) have their orientation fixed (constraint type 3).
-  
-![](<../../.gitbook/assets/arch_constraint.png>)
+To achieve the geometry corresponding to the uniformilly distributed load from our hypothesis, we will firstly add default constraints. Default constraint is implicit when we do graphic statics by hand. On the form diagram (Fig\_XXX):
 
-Assign the default constraint by clicking `Assign default constraints` (Fig_XXX). We wee that: 
+* the vertices in the form diagram with an externally applied load are constrained to remain on the line of action of the load (constraint type 2);
+* the leaf-edges (reactions or loads) have their orientation fixed (constraint type 3).
+
+![](../../.gitbook/assets/arch\_constraint.png)
+
+Assign the default constraint by clicking `Assign default constraints` (Fig\_XXX). We wee that:
+
 * Edges in the form and force diagrams with orientation fixed are highlighted in white.
 * Vertices in the form and force diagram with line constraint are highlighted in white.
 * Anchored vertices are shown in red.
 
-![](<../../.gitbook/assets/default_constraint.png>)
+![](../../.gitbook/assets/default\_constraint.png)
 
-Secondly, we assign **target forces** to the load edges with the same magnitude of the applied load. This reflect as a constraint on the **target length** of the dual edges in the force diagram. To assign these additional constraints click on the button `Assign edge constraints` and select the option `ForceMagnitude`. Select all applied loads and give the target magnitude (10 kN). The sign +/- is not important here since it will always take the same sign of the applied load. The target forces will show in white in the form and force diagrams (Fig_XXX).
+Secondly, we assign **target forces** to the load edges with the same magnitude of the applied load. This reflect as a constraint on the **target length** of the dual edges in the force diagram. To assign these additional constraints click on the button `Assign edge constraints` and select the option `ForceMagnitude`. Select all applied loads and give the target magnitude (10 kN). The sign +/- is not important here since it will always take the same sign of the applied load. The target forces will show in white in the form and force diagrams (Fig\_XXX).
 
-![](<../../.gitbook/assets/arch_edge_force.png>)
+![](../../.gitbook/assets/arch\_edge\_force.png)
 
-Now, we applied constraints to the form and force diagrams which force them to look for a new equilibrium. Now we can update both the form and force diagrams (bi-directional update). Turn on  bi-directional update in the <img src="../../../../.gitbook/assets/image (36).png" alt="" data-size="line">`Settings`. If you continue without turning it on you will receive an error message.
+Now, we applied constraints to the form and force diagrams which force them to look for a new equilibrium. Now we can update both the form and force diagrams (bi-directional update). Turn on bi-directional update in the <img src="../../.gitbook/assets/image (36).png" alt="" data-size="line">`Settings`. If you continue without turning it on you will receive an error message.
 
-Now that the bi-directional module is activated you click on  <img src="../../../../.gitbook/assets/image (75).png" alt="" data-size="line">`Update Both Diagrams`. Both diagrams will update and the result should be as displayed below (Fig_XXX):
+Now that the bi-directional module is activated you click on <img src="../../.gitbook/assets/image (75).png" alt="" data-size="line">`Update Both Diagrams`. Both diagrams will update and the result should be as displayed below (Fig\_XXX):
 
-![](<../../.gitbook/assets/arch_update_both.png>)
+![](../../.gitbook/assets/arch\_update\_both.png)
 
-The funicular form for a uniformly distributed load is shalower than the original. The geometry is a parabola instead of an arc of a circle. 
+The funicular form for a uniformly distributed load is shalower than the original. The geometry is a parabola instead of an arc of a circle.
 
 {% hint style="info" %}
-
 The constraints can be turned on and off, in the latter the original force in the edge is displayed. Aditionally in the `Inspect diagrams > ConstraintsTable` a table is called showing all constraints and the current force in the edges, as well as the constraints in the vertices applied.
 
 The constraints can be erased from the form on the Menu function `IGS> Constraints> Remove all constraints.`
 {% endhint %}
 
 {% hint style="info" %}
-If you use insufficient constriant, sometimes you will achieve some solutions in equilibrium, but not the solutions you want. However, in most cases, the solver will not converge properly and you will receive a warning. 
-![](<../../.gitbook/assets/arch_insuf_constraint.png>)
+If you use insufficient constriant, sometimes you will achieve some solutions in equilibrium, but not the solutions you want (Fig\_XXX). However, in most cases, the solver will not converge properly and you will receive a warning.&#x20;
 {% endhint %}
 
-3.2 Additional modifications
-If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig_XXX). 
+<figure><img src="../../.gitbook/assets/arch_insuf_constraint.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/arch_move_support.png>)
+3.2 Additional modifications If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig\_XXX).
 
-We then press in the button `Update Both Diagrams` and both diagrams are matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformelly distributed load case but with supports in different elevations which make the vertical reaction forces unbalanced (Fig_XXX). 
+![](../../.gitbook/assets/arch\_move\_support.png)
 
-![](<../../.gitbook/assets/arch_support.png>)
+We then press in the button `Update Both Diagrams` and both diagrams are matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformelly distributed load case but with supports in different elevations which make the vertical reaction forces unbalanced (Fig\_XXX).
 
-The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig_XXX, Fig_XXX).
+![](../../.gitbook/assets/arch\_support.png)
 
-![](<../../.gitbook/assets/arch_edge.png>)
-![](<../../.gitbook/assets/arch_edge_25.png>)
----
+The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig\_XXX, Fig\_XXX).
+
+## ![](../../.gitbook/assets/arch\_edge.png) ![](../../.gitbook/assets/arch\_edge\_25.png)
 
 ## 2.2. Constant Force
 

@@ -88,7 +88,7 @@ Variables:
 * the sense of the external loads.
 {% endhint %}
 
-![](<../../.gitbook/assets/1a (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).jpg>)
+![](<../../.gitbook/assets/1a (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).jpg>)
 
 1.b We now want to find out the position of the resultant. To do this we will construct the force diagram. We will first draw F1 and F2 using as a starting point a point from Rhinoceros. Then we will define, also in Rhinoceros, the random pole "O" and we will create the auxiliary lines connecting "O" with F1 and F2.
 
@@ -140,7 +140,7 @@ In the previous tutorial, drawing the main lines of the form and force diagrams 
 
 We will copy\&paste "sense", "force magnitude" and "visualization" from the Grasshopper definition of the previous tutorial.
 
-![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (3).jpg>)
+![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).jpg>)
 
 #### You made it! :) You can now explore the design space of your parametric model!
 
