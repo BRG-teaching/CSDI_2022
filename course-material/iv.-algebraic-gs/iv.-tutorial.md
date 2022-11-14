@@ -207,9 +207,7 @@ We then press in the button `Update Both Diagrams` and both diagrams are matched
 
 ![](../../.gitbook/assets/arch\_support.png)
 
-The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig\_XXX, Fig\_XXX).
-
-<figure><img src="../../.gitbook/assets/arch_edge.png" alt=""><figcaption><p> </p></figcaption></figure>
+The second additional modification imposes an additional target force to one of the reaction forces. Here we set the horizontal reaction force to have magnitude of 25 kN. As a result, the funicular change its height and in the force polygon the horizontal reaction force has its length decreased. The following images show this modifications (Fig\_XXX).
 
 <figure><img src="../../.gitbook/assets/arch_edge_25.png" alt=""><figcaption></figcaption></figure>
 
