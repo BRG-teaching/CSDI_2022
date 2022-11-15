@@ -140,7 +140,7 @@ In the previous tutorial, drawing the main lines of the form and force diagrams 
 
 We will copy\&paste "sense", "force magnitude" and "visualization" from the Grasshopper definition of the previous tutorial.
 
-![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (3).jpg>)
+![](<../../.gitbook/assets/5&6 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).jpg>)
 
 #### You made it! :) You can now explore the design space of your parametric model!
 

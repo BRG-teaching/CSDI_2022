@@ -7,7 +7,7 @@
 
 ## Content
 
-We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch structures.
+We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch-cable structures.
 
 ## Arch-cable and Truss
 
@@ -17,41 +17,41 @@ TODO
 
 ## 1. Analysis of a Simple Truss
 
-Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in the Fig-XXX. The left load is 30 kN and the right one 10 kN.
+Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in Fig-1-1. The left load is 30 kN, and the right is 10 kN.
 
-![drawing](../../.gitbook/assets/simple\_truss\_diagram.png)
+![Fig-1-1](../../.gitbook/assets/simple\_truss\_diagram.png)
 
 ### **1.1 Making the Form Diagram**
 
-In the Rhino file, lines of of this truss are already drawn as Fig-XXX(top-left). The fixed support is represented by two reaction forces in x and y directions. The roller support is represented by a reaction force in y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
+In the Rhino file, the lines of this truss are already drawn as Fig-XXX(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
-In the toolbar of IGS go to the function `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-XXX(top-right). You can notice a difference in the colour of **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are stored in a new Rhino layer - `IGS >> FormDiagram`.
+In the toolbar of IGS, go to the function `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are stored in a new Rhino layer - `IGS >> FormDiagram`.
 
-![](../../.gitbook/assets/simple\_truss\_form.jpg)
+![Fig-1-2](../../.gitbook/assets/simple\_truss\_form.jpg)
 
 {% hint style="info" %}
-The input lines will be hidden from the canvas, to avoid overlap with the newly created Form Diagram. If you need to view them again you need to type the command `Show` in Rhino, or click with the right button in the icon over the main toolbar, as shown below. The input edges should remain hidden during this tutorial.
+The input lines will be hidden from the canvas to avoid overlap with the newly created Form Diagram. If you need to view them again, you need to type the command `Show` in Rhino, or click with the right button in the icon over the main toolbar, as shown below. The input edges should remain hidden during this tutorial.
 {% endhint %}
 
-The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS you can also click the button `Check DoF` to check the required number of forces that should be selected. Click over the Assign Forces button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the right node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown in the edges with an arrow(Fig-XXX(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
+The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button `Check DoF` to check the required number of forces that should be selected. Click over the Assign Forces button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
 
-Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-XXX(bottom-right)).
+Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-1-2(bottom-right)).
 
 ### **1.2 Computing the Force Diagram**
 
-After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as FigXXX:
+After setting the load, we can compute the equilibrium by calculating the force diagram with the button `Create Force Diagram`. The force diagram is automatically generated right to the form diagram. The result should be as shown in Fig-1-3.
 
-![](../../.gitbook/assets/simple\_truss\_force.png)
+![Fig-1-3](../../.gitbook/assets/simple\_truss\_force.png)
 
-Note that the reaction forces now display also the value and direction. The default visualisation for form and force is the red-blue colouring. **Blue** represents **compression** and **red** **tension**. At this point, the scale and location of the force diagram is automatically set by IGS.
+Note that the reaction forces now also display the value and direction. The default visualization for form and force is the red-blue coloring. **Blue** represents **compression** and **red** represents **tension**. At this point, the scale and location of the force diagram are automatically set by IGS.
 
-In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidently assign a gigantic axial force. To analyse the magnitude of the forces in specific edges three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure, additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation**, and the duality can be inspected with the function **ForcePolygons.**
+In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidentally assigns a tremendous axial force. To analyze the magnitude of the forces in specific edges, three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure. Additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation** (Fig-1-4), and the duality can be inspected with the function **ForcePolygons.**
 
-![](../../.gitbook/assets/simple\_truss\_force\_inspector.png)
+![Fig-1-4](../../.gitbook/assets/simple\_truss\_force\_inspector.png)
 
-For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried.
+For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried (Fig-1-5).
 
-![](../../.gitbook/assets/simple\_truss\_force\_pipes.png)
+![Fig-1-5](../../.gitbook/assets/simple\_truss\_force\_pipes.png)
 
 ***
 
