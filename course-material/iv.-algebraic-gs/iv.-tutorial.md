@@ -251,6 +251,6 @@ One additional modification will be performed. The top and bottom chords are con
 
 <figure><img src="../../.gitbook/assets/truss_cons_t_b.png" alt=""><figcaption><p>Fig-4-6</p></figcaption></figure>
 
-Now, we can apply the update to form and force diagrams an,d the result is the double constant truss below (Fig-4-7):
+Now, we can apply the update to form and force diagrams, and the result is the double constant truss below (Fig-4-7):
 
 ![Fig-4-7](../../.gitbook/assets/truss\_cons\_top\_bottom.png)
