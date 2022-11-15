@@ -181,7 +181,7 @@ Now, we applied constraints to the form and force diagrams which force them to l
 
 Now that the bi-directional module is activated you click on <img src="../../.gitbook/assets/image (75).png" alt="" data-size="line">`Update Both Diagrams`. Both diagrams will update and the result should be as displayed below (Fig\_XXX):
 
-![](../../.gitbook/assets/arch\_update\_both.png)
+![](../../.gitbook/assets/arch_update_both.png)
 
 The funicular form for a uniformly distributed load is shalower than the original. The geometry is a parabola instead of an arc of a circle.
 
@@ -225,9 +225,9 @@ Create the form diagram and force diagram (Fig_XXX).
 ![](<../../.gitbook/assets/form_force_truss.png>)
 
 ### 4.2 Truss with constant force in upper chord
-The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points. 
+The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points (Fig_XXX). 
 
-TODO: Add diagram
+![](<../../.gitbook/assets/constant_chord_diagram.png>)
 
 Now we will impose constraints to form find the truss such as the edges in the top chord have constant force. 
 
