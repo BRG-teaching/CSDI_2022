@@ -39,7 +39,7 @@ You can use the initial Grasshopper file to solve this task. However, if you use
 
 In the algorithm shown in the tutorial, the magnitude of the loads is defined with a number slider. For this reason, this value is valid no matter where along the bridge deck this load is located. Find out how the magnitude of the loads can respond to the tributary areas, so that each cable supports its respective part of the bridge deck. The scheme below shows you how to calculate the tributary areas for the different cables. Consider a self-weight of 1kN/m2.
 
-![](../../.gitbook/assets/5.png)
+![](<../../.gitbook/assets/5 (1).png>)
 
 {% hint style="warning" %}
 You can use the initial Grasshopper file to solve this task. However, if you use the Grasshopper definition that includes Tasks 1 and 2 you will get more interesting results.

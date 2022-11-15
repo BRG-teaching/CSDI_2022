@@ -37,8 +37,6 @@ The system has `m=10` edges and `ni=4` internal nodes. According to the definiti
 
 Supports should be assigned to the nodes where reaction forces are applied. Go to the function `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-XXX(bottom-right)).
 
-
-
 ### **1.2 Computing the Force Diagram**
 
 After setting the loads we can compute the equilibrium by calculating the force diagram in the button `Create Force Diagram`, the force diagram is automatically generated right to the form diagram. The result should be as FigXXX:
@@ -158,7 +156,7 @@ Four types of constraints are possible in the current version of IGS (Fig\_XX)
 Since white is the default color for the constraints remember to change your backgroud color. Grey is prefered. The visualisation of the arch after the default constrains should look as follows:
 {% endhint %}
 
-To achieve the geometry corresponding to the uniformilly distributed load from our hypothesis, we will firstly add default constraints. Default constraint is implicit when we do graphic statics by hand. On the form diagram (Fig_XXX):
+To achieve the geometry corresponding to the uniformilly distributed load from our hypothesis, we will firstly add default constraints. Default constraint is implicit when we do graphic statics by hand. On the form diagram (Fig\_XXX):
 
 * the vertices in the form diagram with an externally applied load are constrained to remain on the line of action of the load (constraint type 2);
 * the leaf-edges (reactions or loads) have their orientation fixed (constraint type 3).
@@ -192,12 +190,12 @@ The constraints can be erased from the form on the Menu function `IGS> Constrain
 {% endhint %}
 
 {% hint style="info" %}
-If you use insufficient constriant, sometimes you will achieve some solutions in equilibrium, but not the solutions you want (Fig\_XXX). However, in most cases, the solver will not converge properly and you will receive a warning.&#x20;
+If you use insufficient constriant, sometimes you will achieve some solutions in equilibrium, but not the solutions you want (Fig\_XXX). However, in most cases, the solver will not converge properly and you will receive a warning.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/arch_insuf_constraint.png" alt=""><figcaption></figcaption></figure>
 
-### 3.3 Additional modifications&#x20;
+### 3.3 Updating the Support
 
 If the constraints are not erased, or are reassigned more modificaitions could be done on top of the current design. We will explore two simple ones. In the first modification we move the right support and the reaction forces 3m up (Fig\_XXX).
 
@@ -211,45 +209,54 @@ The second additional modification imposes an additional target force to one of 
 
 <figure><img src="../../.gitbook/assets/arch_edge_25.png" alt=""><figcaption></figcaption></figure>
 
-## 2.2. Constant Force Truss / Tied Arch Bridge
+## 4. Constant Force Truss / Tied Arch Bridge
 
-The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord. By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load.  It has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`.
+The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord. By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`.
 
-![](<../../.gitbook/assets/truss_no_dia.png>)
+![](../../.gitbook/assets/truss\_no\_dia.png)
 
-Although this structure can be "unstable" under variable load, we can manipulate the force diagram to optimize the truss. Since the polygons in the force diagram remain closed, the form diagram is guaranteed to be in equilibrium. 
-
+Although this structure can be "unstable" under variable load, we can manipulate the force diagram to optimize the truss. Since the polygons in the force diagram remain closed, the form diagram is guaranteed to be in equilibrium.
 
 ### 4.1 Analysis of the constant force truss
-Create the form diagram and force diagram (Fig_XXX). 
-![](<../../.gitbook/assets/form_force_truss.png>)
+
+Create the form diagram and force diagram (Fig\_XXX).
+
+&#x20;
+
+<figure><img src="../../.gitbook/assets/form_force_truss.png" alt=""><figcaption></figcaption></figure>
 
 ### 4.2 Truss with constant force in upper chord
+<<<<<<< HEAD
 The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points (Fig_XXX). 
+=======
+
+The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points.
+>>>>>>> main
 
 ![](<../../.gitbook/assets/constant_chord_diagram.png>)
 
-Now we will impose constraints to form find the truss such as the edges in the top chord have constant force. 
+Now we will impose constraints to form find the truss such as the edges in the top chord have constant force.
 
 Firstly, the default constraints are applied affecting the leaf edges (loads and reactions) and the vertices connected to it. This can be done pressing the button `Apply Default Constraints`.
 
-Secondly, we assign target forces to the top chord. In the button `Assign edge constraints` over the option `ForceMagnitude` we assign 30 kN to edges in the top chord. 
+Secondly, we assign target forces to the top chord. In the button `Assign edge constraints` over the option `ForceMagnitude` we assign 30 kN to edges in the top chord.
 
 Thirdly, multiple solutions for a constant top chord exist. In this part we will intially look for the one which keep the bottom chord flat. To do that we click once more to the `Assign edge constraint` button over the option `EdgeOrientation` and select edges in the bottom chord. The display should look like below:
 
-Finally, to preserve the load case we assign target edges also to the applied loads. On the function `Assign edge constraints` option `ForceMagnitude` we assign 10 kN to the applied loads. The result look like Fig_XX:
+Finally, to preserve the load case we assign target edges also to the applied loads. On the function `Assign edge constraints` option `ForceMagnitude` we assign 10 kN to the applied loads. The result look like Fig\_XX:
 
-![](<../../.gitbook/assets/truss_constrain.png>)
+![](../../.gitbook/assets/truss\_constrain.png)
 
-Click on the button `Update both diagrams`. The result is depicted as below (Fig_XX):
+Click on the button `Update both diagrams`. The result is depicted as below (Fig\_XX):
 
-![](<../../.gitbook/assets/truss_cons_upper.png>)
+![](../../.gitbook/assets/truss\_cons\_upper.png)
 
 ### 4.2 Truss with constant force in bottom and upper chord
-One additional modification will be performed. The top and bottom chord are constrained to the same target force 30 kN. As a consequence the bottom chord can no longer be flat. Therefore we remove that constraint and assign target edges length to the bottom chord. (Fig_XX)
-![](<../../.gitbook/assets/truss_cons_t_b.png>)
 
+One additional modification will be performed. The top and bottom chord are constrained to the same target force 30 kN. As a consequence the bottom chord can no longer be flat. Therefore we remove that constraint and assign target edges length to the bottom chord. (Fig\_XX)&#x20;
 
-Now, we can apply the update to form and force diagrams and the result is the double constant truss below (Fig_XX):
+<figure><img src="../../.gitbook/assets/truss_cons_t_b.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/truss_cons_top_bottom.png>)
+Now, we can apply the update to form and force diagrams and the result is the double constant truss below (Fig\_XX):
+
+![](../../.gitbook/assets/truss\_cons\_top\_bottom.png)
