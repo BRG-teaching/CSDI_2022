@@ -9,9 +9,9 @@
 
 We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch structures.
 
-### Arch-cable and Truss
+## Arch-cable and Truss
 
-####
+TODO
 
 ***
 
@@ -55,7 +55,7 @@ For the Form Diagram, pipes can be drawn in the edges with thickness proportiona
 
 ***
 
-###
+####
 
 ## 2. Analysis of a Warren Truss with Vertical Supports
 
@@ -123,8 +123,6 @@ In procedure graphic statics, we use both the form diagram and force diagram to 
 
 ![](../../.gitbook/assets/arch\_q.png)
 
-In algebric graphic statics, we always need to start from a desired topology.
-
 In algebric graphic statics, we always need to start from a desired topology. The following steps are shown in Fig-XX. We assume that the two extremities are pin supports. We divide the line between two supports into 7 segments, and the points indicates the line of action of the vertical loads. Here we will use an arc of a circle as an initial guess. Intersect the vertial lines with the arc and redraw the arc as line segments. Hide auxiliary geometries and add lines that represent external forces on the nodes. This is our input geometry for the force diagram.
 
 ![](../../.gitbook/assets/arch\_circle.jpg)
@@ -141,7 +139,7 @@ We observe that the force 10 kN is only applied to the edge selected as independ
 
 ### 3.2 Constrained Equilibrium under Uniformilly Distributed Load
 
-In algebric graphic statics, modifing a force diagram to update the form diagram sometimes is not as straight-forward. These constraints will help the user to update the diagrams more easily, and our algorithm to converge more sufficiently.
+In algebraic graphic statics, modifing a force diagram to update the form diagram sometimes is not as straightforward. These constraints will help the user to update the diagrams more easily, and our algorithm to converge more sufficiently.
 
 Four types of constraints are possible in the current version of IGS (Fig\_XX)
 
@@ -179,7 +177,7 @@ Now, we applied constraints to the form and force diagrams which force them to l
 
 Now that the bi-directional module is activated you click on <img src="../../.gitbook/assets/image (75).png" alt="" data-size="line">`Update Both Diagrams`. Both diagrams will update and the result should be as displayed below (Fig\_XXX):
 
-![](../../.gitbook/assets/arch_update_both.png)
+![](../../.gitbook/assets/arch\_update\_both.png)
 
 The funicular form for a uniformly distributed load is shalower than the original. The geometry is a parabola instead of an arc of a circle.
 
@@ -209,6 +207,8 @@ The second additional modification imposes an additional target force to one of 
 
 <figure><img src="../../.gitbook/assets/arch_edge_25.png" alt=""><figcaption></figcaption></figure>
 
+###
+
 ## 4. Constant Force Truss / Tied Arch Bridge
 
 The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord. By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`.
@@ -221,21 +221,15 @@ Although this structure can be "unstable" under variable load, we can manipulate
 
 Create the form diagram and force diagram (Fig\_XXX).
 
-&#x20;
-
 <figure><img src="../../.gitbook/assets/form_force_truss.png" alt=""><figcaption></figcaption></figure>
 
 ### 4.2 Truss with constant force in upper chord
-<<<<<<< HEAD
-The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points (Fig_XXX). 
-=======
 
-The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points.
->>>>>>> main
+HEAD The truss has constant tensile force in the bottom chord, but not in the upper chord. To achieve constant force in the upper chord with graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represents the bottom chord, and connect the center of the circle with the intersection points (Fig\_XXX).
 
-![](<../../.gitbook/assets/constant_chord_diagram.png>)
+![](../../.gitbook/assets/constant\_chord\_diagram.png)
 
-Now we will impose constraints to form find the truss such as the edges in the top chord have constant force.
+Now we will impose constraints to form-find the truss, such as the edges in the top chord having constant force.
 
 Firstly, the default constraints are applied affecting the leaf edges (loads and reactions) and the vertices connected to it. This can be done pressing the button `Apply Default Constraints`.
 
@@ -251,9 +245,9 @@ Click on the button `Update both diagrams`. The result is depicted as below (Fig
 
 ![](../../.gitbook/assets/truss\_cons\_upper.png)
 
-### 4.2 Truss with constant force in bottom and upper chord
+### 4.3 Truss with constant force in bottom and upper chord
 
-One additional modification will be performed. The top and bottom chord are constrained to the same target force 30 kN. As a consequence the bottom chord can no longer be flat. Therefore we remove that constraint and assign target edges length to the bottom chord. (Fig\_XX)&#x20;
+One additional modification will be performed. The top and bottom chord are constrained to the same target force 30 kN. As a consequence the bottom chord can no longer be flat. Therefore we remove that constraint and assign target edges length to the bottom chord. (Fig\_XX)
 
 <figure><img src="../../.gitbook/assets/truss_cons_t_b.png" alt=""><figcaption></figcaption></figure>
 

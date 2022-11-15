@@ -4,7 +4,7 @@
 
 Procedure graphic statics has shown us that graphic statics can be a powerful tool in architecture, allowing the exploration of different forms in equilibrium by modifying two diagrams: **form** (representing the frame structure) and **force** (representing the equilibrium on the nodes). By following procedural rules one the equilibrium can be verified and the force diagram is drawn.
 
-![Fibure 1: Procedure vs. Algebraic Graphic statics construction](<../../../.gitbook/assets/image (140).png>)
+![Fibure 1: Procedure vs. Algebraic Graphic statics construction](<../../../.gitbook/assets/image (328).png>)
 
 So far we have worked with single-node and funicular arch constructions. These can be dealt and programmed easily since they are composed of a few nodes and bars. The figure below illustrates the graphic statics construction for a triangulated structure (a Howe truss), which steps can be seen [here](https://block.arch.ethz.ch/eq/drawing/view/38). A much more extensive, and tedious procedure needs to be applied to construct form and force diagrams for this structure, and draw its force polygon.
 
@@ -14,7 +14,7 @@ Now, we introduce Algebraic Graph Statics (AGS) a method to encode the graphical
 
 The algorithm environment developed with AGS allows to perform the same modifications for form and force from previous lectures automatically, since the two diagrams are embedded in the data structure generated in AGS. The general workflow is described:
 
-![](<../../../.gitbook/assets/image (146).png>)
+![](<../../../.gitbook/assets/image (299).png>)
 
 ## IGS - Interactive Graphic Statics
 
@@ -100,7 +100,7 @@ The following rules need to be observed to draw a form diagram representing the 
 
 The representation of structures in IGS requires that the **loads applied** and **reaction forces** are drawn as edges in the diagram. The following examples represent possible inputs for IGS. In these, the black edges represent the internal members of the structure. The loads applied are represented in green and the supports, or reaction forces, are drawn in blue. The edges representing loads and supports will be indifferent in IGS, these will be called **leaf edges** in the diagram.
 
-![](<../../../.gitbook/assets/image (231).png>)
+![](<../../../.gitbook/assets/image (139).png>)
 
 #### **1.2. Sign to applied loads.**
 
