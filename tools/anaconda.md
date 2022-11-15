@@ -1,12 +1,12 @@
 # Anaconda 3
 
 {% hint style="info" %}
-If you are sure you already have Anaconda installed in your computed you can skip the first step.
+If you are sure you already have Anaconda installed in your computer, you can skip the first step.
 {% endhint %}
 
 ## 1. Download the Anaconda installer
 
-The Installation of Anaconda can be done through the link below. The installtion is free and **do not require any** registration. Note the installer download starts once you click in the `Download` button in green.
+The Installation of Anaconda can be done through the link below. The installation is free and **does not require any** registration. Note the installer download starts once you click in the `Download` button in green.
 
 {% embed url="https://www.anaconda.com/products/individual" %}
 
@@ -21,7 +21,7 @@ You can follow the steps in the link below to install Anaconda on Windows.&#x20;
 {% hint style="danger" %}
 ### Troubleshooting for usernames with spaces '\_'
 
-If your username contain white spaces `' '` or special caracteres `éáã'ç` you will see the following warning that **should not be ignored**. Multiple python packages have trouble running into usernames with spaces. To avoid that we will install Anaconda in a different location.
+If your username contains white spaces `' '` or special characters `éáã'ç` you will see the following warning that **should not be ignored**. Multiple python packages have trouble running into usernames with spaces. To avoid that, we will install Anaconda in a different location.
 
 
 {% endhint %}
@@ -29,7 +29,7 @@ If your username contain white spaces `' '` or special caracteres `éáã'ç` yo
 <figure><img src="../.gitbook/assets/image (365).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-If you saw that warning please create a folder named `anaconda3` within your local drive `C:\` the final adresss should look like in the following image. After that please accept all the default settings.
+If you saw that warning, please create a folder named `anaconda3` within your local drive `C:\` the final adresss should look like this in the following image. After that, please accept all the default settings.
 {% endhint %}
 
 ![](<../.gitbook/assets/image (64).png>)
