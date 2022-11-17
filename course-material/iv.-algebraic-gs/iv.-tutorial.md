@@ -211,7 +211,7 @@ The second modification imposes an additional target force on one of the reactio
 
 ## 4. Constant Force Truss / Tied Arch Bridge
 
-The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`.
+The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
 
 ![Fig-4-1](../../.gitbook/assets/truss\_no\_dia.png)
 
