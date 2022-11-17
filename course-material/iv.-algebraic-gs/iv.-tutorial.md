@@ -49,7 +49,7 @@ In procedure graphic statics, the magnitude of the force is equal to the length 
 
 ![Fig-1-5](../../.gitbook/assets/simple\_truss\_force\_inspector.png)
 
-For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried (Fig-1-6).
+For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried (Fig-1-6). The settings can be found in COMPAS toolbar uder the button `Scene Objects`. Choose `Settings` for the FormDiagram and check `show >> forcepipes`.&#x20;
 
 ![Fig-1-6](../../.gitbook/assets/simple\_truss\_force\_pipes.png)
 
