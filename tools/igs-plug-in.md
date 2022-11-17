@@ -12,7 +12,9 @@ If you have a fresh installation of Rhino, or if you have never used it for scri
 
 The installation process involves commands that have to be executed on the command line. **On Mac**, you can use the _**Terminal**_ app. **On Windows**, you need to use the _**Anaconda Prompt**_ instead of the standard _Command Prompt_. The Anaconda Prompt is automatically installed when you install Anaconda.
 
-<figure><img src="../.gitbook/assets/Anaconda Prompt.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2022-11-17 at 20.01.41.png" alt=""><figcaption><p>Terminal app for Mac users</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Anaconda Prompt.jpg" alt=""><figcaption><p>Anaconda Prompt for Win users</p></figcaption></figure>
 
 {% hint style="warning" %}
 Windows users may have to run the Anaconda Prompt "**as administrator**" to have sufficient permissions to execute all the commands successfully.
@@ -28,11 +30,11 @@ conda env create -f https://blockresearchgroup.github.io/compas-IGS2/environment
 
 You will see your Terminal / Anaconda Prompt appears in the image below. Copy the command and press `return/enter`.&#x20;
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 If you see the following lines, the installation is successful.&#x20;
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Activating the Environment
 
@@ -42,7 +44,7 @@ conda activate csd1
 
 You will see that you jump from the (_base_) to your (_csd1_) environment.&#x20;
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Installing the Plug-ins in Rhino
 
@@ -62,7 +64,7 @@ python -m compas_rhino.install -v 6.0 --clean
 
 If the plug-ins are installed correctly, you should see "Install completed" and no errors.
 
-<figure><img src="../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Updating the  Plug-ins
 
