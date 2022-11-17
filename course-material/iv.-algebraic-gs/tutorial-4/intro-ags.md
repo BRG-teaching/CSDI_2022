@@ -82,7 +82,7 @@ The IGS menu is organised in the sequential order of the workflow steps. The IGS
 
 The IGS toolbar is also organised in the sequential order of the workflow steps. The IGS toolbar includes most of the available functions and features of the plugin.
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 ### 3. IGS list of commands <a href="#2-rv2-toolbar" id="2-rv2-toolbar"></a>
 

@@ -90,7 +90,7 @@ Loading the toolbars of IGS2 is slightly different on Mac and on Windows.
 
 On Mac, you can load the toolbars by running the commands `COMPAS__toolbar` **** and **** `IGS2__toolbar`. **** You should now see the following toolbars in your Rhino viewport. You will have to do this every time you start Rhino.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ### Windows Users
 
@@ -98,9 +98,9 @@ On Windows, you only have to load the toolbars once and they will automatically 
 
 In the top menu, go to `Tools > Toolbar Layout`. Go to `File > Open`.  Select the file `COMPAS.rui` and click `Open`. Check the box for COMPAS, then click OK.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Repeat the same procedure for IGS2. Go to `File > Open`.  Select the file `IGS2.rui` and click `Open`. Check the box for IGS2, then click OK.
 

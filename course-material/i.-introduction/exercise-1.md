@@ -44,7 +44,7 @@ Find the magnitude and direction (indicate using the `ArrowHead` command in Rhin
 
 Given is a shape of stacked boxes glued together. Each acting force corresponds to the weight of one box. Find the magnitude and the direction of the resultant (indicate direction using the `ArrowHead` command in Rhino) in the force diagram as well as its position in the form diagram by using a trial funicular and check whether the arrangement is stable. In the PDF, briefly describe the construction procedure and the solution.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 ### Task 4 - Drawing subsystems
 
