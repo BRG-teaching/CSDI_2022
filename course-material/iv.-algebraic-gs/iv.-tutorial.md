@@ -31,9 +31,11 @@ In the toolbar of IGS2, click the button ![](<../../.gitbook/assets/IGS2\_form (
 The input lines will be hidden from the canvas to avoid overlap with the newly created Form Diagram. If you need to view them again, you need to type the command `Show` in Rhino. The input edges should remain hidden during this tutorial.
 {% endhint %}
 
-The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` to check the required number of forces that should be selected. Click ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node.You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
-
 Supports should be assigned to the nodes where reaction forces are applied. Click ![](../../.gitbook/assets/IGS2\_form\_select\_fixed.png) `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-1-2(bottom-right)).
+
+The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` to check the required number of forces that should be selected. Click ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (1).png>) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
+
+After you have assigned the forces, you can click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
 
 ### **1.2 Computing the Force Diagram**
 
@@ -65,7 +67,7 @@ Here we will look into a warren truss(Fig-2-1). The forces applied at each node 
 
 ### **2.1 Making the Form Diagram**
 
-As in the first example, at the IGS toolbar go to `Create Form Diagram` and select the option `FromLines` . This form diagram is composed of `m=33` edges and `ni=14` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 33 - 2*14 = 5`). Use `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. Use `Identify Anchors` to select the support nodes. (Fig-2-2)
+As in the first example, at the IGS toolbar go to ![](../../.gitbook/assets/IGS2\_form.png) `Create Form Diagram` and select the option `FromLines` . Use ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (1).png>) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2)
 
 ![Fig-2-2](../../.gitbook/assets/truss\_fixed.png)
 
