@@ -77,3 +77,32 @@ conda env update -f https://blockresearchgroup.github.io/compas-IGS2/environment
 ```
 
 After updating is finished, repeat [3. Installing the Plug-ins in Rhino](igs-plug-in.md#3.-installing-the-plug-ins-in-rhino).&#x20;
+
+
+
+## Loading the Toolbars
+
+After installing, restart Rhino, and run the command `EditPythonScript` at the Rhino command prompt. This will make Rhino scan the Python plugin folders and make the functionality of COMPAS and IGS2 available. You only need to do this once, and there is no need to restart Rhino afterward.
+
+Loading the toolbars of IGS2 is slightly different on Mac and on Windows.
+
+### Mac Users
+
+On Mac, you can load the toolbars by running the commands `COMPAS__toolbar` **** and **** `IGS2__toolbar`. **** You should now see the following toolbars in your Rhino viewport. You will have to do this every time you start Rhino.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+### Windows Users
+
+On Windows, you only have to load the toolbars once and they will automatically appear every time Rhino starts.
+
+In the top menu, go to `Tools > Toolbar Layout`. Go to `File > Open`.  Select the file `COMPAS.rui` and click `Open`. Check the box for COMPAS, then click OK.
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+Repeat the same procedure for IGS2. Go to `File > Open`.  Select the file `IGS2.rui` and click `Open`. Check the box for IGS2, then click OK.
+
+The menus and toolbars for COMPAS and IGS2 will now both appear in Rhino.&#x20;
+

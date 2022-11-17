@@ -32,8 +32,8 @@
   * [Exercise 2](course-material/iii.-procedural-gs-ii-1/exercise-3.md)
 * [IV. Algebraic GS](course-material/iv.-algebraic-gs/tutorial-4/README.md)
   * [Lecture](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
+  * [Workflow + UI](course-material/tutorial-4/workflow-+-ui.md)
   * [Tutorial](course-material/iv.-algebraic-gs/iv.-tutorial.md)
-  * [Exercise](course-material/tutorial-4/exercise.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
 
 ## appendix
