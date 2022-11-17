@@ -4,6 +4,7 @@
 * [Syllabus](syllabus.md)
 * [Instructors](instructors.md)
 * [Tools](tools/README.md)
+  * [Algebraic GS Plug-in](tools/algebraic-gs-plug-in.md)
   * [Anaconda 3](tools/anaconda.md)
 * [Cite](cite.md)
 
