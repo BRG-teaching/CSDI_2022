@@ -57,9 +57,9 @@ For the Form Diagram, pipes can be drawn in the edges with thickness proportiona
 
 ####
 
-## 2. Analysis of a Warren Truss with Vertical Supports
+## 2. Analysis of a Truss
 
-The second example analyses a warren truss with vertical supports (Fig-2-1). The forces applied at each node have a magnitude of 10 kN.
+Here we will look into a warren truss(Fig-2-1). The forces applied at each node have a magnitude of 10 kN.
 
 ![Fig-2-1](../../.gitbook/assets/truss.png)
 
@@ -117,13 +117,13 @@ For Fig-2-6,
 
 ***
 
-## 3. Form finding of the arch under uniformly distributed load
+## 3. Form Finding of An arch Under Uniformly Distributed Load
 
-In procedure graphic statics, we use the form diagram and force diagram to find a funicular structure in equilibrium. Here we will use algebraic graphic statics to find an arch under uniformly distributed load (Fig-3-1). The load in each node is equal to **10 kN**.
+In procedure graphic statics, we use the form and force diagrams to find a funicular structure in equilibrium. Here we will use algebraic graphic statics to find an arch under uniformly distributed load (Fig-3-1). The load in each node is equal to **10 kN**.
 
 ![Fig-3-1](../../.gitbook/assets/arch\_q.png)
 
-In algebraic graphic statics, we always need to start from the desired topology. The following steps are shown in Fig-3-2. We assume that the two extremities are pin supports. We divide the line between two supports into 7 segments, and the points indicate the line of action of the vertical loads. Here we will use an arc of a circle as an initial guess. Intersect the vertical lines with the arc and redraw the arc as line segments. Hide auxiliary geometries and add lines that represent external forces on the nodes. This is our input geometry for the force diagram.
+In algebraic graphic statics, we always need to start from the desired topology, which means the algorithm only works with a given geometry, and you need to make a drawing of your initial guess. The steps are shown in Fig-3-2. We assume that the two extremities are pin supports. We divide the line between two supports into 7 segments, and the points indicate the line of action of the vertical loads. Here we will use an arc of a circle as an initial guess. Intersect the vertical lines with the arc and redraw the arc as line segments. Hide auxiliary geometries and add lines that represent external forces on the nodes. This is our input geometry for the force diagram.
 
 ![Fig-3-2](../../.gitbook/assets/arch\_circle.jpg)
 
@@ -141,12 +141,11 @@ We observe that the force 10 kN is only applied to the edge selected as independ
 
 In algebraic graphic statics, modifying a force diagram to update the form diagram sometimes is not as straightforward. These constraints will help the user to update the diagrams more efficiently and our algorithm to converge more easily.
 
-Four types of constraints are possible in the current version of IGS (Fig-3-4)
+Four types of constraints are possible in the current version of IGS (Fig-3-4)**Anchor a vertex**, fixing its x, and y coordinates;
 
-1. **Anchor a vertex**, fixing its x, and y coordinates;
-2. Constraint a vertex to a **line of action**;
-3. Constraint **edge direction**; and
-4. Apply **target forces** in the form diagram, which reflect in target lengths in the force diagram.
+1. Constraint a vertex to a **line of action**;
+2. Constraint **edge direction**; and
+3. Apply **target forces** in the form diagram, which reflect in target lengths in the force diagram.
 
 ![Fig-3-4](../../.gitbook/assets/image\(408\).png)
 
