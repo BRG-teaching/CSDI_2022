@@ -33,9 +33,9 @@ The input lines will be hidden from the canvas to avoid overlap with the newly c
 
 Supports should be assigned to the nodes where reaction forces are applied. Click ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (1).png>) `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-1-2(bottom-right)).
 
-The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>) `Check DoF` to check the required number of forces that should be selected. Click ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (2).png>) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
+The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` to check the required number of forces that should be selected. Click ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (2).png>) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
 
-After you have assigned the forces, you can click the button ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
+After you have assigned the forces, you can click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
 
 ### **1.2 Computing the Force Diagram**
 
@@ -67,7 +67,7 @@ Here we will look into a warren truss(Fig-2-1). The forces applied at each node 
 
 ### **2.1 Making the Form Diagram**
 
-As in the first example, at the IGS toolbar go to ![](<../../.gitbook/assets/IGS2\_form (1).png>) `Create Form Diagram` and select the option `FromLines` . Use ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (2).png>) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2) Use ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png)`Check DoF` to verify that you have assigned the right number of forces.&#x20;
+As in the first example, at the IGS toolbar go to ![](<../../.gitbook/assets/IGS2\_form (1).png>) `Create Form Diagram` and select the option `FromLines` . Use ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (2).png>) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2) Use ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>)`Check DoF` to verify that you have assigned the right number of forces.&#x20;
 
 ![Fig-2-2](../../.gitbook/assets/truss\_fixed.png)
 
@@ -201,9 +201,9 @@ The second modification imposes an additional target force on one of the reactio
 
 ###
 
-## 4. Analysis and Form Finding of an Arch Cable of Constant Force
+## 4. Analysis and Form Finding of an Arch Cable of Constant Force in the Chord
 
-The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
+The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we can remove these bars of 0 forces in our structure. Note that this truss is only "stable" under a uniformly distributed load. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
 
 ![Fig-4-1](../../.gitbook/assets/truss\_no\_dia.png)
 
