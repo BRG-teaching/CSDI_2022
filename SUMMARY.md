@@ -5,7 +5,7 @@
 * [Instructors](instructors.md)
 * [Tools](tools/README.md)
   * [Anaconda 3](tools/anaconda.md)
-  * [IGS Plug-in](tools/igs-plug-in.md)
+  * [IGS plug-in](tools/igs-plug-in.md)
 * [Cite](cite.md)
 
 ## course material

@@ -1,4 +1,4 @@
-# Algebraic GS Plug-in
+# IGS plug-in
 
 {% hint style="danger" %}
 To install the plug-in for Algebraic GS, please make sure that you have installed [Anaconda 3](anaconda.md).&#x20;
@@ -26,11 +26,23 @@ Now, you have to execute the following 3 commands **one after another**. To do t
 conda env create -f https://blockresearchgroup.github.io/compas-IGS2/environment.yml
 ```
 
+You will see your Terminal / Anaconda Prompt appears in the image below. Copy the command and press `return/enter`.&#x20;
+
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+
+If you see the following lines, the installation is successful.&#x20;
+
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+
 ### 2. Activating the Environment
 
 ```
 conda activate csd1
 ```
+
+You will see that you jump from the (_base_) to your (_csd1_) environment.&#x20;
+
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Installing the Plug-ins in Rhino
 
@@ -49,3 +61,17 @@ python -m compas_rhino.install -v 6.0 --clean
 ```
 
 If the plug-ins are installed correctly, you should see "Install completed" and no errors.
+
+<figure><img src="../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+
+### 4. Updating the  Plug-ins
+
+{% hint style="warning" %}
+You only need to run this command when there's a new release of the plug-in.&#x20;
+{% endhint %}
+
+```
+conda env update -f https://blockresearchgroup.github.io/compas-IGS2/environment.yml
+```
+
+After updating is finished, repeat [3. Installing the Plug-ins in Rhino](igs-plug-in.md#3.-installing-the-plug-ins-in-rhino).&#x20;
