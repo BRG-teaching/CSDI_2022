@@ -23,7 +23,7 @@ Let's start with the following example of the simple truss. The geometry, loads,
 
 In the Rhino file, the lines of this truss are already drawn as Fig-1-2(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
-In the toolbar of IGS2, click the button ![](<../../.gitbook/assets/IGS2\_form (1) (1).png>) `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are drawn in the current layer.&#x20;
+In the toolbar of IGS2, click the button ![](<../../.gitbook/assets/IGS2\_form (1).png>) `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are drawn in the current layer.&#x20;
 
 ![Fig-1-2](../../.gitbook/assets/simple\_truss\_form.jpg)
 
@@ -31,11 +31,11 @@ In the toolbar of IGS2, click the button ![](<../../.gitbook/assets/IGS2\_form (
 The input lines will be hidden from the canvas to avoid overlap with the newly created Form Diagram. If you need to view them again, you need to type the command `Show` in Rhino. The input edges should remain hidden during this tutorial.
 {% endhint %}
 
-Supports should be assigned to the nodes where reaction forces are applied. Click ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (1).png>) `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-1-2(bottom-right)).
+Supports should be assigned to the nodes where reaction forces are applied. Click ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (2).png>) `Identify Anchors` and select the two nodes in the base of the single panel. These nodes will be highlighted in red(Fig-1-2(bottom-right)).
 
-The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` to check the required number of forces that should be selected. Click ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (2).png>) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
+The system has `m=10` edges and `ni=4` internal nodes. According to the definition of static determinacy, `DOF = m - 2*ni = 10 - 2*4 = 2`. We need to assign two forces. In IGS, you can also click the button ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>) `Check DoF` to check the required number of forces that should be selected. Click ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) the `Assign Forces` button. Select the two edges representing the loads and apply a magnitude of **-30 kN** to the left load and **-10 kN** to the correct node. For the forces, the negative sign means the force is pressing against the node; the positive sign means pulling away the node. You can identify the left and right edges by the displayed numbers in edge labels. After we hit OK, the forces applied are shown on the edges with an arrow(Fig-1-2(bottom-left)). Verify that the arrow direction corresponds to the desired direction of the applied loads.
 
-After you have assigned the forces, you can click the button ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
+After you have assigned the forces, you can click the button ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
 
 ### **1.2 Computing the Force Diagram**
 
@@ -67,7 +67,7 @@ Here we will look into a warren truss(Fig-2-1). The forces applied at each node 
 
 ### **2.1 Making the Form Diagram**
 
-As in the first example, at the IGS toolbar go to ![](<../../.gitbook/assets/IGS2\_form (1).png>) `Create Form Diagram` and select the option `FromLines` . Use ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (2).png>) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](../../.gitbook/assets/IGS2\_form\_assign\_forces.png) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2) Use ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>)`Check DoF` to verify that you have assigned the right number of forces.&#x20;
+As in the first example, at the IGS toolbar go to ![](<../../.gitbook/assets/IGS2\_form (3).png>) `Create Form Diagram` and select the option `FromLines` . Use ![](../../.gitbook/assets/IGS2\_form\_select\_fixed.png) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (1).png>) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2) Use ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png)`Check DoF` to verify that you have assigned the right number of forces.&#x20;
 
 ![Fig-2-2](../../.gitbook/assets/truss\_fixed.png)
 
@@ -123,7 +123,7 @@ In algebraic graph statics, we always need to start from the desired topology, w
 
 In this case, we have a funicular arch, but the load is unknown. As long as we know one axial force in our system, we can draw the force diagram with the correct scale. We can double-check this argument via the definition of static determinacy. The system has `m=17` edges and `ni=8` internal nodes. Its `DOF = m - 2*ni = 17 - 2*8 = 1`. We need to assign only one force.
 
-Create FormDiagram with the button ![](<../../.gitbook/assets/IGS2\_form (2).png>)`Crerate Form Diagram` from the lines. Restrain the two extremity vertices assigning them as supports/anchors with the button ![](../../.gitbook/assets/IGS2\_form\_select\_fixed.png) `Identify Anchors`. Assign one load, -10 kN, with the button ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (1).png>) `Assign Forces`.  Press the button ![](<../../.gitbook/assets/IGS2\_force\_from\_form (2).png>) `Create Force Diagram` which generated the ForceDiagram highlighted in Fig-3-3.
+Create FormDiagram with the button ![](<../../.gitbook/assets/IGS2\_form (2).png>)`Crerate Form Diagram` from the lines. Restrain the two extremity vertices assigning them as supports/anchors with the button ![](<../../.gitbook/assets/IGS2\_form\_select\_fixed (1).png>) `Identify Anchors`. Assign one load, -10 kN, with the button ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (2).png>) `Assign Forces`.  Press the button ![](<../../.gitbook/assets/IGS2\_force\_from\_form (2).png>) `Create Force Diagram` which generated the ForceDiagram highlighted in Fig-3-3.
 
 ![Fig-3-3](../../.gitbook/assets/arch\_force.png)
 
@@ -191,7 +191,7 @@ If the constraints are not erased or are reassigned, more modifications could be
 
 ![Fig-3-10](../../.gitbook/assets/arch\_move\_support.png)
 
-We then press the button ![](../../.gitbook/assets/IGS2\_update\_both.png) `Update Both Diagrams` and both diagrams will be matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformly distributed load case but with supports in different elevations, which makes the vertical reaction forces unbalanced (Fig-3-11).
+We then press the button ![](<../../.gitbook/assets/IGS2\_update\_both (2).png>) `Update Both Diagrams` and both diagrams will be matched according to the constraints and the new support position. The resultant structure is still a funicular for the uniformly distributed load case but with supports in different elevations, which makes the vertical reaction forces unbalanced (Fig-3-11).
 
 ![Fig-3-11](../../.gitbook/assets/arch\_support.png)
 
@@ -201,13 +201,17 @@ The second modification imposes an additional target force on one of the reactio
 
 ###
 
-## 4. Analysis and Form Finding of an Arch Cable of Constant Force in the Chord
+## 4. Analysis and Form Finding of an Arch-Cable Structure of Constant Force in the Chord
 
-The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we can remove these bars of 0 forces in our structure. Note that this truss is only "stable" under a uniformly distributed load. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
+The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we can remove these bars of 0 forces in our structure. Note that this truss is only "stable" under a uniformly distributed load.&#x20;
+
+Although such a structure can be "unstable" under variable load, we can manipulate the force diagram to explore the design space. Since the polygons in the force diagram remain closed, the form diagram is guaranteed to be in equilibrium.&#x20;
+
+We will start with the following arch-cable structure. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
 
 ![Fig-4-1](../../.gitbook/assets/truss\_no\_dia.png)
 
-Although this structure can be "unstable" under variable load, we can manipulate the force diagram to optimize the truss. Since the polygons in the force diagram remain closed, the form diagram is guaranteed to be in equilibrium.
+
 
 ### 4.1 Analysis of the constant force truss
 
@@ -215,34 +219,34 @@ Create the form diagram and force diagram (Fig-4-2).
 
 <figure><img src="../../.gitbook/assets/form_force_truss.png" alt=""><figcaption><p>Fig-4-2</p></figcaption></figure>
 
-### 4.2 Truss with constant force in the upper chord
+### 4.2 Arch-cable with constant force in the upper chord
 
-HEAD The truss has constant tensile force in the bottom chord but not in the upper chord. To achieve constant force in the upper chord graphically is to draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represent the bottom chord, and connect the center of the circle with the intersection points (Fig-4-3).
+The truss has constant tensile forces in the bottom chord but variable forces in the upper chord. To achieve constant force in the upper chord graphically, we will draw a circle in the force diagram. The radius of the circle is equal to the constant force. Intersect the circle with the horizontal lines that represent the bottom chord, and connect the center of the circle with the intersection points (Fig-4-3).
 
 ![Fig-4-3](../../.gitbook/assets/constant\_chord\_diagram.png)
 
-Now we will impose constraints to form-find the truss, such as the edges in the top chord having constant force.
+Now we will impose constraints to form-find the arch cable, such as the edges in the top chord having constant force.
 
-Firstly, the default constraints affect the leaf edges (loads and reactions) and the vertices connected to them. This can be done by pressing the button `Apply Default Constraints`.
+Firstly, the default constraints affect the leaf edges (loads and reactions) and the vertices connected to them. This can be done by pressing the button ![](../../.gitbook/assets/IGS2\_form\_default\_constraints.png) `Apply Default Constraints`.
 
-Secondly, we assign target forces to the top chord. In the button `Assign edge constraints` over the option, `ForceMagnitude` we assign 30 kN to the edges in the top chord.
+Secondly, we assign target forces to the top chord. In the button ![](<../../.gitbook/assets/IGS2\_form\_constraints\_edge (1).png>) `Assign edge constraints` over the option, `ForceMagnitude` we assign 30 kN to the edges in the top chord.
 
-Thirdly, multiple solutions for a constant top chord exist. In this part, we will initially look for the one which keeps the bottom chord flat. To do that, we click once more on the `Assign edge constraint` button over the option `EdgeOrientation` and select edges in the bottom chord. The display should look like below:
+Thirdly, multiple solutions for a constant top chord exist. In this part, we will initially look for the one which keeps the bottom chord flat. To do that, we click once more on the ![](<../../.gitbook/assets/IGS2\_form\_constraints\_edge (3).png>)`Assign edge constraint` button over the option `EdgeOrientation` and select edges in the bottom chord.&#x20;
 
-Finally, to preserve the load case, we assign target edges also to the applied loads. On the function `Assign edge constraints` option `ForceMagnitude` we assign 10 kN to the applied loads. The result looks like Fig-4-4:
+Finally, to preserve the load case, we assign target edges also to the applied loads. Under the function ![](<../../.gitbook/assets/IGS2\_form\_constraints\_edge (2).png>) `Assign edge constraints` option `ForceMagnitude,` we assign 10 kN to the applied loads. The result looks like Fig-4-4:
 
 ![Fig-4-4](../../.gitbook/assets/truss\_constrain.png)
 
-Click on the button `Update both diagrams`. The result is depicted below (Fig-4-5):
+Click on the button ![](<../../.gitbook/assets/IGS2\_update\_both (1).png>) `Update both diagrams`. The result is depicted below (Fig-4-5):
 
 ![Fig-4-5](../../.gitbook/assets/truss\_cons\_upper.png)
 
-### 4.3 Truss with constant force in the bottom and upper chord
+### 4.3 Arch-cable with constant force in the bottom and upper chord
 
-One additional modification will be performed. The top and bottom chords are constrained to the same target force of 30 kN. As a consequence, the bottom chord can no longer be flat. Therefore we remove that constraint and assign the target edges length to the bottom chord. (Fig-4-6)
+One additional modification will be performed. The top and bottom chords are constrained to the same target force of 30 kN. As a consequence, the bottom chord can no longer be flat. Therefore we remove that constraint using command `IGS2_form_constraint_edge_remove` and assign the target edges length to the bottom chord. (Fig-4-6)
 
 <figure><img src="../../.gitbook/assets/truss_cons_t_b.png" alt=""><figcaption><p>Fig-4-6</p></figcaption></figure>
 
-Now, we can apply the update to form and force diagrams, and the result is the double constant truss below (Fig-4-7):
+Now, we can apply the ![](../../.gitbook/assets/IGS2\_update\_both.png) update to form and force diagrams, and the result is the double constant truss below (Fig-4-7):
 
 ![Fig-4-7](../../.gitbook/assets/truss\_cons\_top\_bottom.png)
