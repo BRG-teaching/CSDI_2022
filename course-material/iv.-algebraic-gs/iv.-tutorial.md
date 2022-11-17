@@ -117,7 +117,7 @@ For Fig-2-6,
 
 ***
 
-## 3. Form Finding of An arch Under Uniformly Distributed Load
+## 3. Analysis and Form Finding of an arch Under Uniformly Distributed Load
 
 In procedure graphic statics, we use the form and force diagrams to find a funicular structure in equilibrium. Here we will use algebraic graphic statics to find an arch under uniformly distributed load (Fig-3-1). The load in each node is equal to **10 kN**.
 
@@ -208,7 +208,7 @@ The second modification imposes an additional target force on one of the reactio
 
 ###
 
-## 4. Constant Force Arch Cable
+## 4. Analysis and Form Finding of an Arch Cable of Constant Force
 
 The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we remove these forces, and this truss is only "stable" under a uniformly distributed load. It has `m=21` edges and `ni=10` internal nodes. Its `DOF = m - 2*ni = 21 - 2*10 = 1`.
 
