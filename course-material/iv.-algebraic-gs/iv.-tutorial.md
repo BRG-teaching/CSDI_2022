@@ -21,7 +21,7 @@ Let's start with the following example of the simple truss. The geometry, loads,
 
 ### **1.1 Making the Form Diagram**
 
-In the Rhino file, the lines of this truss are already drawn as Fig-XXX(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
+In the Rhino file, the lines of this truss are already drawn as Fig-1-2(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
 In the toolbar of IGS, go to the function `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are stored in a new Rhino layer - `IGS >> FormDiagram`.
 
@@ -103,15 +103,7 @@ Now change the uniform loading to ununiform loading (Fig-2-8). The diagonal stru
 
 ![Fig-2-8](../../.gitbook/assets/truss\_cons\_unsymmetrical.png)
 
-### **2.5 Load Path**
-
-Additionally, feedback on the cost of the structure can be assessed by activating the option`Compute loadpath` that shows an increase in the cost/loadpath of the structure. For Fig-2-4,
-
-> The total load-path of the structure is 1860.0 kNm.
-
-For Fig-2-6,
-
-> The total load-path of the structure is 1892.0 kNm.
+****
 
 ***
 
