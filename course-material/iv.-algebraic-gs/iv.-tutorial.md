@@ -23,7 +23,7 @@ Let's start with the following example of the simple truss. The geometry, loads,
 
 In the Rhino file, the lines of this truss are already drawn as Fig-1-2(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
-In the toolbar of IGS2, click the button ![](../../.gitbook/assets/IGS2\_form.png) `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are drawn in the current layer.&#x20;
+In the toolbar of IGS2, click the button ![](<../../.gitbook/assets/IGS2\_form (1).png>) `Create Form Diagram` and select the option `FromLines`. The FormDiagram will be created as Fig-1-2(top-right). You can notice a difference in the color of the **internal edges** (structure) and **external edges** (loads and reactions). The Form Diagram edges are drawn in the current layer.&#x20;
 
 ![Fig-1-2](../../.gitbook/assets/simple\_truss\_form.jpg)
 
@@ -43,13 +43,15 @@ After setting the load, we can compute the equilibrium by calculating the force 
 
 Note that the reaction forces now also display the value and direction. The default visualization for form and force is the red-blue coloring. **Blue** represents **compression** and **red** represents **tension**. At this point, the scale and location of the force diagram are automatically set by IGS.
 
-In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidentally assigns a tremendous axial force. To analyze the magnitude of the forces in specific edges, three options are available in the Button `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure. Additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation** (Fig-1-4), and the duality can be inspected with the function **ForcePolygons.**
+In procedure graphic statics, the magnitude of the force is equal to the length of the force diagram. In IGS, the force diagram is automatically scaled based on the size of the form diagram, in case the user accidentally assigns a tremendous axial force. To analyze the magnitude of the forces in specific edges, two options are available in the button ![](../../.gitbook/assets/IGS2\_inspector.png) `Inspect Diagrams`. An **EdgesTable** can be displayed with information about all the forces in the structure(Fig-1-4). Additionally, information about one specific edge of the structure can be queried with the option **EdgeInformation** (Fig-1-5).
 
-![Fig-1-4](../../.gitbook/assets/simple\_truss\_force\_inspector.png)
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Fig-1-4</p></figcaption></figure>
 
-For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried (Fig-1-5).
+![Fig-1-5](../../.gitbook/assets/simple\_truss\_force\_inspector.png)
 
-![Fig-1-5](../../.gitbook/assets/simple\_truss\_force\_pipes.png)
+For the Form Diagram, pipes can be drawn in the edges with thickness proportional to the load carried (Fig-1-6).
+
+![Fig-1-6](../../.gitbook/assets/simple\_truss\_force\_pipes.png)
 
 ***
 
