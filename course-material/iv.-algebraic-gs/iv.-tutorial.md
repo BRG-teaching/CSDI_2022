@@ -2,16 +2,14 @@
 
 ## Learning Goals
 
-* analyze 2-dimensional truss structures using algebraic graphic statics
-* form-find funicular arch-cable structures using restrained algebraic graphic statics
+* analyze 2-dimensional truss structures using algebraic graph statics
+* form-find funicular arch-cable structures using restrained algebraic graph statics
+
+
 
 ## Content
 
 We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch-cable structures.
-
-## Arch-cable and Truss
-
-TODO
 
 ***
 
