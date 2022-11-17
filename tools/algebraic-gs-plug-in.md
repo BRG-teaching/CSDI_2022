@@ -14,13 +14,11 @@ The installation process involves commands that have to be executed on the comma
 
 <figure><img src="../.gitbook/assets/Anaconda Prompt.jpg" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Windows users may have to run the Anaconda Prompt "**as administrator**" to have sufficient permissions to execute all the commands successfully.
 {% endhint %}
 
-
-
-You have to execute the following 3 commands. Please copy the line in your Terminal / Anaconda Prompt and press `return/enter`. For the first command, it will take a few minutes to be executed. Please be patient and wait until you see "done".&#x20;
+Now, you have to execute the following 3 commands **one after another**. To do that, copy the first command line in your Terminal / Anaconda Prompt and press `return/enter` .**This will take a few minutes to be executed so please be patient**. Once it finishes completely, execute the second command line. And, once the second is finished, execute the last one.
 
 ### 1. Creating an Environment and Downloading the packages
 
@@ -36,7 +34,9 @@ conda activate csd1
 
 ### 3. Installing the Plug-ins in Rhino
 
-Please close all the Rhino windows you have opened. If you are using **Rhino 7.0**, please execute the following command.&#x20;
+{% hint style="warning" %}
+Close all the Rhino windows you have opened. If you are using **Rhino 7.0**, please execute the following command.
+{% endhint %}
 
 ```
 python -m compas_rhino.install -v 7.0 --clean
@@ -49,7 +49,3 @@ python -m compas_rhino.install -v 6.0 --clean
 ```
 
 If the plug-ins are installed correctly, you should see "Install completed" and no errors.
-
-
-
->
