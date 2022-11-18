@@ -213,7 +213,7 @@ We will start with the following arch-cable structure. It has `m=21` edges and `
 
 
 
-### 4.1 Analysis of the constant force truss
+### 4.1 Analysis of the Arch-cable Structure
 
 Create the form diagram and force diagram (Fig-4-2).
 
