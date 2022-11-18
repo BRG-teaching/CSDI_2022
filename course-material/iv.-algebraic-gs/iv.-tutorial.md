@@ -1,25 +1,21 @@
 # Tutorial
 
-## Learning Goals
+## Learning goals
 
 * analyze 2-dimensional truss structures using algebraic graph statics
 * form-find funicular arch-cable structures using restrained algebraic graph statics
-
-
 
 ## Content
 
 We have learned how to find a form under variable loads using procedure graphic statics. However, when we want to modify the initial setup of the drawing, such as the number of structural elements and the connectivity, we need to modify a large amount of the program or even reconstruct the entire procedure. This process can be time-consuming and requires profound familiarity with geometric construction knowledge. This week we will algebraic graphic statics to analyze 2-dimensional trusses, as well as form-find funicular and arch-cable structures.
 
-***
-
-## 1. Analysis of a Simple Truss
+## 1. Analysis of a simple truss
 
 Let's start with the following example of the simple truss. The geometry, loads, and support conditions are depicted in Fig-1-1. The left load is 30 kN, and the right is 10 kN.
 
 ![Fig-1-1](../../.gitbook/assets/simple\_truss\_diagram.png)
 
-### **1.1 Making the Form Diagram**
+### **1.1 Making the form diagram**
 
 In the Rhino file, the lines of this truss are already drawn as Fig-1-2(top-left). The fixed support is represented by two reaction forces in the x and y directions. The roller support is represented by a reaction force in the y direction. Two unsymmetrical external forces are simplified as two lines in the orientation of the forces.
 
@@ -37,7 +33,7 @@ The system has `m=10` edges and `ni=4` internal nodes. According to the definiti
 
 After you have assigned the forces, you can click the button ![](<../../.gitbook/assets/IGS2\_form\_check\_dof (1).png>) `Check DoF` again to make sure that you have assigned the right number of forces.&#x20;
 
-### **1.2 Computing the Force Diagram**
+### **1.2 Computing the force diagram**
 
 After setting the load, we can compute the equilibrium by calculating the force diagram with the button ![](../../.gitbook/assets/IGS2\_force\_from\_form.png) `Create Force Diagram`. The force diagram is automatically generated right to the form diagram. The result should be as shown in Fig-1-3.
 
@@ -59,19 +55,19 @@ For the Form Diagram, pipes can be drawn in the edges with thickness proportiona
 
 ####
 
-## 2. Analysis of a Truss
+## 2. Analysis of a truss
 
 Here we will look into a warren truss(Fig-2-1). The forces applied at each node have a magnitude of 10 kN.
 
 ![Fig-2-1](../../.gitbook/assets/truss.png)
 
-### **2.1 Making the Form Diagram**
+### **2.1 Making the form diagram**
 
 As in the first example, at the IGS toolbar go to ![](<../../.gitbook/assets/IGS2\_form (3).png>) `Create Form Diagram` and select the option `FromLines` . Use ![](../../.gitbook/assets/IGS2\_form\_select\_fixed.png) `Identify Anchors` to select the support nodes. This form diagram is composed of `m=29` edges and `ni=12` internal nodes. Therefore we can specify the force in 5 edges (`DOF = m - 2*ni = 29 - 2*12 = 5`). Use ![](<../../.gitbook/assets/IGS2\_form\_assign\_forces (1).png>) `Assign Forces` to select 5 forces and input the corresponding force of +**10 kN**. (Fig-2-2) Use ![](../../.gitbook/assets/IGS2\_form\_check\_dof.png)`Check DoF` to verify that you have assigned the right number of forces.&#x20;
 
 ![Fig-2-2](../../.gitbook/assets/truss\_fixed.png)
 
-### **2.2. Computing the Force Diagram**
+### **2.2. Computing the force diagram**
 
 After setting the load, we can compute the equilibrium by calculating the force diagram using the button ![](<../../.gitbook/assets/IGS2\_force\_from\_form (1).png>) `Create Force Diagram`. The force diagram is automatically generated right to the form diagram. The result should be as below (Fig-2-3).
 
@@ -81,7 +77,7 @@ The sum of external forces are `10 * 5 = 50 kN`. Turn on the hidden Rhino layer 
 
 ![Fig-2-4](../../.gitbook/assets/truss\_scale\_pipe.png)
 
-### **2.3 Modification of Form Diagram**
+### **2.3 Modification of form diagram**
 
 Geometric modifications, such as dragging nodes in the form diagram, can be executed with the button ![](../../.gitbook/assets/IGS2\_form\_move\_nodes.png) `Move FormDiagram Nodes`. Once one modification is performed, the force diagram can be updated by pressing the button ![](../../.gitbook/assets/IGS2\_force\_update.png) `Update ForceDiagram from FormDiagram`.
 
@@ -95,7 +91,7 @@ If we increase the height of our truss, the internal forces decrease (Fig-2-6).
 
 
 
-### **2.4 Special Case**
+### **2.4 Special case**
 
 The following geometry shows a truss designed by the desired force property under uniformly distributed load (Fig-2-7). It has constant axial forces in the bottom chord. The forces in the diagonal struts are zero. In the force diagram, the endpoints representing these diagonal struts are overlaid, which means the edges are of 0 lengths. Thus, these members can be eliminated from the structure of the chords if the rest elements have sufficient strength and flexural stiffness to satisfy the demand of non-uniform load cases and stability requirements.
 
@@ -109,7 +105,7 @@ Now change the uniform loading to ununiform loading (Fig-2-8). The diagonal stru
 
 ***
 
-## 3. Analysis and Form Finding of an arch Under Uniformly Distributed Load
+## 3. Analysis and form finding of an arch under uniformly distributed load
 
 In procedure graphic statics, we use the form and force diagrams to find a funicular structure in equilibrium. Here we will use algebraic graphic statics to find an arch under uniformly distributed load (Fig-3-1). The load in each node is equal to **10 kN**.
 
@@ -129,7 +125,7 @@ Create FormDiagram with the button ![](<../../.gitbook/assets/IGS2\_form (2).png
 
 We observe that the force 10 kN is only applied to the edge selected as the independent and the mirrored edge in the form diagram. The rest of the applied loads are different from 10 kN.
 
-### 3.2 Constrained Equilibrium under Uniformly Distributed Load
+### 3.2 Constrained equilibrium under uniformly distributed load
 
 In algebraic graphic statics, modifying a force diagram to update the form diagram sometimes is not as straightforward as you modify it manually.&#x20;
 
@@ -185,7 +181,7 @@ If you use insufficient constraints, sometimes you will achieve some solutions i
 
 <figure><img src="../../.gitbook/assets/arch_insuf_constraint.png" alt=""><figcaption><p>Fig-3-9</p></figcaption></figure>
 
-### 3.3 Updating the Support
+### 3.3 Updating the support
 
 If the constraints are not erased or are reassigned, more modifications could be done on top of the current design. We will explore two simple ones. In the first modification, we move the right support, and the reaction forces 3m up (Fig-3-10). Click the button ![](<../../.gitbook/assets/IGS2\_form\_move\_nodes (1).png>) `Move FormDiagram vertices`, select the 3 nodes at the right support and move them. &#x20;
 
@@ -201,7 +197,7 @@ The second modification imposes an additional target force on one of the reactio
 
 ###
 
-## 4. Analysis and Form Finding of an Arch-Cable Structure of Constant Force in the Chord
+## 4. Analysis and form finding of an arch-cable structure of constant force in the chord
 
 The form of the truss in 2.4 is found graphically by specifying a constant force of **10 kN** in the bottom chord (Fig-4-1). By examining the corresponding force diagram, we observe that the diagonal members of the truss are zero force members. Thus, we can remove these bars of 0 forces in our structure. Note that this truss is only "stable" under a uniformly distributed load.&#x20;
 
@@ -213,7 +209,7 @@ We will start with the following arch-cable structure. It has `m=21` edges and `
 
 
 
-### 4.1 Analysis of the Arch-cable Structure
+### 4.1 Analysis of the arch-cable structure
 
 Create the form diagram and force diagram (Fig-4-2).
 
