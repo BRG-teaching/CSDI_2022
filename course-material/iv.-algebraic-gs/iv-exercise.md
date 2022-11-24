@@ -96,14 +96,6 @@ Assume that:
 
 Propose two bridge designs.&#x20;
 
-* In the first design, the span and the cantilever are two independent structures. One of them should be an arch-cable, and the other one should be a truss. In the second design, the bridge and the viewing platform have to be a single structure. Solve it using a combination of truss and arch-cable, or only arch-cables.
+* In the first design, the span and the cantilever are two independent structures. One of them should be an arch-cable, and the other one should be a truss.&#x20;
+* In the second design, the bridge and the viewing platform have to be a single structure. Solve it using a combination of a truss and an arch-cable, or only arch-cables.
 
-### Deliverables
-
-Please submit the following elements:
-
-1. Five .igs files corresponding to the structures analysed throughout the 3 tasks.
-2. The PDF-Document with your answers and screenshots.\
-   _The **formatting** must be kept **clean** and the **word limits** must be respected._
-3. (optional) the Rhino (.3dm) file with the structures in separate layers.\
-   _For each completed structure before clearing the scene to initiate the next one you can copy the layer_ `IGS>>FormDiagram` _and_ `IGS>>ForceDiagram` _and rename them, for example as_ `IGS_task1_A>>FormDiagram` and `IGS_task1_A>>ForceDiagram` in _this way they will not be deleted as you move on to the next task. This is a great way to keep track of your advances in the extecise_
