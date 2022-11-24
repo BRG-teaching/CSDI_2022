@@ -34,6 +34,7 @@
   * [Lecture](course-material/iv.-algebraic-gs/tutorial-4/intro-ags.md)
   * [Workflow + UI](course-material/tutorial-4/workflow-+-ui.md)
   * [Tutorial](course-material/iv.-algebraic-gs/iv.-tutorial.md)
+  * [Exercise](course-material/iv.-algebraic-gs/iv-exercise.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
 
 ## appendix

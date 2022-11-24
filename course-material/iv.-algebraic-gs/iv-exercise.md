@@ -10,7 +10,7 @@ Complete the tasks below, and submit **by 9:00am on Friday, December 2nd one zip
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/xB0jt4XbfkHXWIk)**** (TODO)
+### ****[**Submit here**](https://polybox.ethz.ch/index.php/s/4Am1YGniSK1xRNL)**** 
 {% endhint %} 
 
 {% hint style="info" %}
@@ -33,13 +33,14 @@ In the first task, you will analyse and modify 3 trusses.
 
 Assume that: 
 * The total weight applied to the central portion of the deck is 50 kN. They are distributed equally: 10 kN at each loaded node.
-* All the trusses have a pin support (fixed in X and Y) in the left and a roller support (fixed Y) in the right.
+* All the trusses have a pin support in the left and a roller support in the right.
 * The position of the supports can be either on the upper chord or on the lower chord. 
 
-Here are the three truss(Fig-1-1): 
+Here are the three truss(Fig-1-2): 
 1. Truss bridge with N diagonals
 2. Truss bridge with V diagonals
 3. Truss bridge with K diagonals
+   
 ![Fig-1-2](../../.gitbook/assets/3_truss_bridges.png)
 
 You need to: 
@@ -50,13 +51,13 @@ You need to:
 
 
 
-# Task 2: Cantilever arch-cable structure under uniformly distributed load 
+# Task 2: Cantilever arch-cable structure 
 
 Here's a comparison between an arch and a cantilever arch-cable under 4 external loads. Remove the rightest member in the arch, follow its direction, and find the correct anchor point. 
 
 ![Fig-1-3](../../.gitbook/assets/cantilever_exp.png)
 
-In task 2, we will build a 15.0m cantilever arch-cable viewing platform on a cliff. 
+In task 2, we will build a 15.0m cantilever arch-cable viewing platform on a cliff. The cliff is vertical. 
 
 Assume that:
 * The total weight applied to the deck is 50 kN, assume that the deck is divided in 5 pieces such that the load of 10 kN should be applied at each loaded node.
@@ -68,38 +69,33 @@ The steps to construct the antilever arch-cable viewing platform are described a
 ![Fig-1-3](../../.gitbook/assets/cantilever_steps.png)
 
 1. Define two anchor points on the cliff and the direction of the reaction force. 
-2. Find the rightest point in the arch. 
-3. Form find the arch under self weight of the deck. 
+2. Find the support of the arch on the right side.
+3. Form find the arch under self weight of the deck. (Hint: tutorial part 3) 
 4. Transfer the load on the arch to the upper chord.
-5. Construct the arch-cable using the form-found arch. 
+5. Rebuild the entire the geometry and analyse it again in IGS to obtain the final force diagram. 
 
 Based on your form-found arch-cable structure, answer the following questions. 
-* Assume that the load on the structure is no longer uniform. Could you propose a modification so that the structure is stable under the following loads (Fig-1-4)? Hint: Topological modification is allowed. 
+* Assume that the load on the structure is no longer uniform. Could the arch-cable cantilever structure take non-uniformly distributed loads? If not, could you propose a modification so that the structure is stable under the following loads (Fig-1-4)? Hint: Topological modification is allowed. 
 
 ![Fig-1-4](../../.gitbook/assets/cantilever_unequal.png)
 
 * Assume that we want to achieve constant force in the lower chord. Is it possible to find a design solution considering the current support locations? If it's possible, compute the final results. If it's not possible, could you propose a solution so that constant force can be achieved? 
-Hint: changing the support locations and cantilevering span is allowed.
+Hint: changing the support locations is allowed.
 
 
 # Task 3: Design your bridge
 
-In task 3, we will build a bridge connecting the left cliff and the right island(Fig-1-4). The distance between the left cliff and the middle island is 30 meters. The distance between the middle island and the right island is 15 meters. 
+In task 3, we will build a bridge connecting the left cliff and the middle island, and a cantilever viewing platform(Fig-1-4). The distance between the left cliff and the middle island is 30 meters. The cantilever span is 15 meters. 
 
 
 ![Fig-1-4](../../.gitbook/assets/bridge_design.png)
 
 Assume that:
-* The weight of the deck is 5 kN/m. The weight should be equally distributed along the span. However, you are free to divide the deck in as many slices as you want.
-
-* Due to the soil property, the bridge cannot be anchored on the right island. You are allowed to anchor anywhere on the left cliff, and on the peak of the middle island. The deck that is supported by the middle island and hangs over the right island can be longer than 15 m. 
-
+* The weight of the deck is 5 kN/m. The weight should be uniformly distributed along the span. However, you are free to divide the deck as many slices as you want.
+* You are allowed to anchor anywhere on the left cliff and the middle island. 
 * In your design the deck does not need to remain horizontal.
-  
-* Be creative :) 
 
-Propose two bridge designs. One should be made of trusses, and the other one of arch-cable. 
-
+Propose two bridge designs. In the first design, the span and the cantilever are two independent structure. One of them should be an arch-cable and the other one should be a truss. In the second design, the bridge and the viewing platform have to be a single structure. Solve it using a combination of trusses and arch-cable, or only arch-cable. 
 
 ## Deliverables
 
