@@ -18,9 +18,11 @@ Then answer the questions on the following document:
 
 {% file src="../../.gitbook/assets/CSD1_2021_exercise-4_template (1).docx" %}
 
-Remember to save each subtask as an individual `.igs` with the function <img src="../../.gitbook/assets/image (361).png" alt="" data-size="line">`Save IGS Session` as they are needed in the submission. To keep track of your progress you can duplicate the layer `IGS` (with its sublayers) after completing each task/subtask and rename it to `IGS_taskX` so the lines get stored in the Rhinofile. Optionally, you can submit this too. Check the [deliverables](exercise-4.md#deliverables) expected.
+Remember to save each subtask as an individual `.igs` with the function `Save Session` as they are needed in the submission. To keep track of your progress you can duplicate the layer `IGS` (with its sublayers) after completing each task/subtask and rename it to `IGS_taskX` so the lines get stored in the Rhinofile. Optionally, you can submit this too. Check the [deliverables](exercise-4.md#deliverables) expected.
 
-## Task 1: Analysis of a truss bridge (2.0 pt) <a href="#rhinoceros-file-and-template" id="rhinoceros-file-and-template"></a>
+## Task 1: Analysis of a truss bridge
+
+
 
 In the first task we will study of the following truss bridge. It is composed of 21 internal edges and supports on both extremities. The total span is 18m. The initial design is presented in Figure 1. The structure is divided into 6 modules and has a structural height of 3 m.
 
@@ -97,3 +99,59 @@ Please submit the following elements:
    _The **formatting** must be kept **clean** and the **word limits** must be respected._
 3. (optional) the Rhino (.3dm) file with the structures in separate layers.\
    _For each completed structure before clearing the scene to initiate the next one you can copy the layer_ `IGS>>FormDiagram` _and_ `IGS>>ForceDiagram` _and rename them, for example as_ `IGS_task1_A>>FormDiagram`  and `IGS_task1_A>>ForceDiagram` in _this way they will not be deleted as you move on to the next task. This is a great way to keep track of your advances in the extecise_
+
+
+
+
+
+# 0. Static determincy
+For the following structures, how many internal edges, load and nodes do they have? What is the degree of freedom? 
+
+what is the difference between a truss without diagonals, with one diagonals, and with X diagonals. 
+
+
+# 1. Analysis of truss bridges
+A truss is composed of chords and digonal struts. In this exercise you are given a few truss options for a pedestrian bridge. 
+
+1.1. Create a form diagram for the bridge and compute a force diagram representing the equilibrium of the bridge considering the loads on the deck.
+
+1.2 Estimates maximum strength of the trusses considering the kind of material to use and the element’s thickness.
+
+Given material properties -> one edge exceed the maximum force that's allowed. How to modify the form diagram to minimize the force? 
+
+(1.3 Compute the loadpath? )
+
+1.4 Compute the funicular structure under the load and compare it with the truss. 
+
+---
+
+# 2. the Chiasso Shed
+The Chiasso Shed is one of Robert Maillart(1872–1940)'s most intriguing projects. In this exercise, we will study how to use graphic statics to design this structure. 
+
+## 2.1 Analysis of Howe Truss
+We will start from a typical triangulated roof structure - a Howe truss. The truss has a span of 18 meters and a height of 3 meters, under constant load 10 kN on each node. Create the form and force diagram of the Howe truss. 
+
+## 2.2 Modification of Force Diagram
+You can see that the forces in the top chords are not equal. Inpractice, the top chord would be made entirely of a section with sufficient capacity for the highest compressive load. Modify your force diagram, so that 1. the top chord has constant forces. 2. the diagonal elements has 0 forces. 
+
+Hint: Use the edge inspectors to understand the corresponding edges in the form and force diagram. Use force_move_nodes to move the correct nodes. 
+
+Doc questions:
+1. explain the steps that you use to modify the force diagram
+2. screen shot of the force diagram
+
+
+## 2.3 Chiasso Shed
+1. create form and force diagram
+2. our material only allows forces less than XXX. now we want to reduce the forces inside the upper chord. Modify your foce diagram 
+3. use constraints to reduce the forces in upper chord 
+
+
+Doc questions: 
+1. explain why we only need to choose one independent edges instead of five in the Howe Truss?
+2. to reduce the forces in the upper chord, what will it influence the height of the truss
+3. what constraints do you use? make screen shot of the updated form and force diagram. 
+
+## 2.4 constant force in upper and bottom chords
+use constraints to find a Chiasso Shed with constant force in both upper and bottom chords.  
+
