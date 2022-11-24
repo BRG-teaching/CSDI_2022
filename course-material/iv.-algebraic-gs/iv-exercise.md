@@ -22,38 +22,38 @@ For **each task,** save the .igs session file. Rename them as `ex-4_task_1_Name.
 
 ## Task 0: Theory: Static determinacy
 
-In the lecture, we learned the concept of static determinacy. Identify the following four structures (Fig-1-1). Is it a cable/arch, arch-cable, or truss? Is it unstable, statically determinate, or statically indeterminate systems?
+In the lecture, we learned the concept of static determinacy. Identify the following four structures (Fig-1-1). Is it a cable/arch, arch-cable, or truss? Is it unstable, statically determinate, or statically indeterminate systems? For the first three structures, calculate their degree of freedom.&#x20;
 
 ![Fig-1-1](../../.gitbook/assets/theory.png)
 
-## Task 1: Analysis of truss bridges
+## Task 1: Analysis of trusses
 
-In the first task, you will analyse and modify 3 trusses.
+In the first task, you will analyze and modify 3 trusses.
 
 Assume that:
 
-* The total weight applied to the central portion of the deck is 50 kN. They are distributed equally: 10 kN at each loaded node.
-* All the trusses have a pin support in the left and a roller support in the right.
-* The position of the supports can be either on the upper chord or on the lower chord.
+* The total weight applied to the deck is 50 kN. They are distributed equally: 10 kN at each loaded node.
+* All the trusses have a pin support on the left and a roller support on the right.
+* The position of the supports can be either on the upper chord or the lower chord.
 
-Here are the three truss(Fig-1-2):
+Here are the three trusses (Fig-1-2):
 
-1. Truss bridge with N diagonals
-2. Truss bridge with V diagonals
-3. Truss bridge with K diagonals
+1. Truss 1 with N diagonals
+2. Truss 2 with V diagonals
+3. Truss 3 with K diagonals
 
 ![Fig-1-2](../../.gitbook/assets/3\_truss\_bridges.png)
 
 You need to:
 
 * Compute the form and force diagrams of the three trusses.
-* Compare the truss 1 with the truss we have analysed in tutorial 2. Analysis of a truss. List the difference between the two trusses.
+* Compare the truss 1 with the truss we have analyzed in [tutorial 2. Analysis of a truss](iv.-tutorial.md#2.-analysis-of-a-truss). List the difference between the two trusses.
 * Change the support locations of truss 2 so that the top chord is in tension and the bottom chord is in compression. Modify the input lines for truss 2 and compute the form and force diagram.
 * In truss 3, which members of the top and bottom chord have the largest forces? Which members in the diagonals have the largest forces? What are the force magnitudes in these members? Perform a geometric modification of truss 3 so that the internal forces in the members are reduced.
 
 ## Task 2: Cantilever arch-cable structure
 
-Here's a comparison between an arch and a cantilever arch-cable under 4 external loads. Remove the rightest member in the arch, follow its direction, and find the correct anchor point.
+Here's a comparison between an arch and a cantilever arch-cable under 4 external loads. If you remove the member on the right and find the intersection between its extension and the anchoring obstacle, you will find the correct anchor point to anchor the cable, and the cable can carry the loads originally in the member.
 
 ![Fig-1-3](../../.gitbook/assets/cantilever\_exp.png)
 
@@ -61,7 +61,7 @@ In task 2, we will build a 15.0m cantilever arch-cable viewing platform on a cli
 
 Assume that:
 
-* The total weight applied to the deck is 50 kN, assume that the deck is divided in 5 pieces such that the load of 10 kN should be applied at each loaded node.
+* The total weight applied to the deck is 50 kN. Assume that the deck is divided in 5 pieces such that the load of 10 kN should be applied at each loaded node.
 * The supports can be anchored anywhere on the cliff.
 
 The steps to construct the antilever arch-cable viewing platform are described as followed.
