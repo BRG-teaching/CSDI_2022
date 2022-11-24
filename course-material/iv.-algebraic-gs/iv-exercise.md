@@ -76,11 +76,11 @@ The steps to construct the cantilever arch-cable are described as follows (Fig-2
 
 Based on your form-found arch-cable structure, answer the following questions.
 
-* Assume that the load on the structure is no longer uniform. Could the arch-cable cantilever structure take non-uniformly distributed loads? If not, could you propose a modification so that the structure is stable under the following loads (Fig-2-3)? (Hint: Topological modification is allowed)
+* Assume that the load on the structure is no longer uniform. Could the arch-cable cantilever structure take non-uniformly distributed loads? If not, could you propose a modification to stabilize the structure under the following loads (Fig-2-3)? (Hint: Topological modification is allowed)
 
 ![Fig-2-3](../../.gitbook/assets/cantilever\_unequal.png)
 
-* Assume that we want to achieve constant force in the lower chord. Is it possible to find a design solution considering the current support locations? If it's possible, compute the final results. If it's not possible, could you propose a solution so that constant force can be achieved? (Hint: changing the support locations is allowed)
+* Assume that we want to achieve constant force in the lower chord. Is it possible to find a design solution considering the current support locations? If it's possible, compute the final results. If it's not possible, could you propose a solution to achieve constant force? (Hint: changing the support locations is allowed)
 
 ## Task 3: Design your bridge
 
