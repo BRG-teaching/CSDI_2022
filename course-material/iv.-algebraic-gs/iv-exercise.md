@@ -9,7 +9,7 @@ Complete the tasks below, and submit **by 9:00 am on Friday, December 2nd, one z
 2. 3 .igs session file.
 3. The completed PDF.
 
-
+Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
 #### [**Submit here**](https://polybox.ethz.ch/index.php/s/4Am1YGniSK1xRNL)
 {% endhint %}
