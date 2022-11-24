@@ -50,7 +50,7 @@ You need to:
 
 * Compute the form and force diagrams of the three trusses.
 * Compare truss 1 with the truss we have analyzed in [tutorial 2. Analysis of a truss](iv.-tutorial.md#2.-analysis-of-a-truss). List the difference between the two trusses.
-* Change the support locations of truss 2 so that the top chord is in tension and the bottom chord is in compression. Modify the input lines for truss 2 and compute the form and force diagram.
+* Change the support locations of truss 2 so that the top chord is in tension and the bottom chord is in compression. Compute the form and force diagram.
 * In truss 3, which members of the top and bottom chords have the largest forces? Which members in the diagonals have the largest forces? What are the force magnitudes in these members? Perform a geometric modification of truss 3 so that the internal forces in the members are reduced.
 
 ## Task 2: Cantilever arch-cable structure
