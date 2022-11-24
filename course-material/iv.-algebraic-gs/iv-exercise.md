@@ -18,7 +18,9 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 For **each task,** save the .igs session file. Rename them as `ex-4_task_1_Name.igs`.
 {% endhint %}
 
+## Save and load .igs session.
 
+In COMPAS toolbar, you can save the working session using button ![](../../.gitbook/assets/COMPAS\_save.png) and load the session using button ![](<../../.gitbook/assets/COMPAS\_load (1).png>). For task 1 , 2, 3, after you finish every task, please save the working session.&#x20;
 
 ## Task 0: Theory: Static determinacy
 
