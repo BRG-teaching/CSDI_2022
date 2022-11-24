@@ -5,7 +5,7 @@
 {% hint style="warning" %}
 Complete the tasks below, and submit **by 9:00 am on Friday, December 2nd, one zipped folder** that includes:
 
-1. the Rhinoceros file.
+1. the Rhinoceros file containing all the form and force diagrams.
 2. 3 .igs session file.
 3. The completed PDF.
 
@@ -15,16 +15,14 @@ Complete the tasks below, and submit **by 9:00 am on Friday, December 2nd, one z
 {% endhint %}
 
 {% hint style="info" %}
-For **each task** save the IGS session file. Rename them as `exercise-4_task_1_Name.igs`.
+For **each task,** save the .igs session file. Rename them as `ex-4_task_1_Name.igs`.
 {% endhint %}
 
-### Tasks
 
-Complete the following 1 theory task and 3 tasks using IGS.
 
 ## Task 0: Theory: Static determinacy
 
-In the lecture, we have learned the concept of static determincy. Identify the following four structures (Fig-1-1). Is it a cable / arch, arch-cable or truss? Is it unstable, statically determinate or statically indeterminate systems?
+In the lecture, we learned the concept of static determinacy. Identify the following four structures (Fig-1-1). Is it a cable/arch, arch-cable, or truss? Is it unstable, statically determinate, or statically indeterminate systems?
 
 ![Fig-1-1](../../.gitbook/assets/theory.png)
 
