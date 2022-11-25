@@ -68,19 +68,21 @@ Assume that:
 
 The steps to construct the cantilever arch-cable are described as follows (Fig-2-2).
 
-<figure><img src="../../.gitbook/assets/IGS2_cantilever copy_2.png" alt=""><figcaption></figcaption></figure>
-
 1. Define two anchor points on the cliff and the direction of the reaction force.
 2. Find the support of the arch on the right side.
 3. Form find the arch under the self-weight of the deck. (Hint: [Tutorial 3. ](iv.-tutorial.md#3.-analysis-and-form-finding-of-an-arch-under-uniformly-distributed-load)Analysis and form finding of an arch under uniformly distributed load[ ](iv.-tutorial.md#3.-analysis-and-form-finding-of-an-arch-under-uniformly-distributed-load))
 4. Transfer the load on the arch to the upper chord.
 5. Rebuild the entire geometry and analyze it again in IGS to obtain the final force diagram.
 
+<figure><img src="../../.gitbook/assets/Screenshot 2022-11-26 at 00.41.38 (1).png" alt=""><figcaption><p>Fig-2-2</p></figcaption></figure>
+
+
+
 Based on your form-found arch-cable structure, answer the following questions.
 
 * Assume that the load on the structure is no longer uniform. Could the arch-cable cantilever structure take non-uniformly distributed loads? If not, could you propose a modification to stabilize the structure under the following loads (Fig-2-3)? (Hint: Topological modification is allowed)
 
-![Fig-2-3](../../.gitbook/assets/cantilever\_unequal.png)
+<figure><img src="../../.gitbook/assets/Screenshot 2022-11-26 at 00.44.22.png" alt=""><figcaption><p>Fig-2-3</p></figcaption></figure>
 
 * Assume that we want to achieve constant force in the lower chord. Is it possible to find a design solution considering the current support locations? If it's possible, compute the final results. If it's not possible, could you propose a solution to achieve constant force? (Hint: changing the support locations is allowed)
 
