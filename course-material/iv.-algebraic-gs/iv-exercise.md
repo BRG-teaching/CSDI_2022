@@ -68,7 +68,7 @@ Assume that:
 
 The steps to construct the cantilever arch-cable are described as follows (Fig-2-2).
 
-<figure><img src="../../.gitbook/assets/IGS2_cantilever.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/IGS2_cantilever copy_2.png" alt=""><figcaption></figcaption></figure>
 
 1. Define two anchor points on the cliff and the direction of the reaction force.
 2. Find the support of the arch on the right side.
