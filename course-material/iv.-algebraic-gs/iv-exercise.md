@@ -68,7 +68,7 @@ Assume that:
 
 The steps to construct the cantilever arch-cable are described as follows (Fig-2-2).
 
-![Fig-2-2](../../.gitbook/assets/cantilever\_steps.png)
+![Fig-2-2](../../.gitbook/assets/cantilever_step.png)
 
 1. Define two anchor points on the cliff and the direction of the reaction force.
 2. Find the support of the arch on the right side.
@@ -98,6 +98,6 @@ Assume that:
 
 Propose two bridge designs.&#x20;
 
-* In the first design, the span and the cantilever are two independent structures. One of them should be an arch-cable, and the other one should be a truss.&#x20;
+* In the first design, the bridge and the viewing platform are two independent structures. One of them should be an arch-cable, and the other one should be a truss.&#x20;
 * In the second design, the bridge and the viewing platform have to be a single structure. Solve it using a combination of a truss and an arch-cable, or only arch-cables.
 
