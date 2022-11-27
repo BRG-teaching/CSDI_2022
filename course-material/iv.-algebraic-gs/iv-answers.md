@@ -19,35 +19,56 @@ The forces in the members can be reduced by increasing the height of the truss,
 
 
 ## Task 2: Cantilever arch-cable structure
+The cantilever arch-cable structure can be constructed in the following steps: 
 
-Construct the arch-cable
+Part 1: 
+1. Find the intersection point of the reaction force and the load on the most right location. Draw a curve, and find the intersection between the curve and the external loads loads. Redraw the curve as segments. 
+
 ![Fig-1-3](../../.gitbook/assets/4ex_2.1.png)
-![Fig-1-3](../../.gitbook/assets/4ex_2.2.png)
+
+2. Conmpute the form diagram. Assign one force, and compute the force diagram. The external loads are not constant. 
+   
+![Fig-1-3](../../.gitbook/assets/4ex_2.2.png) 
+
+1. Assign default constraint. Assign target edge magnituede 10kN to the external loads. 
+   
 ![Fig-1-3](../../.gitbook/assets/4ex_2.3.png)
+
+1. Update the diagrams. Note that if your horizontal reaction force is very large, sometimes the solver cannot converge perfectly. The tolerance difference is accepted for this exercise. 
+   
 ![Fig-1-3](../../.gitbook/assets/4ex_2.4.png)
-1. form find the arch
-2. complete the arch-cable
+
+5. Use the form-found arch to construct the input lines for the arch-cable. The upper chord needs to be segments. The top support should be drawn as one horizontal reaction force and one vertical reaction force. 
+   
 ![Fig-1-3](../../.gitbook/assets/4ex_2.5.png)
+
+1. Compute the form and force diagram. 
+   
 ![Fig-1-3](../../.gitbook/assets/4ex_2.6.png)
 
+Part 2: 
+Adding diagonals can help the arch-cable to resist non-uniform loadings. 
 
-Arch-cable under non-uniform load
 ![Fig-1-3](../../.gitbook/assets/4ex_2.7.png)
 
-Constant force in the lower chord
+Part 3:
+For the arch-cable in tutorial 4. The rise of the arch changes to achieve constant force in the upper chord. Similarly, to allow constant force in the lower chord, the rise of the bottom chord needs to move. Thus, we need to unfix the bottom support and add a line constraint to the support so that it remains on the vertical cliff. 
+
+1. We can use edge inspector to find a reasonable edge magnitude to assign to the bottom chord. 
 ![Fig-1-3](../../.gitbook/assets/4ex_2.8.png)
-![Fig-1-3](../../.gitbook/assets/4ex_2.9.png)
-![Fig-1-3](../../.gitbook/assets/4ex_2.10.png)
 
-reason why need to be fixed
-We need to allow one support to move. 
-
-over-constraint
-1. Fix only one support on the cliff.
-2. Add default constraint, this will:
+1. Now assign the constraints. 
+   A. Fix the top support on the cliff.
+   B. Add default constraint, this will:
    - fix orientation of reactional forces and external loads
    - vertices where external loads are applied remain on the line of action of the load
    - fixed support remain in place
-3. The support that is not fixed should remain on the vertical cliff. Thus, it can only move upwards or downwards. Use vertex constraint, select the support, and keep it in y direction. 
-4. Now you can assign a target constant force in the bottom chord. You can first check the forces in the bottom chord, and estimate a target force. Apply target forces in the bottom chord. 
-5. Update both diagrams. 
+   C. The bottom support is not fixed but should remain on the vertical cliff. Use vertex constraint, select the support, and keep it in y-direction. 
+   D. Assign a target constant force in the bottom chord.
+
+![Fig-1-3](../../.gitbook/assets/4ex_2.9.png)
+
+3. Update both diagrams. 
+   
+![Fig-1-3](../../.gitbook/assets/4ex_2.10.png)
+
