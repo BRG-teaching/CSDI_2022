@@ -75,4 +75,147 @@ In order to move on to the next example, we have to clear out our RV2 session in
 
 ## 2.0 Formfinding from a Mesh and Visualisation Options
 
-Now we will expand upon the simple workflow to make a simple shell supported at its four corner points. We will also go through different options for visualisation in RV2.
+Before starting this example, it is important to know the difference between a mesh and a surface. 
+
+Rhino defines a [surface](http://docs.mcneel.com/rhino/5/help/en-us/seealso/sak_surface.htm#:~:text=A%20surface%20is%20like%20a,same%20object%3A%20a%20NURBS%20surface.) as being like a rectangular stretchy rubber sheet. The NURBS form can represent simple shapes, such as planes and cylinders, as well as free-form, sculptured surfaces.
+
+Rhino defines a [mesh](http://docs.mcneel.com/rhino/5/help/en-us/commands/mesh.htm#:~:text=The%20Mesh%20command%20creates%20a,export%20into%20various%20file%20formats.) as a collection of vertices and polygons that define the shape of an polyhedral object.
+
+In summary, **meshes** are composed of faces, edges, and vertices while **surfaces** are best described as the pure mathematical expression of the geometry. 
+
+Now that we know the difference, we can begin the example. Here we will expand upon the simple workflow to make a simple shell supported at its four corner points. We will also go through different options for visualisation in RV2.
+
+### 2.1 Defining the Topology
+
+We begin with a simple mesh with the same dimensions and subdivisions as our last example, as shown in Fig 2-1. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_initialGeom.png" alt=""><figcaption><p>Fig 2-1 : Initial Mesh</p></figcaption></figure>
+
+First, we select ![](../../../.gitbook/assets/rv2_toolbar_make_pattern.png) `Create pattern` and select the option `FromMesh`. Next, select the mesh. It should then look like this.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_meshPattern.png" alt=""><figcaption><p>Fig 2-2 : Pattern from Mesh</p></figcaption></figure>
+
+### 2.2 Identifying the Supports
+
+The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `Corners`. Press enter to allow RV2 to find and select the corners.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_corners.png" alt=""><figcaption><p>Supports Located at the Corners</p></figcaption></figure>
+
+At this point it is important to note that as a consequence of selecting only the four corners, we must now update our form diagram to accomodate for this choice. In order to understand how we must update our form diagram, we can isolate one vertex and graphically calculate the equilibrium of that node by drawing the force diagram (Fig 2-3 left). In the case on the left (straight boundaries), since the directions of the forces along the opening needs to be horizontal, you can not close the force polygon unless the force perpendicular to the opening is zero. However by updating the form diagram with a sag equal to 10% of the span of the opening, the force polygon can be closed using forces with finite magnitude (Fig 2-3 right).
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_corners.png" alt=""><figcaption><p>Fig 2-3 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
+
+This sag feature is available in RV2. In the Rhino command line, click on `UpdateBoundaries`. You will now see that each side of the pattern has received an identification number as in Fig 2-4.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_sagStart.png" alt=""><figcaption><p>Fig 2-4 : Pattern with sides identified</p></figcaption></figure>
+
+We can now change the amount of sag on individual boundaries, or one by one. We will go ahead and add a sag of 10% to all boundaries. Do this by clicking `All`, and then `Sag10`. We can see the sag that is applied to the sides in Fig 2-5. Now **press enter twice** to apply all the changes to the topology.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_sag10.png" alt=""><figcaption><p>Fig 2-5 : 10% Sag applied to sides</p></figcaption></figure>
+
+### 2.3 Creating the Form Diagram
+
+Next we will create the form diagram as before by clicking  ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_formDiagram.png" alt=""><figcaption><p>Fig 2-6 : Form Diagram</p></figcaption></figure>
+
+### 2.4 Creating the Force Diagram
+
+Now click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`. In this example we can see many more dots indicating angle deviations, shown in Fig 2-7. This is resolved in the horizontal equilibrium step. To do this, we click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. If you run the solver once and there are remaining angle deviations, just run the `Horizontal equilbrium` command again. The final force diagram after solving for equilibrium is shown in Fig 2-8. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_forceDiagram.png" alt=""><figcaption><p>Fig 2-7 : Force Diagram not in Equilbrium</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_horizEquilibrium.png" alt=""><figcaption><p>Fig 2-8 : Final Force Diagram in Equilibrium</p></figcaption></figure>
+
+### 2.5 Generating the Thrust Object
+
+Next, we will click ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject.png" alt=""><figcaption><p>Fig 2-9 : Initial Thrust Object</p></figcaption></figure>
+
+In this instance, let's change the height of the shell to see what happens. Click on ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` again, and this time click on `TargetHeight` to edit the value. Type **2** and then hit enter **twice**. Now we can see a shallow shell with increasted reaction forces at the corners. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_2.png" alt=""><figcaption><p>Fig 2-10 : Thrust Object with 2m Height</p></figcaption></figure>
+
+Next, let's increase the height to see the effect this has on the reaction forces. Click on ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` again, and change the `TargetHeight` value to **6**. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_6.png" alt=""><figcaption><p>Fig 2-11 : Thrust Object with 6m Height</p></figcaption></figure>
+
+We can see that this taller shell has decreased reaction forces at its corners in comparison to the shallow shell, as we would expect. While this visualisation is helpful, there are actually many other visualisation options in RV2 to help us more easily comprehend the force flow in the shell.
+
+### 2.5 Visualisation Options
+
+While we will not go over all the settings, we will go through a number of them which might be helpful for your. Click on ![](../../../.gitbook/assets/rv2_toolbar_settings.png) `Settings`. In the `RV2` tab, we can see the `angle tolerance` which determines the minimum value before RV2 displays the red dot with the angle deviation in the force diagram. The `forces` option color codes your form to your force diagram, allowing you to easily see which edges are taking the greatest forces. In Fig 2-12 the `forces` are shown.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_RV2.png" alt=""><figcaption><p>Fig 2-12 : RV2 Settings</p></figcaption></figure>
+
+In the `FormObject` Tab we can show and hide the `edges` and the `vertices` of the form diagram. In Fig 2-13 the `edges` remain shown but the `vertices` have been hidden.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ForceObject.png" alt=""><figcaption><p>Fig 2-13 : FormObject Settings</p></figcaption></figure>
+
+In the `ForceObject` Tab we find the same types of settings, but now for the force diagram. In Fig 2-14 the `vertices` have been hidden and the `edges` are still shown.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_FormObject.png" alt=""><figcaption><p>Fig 2-14 : FormObject Settings</p></figcaption></figure>
+
+The final tab `ThrustObject` has numerous helpful visualisation settings. Similar to our grasshopper exercises from before, we can do things such as show pipes. We are also able to display the stresses throughout the shell, color coding our form to our force diagram and increasing the speed with which we can analyse our results. Feel free to play around with these settings. In Fig 2-15, the `pipes` and `stresses` are shown.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-15 : FormObject Settings</p></figcaption></figure>
+
+
+## 3.0 Using Surfaces 
+In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
+
+### 3.1 Subdivision Example 1
+
+First we will input a surface with a number of curves to it.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_input.png" alt=""><figcaption><p>Fig 3-1 : Input Surface</p></figcaption></figure>
+
+Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. RV2 will show you a grey linework representing a standard quadrilateral subdivision of the mesh (Fig 3-1), from which we will make adjustments.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivisionStep1.png" alt=""><figcaption><p>Fig 3-2 : Simple Subdivision</p></figcaption></figure>
+
+We can now explore the different subdivision options. Click `SubdivideEntireMesh` and enter **8**. Now we can see the grey subdivision become much denser (Fig 3-3).
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8.png" alt=""><figcaption><p>Fig 3-3 : Densified Subdivision</p></figcaption></figure>
+
+We can customise the subdivision further by selecting `SubdivideEdgeStrip` and clicking on the **black line** which represents the left edge of the surface. Type **4** and press enter. Now, we can see that RV2 has changed the subdivision in the direction of that edge to 4, and left the subdivision in the opposite direction unchanged. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
+
+### 3.1 Subdivision Example 2
+
+Now let us look at a surface which causes some complications for RV2. This input surface is actually a series of surfaces joined together, some of which are triangles. Subdividing triangles into quadrilateral meshes requires the use of a specific subdivision method, which results in the triangles having a denser subdivision than adjacent quadrilaterals. 
+
+Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on the second surface in the example file.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivisionStep1_2.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+As you can see what were triangle surfaces are now subdivided into a denser mesh than other parts of the surface. Let's use the `SubdivideEdgeStrip` option and select one of the edges of the triangles. We see that RV2 alerts us that `This is a non-quadmesh strip - Choose an integer that is a power of 2`. Let's go ahead and type **2** and see what happens.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_triangleEdge.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+As you can see, some of the adjacent quadrilaterals were also effected by the change in the subdivision. We now have corners with a much higher subdivision than the rest of the shell. Let's see how this effects our formfinding. Hit enter to end the process, and let RV2 generate the pattern.
+
+Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_allBoundaries_ex2.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+Next, generate the form and force diagram. Repeat the steps we've been doing, and if you have forgotten then scroll up on this tutorial page to find the icons and names of the commands again.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_formandForce.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+Now let's calculate the horizontal equilibrium.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_horizEquilibrium.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+Lastly, find the vertical equilibrium and generate the thrust object.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_shell.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
+
+In this view we can see the effects of the much denser subdivision at the corners. The higher subdivision has resulted in a much flatter shell, even starting to bow outwards as it reaches the corners. While this is a compression only structure in equilibrium, its not an ideal solution. We can also see that the force distribution is not ideal in the force diagram, where the yellow edges are in a higher stress. 
+
+### 3.1 Subdivision Example 3
+
+Do this one Later.
+
