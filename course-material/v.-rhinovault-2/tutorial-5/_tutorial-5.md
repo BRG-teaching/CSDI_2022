@@ -29,7 +29,7 @@ Each line in the grid is a **segment**, meaning that these lines cannot run cont
 
 ### 1.2 Identifying the Supports
 
-The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. Next **press enter twice** to exit out of the command and end the process of defining the boundary conditions. You can confirm that the program executed the command correctly when you see that all vertices located at the boundary of the pattern are displayed in red.
+The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. Next **press enter twice** to exit out of the command and end the process of defining the boundary conditions. You can confirm that the program executed the command correctly when you see that all vertices located at the boundary of the pattern are displayed in <mark style="color:red;">red</mark>.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_supports.png" alt=""><figcaption><p>Support vertices</p></figcaption></figure>
 
@@ -61,7 +61,7 @@ Next, we will click the button ![](../../../.gitbook/rv2\_toolbar\_vert\_equilib
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_verticalEquilibrium.png" alt=""><figcaption><p>Vertical Equilibrium</p></figcaption></figure>
 
-After running this step, you can see that the mesh has changed from <mark style="color:green;">**green**</mark> to <mark style="color:red;">**pink**</mark>. Whenever you are going through the workflow in RV2, keep this in mind at all times. If changes are made in the form or force diagrams, or to the thrust object itself, the equilibrium must be recalculated.
+After running this step, you can see that the mesh has changed from <mark style="color:green;">**green**</mark> to <mark style="color:pink;">**pink**</mark>. Whenever you are going through the workflow in RV2, keep this in mind at all times. If changes are made in the form or force diagrams, or to the thrust object itself, the equilibrium must be recalculated.
 
 ### 1.5 Saving the RV2 Results
 
