@@ -26,11 +26,11 @@ In this tutorial, we will create an interactive form and force diagram of a brid
 
 These are the four possible bridge types with a single node:
 
-![](<../../.gitbook/assets/image (92).png>)
+![](<../../.gitbook/assets/image (170).png>)
 
 Basically, it all comes down to the four basic node types:
 
-![](<../../.gitbook/assets/image (219).png>)
+![](<../../.gitbook/assets/image (183).png>)
 
 ## Implementation in Grasshopper
 
@@ -109,7 +109,7 @@ By definition, the edge lines must be oriented **away** from the centre node!
 
 Now play with the position of the centre and support nodes and verify if the script works for all cases.
 
-![](<../../.gitbook/assets/2\_form diagram\_ (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).png>)
+![](<../../.gitbook/assets/2\_form diagram\_ (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (3).png>)
 
 {% hint style="success" %}
 The edge lines of the form diagram represent the lines of action and can be converted to vectors.
@@ -218,7 +218,7 @@ We start displaying the force magnitude as text in the force diagram:
 2. For the text's location choose the midpoint of the edges using the `curve middle` component.
 3. use the `text tag 3d` component to display as text the force magnitudes.
 
-![](../../.gitbook/assets/5a\_vis\_text\_1\_.png)
+![](<../../.gitbook/assets/5a\_vis\_text\_1\_ (1).png>)
 
 You can either repeat exactly the same for the edges of the form diagram or use the tree datastructure:
 

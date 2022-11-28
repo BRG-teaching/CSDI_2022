@@ -20,7 +20,7 @@ For **each task,** save the .igs session file. Rename them as `ex-4_task_1_Name.
 
 ## Save and load .igs session.
 
-In COMPAS toolbar, you can save the working session using button ![](../../.gitbook/assets/COMPAS\_save.png) and load the session using button ![](<../../.gitbook/assets/COMPAS\_load (1).png>). For task 1 , 2, 3, after you finish every task, please save the working session.
+In COMPAS toolbar, you can save the working session using button ![](../../.gitbook/assets/COMPAS\_save.png) and load the session using button ![](../../.gitbook/assets/COMPAS\_load.png). For task 1 , 2, 3, after you finish every task, please save the working session.
 
 ## Task 0: Theory: Static determinacy
 
@@ -74,7 +74,7 @@ The steps to construct the cantilever arch-cable are described as follows (Fig-2
 4. Transfer the load on the arch to the upper chord.
 5. Rebuild the entire geometry and analyze it again in IGS to obtain the final force diagram.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2022-11-26 at 00.41.38 (1).png" alt=""><figcaption><p>Fig-2-2</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2022-11-26 at 00.41.38.png" alt=""><figcaption><p>Fig-2-2</p></figcaption></figure>
 
 
 
