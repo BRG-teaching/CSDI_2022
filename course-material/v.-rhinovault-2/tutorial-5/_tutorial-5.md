@@ -57,7 +57,7 @@ The solver will run and adjust the force diagram, which in this example is quite
 
 ### 1.4 Generating the Thrust Object
 
-Next, we will click the button ![](../../../.gitbook/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object (the mesh which represents the shell). RV2 will automatically calculate a height that is ideal for the shell structure based on self weight, however it is also possible to click on `TargetHeight` and change the value.
+Next, we will click the button ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object (the mesh which represents the shell). RV2 will automatically calculate a height that is ideal for the shell structure based on self weight, however it is also possible to click on `TargetHeight` and change the value.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_verticalEquilibrium.png" alt=""><figcaption><p>Vertical Equilibrium</p></figcaption></figure>
 
@@ -73,6 +73,6 @@ It is worth noting that you can save your rhino file from RV2 and still recover 
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
 
-## 2.0 Shell Formfinding from a Mesh and Different Visualisation Options
+## 2.0 Formfinding from a Mesh and Visualisation Options
 
 Now we will expand upon the simple workflow to make a simple shell supported at its four corner points. We will also go through different options for visualisation in RV2.
