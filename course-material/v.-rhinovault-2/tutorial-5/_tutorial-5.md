@@ -77,9 +77,9 @@ In order to move on to the next example, we have to clear out our RV2 session in
 
 Before starting this example, it is important to know the difference between a mesh and a surface. 
 
-Rhino defines a [surface](http://docs.mcneel.com/rhino/5/help/en-us/seealso/sak_surface.htm#:~:text=A%20surface%20is%20like%20a,same%20object%3A%20a%20NURBS%20surface.) as being like a rectangular stretchy rubber sheet. The NURBS form can represent simple shapes, such as planes and cylinders, as well as free-form, sculptured surfaces.
+- Rhino defines a [surface](http://docs.mcneel.com/rhino/5/help/en-us/seealso/sak_surface.htm#:~:text=A%20surface%20is%20like%20a,same%20object%3A%20a%20NURBS%20surface.) as being like a rectangular stretchy rubber sheet. The NURBS form can represent simple shapes, such as planes and cylinders, as well as free-form, sculptured surfaces.
 
-Rhino defines a [mesh](http://docs.mcneel.com/rhino/5/help/en-us/commands/mesh.htm#:~:text=The%20Mesh%20command%20creates%20a,export%20into%20various%20file%20formats.) as a collection of vertices and polygons that define the shape of an polyhedral object.
+- Rhino defines a [mesh](http://docs.mcneel.com/rhino/5/help/en-us/commands/mesh.htm#:~:text=The%20Mesh%20command%20creates%20a,export%20into%20various%20file%20formats.) as a collection of vertices and polygons that define the shape of an polyhedral object.
 
 In summary, **meshes** are composed of faces, edges, and vertices while **surfaces** are best described as the pure mathematical expression of the geometry. 
 
