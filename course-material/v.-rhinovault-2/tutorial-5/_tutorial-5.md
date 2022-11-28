@@ -15,7 +15,9 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 
 As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](<imgs/toolbar_icons/init.png>) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
 
-<figure><img src="imgs/rv2_installRV2_init.png" alt=""><figcaption>Screen capture of the RV2 init window</figcaption></figure>
+<!-- <figure><img src="imgs/rv2_installRV2_init.png" alt=""><figcaption>Screen capture of the RV2 init window</figcaption></figure> -->
+
+<figure><img src="../../.gitbook/assets/../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption>Screen capture of the RV2 init window</figcaption></figure>
 
 
 ## 1.0 Simple Shell Formfinding from Lines
