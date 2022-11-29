@@ -270,18 +270,85 @@ We will now find the initial shell without the crease applied. Generate the form
 
 We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 5-4 to see the steps.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 5-4 : Initial Shell Before Crease</p></figcaption></figure>
 
 The final force diagram should look something like this : 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 5-5 : Initial Shell Before Crease</p></figcaption></figure>
 
 Now, we need to recalculate the horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. Then click ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to also recalculate the vertical equilibrium. We now have our shell with two creases in it!
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 5-6 : Initial Shell Before Crease</p></figcaption></figure>
 
+### 5.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram 
+
+The second method for ...
 
 ## 6.0 Lip Edges
+
+We will now take a look at how to manipulate the force diagram in order to achieve a lip at the edge of the shell. A nice example of this effect is Heinz Isler's Wyss Garten Haus, shown in Fig 6-1. 
+
+<figure><img src="../../../.gitbook/assets/rv2_islerwyssgartenhaus_2.png" alt=""><figcaption><p>Fig 6-1 : Close-up Photograph of Heinz Isler's Wyss Garten Haus [Link to Source](https://schoenstebauten.heimatschutz.ch/de/moderne-architektur-im-kanton-solothurn-1940-bis-1980)</p></figcaption></figure>
+
+In order to make this change in the shell, we must **redirect** where our greatest forces will flow. Typically, in or shell formfinding (such as in Example 2.0) the greatest forces have been in the outermost edge of our shell, flowing down to the support points at the corners. In this case, we would like to have these greatest flowing through some edge that is not at the very outside of our shell. 
+
+### 6.1 Defining the Topology
+
+As in our other examples, the first step is to generate our topological pattern. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Select the lines of the pattern. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_pattern.png" alt=""><figcaption><p>Fig 6-1 : Pattern for Lip Example</p></figcaption></figure>
+
+### 6.2 Identifying the Supports
+
+The next step is to define the corners as our supports. Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `Manual`. Now, select all the vertices at the top and bottom edges. it should look like Fig 6-2.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_supportEdges.png" alt=""><figcaption><p>Fig 6-2 : Edges with Support Vertices Selected</p></figcaption></figure>
+
+Next, click `UpdateBoundaries` and apply a sag of 10% to all boundaries. Do this by clicking `All`, and then `Sag10`. Your pattern should now look like Fig 6-3.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_sagEdges.png" alt=""><figcaption><p>Fig 6-3 : Opposite Edges with Sag 10% Applied</p></figcaption></figure>
+
+### 6.3 Form and Force Diagrams
+
+Now that we have given RV2 the general topology of the shell and identified the supports, it is time to make the form diagram. Click ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram` followed by ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. You should now see the same thing as in Fig 6-3.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_formandForce.png" alt=""><figcaption><p>Fig 6-3 : Form and Force Diagrams Generated, with Horizontal Equilibrium Found</p></figcaption></figure>
+
+### 6.4 Formfound Geometry without Changes
+
+Before we change the force digram, we will generate our shell **with a Target Height equal to 6** to see the existing concentrations of forces. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_initialShell.png" alt=""><figcaption><p>Fig 6-4 : Initial Shell</p></figcaption></figure>
+
+Using our new insight on the RV2 settings, let's visualise the forces in the shell to more easily see the forces in the form diagram.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram.png" alt=""><figcaption><p>Fig 6-5 : Color Coded Form and Force Diagrams</p></figcaption></figure>
+
+Now we can clearly see that the longest edges in the force diagram, therefore the largest forces overall, are in the outer edges of the shell. One straightforward way to modify those large forces to be in an inner edge is to limit the amount of forces permitted in the outermost edges. 
+
+The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Select the edges of the force diagram which are <mark style="color:red;">**red**</mark>, and press enter.
+
+Click on the value for `lmax` and replace the old value with **1.5**. Press enter, then click `OK`. Your screen should look like this:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram_postMod.png" alt=""><figcaption><p>Fig 6-6 : Thrust Object after Modifying Force Diagram</p></figcaption></figure>
+
+You might have noticed that nothing really changed, except the color of the thrust object. It is important to note that the thrust object has now turned <mark style="color:green;">**green**</mark>, indicating that it is out of date and must be updated. 
+
+The first step is to again find the horizontal equilibrium, so click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. It should look like Fig 6-7:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_updatedForceDiag_postMod.png" alt=""><figcaption><p>Fig 6-7 : Updated Force Diagram</p></figcaption></figure>
+
+We see now that the edges of the force diagram we constrained to have an `lmax` of **1.5** have shrunken significantly and are now green, indicating they are taking less forces. We see now that as a result, the lines for the edge which lies behind the outer edge are now red and taking most of the forces. Let's generate our thrust object to see the effect in 3D by clicking ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium`.
+
+<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_1.png" alt=""><figcaption><p>Fig 6-8 : Updated Thrust Object Perspective</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_2.png" alt=""><figcaption><p>Fig 6-8 : Updated Thrust Object Front View</p></figcaption></figure>
+
+
+We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways. 
+
+
+
 
 ## 7.0 Holes
 
