@@ -407,6 +407,10 @@ Click ![](../../../.gitbook/assets/rv2_toolbar_vert_settings.png) `Modify Thrust
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_8_movedSupports.png" alt=""><figcaption><p>Fig 8-3 : New Supports Moved to Ground Plane</p></figcaption></figure>
 
+{% hint style="info" %}
+In Rhino, if you would like to run your last command again you can press the **spacebar.**
+{% endhint %}
+
 Now that we have changed the supports, we need to also recalculate our horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png)
 `Horizontal equilibrium`. 
 
