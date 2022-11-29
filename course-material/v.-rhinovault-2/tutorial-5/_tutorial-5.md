@@ -219,3 +219,70 @@ In this view we can see the effects of the much denser subdivision at the corner
 
 Do this one Later.
 
+## 4.0 Triangulation 
+We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
+
+### 4.1 Defining the Topology
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 4-1 : Input Lines</p></figcaption></figure>
+
+We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2_toolbar_make_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
+
+An optional input of the triangulation process is to provide a constraint curve. This curve guides the triangulation subdivision such that the vertices and edges of the triangulation are aligned to this curve in order to include it in the topological generation.
+
+The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 4-2 : Triangulation</p></figcaption></figure>
+
+### 4.2 Identifying the Supports
+
+Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. 
+
+We will now create our form and force diagrams, find the horizontal equilibrium, and analyse the results.
+
+## 5.0 Creases : Two Methods 
+We will now look at methods of interacting with the **force diagram** to affect our formfinding. 
+
+### 5.1 Method One : Moving Vertices in the Force Diagram
+
+The first method for adding creases to our shell is to move vertices in the force diagram and recalculate the equilibrium. 
+
+#### 5.1.1 Topology Creation
+
+We will start this process by clicking ![](../../../.gitbook/assets/rv2_toolbar_make_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on our surface. Click `SubdivideEdgeStrip`, select the left edge, and increase the subdivision to **8**. The result should look like Fig 5-1. 
+
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creasePattern1.png" alt=""><figcaption><p>Fig 5-1 : Pattern for Crease</p></figcaption></figure>
+
+#### 5.1.2 Define Supports
+
+Next, define all the boundary vertices as supports. Do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. It should look like Fig 5-2.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_boundaryVertices_all.png" alt=""><figcaption><p>Fig 5-2 : Boundary Supports Defined</p></figcaption></figure>
+
+#### 5.1.3 Find Initial Equilibrium
+
+We will now find the initial shell without the crease applied. Generate the form and force diagrams, and then find the horizontal equilibrium. Then, find the vertical equilibrium. Your result should look like Fig 5-3.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creases_before.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+
+#### 5.1.4 Modify Force Diagram
+
+We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 5-4 to see the steps.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+
+The final force diagram should look something like this : 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+
+Now, we need to recalculate the horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. Then click ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to also recalculate the vertical equilibrium. We now have our shell with two creases in it!
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
+
+
+## 6.0 Lip Edges
+
+## 7.0 Holes
+
+## 8.0 Dropdowns
