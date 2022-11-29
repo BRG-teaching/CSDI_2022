@@ -348,8 +348,75 @@ We see now that the edges of the force diagram we constrained to have an `lmax` 
 We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways. 
 
 
-
-
 ## 7.0 Holes
 
+Now that we can formfind shells really well, let's go over how to make a hole in one. Of course, as you have seen already, you can have a hole in your pattern, however it is also possible to add holes after you have formfound a shell in equilibrium. 
+
+### 7.1 Basic Shell Thrust Object
+
+You have been giving a simple square surface. Make your pattern and subdivide the entire mesh by **10**. It should look like this :  
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 7-1 : Pattern</p></figcaption></figure>
+
+Next, define the supports as all the boundary vertices...
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_boundaries.png" alt=""><figcaption><p>Fig 7-2 : Defined Supports</p></figcaption></figure>
+
+Then create the form and force diagrams, and find the horizontal equilibrium.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_formandforce.png" alt=""><figcaption><p>Fig 7-3 : Final Form and Force Diagrams</p></figcaption></figure>
+
+Now create the thrust object from finding our vertical equilibrium. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 7-4 : Thrust Object</p></figcaption></figure>
+
+Now that we have our shell in compression we can begin the process of adding a hole to it. Start by clicking ![](../../../.gitbook/assets/rv2_toolbar_vert_settings.png) `Modify Thrust Diagram`. Next, click on `FacesAttributes` then `Manual`. Select whichever faces you want, and then press enter. A `Properties` box will appear with editable value named `_is_loaded`. The value is a **boolean**, so keep in mind that capitalisation is important here. Change the value from `True` to `False`, and click ok.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceSelection.png" alt=""><figcaption><p>Fig 7-5 : Selection of Faces</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceAttributes.png" alt=""><figcaption><p>Fig 7-6 : Settings Box for Face Attributes</p></figcaption></figure>
+
+After pressing enter, you should see the mesh turn <mark style="color:green;">**green**</mark> (indicating it requires updating) and the faces you selected should disappear...
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_hole.png" alt=""><figcaption><p>Fig 7-7 : Hole in the Thrust Object</p></figcaption></figure>
+
+As we have only edited the thrust diagram, we only need to click ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` in order to update our thrust object to be in equilibrium again.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_1.png" alt=""><figcaption><p>Fig 7-8 : Thrust Object in Equilbrium with Hole</p></figcaption></figure>
+
+While difficult to tell from this angle, we can see that this hole has significantly affected the shell by orbiting around it. As you can see in Fig 7-9 this hole has caused the shell around it to become flatter as it no longer needs to carry the weight of these faces. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_2_arrow.png" alt=""><figcaption><p>Fig 7-9 : Flattening of Shell around Hole</p></figcaption></figure>
+
+
 ## 8.0 Dropdowns
+
+Do not clear your scene for this example! We will now take the hole we created in our shell structure and turn it into a dropdown. 
+
+### 8.1 Modify Thrust Diagram Vertices
+
+Begin by clicking on ![](../../../.gitbook/assets/rv2_toolbar_vert_settings.png) `Modify Thrust Diagram` again. This time, select `VerticesAttributes` and then `Manual`. Select all the vertices which outline the hole in your shell, then press enter. As before, a box will pop up with the settings options for these vertices.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_vertices.png" alt=""><figcaption><p>Fig 8-1 : Selected Vertices</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_verticesSettings.png" alt=""><figcaption><p>Fig 8-2 : Selected Vertices Settings</p></figcaption></figure>
+
+Click on the value `is_anchor` and modify it to **True**. Click `OK`. The vertices you selected should now turn <mark style="color:red;">**red**</mark>. At this point, it is now as if there are support points for the shell around our void located at those x,y,z coordinates. So, we would like to take those points and move them to the ground. 
+
+Click ![](../../../.gitbook/assets/rv2_toolbar_vert_settings.png) `Modify Thrust Diagram` and this time select `MoveSupports`. Select the points you want to move. As the points are at different heights, you may also want to move one point at a time to align with the ground. Repeat these steps until all your new support points are at ground level. The result should look something like this :
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_movedSupports.png" alt=""><figcaption><p>Fig 8-3 : New Supports Moved to Ground Plane</p></figcaption></figure>
+
+Now that we have changed the supports, we need to also recalculate our horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png)
+`Horizontal equilibrium`. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_horizEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Horizontal Equilibrium</p></figcaption></figure>
+
+Next recalculate the vertical equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_vertEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Vertical Equilibrium</p></figcaption></figure>
+
+Now we can see that the shell has been smoothed out to accommodate for the void we made in it as well as the new supports we specified.
+
+
+# This marks the end of the tutorial! You now know all of the basic steps to use RV2 for finding shells in a compression-only equilibrium.
