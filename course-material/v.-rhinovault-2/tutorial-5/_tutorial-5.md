@@ -419,4 +419,6 @@ Next recalculate the vertical equilibrium. Click the button ![](../../../.gitboo
 Now we can see that the shell has been smoothed out to accommodate for the void we made in it as well as the new supports we specified.
 
 
-# This marks the end of the tutorial! You now know all of the basic steps to use RV2 for finding shells in a compression-only equilibrium.
+## This marks the end of the tutorial! 
+
+You now know all of the basic steps to use RV2 for finding shells in a compression-only equilibrium.
