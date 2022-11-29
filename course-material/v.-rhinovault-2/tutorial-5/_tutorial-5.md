@@ -288,7 +288,7 @@ The second method for ...
 
 We will now take a look at how to manipulate the force diagram in order to achieve a lip at the edge of the shell. A nice example of this effect is Heinz Isler's Wyss Garten Haus, shown in Fig 6-1. 
 
-<figure><img src="../../../.gitbook/assets/rv2_islerwyssgartenhaus_2.png" alt=""><figcaption><p>Fig 6-1 : Close-up Photograph of Heinz Isler's Wyss Garten Haus [Link to Source](https://schoenstebauten.heimatschutz.ch/de/moderne-architektur-im-kanton-solothurn-1940-bis-1980)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_islerwyssgartenhaus_2.jpeg" alt=""><figcaption><p>Fig 6-1 : Close-up Photograph of Heinz Isler's Wyss Garten Haus [Link to Source](https://schoenstebauten.heimatschutz.ch/de/moderne-architektur-im-kanton-solothurn-1940-bis-1980)</p></figcaption></figure>
 
 In order to make this change in the shell, we must **redirect** where our greatest forces will flow. Typically, in or shell formfinding (such as in Example 2.0) the greatest forces have been in the outermost edge of our shell, flowing down to the support points at the corners. In this case, we would like to have these greatest flowing through some edge that is not at the very outside of our shell. 
 
