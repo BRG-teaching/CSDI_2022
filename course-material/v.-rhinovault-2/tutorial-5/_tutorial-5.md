@@ -23,7 +23,7 @@ Let's start with the simplest workflow for using RV2, where we will make a simpl
 
 ### 1.1 Defining the Topology
 
-Each line in the grid is a **segment**, meaning that these lines cannot run continuously from one side of the pattern to the other side and must instead be segmented into shorter lines per each quadrilateral in the pattern. The next step is to select In the toolbar of IGS2, click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Next, select the lines of the pattern. It should then look like this.
+Each line in the grid is a **segment**, meaning that these lines cannot run continuously from one side of the pattern to the other side and must instead be segmented into shorter lines per each quadrilateral in the pattern. The next step is to click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Next, select the lines of the pattern. It should then look like this.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_pattern.png" alt=""><figcaption><p>Pattern</p></figcaption></figure>
 
