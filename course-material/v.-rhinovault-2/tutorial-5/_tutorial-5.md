@@ -322,6 +322,37 @@ Now, we know that this line needs to be in **segments** for the topology to work
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 5-7 : Adding Line Edges</p></figcaption></figure>
 
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_FinalPattern.png" alt=""><figcaption><p>Fig 5-8 : Final Pattern</p></figcaption></figure>
+
+Next, go through all the basic steps to create your base thrust object with supports at the corner points and a `TargetHeight` of **6**. Here are the buttons you will need to click : 
+- ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern`, `FromLines`
+- ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`, 
+  - `IdentifySupports`, `Select`,  `Corners`
+  - `UpdateBoundaries`, `All`,  `Sag10`
+- ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`
+- ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram` 
+- ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`
+- ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium`
+
+If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_originalObj.png" alt=""><figcaption><p>Fig 5-9 : Unaltered Shell</p></figcaption></figure>
+
+Now, let's modify our force diagram. Click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Hit enter and the settings box will appear. Click on `lmin` and change the value to **5**. Click Ok. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceEdgesSelected_withSettings.png" alt=""><figcaption><p>Fig 5-10 : Changing Force Edge lmin</p></figcaption></figure>
+
+Now we need to recalculate our horizontal equilibrium. Click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`, and your results should look like Fig-11:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_newForceDiag.png" alt=""><figcaption><p>Fig 5-11 : Changing Force Edge lmin</p></figcaption></figure>
+
+We see that the forces in the edges we selected have greatly increased, and as a result the forces in the opposite crease have also begun to take more forces. The mesh for our thrust object is <mark style="color:green;">**green**</mark>, indicating that it **needs to be updated**. So click on ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to see our results.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_crossVault.png" alt=""><figcaption><p>Fig 5-12 : Updated Thrust Object with Creases</p></figcaption></figure>
+
+Now we can see the creases in our shell, with one exaggerated and the other somewhat more shallow. Feel free to go back throught the stops to make the other crease as exaggerated as the other, or explore different options.
+
+
 ## 6.0 Lip Edges
 
 We will now take a look at how to manipulate the force diagram in order to achieve a lip at the edge of the shell. A nice example of this effect is Heinz Isler's Wyss Garten Haus, shown in Fig 6-1. 
