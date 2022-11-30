@@ -183,39 +183,6 @@ We can customise the subdivision further by selecting `SubdivideEdgeStrip` and c
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
 
-
-Now let's subdivide a surface which combines pentagons, squares, and triangles to see how RV2 subdivides it into a mesh. 
-
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on the third surface in the example file. You should see this:
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonSimpleSubdivision.png" alt=""><figcaption><p>Fig 3-6 : Simple Subdivision</p></figcaption></figure>
-
-Using `SubdivideEdgeStrip`, change the subdivision of your triangle edges to **8**. Next select one of the edges of the pentagon in the center and use `SubdivideEdgeStrip` to change the subdivision to **16**. 
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_densePattern.png" alt=""><figcaption><p>Fig 3-7 : Final Pattern</p></figcaption></figure>
-
-In this example, I am using a much denser subdivision to show a more smoothed effect in the final shell. Let's see how this pattern effects the final shell. Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. 
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonboundaries.png" alt=""><figcaption><p>Fig 3-8 : All Boundary Vertices</p></figcaption></figure>
-
-Next, generate the form and force diagram.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonformforce.png" alt=""><figcaption><p>Fig 3-9 : Form and Force Diagram</p></figcaption></figure>
-
-Now let's calculate the horizontal equilibrium. You may need to do this step more than once.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonhorizEquilibrium.png" alt=""><figcaption><p>Fig 3-10 : Horizontal Equilibrium</p></figcaption></figure>
-
-Lastly, find the vertical equilibrium and generate the thrust object.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonThrustObj.png" alt=""><figcaption><p>Fig 3-11 : Thrust Object</p></figcaption></figure>
-
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonThrustObj_clipp_arrow.png" alt=""><figcaption><p>Fig 3-12 : Thrust Object Section Cut</p></figcaption></figure>
-
-In this view we can see that the different edge subdivisions have resulting in a relatively smooth shell. Therefore while it can be difficult to subdivide triangles and other shapes as we de quadrilaterals and match their density, strategically targeting edges and using shapes with more sides than a quadrilateral can help you control your shell geometry.
-
-
 ## 4 Triangulation 
 We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
 
