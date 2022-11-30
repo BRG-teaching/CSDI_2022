@@ -17,10 +17,11 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
   3. Formfinding of a Shell from a **Surface**
 
 **Features** </br>
-  4. **Creases**</br>
-  5. **Lip Edges**</br>
-  6. **Holes**</br>
-  7. **Dropdowns**</br>
+	4. **Creases**
+	5. **Lip Edges**
+	6. **Holes**
+	7. **Dropdowns**
+
 
 ## Initialisation
 
