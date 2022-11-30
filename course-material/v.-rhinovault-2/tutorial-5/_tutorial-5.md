@@ -12,17 +12,15 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 ## Content Overview
 
 **Inputs**
-&#x20;    1\. Formfinding of a Shell from **Lines**
-&#x20;    2\. Formfinding of a Shell from a **Mesh**
-&#x20;    3\. Formfinding of a Shell from a **Surface**
+- 1 Formfinding of a Shell from **Lines**
+- 2 Formfinding of a Shell from a **Mesh**
+- 3 Formfinding of a Shell from a **Surface**
 
 **Features**
-
-&#x20;    4\. **Creases**
-&#x20;    5\. **Lip Edges**
-&#x20;    6\. **Holes**
-&#x20;    7\. **Dropdowns**
-
+- 4 **Creases**
+- 5 **Lip Edges**
+- 6 **Holes**
+- 7 **Dropdowns**
 ## Initialisation
 
 As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
