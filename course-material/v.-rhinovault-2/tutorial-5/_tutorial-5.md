@@ -15,7 +15,7 @@ As with IGS, the first step is to initiate the RV2 engine which imports all the 
 
 <figure><img src="../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption><p>Screen capture of the RV2 init window</p></figcaption></figure>
 
-## 1 Simple Shell Formfinding from Lines
+## 1 Formfinding of a Shell from Lines
 
 Let's start with the simplest workflow for using RV2, where we will make a simple shell supported at all its boundaries. In RV2, a **Pattern** is a collection of lines that define the topology of the form diagram. For this example we will use a simple grid of lines.
 
@@ -73,7 +73,7 @@ It is worth noting that you can save your rhino file from RV2 and still recover 
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
 
-## 2 Formfinding from a Mesh and Visualisation Options
+## 2 Formfinding of a Shell from a Mesh
 
 Before starting this example, it is important to know the difference between a mesh and a surface. 
 
@@ -162,7 +162,7 @@ The final tab `ThrustObject` has numerous helpful visualisation settings. Simila
 <figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-16 : FormObject Settings</p></figcaption></figure>
 
 
-## 3 Using Surfaces 
+## 3 Formfinding of a Shell from a Surface
 In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
 
 ### 3.1 Subdivision Example 1
