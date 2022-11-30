@@ -12,19 +12,15 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 ## Content Overview
 
 **Inputs**
-
-1. Formfinding of a Shell from **Lines**
-2. Formfinding of a Shell from a **Mesh**
-3. Formfinding of a Shell from a **Surface**
+&#x20;    1\. Formfinding of a Shell from **Lines**
+&#x20;    2\. Formfinding of a Shell from a **Mesh**
+&#x20;    3\. Formfinding of a Shell from a **Surface**
 
 **Features**
 
 &#x20;    4\. **Creases**
-
-&#x20;    5\. **Lip Edges**&#x20;
-
-&#x20;    6\. **Holes**&#x20;
-
+&#x20;    5\. **Lip Edges**
+&#x20;    6\. **Holes**
 &#x20;    7\. **Dropdowns**
 
 ## Initialisation
