@@ -9,13 +9,13 @@
 
 This tutorial will teach you the basic capabilities of RV2. As not all capabilities of the software will be included, feel free to browse [the documentation](https://blockresearchgroup.gitbook.io/rv2/quick-start/tutorial) on your own at a later time and try out the other more advanced tutorials.
 
-## 0. Initialisation
+## Initialisation
 
 As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
 
 <figure><img src="../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption><p>Screen capture of the RV2 init window</p></figcaption></figure>
 
-## 1.0 Simple Shell Formfinding from Lines
+## 1 Simple Shell Formfinding from Lines
 
 Let's start with the simplest workflow for using RV2, where we will make a simple shell supported at all its boundaries. In RV2, a **Pattern** is a collection of lines that define the topology of the form diagram. For this example we will use a simple grid of lines.
 
@@ -73,7 +73,7 @@ It is worth noting that you can save your rhino file from RV2 and still recover 
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
 
-## 2.0 Formfinding from a Mesh and Visualisation Options
+## 2 Formfinding from a Mesh and Visualisation Options
 
 Before starting this example, it is important to know the difference between a mesh and a surface. 
 
@@ -162,7 +162,7 @@ The final tab `ThrustObject` has numerous helpful visualisation settings. Simila
 <figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-16 : FormObject Settings</p></figcaption></figure>
 
 
-## 3.0 Using Surfaces 
+## 3 Using Surfaces 
 In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
 
 ### 3.1 Subdivision Example 1
@@ -183,39 +183,6 @@ We can customise the subdivision further by selecting `SubdivideEdgeStrip` and c
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
 
-### 3.2 Subdivision Example 2
-
-Now let us look at a surface which causes some complications for RV2. This input surface is actually a series of surfaces joined together, some of which are triangles. Subdividing triangles into quadrilateral meshes requires the use of a specific subdivision method, which results in the triangles having a denser subdivision than adjacent quadrilaterals. 
-
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on the second surface in the example file.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivisionStep1_2.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-As you can see what were triangle surfaces are now subdivided into a denser mesh than other parts of the surface. Let's use the `SubdivideEdgeStrip` option and select one of the edges of the triangles. We see that RV2 alerts us that `This is a non-quadmesh strip - Choose an integer that is a power of 2`. Let's go ahead and type **2** and see what happens.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_triangleEdge.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-As you can see, some of the adjacent quadrilaterals were also effected by the change in the subdivision. We now have corners with a much higher subdivision than the rest of the shell. Let's see how this effects our formfinding. Hit enter to end the process, and let RV2 generate the pattern.
-
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. 
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_allBoundaries_ex2.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-Next, generate the form and force diagram. Repeat the steps we've been doing, and if you have forgotten then scroll up on this tutorial page to find the icons and names of the commands again.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_formandForce.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-Now let's calculate the horizontal equilibrium.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_horizEquilibrium.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-Lastly, find the vertical equilibrium and generate the thrust object.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_shell.png" alt=""><figcaption><p>Fig 3-5 : Simple Subdivision</p></figcaption></figure>
-
-In this view we can see the effects of the much denser subdivision at the corners. The higher subdivision has resulted in a much flatter shell, even starting to bow outwards as it reaches the corners. While this is a compression only structure in equilibrium, its not an ideal solution. We can also see that the force distribution is not ideal in the force diagram, where the yellow edges are in a higher stress. 
-
-### 3.3 Subdivision Example 3
 
 Now let's subdivide a surface which combines pentagons, squares, and triangles to see how RV2 subdivides it into a mesh. 
 
@@ -249,7 +216,7 @@ Lastly, find the vertical equilibrium and generate the thrust object.
 In this view we can see that the different edge subdivisions have resulting in a relatively smooth shell. Therefore while it can be difficult to subdivide triangles and other shapes as we de quadrilaterals and match their density, strategically targeting edges and using shapes with more sides than a quadrilateral can help you control your shell geometry.
 
 
-## 4.0 Triangulation 
+## 4 Triangulation 
 We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
 
 ### 4.1 Defining the Topology
