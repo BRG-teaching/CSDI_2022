@@ -20,6 +20,6 @@ Next, run this line of code:
 conda env update -f https://blockresearchgroup.github.io/compas-RV3/environment.yml
 ```
 
-After updating is finished, repeat [3. Installing the Plug-ins in Rhino](igs-plug-in.md#3.-installing-the-plug-ins-in-rhino). Then, follow all the steps from [Loading the Toolbars](igs-plug-in.md#loading-the-toolbars) but instead of typing `IGS2__toolbar` in the Rhino command line, type `IGS2__toolbar`.
+After updating is finished, repeat [3. Installing the Plug-ins in Rhino](igs-plug-in.md#3.-installing-the-plug-ins-in-rhino). Then, follow all the steps from [Loading the Toolbars](igs-plug-in.md#loading-the-toolbars) but instead of typing `IGS2__toolbar` in the Rhino command line, type `RV3__toolbar`.
 
 That should be the end of the installation process! If you run into any issues, please post them with screenshots in the slack channel.

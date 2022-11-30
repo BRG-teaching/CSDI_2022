@@ -6,7 +6,7 @@
 * [Tools](tools/README.md)
   * [Anaconda 3](tools/anaconda.md)
   * [IGS plug-in](tools/igs-plug-in.md)
-  * [RV2](tools/rv2.md)
+  <!-- * [RV2](tools/rv2.md) -->
 * [Cite](cite.md)
 
 ## course material
@@ -37,6 +37,7 @@
   * [Tutorial](course-material/iv.-algebraic-gs/iv.-tutorial.md)
   * [Exercise](course-material/iv.-algebraic-gs/iv-exercise.md)
 * [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
+  * [Workflow + UI](course-material/v.-rhinovault-2/tutorial-5/_workflow_and_ui.md)
   * [Tutorial](course-material/v.-rhinovault-2/tutorial-5/_tutorial-5.md)
 
 ## appendix
