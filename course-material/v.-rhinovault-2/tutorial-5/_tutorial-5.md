@@ -183,7 +183,7 @@ We can customise the subdivision further by selecting `SubdivideEdgeStrip` and c
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
 
-### 3.1 Subdivision Example 2
+### 3.2 Subdivision Example 2
 
 Now let us look at a surface which causes some complications for RV2. This input surface is actually a series of surfaces joined together, some of which are triangles. Subdividing triangles into quadrilateral meshes requires the use of a specific subdivision method, which results in the triangles having a denser subdivision than adjacent quadrilaterals. 
 
@@ -215,9 +215,39 @@ Lastly, find the vertical equilibrium and generate the thrust object.
 
 In this view we can see the effects of the much denser subdivision at the corners. The higher subdivision has resulted in a much flatter shell, even starting to bow outwards as it reaches the corners. While this is a compression only structure in equilibrium, its not an ideal solution. We can also see that the force distribution is not ideal in the force diagram, where the yellow edges are in a higher stress. 
 
-### 3.1 Subdivision Example 3
+### 3.3 Subdivision Example 3
 
-Do this one Later.
+Now let's subdivide a surface which combines pentagons, squares, and triangles to see how RV2 subdivides it into a mesh. 
+
+Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on the third surface in the example file. You should see this:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonSimpleSubdivision.png" alt=""><figcaption><p>Fig 3-6 : Simple Subdivision</p></figcaption></figure>
+
+Using `SubdivideEdgeStrip`, change the subdivision of your triangle edges to **8**. Next select one of the edges of the pentagon in the center and use `SubdivideEdgeStrip` to change the subdivision to **16**. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_densePattern.png" alt=""><figcaption><p>Fig 3-7 : Final Pattern</p></figcaption></figure>
+
+In this example, I am using a much denser subdivision to show a more smoothed effect in the final shell. Let's see how this pattern effects the final shell. Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonboundaries.png" alt=""><figcaption><p>Fig 3-8 : All Boundary Vertices</p></figcaption></figure>
+
+Next, generate the form and force diagram.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonformforce.png" alt=""><figcaption><p>Fig 3-9 : Form and Force Diagram</p></figcaption></figure>
+
+Now let's calculate the horizontal equilibrium. You may need to do this step more than once.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonhorizEquilibrium.png" alt=""><figcaption><p>Fig 3-10 : Horizontal Equilibrium</p></figcaption></figure>
+
+Lastly, find the vertical equilibrium and generate the thrust object.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonThrustObj.png" alt=""><figcaption><p>Fig 3-11 : Thrust Object</p></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_pentagonThrustObj_clipp_arrow.png" alt=""><figcaption><p>Fig 3-12 : Thrust Object Section Cut</p></figcaption></figure>
+
+In this view we can see that the different edge subdivisions have resulting in a relatively smooth shell. Therefore while it can be difficult to subdivide triangles and other shapes as we de quadrilaterals and match their density, strategically targeting edges and using shapes with more sides than a quadrilateral can help you control your shell geometry.
+
 
 ## 4.0 Triangulation 
 We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
@@ -282,7 +312,15 @@ Now, we need to recalculate the horizontal equilibrium. Click the button ![](../
 
 ### 5.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram 
 
-The second method for ...
+The second method for adding creases is to alter our topology and define the forces in particular edges of the force diagram. For this example, let's make a cross vault. A cross vault can be seen as having two creases which run between supports at the corners which are diagonal from each other, which we can also visualise as being arches within our shell which start and end at these supports.
+
+Taking our simplest grid of lines, let's adjust this in order to be the topology required for our cross vault. Currently, there is no way for an arch within our topology to connect the corners diagonally. This indicates that we need to add edges. 
+
+Type `Line` and draw a line that goes from the upper left corner of the pattern to the bottom right corner. Select your line and type `Mirror`, then click on a point in the middle of the pattern, hold shift and move your cursor up or down. When you see the correct diagonal mirrored in the viewport, press enter.
+
+Now, we know that this line needs to be in **segments** for the topology to work. Type `Split` and select both your lines. Then Drag a box to add the other lines in the original pattern which will split our line geometries (see Fig). Press enter. Your line should now be split into ten segments. 
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 5-7 : Adding Line Edges</p></figcaption></figure>
 
 ## 6.0 Lip Edges
 
@@ -326,6 +364,8 @@ Using our new insight on the RV2 settings, let's visualise the forces in the she
 
 Now we can clearly see that the longest edges in the force diagram, therefore the largest forces overall, are in the outer edges of the shell. One straightforward way to modify those large forces to be in an inner edge is to limit the amount of forces permitted in the outermost edges. 
 
+### 6.5 Limit the Amount of Force in Edges of the Force Diagram
+
 The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Select the edges of the force diagram which are <mark style="color:red;">**red**</mark>, and press enter.
 
 Click on the value for `lmax` and replace the old value with **1.5**. Press enter, then click `OK`. Your screen should look like this:
@@ -333,6 +373,8 @@ Click on the value for `lmax` and replace the old value with **1.5**. Press ente
 <figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram_postMod.png" alt=""><figcaption><p>Fig 6-7 : Thrust Object after Modifying Force Diagram</p></figcaption></figure>
 
 You might have noticed that nothing really changed, except the color of the thrust object. It is important to note that the thrust object has now turned <mark style="color:green;">**green**</mark>, indicating that it **needs to be updated**. 
+
+### 6.6 Update the Force Diagram and Thrust Object
 
 The first step is to again find the horizontal equilibrium, so click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. It should look like Fig 6-7:
 
