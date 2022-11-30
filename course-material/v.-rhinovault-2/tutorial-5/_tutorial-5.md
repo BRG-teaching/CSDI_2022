@@ -55,7 +55,7 @@ The solver will run and adjust the force diagram, which in this example is quite
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_horizEquilibrium.png" alt=""><figcaption><p>Force Diagram in Horizontal Equilibrium</p></figcaption></figure>
 
-### 1.4 Generating the Thrust Object
+### 1.5 Generating the Thrust Object
 
 Next, we will click the button ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object (the mesh which represents the shell). RV2 will automatically calculate a height that is ideal for the shell structure based on self weight, however it is also possible to click on `TargetHeight` and change the value.
 
@@ -63,13 +63,13 @@ Next, we will click the button ![](../../../.gitbook/assets/rv2_toolbar_vert_equ
 
 After running this step, you can see that the mesh has changed from <mark style="color:green;">**green**</mark> to <mark style="color:magenta;">**pink**</mark>. Whenever you are going through the workflow in RV2, keep this in mind at all times. If changes are made in the form or force diagrams, or to the thrust object itself, the equilibrium must be recalculated.
 
-### 1.5 Saving the RV2 Results
+### 1.6 Saving the RV2 Results
 
 Unlike IGS, there can only be one RV2 session running in Rhino at a time. Therefore, in order to keep your results and be able to continue your formfinding at a later time, you need to save out your RV2 files **.rv2** scene files. This can be easily done by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_save\_scene.png) `Save RV2 session`. Similarly to grasshopper you can later open your base Rhino file, initialise RV2, and load these .rv2 scene files in order to recover your results by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_load\_scene.png) `Open RV2 session`.
 
 It is worth noting that you can save your rhino file from RV2 and still recover your final results, however without saving the RV2 session as a .rv2 file you will no longer be able to work on the shell and continue your formfinding.
 
-### 1.6 Clearing the Scene
+### 1.7 Clearing the Scene
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
 
@@ -99,67 +99,67 @@ First, we select ![](../../../.gitbook/assets/rv2_toolbar_make_pattern.png) `Cre
 
 The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `Corners`. Press enter to allow RV2 to find and select the corners.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_corners.png" alt=""><figcaption><p>Supports Located at the Corners</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_corners.png" alt=""><figcaption><p>Fig 2-3 : Supports Located at the Corners</p></figcaption></figure>
 
-At this point it is important to note that as a consequence of selecting only the four corners, we must now update our form diagram to accomodate for this choice. In order to understand how we must update our form diagram, we can isolate one vertex and graphically calculate the equilibrium of that node by drawing the force diagram (Fig 2-3 left). In the case on the left (straight boundaries), since the directions of the forces along the opening needs to be horizontal, you can not close the force polygon unless the force perpendicular to the opening is zero. However by updating the form diagram with a sag equal to 10% of the span of the opening, the force polygon can be closed using forces with finite magnitude (Fig 2-3 right).
+At this point it is important to note that as a consequence of selecting only the four corners, we must now update our form diagram to accomodate for this choice. In order to understand how we must update our form diagram, we can isolate one vertex and graphically calculate the equilibrium of that node by drawing the force diagram (Fig 2-4 left). In the case on the left (straight boundaries), since the directions of the forces along the opening needs to be horizontal, you can not close the force polygon unless the force perpendicular to the opening is zero. However by updating the form diagram with a sag equal to 10% of the span of the opening, the force polygon can be closed using forces with finite magnitude (Fig 2-4 right).
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_corners.png" alt=""><figcaption><p>Fig 2-3 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_aleDiagram.png" alt=""><figcaption><p>Fig 2-4 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
 
 This sag feature is available in RV2. In the Rhino command line, click on `UpdateBoundaries`. You will now see that each side of the pattern has received an identification number as in Fig 2-4.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_sagStart.png" alt=""><figcaption><p>Fig 2-4 : Pattern with sides identified</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_sagStart.png" alt=""><figcaption><p>Fig 2-5 : Pattern with sides identified</p></figcaption></figure>
 
 We can now change the amount of sag on individual boundaries, or one by one. We will go ahead and add a sag of 10% to all boundaries. Do this by clicking `All`, and then `Sag10`. We can see the sag that is applied to the sides in Fig 2-5. Now **press enter twice** to apply all the changes to the topology.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_sag10.png" alt=""><figcaption><p>Fig 2-5 : 10% Sag applied to sides</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_sag10.png" alt=""><figcaption><p>Fig 2-6 : 10% Sag applied to sides</p></figcaption></figure>
 
 ### 2.3 Creating the Form Diagram
 
 Next we will create the form diagram as before by clicking  ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_formDiagram.png" alt=""><figcaption><p>Fig 2-6 : Form Diagram</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_formDiagram.png" alt=""><figcaption><p>Fig 2-7 : Form Diagram</p></figcaption></figure>
 
 ### 2.4 Creating the Force Diagram
 
 Now click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`. In this example we can see many more dots indicating angle deviations, shown in Fig 2-7. This is resolved in the horizontal equilibrium step. To do this, we click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. If you run the solver once and there are remaining angle deviations, just run the `Horizontal equilbrium` command again. The final force diagram after solving for equilibrium is shown in Fig 2-8. 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_forceDiagram.png" alt=""><figcaption><p>Fig 2-7 : Force Diagram not in Equilbrium</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_forceDiagram.png" alt=""><figcaption><p>Fig 2-8 : Force Diagram not in Equilbrium</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_horizEquilibrium.png" alt=""><figcaption><p>Fig 2-8 : Final Force Diagram in Equilibrium</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_horizEquilibrium.png" alt=""><figcaption><p>Fig 2-9 : Final Force Diagram in Equilibrium</p></figcaption></figure>
 
 ### 2.5 Generating the Thrust Object
 
 Next, we will click ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject.png" alt=""><figcaption><p>Fig 2-9 : Initial Thrust Object</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject.png" alt=""><figcaption><p>Fig 2-10 : Initial Thrust Object</p></figcaption></figure>
 
 In this instance, let's change the height of the shell to see what happens. Click on ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` again, and this time click on `TargetHeight` to edit the value. Type **2** and then hit enter **twice**. Now we can see a shallow shell with increasted reaction forces at the corners. 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_2.png" alt=""><figcaption><p>Fig 2-10 : Thrust Object with 2m Height</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_2.png" alt=""><figcaption><p>Fig 2-11 : Thrust Object with 2m Height</p></figcaption></figure>
 
 Next, let's increase the height to see the effect this has on the reaction forces. Click on ![](../../../.gitbook/assets/rv2_toolbar_vert_equilibrium.png) `Vertical equilibrium` again, and change the `TargetHeight` value to **6**. 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_6.png" alt=""><figcaption><p>Fig 2-11 : Thrust Object with 6m Height</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_thrustObject_6.png" alt=""><figcaption><p>Fig 2-12 : Thrust Object with 6m Height</p></figcaption></figure>
 
 We can see that this taller shell has decreased reaction forces at its corners in comparison to the shallow shell, as we would expect. While this visualisation is helpful, there are actually many other visualisation options in RV2 to help us more easily comprehend the force flow in the shell.
 
 ### 2.5 Visualisation Options
 
-While we will not go over all the settings, we will go through a number of them which might be helpful for your. Click on ![](../../../.gitbook/assets/rv2_toolbar_settings.png) `Settings`. In the `RV2` tab, we can see the `angle tolerance` which determines the minimum value before RV2 displays the red dot with the angle deviation in the force diagram. The `forces` option color codes your form to your force diagram, allowing you to easily see which edges are taking the greatest forces. In Fig 2-12 the `forces` are shown.
+While we will not go over all the settings, we will go through a number of them which might be helpful for your. Click on ![](../../../.gitbook/assets/rv2_toolbar_settings.png) `Settings`. In the `RV2` tab, we can see the `angle tolerance` which determines the minimum value before RV2 displays the red dot with the angle deviation in the force diagram. The `forces` option color codes your form to your force diagram, allowing you to easily see which edges are taking the greatest forces. In Fig 2-13 the `forces` are shown.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_RV2.png" alt=""><figcaption><p>Fig 2-12 : RV2 Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_RV2.png" alt=""><figcaption><p>Fig 2-13 : RV2 Settings</p></figcaption></figure>
 
-In the `FormObject` Tab we can show and hide the `edges` and the `vertices` of the form diagram. In Fig 2-13 the `edges` remain shown but the `vertices` have been hidden.
+In the `FormObject` Tab we can show and hide the `edges` and the `vertices` of the form diagram. In Fig 2-14 the `edges` remain shown but the `vertices` have been hidden.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ForceObject.png" alt=""><figcaption><p>Fig 2-13 : FormObject Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ForceObject.png" alt=""><figcaption><p>Fig 2-14 : FormObject Settings</p></figcaption></figure>
 
-In the `ForceObject` Tab we find the same types of settings, but now for the force diagram. In Fig 2-14 the `vertices` have been hidden and the `edges` are still shown.
+In the `ForceObject` Tab we find the same types of settings, but now for the force diagram. In Fig 2-15 the `vertices` have been hidden and the `edges` are still shown.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_FormObject.png" alt=""><figcaption><p>Fig 2-14 : FormObject Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_FormObject.png" alt=""><figcaption><p>Fig 2-15 : FormObject Settings</p></figcaption></figure>
 
-The final tab `ThrustObject` has numerous helpful visualisation settings. Similar to our grasshopper exercises from before, we can do things such as show pipes. We are also able to display the stresses throughout the shell, color coding our form to our force diagram and increasing the speed with which we can analyse our results. Feel free to play around with these settings. In Fig 2-15, the `pipes` and `stresses` are shown.
+The final tab `ThrustObject` has numerous helpful visualisation settings. Similar to our grasshopper exercises from before, we can do things such as show pipes. We are also able to display the stresses throughout the shell, color coding our form to our force diagram and increasing the speed with which we can analyse our results. Feel free to play around with these settings. In Fig 2-16, the `pipes` and `stresses` are shown.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-15 : FormObject Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-16 : FormObject Settings</p></figcaption></figure>
 
 
 ## 3.0 Using Surfaces 
