@@ -30,25 +30,26 @@ Let's start with the simplest workflow for using RV2, where we will make a simpl
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_lines.png" alt=""><figcaption><p>Initial grid of lines</p></figcaption></figure>
 
-### 1.1 Defining the Topology
+### 1.1 From Line Segments
+#### 1.1.1 Defining the Topology
 
 Each line in the grid is a **segment**, meaning that these lines cannot run continuously from one side of the pattern to the other side and must instead be segmented into shorter lines per each quadrilateral in the pattern. The next step is to click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Next, select the lines of the pattern. It should then look like this.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_pattern.png" alt=""><figcaption><p>Pattern</p></figcaption></figure>
 
-### 1.2 Identifying the Supports
+#### 1.1.2 Identifying the Supports
 
 The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. Next **press enter twice** to exit out of the command and end the process of defining the boundary conditions. You can confirm that the program executed the command correctly when you see that all vertices located at the boundary of the pattern are displayed in <mark style="color:red;">**red**</mark>.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_supports.png" alt=""><figcaption><p>Support vertices</p></figcaption></figure>
 
-### 1.3 Creating the Form Diagram
+#### 1.1.3 Creating the Form Diagram
 
 Now that we have given RV2 the general topology of the shell and identified the supports, it is time to make the form diagram. This is done by clicking the button ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. You should now see a green mesh which represents the shell. Currently this mesh is flat as we have not finished the process. This is also indicated by the fact that the mesh is <mark style="color:green;">**green**</mark> which means that the mesh is **not in equilibrium**.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_formDiagram.png" alt=""><figcaption><p>Form Diagram</p></figcaption></figure>
 
-### 1.4 Creating the Force Diagram
+#### 1.1.4 Creating the Force Diagram
 
 The next step is to generate the force diagram. Unlike IGS, RV2 relies on an iterative solver and therefore the initial force diagram generated is actually the dual of the form diagram. We generate this diagram by clicking the button ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`. The diagram appears to the right of the form diagram.
 
@@ -64,7 +65,7 @@ The solver will run and adjust the force diagram, which in this example is quite
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_horizEquilibrium.png" alt=""><figcaption><p>Force Diagram in Horizontal Equilibrium</p></figcaption></figure>
 
-### 1.5 Generating the Thrust Object
+#### 1.1.5 Generating the Thrust Object
 
 Next, we will click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object (the mesh which represents the shell). RV2 will automatically calculate a height that is ideal for the shell structure based on self weight, however it is also possible to click on `TargetHeight` and change the value.
 
@@ -72,15 +73,33 @@ Next, we will click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_
 
 After running this step, you can see that the mesh has changed from <mark style="color:green;">**green**</mark> to **pink**. Whenever you are going through the workflow in RV2, keep this in mind at all times. If changes are made in the form or force diagrams, or to the thrust object itself, the equilibrium must be recalculated.
 
-### 1.6 Saving the RV2 Results
+#### 1.1.6 Saving the RV2 Results
 
 Unlike IGS, there can only be one RV2 session running in Rhino at a time. Therefore, in order to keep your results and be able to continue your formfinding at a later time, you need to save out your RV2 files **.rv2** scene files. This can be easily done by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_save\_scene.png) `Save RV2 session`. Similarly to grasshopper you can later open your base Rhino file, initialise RV2, and load these .rv2 scene files in order to recover your results by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_load\_scene.png) `Open RV2 session`.
 
 It is worth noting that you can save your rhino file from RV2 and still recover your final results, however without saving the RV2 session as a .rv2 file you will no longer be able to work on the shell and continue your formfinding.
 
-### 1.7 Clearing the Scene
+#### 1.1.7 Clearing the Scene
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
+
+### 1.2 Triangulation
+
+We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 3-7 : Input Lines</p></figcaption></figure>
+
+We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
+
+An optional input of the triangulation process is to provide a constraint curve. This curve guides the triangulation subdivision such that the vertices and edges of the triangulation are aligned to this curve in order to include it in the topological generation.
+
+The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 3-8 : Triangulation</p></figcaption></figure>
+
+Define all the boundary vertices as supports and create the form and force diagrams. Find the horizontal equilibrium, and analyse the results. The shell should look like Fig 3-9.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
 ## 2 Formfinding of a Shell from a Mesh
 
@@ -203,24 +222,6 @@ Hit enter until you see the final pattern. Then, click `Define boundary conditio
 If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
-
-### 3.2 Triangulation
-
-We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 3-7 : Input Lines</p></figcaption></figure>
-
-We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
-
-An optional input of the triangulation process is to provide a constraint curve. This curve guides the triangulation subdivision such that the vertices and edges of the triangulation are aligned to this curve in order to include it in the topological generation.
-
-The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 3-8 : Triangulation</p></figcaption></figure>
-
-Define all the boundary vertices as supports and create the form and force diagrams. Find the horizontal equilibrium, and analyse the results. The shell should look like Fig 3-9.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
 ## 4 Creases
 
