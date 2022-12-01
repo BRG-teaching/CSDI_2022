@@ -11,13 +11,12 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 
 The tutorial can be organised into these categories:
 
-| Inputs | Features  | 
-| --------- | - |
-| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)  | 4 [Creases](\_tutorial-5.md#4-creases--two-methods)  |
-| 2 [Formfinding of a Shell from a Mesh](_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](_tutorial-5.md#5-lip-edges)  |
-| 3 [Formfinding of a Shell from Surfaces](_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface)          | 6 [Holes](_tutorial-5.md#6-holes)  |
-|          | 7 [Dropdowns](_tutorial-5.md#80-dropdowns)  |
-
+| Inputs                                                                                            | Features                                           |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)        | 4 [Creases](\_tutorial-5.md#4-creases-two-methods) |
+| 2 [Formfinding of a Shell from a Mesh](\_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](\_tutorial-5.md#5-lip-edges)         |
+| 3 [Formfinding of a Shell from Surfaces](\_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface) | 6 [Holes](\_tutorial-5.md#6-holes)                 |
+|                                                                                                   | 7 [Dropdowns](\_tutorial-5.md#8.0-dropdowns)       |
 
 ## Initialisation
 
@@ -223,7 +222,7 @@ Define all the boundary vertices as supports and create the form and force diagr
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
-## 4 Creases : Two Methods
+## 4 Creases
 
 We will now look at methods of interacting with the **force diagram** to affect our formfinding.
 
@@ -380,13 +379,11 @@ Now that we have our shell in compression we can begin the process of adding a h
 
 Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
-
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-4 : Selection of Faces</p></figcaption></figure>
 
 You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
-
 
 ## 8.0 Dropdowns
 
