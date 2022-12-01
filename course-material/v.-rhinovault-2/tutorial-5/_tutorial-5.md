@@ -15,10 +15,11 @@ The tutorial can be organised into these categories:
 | --------- | - |
 | 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)  | 4 [Creases](\_tutorial-5.md#4-creases--two-methods)  |
 | 2 [Formfinding of a Shell from a Mesh](_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](_tutorial-5.md#5-lip-edges)  |
-|           |   |
+| 3 [Formfinding of a Shell from Surfaces](_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface)          | 6 [Holes](_tutorial-5.md#70-holes)  |
+|          | 7 [Dropdowns](_tutorial-5.md#80-dropdowns)  |
 
 
-
+<!-- 
 **Inputs**
 
 * 1 Formfinding of a Shell from **Lines**
@@ -30,7 +31,7 @@ The tutorial can be organised into these categories:
 * 4 **Creases**
 * 5 **Lip Edges**
 * 6 **Holes**
-* 7 **Dropdowns**
+* 7 **Dropdowns** -->
 
 ## Initialisation
 
