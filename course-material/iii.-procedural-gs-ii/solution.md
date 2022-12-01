@@ -6,7 +6,7 @@ To add one more external load to the model, we must modify the following parts o
 
 <figure><img src="../../.gitbook/assets/CSDI_II_T1_solution_2.jpg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/CSDI_II_T1_solution_1.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSDI_II_T1_solution.jpg" alt=""><figcaption></figcaption></figure>
 
 ## Task 2
 
@@ -32,7 +32,7 @@ In Task 4 we must add two constraints to the force diagram to find a particular 
 
 If we study the solutions that we obtain in the initial Grasshopper definition, we observe that the steepest elements are always at the extremes of the funicular and that their geometry is fixed when the supports are defined. In order to solve this task, instead of defining the supports and reaction forces in the form diagram, you will do this using the force diagram. The sketch below shows how to do this. Once we find a possible solution in the force diagram we will construct the form diagram and find the position of the supports along the curves of the cliffs.
 
-<figure><img src="../../.gitbook/assets/CSDI_II_T4_solution_4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSDI_II_T4_solution_4 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Second constraint
 

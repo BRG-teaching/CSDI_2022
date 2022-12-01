@@ -28,7 +28,7 @@ In Task 3 you are asked to find a way to generate single-sided bridges and that 
 
 Task 4 asks you to display a warning symbol if the geometry of the bridge (form diagram) happens to use as supports areas of the cliff which are unstable. As you did for Task 2, here the solution can be constructed by building a conditional using the "Point in Curves", "Equality" and "Dispatch".
 
-<figure><img src="../../.gitbook/assets/CSDI_I_T4_solution.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSDI_I_T4_solution (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ## Task 5
 

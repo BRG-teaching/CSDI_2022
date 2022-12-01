@@ -9,18 +9,15 @@
 
 This tutorial will teach you the basic capabilities of RV2. As not all capabilities of the software will be included, feel free to browse [the documentation](https://blockresearchgroup.gitbook.io/rv2/quick-start/tutorial) on your own at a later time and try out the other more advanced tutorials.
 
-## Content Overview
+The tutorial can be organised into these categories:
 
-**Inputs**
-- 1 Formfinding of a Shell from **Lines**
-- 2 Formfinding of a Shell from a **Mesh**
-- 3 Formfinding of a Shell from a **Surface**
+| Inputs                                                                                            | Features                                   |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)        | 4 [Creases](\_tutorial-5.md#4-creases)     |
+| 2 [Formfinding of a Shell from a Mesh](\_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](\_tutorial-5.md#5-lip-edges) |
+| 3 [Formfinding of a Shell from Surfaces](\_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface) | 6 [Holes](\_tutorial-5.md#6-holes)         |
+|                                                                                                   | 7 [Dropdowns](\_tutorial-5.md#7-dropdowns) |
 
-**Features**
-- 4 **Creases**
-- 5 **Lip Edges**
-- 6 **Holes**
-- 7 **Dropdowns**
 ## Initialisation
 
 As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
@@ -29,29 +26,31 @@ As with IGS, the first step is to initiate the RV2 engine which imports all the 
 
 ## 1 Formfinding of a Shell from Lines
 
+### 1.1 From Line Segments
+
 Let's start with the simplest workflow for using RV2, where we will make a simple shell supported at all its boundaries. In RV2, a **Pattern** is a collection of lines that define the topology of the form diagram. For this example we will use a simple grid of lines.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_lines.png" alt=""><figcaption><p>Initial grid of lines</p></figcaption></figure>
 
-### 1.1 Defining the Topology
+#### 1.1.1 Defining the Topology
 
 Each line in the grid is a **segment**, meaning that these lines cannot run continuously from one side of the pattern to the other side and must instead be segmented into shorter lines per each quadrilateral in the pattern. The next step is to click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Next, select the lines of the pattern. It should then look like this.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_pattern.png" alt=""><figcaption><p>Pattern</p></figcaption></figure>
 
-### 1.2 Identifying the Supports
+#### 1.1.2 Identifying the Supports
 
 The next step is to click the following series of commands: click the icon ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. Next **press enter twice** to exit out of the command and end the process of defining the boundary conditions. You can confirm that the program executed the command correctly when you see that all vertices located at the boundary of the pattern are displayed in <mark style="color:red;">**red**</mark>.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_supports.png" alt=""><figcaption><p>Support vertices</p></figcaption></figure>
 
-### 1.3 Creating the Form Diagram
+#### 1.1.3 Creating the Form Diagram
 
 Now that we have given RV2 the general topology of the shell and identified the supports, it is time to make the form diagram. This is done by clicking the button ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. You should now see a green mesh which represents the shell. Currently this mesh is flat as we have not finished the process. This is also indicated by the fact that the mesh is <mark style="color:green;">**green**</mark> which means that the mesh is **not in equilibrium**.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_formDiagram.png" alt=""><figcaption><p>Form Diagram</p></figcaption></figure>
 
-### 1.4 Creating the Force Diagram
+#### 1.1.4 Creating the Force Diagram
 
 The next step is to generate the force diagram. Unlike IGS, RV2 relies on an iterative solver and therefore the initial force diagram generated is actually the dual of the form diagram. We generate this diagram by clicking the button ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`. The diagram appears to the right of the form diagram.
 
@@ -67,7 +66,7 @@ The solver will run and adjust the force diagram, which in this example is quite
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_horizEquilibrium.png" alt=""><figcaption><p>Force Diagram in Horizontal Equilibrium</p></figcaption></figure>
 
-### 1.5 Generating the Thrust Object
+#### 1.1.5 Generating the Thrust Object
 
 Next, we will click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to find the vertical equilibrium of the shell structure and generate the thrust object (the mesh which represents the shell). RV2 will automatically calculate a height that is ideal for the shell structure based on self weight, however it is also possible to click on `TargetHeight` and change the value.
 
@@ -75,15 +74,33 @@ Next, we will click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_
 
 After running this step, you can see that the mesh has changed from <mark style="color:green;">**green**</mark> to **pink**. Whenever you are going through the workflow in RV2, keep this in mind at all times. If changes are made in the form or force diagrams, or to the thrust object itself, the equilibrium must be recalculated.
 
-### 1.6 Saving the RV2 Results
+#### 1.1.6 Saving the RV2 Results
 
 Unlike IGS, there can only be one RV2 session running in Rhino at a time. Therefore, in order to keep your results and be able to continue your formfinding at a later time, you need to save out your RV2 files **.rv2** scene files. This can be easily done by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_save\_scene.png) `Save RV2 session`. Similarly to grasshopper you can later open your base Rhino file, initialise RV2, and load these .rv2 scene files in order to recover your results by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_load\_scene.png) `Open RV2 session`.
 
 It is worth noting that you can save your rhino file from RV2 and still recover your final results, however without saving the RV2 session as a .rv2 file you will no longer be able to work on the shell and continue your formfinding.
 
-### 1.7 Clearing the Scene
+#### 1.1.7 Clearing the Scene
 
 In order to move on to the next example, we have to clear out our RV2 session in order to start from scratch. You can easily do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_clear\_scene.png) `Clear scene`.
+
+### 1.2 Triangulation
+
+We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 3-7 : Input Lines</p></figcaption></figure>
+
+We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
+
+An optional input of the triangulation process is to provide a constraint curve. This curve guides the triangulation subdivision such that the vertices and edges of the triangulation are aligned to this curve in order to include it in the topological generation.
+
+The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 3-8 : Triangulation</p></figcaption></figure>
+
+Define all the boundary vertices as supports and create the form and force diagrams. Find the horizontal equilibrium, and analyse the results. The shell should look like Fig 3-9.
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
 ## 2 Formfinding of a Shell from a Mesh
 
@@ -176,7 +193,7 @@ The final tab `ThrustObject` has numerous helpful visualisation settings. Simila
 
 In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
 
-### 3.1 Subdivision Example 1
+### 3.1 Surface Subdivision
 
 First we will input a surface with a number of curves to it.
 
@@ -194,71 +211,56 @@ We can customise the subdivision further by selecting `SubdivideEdgeStrip` and c
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
 
-## 4 Triangulation
+Hit enter until you see the final pattern. Then, click `Define boundary conditions`, and identify the vertices at the left and right edges as the supports (see Fig 3-5).
 
-We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_supportsAtEdges.png" alt=""><figcaption><p>Fig 3-5 : Side Vertices as Supports</p></figcaption></figure>
 
-### 4.1 Defining the Topology
+* ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 4-1 : Input Lines</p></figcaption></figure>
+If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
 
-We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
 
-An optional input of the triangulation process is to provide a constraint curve. This curve guides the triangulation subdivision such that the vertices and edges of the triangulation are aligned to this curve in order to include it in the topological generation.
-
-The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 4-2 : Triangulation</p></figcaption></figure>
-
-### 4.2 Identifying the Supports
-
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`.
-
-We will now create our form and force diagrams, find the horizontal equilibrium, and analyse the results.
-
-## 5.0 Creases : Two Methods
+## 4 Creases
 
 We will now look at methods of interacting with the **force diagram** to affect our formfinding.
 
-### 5.1 Method One : Moving Vertices in the Force Diagram
+### 4.1 Method One : Moving Vertices in the Force Diagram
 
 The first method for adding creases to our shell is to move vertices in the force diagram and recalculate the equilibrium.
 
-#### 5.1.1 Topology Creation
+Start by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on our surface. Click `SubdivideEdgeStrip`, select the left edge, and increase the subdivision to **8**. The result should look like Fig 4-1.
 
-We will start this process by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on our surface. Click `SubdivideEdgeStrip`, select the left edge, and increase the subdivision to **8**. The result should look like Fig 5-1.
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creasePattern1.png" alt=""><figcaption><p>Fig 4-1 : Pattern for Crease</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creasePattern1.png" alt=""><figcaption><p>Fig 5-1 : Pattern for Crease</p></figcaption></figure>
+Next, define all the boundary vertices as supports. It should look like Fig 4-2.
 
-#### 5.1.2 Define Supports
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_boundaryVertices_all.png" alt=""><figcaption><p>Fig 4-2 : Boundary Supports Defined</p></figcaption></figure>
 
-Next, define all the boundary vertices as supports. Do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. It should look like Fig 5-2.
+We will now find the initial shell without the crease applied. Generate the form and force diagrams, and then find the horizontal equilibrium. Then, find the vertical equilibrium. Your result should look like Fig 4-3.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_boundaryVertices_all.png" alt=""><figcaption><p>Fig 5-2 : Boundary Supports Defined</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creases_before.png" alt=""><figcaption><p>Fig 4-3 : Initial Shell Before Crease</p></figcaption></figure>
 
-#### 5.1.3 Find Initial Equilibrium
+#### 4.1.1 Modify the Force Diagram
 
-We will now find the initial shell without the crease applied. Generate the form and force diagrams, and then find the horizontal equilibrium. Then, find the vertical equilibrium. Your result should look like Fig 5-3.
+We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 4-4 to see the steps.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creases_before.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
-
-#### 5.1.4 Modify Force Diagram
-
-We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 5-4 to see the steps.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 5-4 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 4-4 : Steps for Modifying the Force Diagram</p></figcaption></figure>
 
 The final force diagram should look something like this :
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 5-5 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 4-5 : Force Diagram Post-Modifications</p></figcaption></figure>
 
 Now, we need to recalculate the horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. Then click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to also recalculate the vertical equilibrium. We now have our shell with two creases in it!
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 5-6 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 4-6 : Shell with Two Creases</p></figcaption></figure>
 
-### 5.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram
+### 4.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram
 
-The second method for adding creases is to alter our topology and define the forces in particular edges of the force diagram. For this example, let's make a cross vault. A cross vault can be seen as having two creases which run between supports at the corners which are diagonal from each other, which we can also visualise as being arches within our shell which start and end at these supports.
+The second method for adding creases is to define the forces in particular edges of the force diagram. For this example, let's make a cross vault. A cross vault can be seen as having two creases which run between supports at the corners which are diagonal from each other, which we can also visualise as being arches within our shell which start and end at these supports.
 
 Taking our simplest grid of lines, let's adjust this in order to be the topology required for our cross vault. Currently, there is no way for an arch within our topology to connect the corners diagonally. This indicates that we need to add edges.
 
@@ -266,9 +268,9 @@ Type `Line` and draw a line that goes from the upper left corner of the pattern 
 
 Now, we know that this line needs to be in **segments** for the topology to work. Type `Split` and select both your lines. Then Drag a box to add the other lines in the original pattern which will split our line geometries (see Fig). Press enter. Your line should now be split into ten segments.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 5-7 : Adding Line Edges</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 4-7 : Adding Line Edges</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_FinalPattern.png" alt=""><figcaption><p>Fig 5-8 : Final Pattern</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_FinalPattern.png" alt=""><figcaption><p>Fig 4-8 : Final Pattern</p></figcaption></figure>
 
 Next, go through all the basic steps to create your base thrust object with supports at the corner points and a `TargetHeight` of **6**. Here are the buttons you will need to click :
 
@@ -283,131 +285,113 @@ Next, go through all the basic steps to create your base thrust object with supp
 
 If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_originalObj.png" alt=""><figcaption><p>Fig 5-9 : Unaltered Shell</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_originalObj.png" alt=""><figcaption><p>Fig 4-9 : Unaltered Shell</p></figcaption></figure>
 
 Now, let's modify our force diagram. Click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Hit enter and the settings box will appear. Click on `lmin` and change the value to **5**. Click Ok.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceEdgesSelected_withSettings.png" alt=""><figcaption><p>Fig 5-10 : Changing Force Edge lmin</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceEdgesSelected_withSettings.png" alt=""><figcaption><p>Fig 4-10 : Changing Force Edge lmin</p></figcaption></figure>
 
 Now we need to recalculate our horizontal equilibrium. Click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`, and your results should look like Fig-11:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_newForceDiag.png" alt=""><figcaption><p>Fig 5-11 : Changing Force Edge lmin</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_newForceDiag.png" alt=""><figcaption><p>Fig 4-11 : Changing Force Edge lmin</p></figcaption></figure>
 
 We see that the forces in the edges we selected have greatly increased, and as a result the forces in the opposite crease have also begun to take more forces. The mesh for our thrust object is <mark style="color:green;">**green**</mark>, indicating that it **needs to be updated**. So click on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to see our results.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_crossVault.png" alt=""><figcaption><p>Fig 5-12 : Updated Thrust Object with Creases</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_crossVault.png" alt=""><figcaption><p>Fig 4-12 : Updated Thrust Object with Creases</p></figcaption></figure>
 
 Now we can see the creases in our shell, with one exaggerated and the other somewhat more shallow. Feel free to go back throught the stops to make the other crease as exaggerated as the other, or explore different options.
 
-## 6.0 Lip Edges
+## 5 Lip Edges
 
-We will now take a look at how to manipulate the force diagram in order to achieve a lip at the edge of the shell. A nice example of this effect is Heinz Isler's Wyss Garten Haus, shown in Fig 6-1.
+We will now take a look at how to manipulate the force diagram in order to achieve a lip at the edge of the shell. A nice example of this effect is Heinz Isler's Wyss Garten Haus, shown in Fig 5-1.
 
-<figure><img src="../../../.gitbook/assets/rv2_islerwyssgartenhaus_2.jpeg" alt=""><figcaption><p>Fig 6-1 : Close-up Photograph of Heinz Isler's Wyss Garten Haus<br>Source: https://schoenstebauten.heimatschutz.ch/de/moderne-architektur-im-kanton-solothurn-1940-bis-1980</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_islerwyssgartenhaus_2.jpeg" alt=""><figcaption><p>Fig 5-1 : Close-up Photograph of Heinz Isler's Wyss Garten Haus<br>Source: https://schoenstebauten.heimatschutz.ch/de/moderne-architektur-im-kanton-solothurn-1940-bis-1980</p></figcaption></figure>
 
 In order to make this change in the shell, we must **redirect** where our greatest forces will flow. Typically, in or shell formfinding (such as in Example 2.0) the greatest forces have been in the outermost edge of our shell, flowing down to the support points at the corners. In this case, we would like to have these greatest flowing through some edge that is not at the very outside of our shell.
 
-### 6.1 Defining the Topology
+Generate the topology by creating the pattern from our grid of lines. Next, identify the supports as the vertices along the top and bottom edges of our pattern.Your result should look like Fig 5-2.
 
-As in our other examples, the first step is to generate our topological pattern. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Select the lines of the pattern.
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_supportEdges.png" alt=""><figcaption><p>Fig 5-2 : Edges with Support Vertices Selected</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_pattern.png" alt=""><figcaption><p>Fig 6-1 : Pattern for Lip Example</p></figcaption></figure>
+Next, click `UpdateBoundaries` and apply a sag of 10% to all boundaries.
 
-### 6.2 Identifying the Supports
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_sagEdges.png" alt=""><figcaption><p>Fig 5-3 : Opposite Edges with Sag 10% Applied</p></figcaption></figure>
 
-The next step is to define the corners as our supports. Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `Manual`. Now, select all the vertices at the top and bottom edges. it should look like Fig 6-2.
+Next create the form and force diagram, and calculate the horizontal equilibrium. You should now see the same thing as in Fig 5-4.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_supportEdges.png" alt=""><figcaption><p>Fig 6-2 : Edges with Support Vertices Selected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_formandForce.png" alt=""><figcaption><p>Fig 5-4 : Form and Force Diagrams Generated, with Horizontal Equilibrium Found</p></figcaption></figure>
 
-Next, click `UpdateBoundaries` and apply a sag of 10% to all boundaries. Do this by clicking `All`, and then `Sag10`. Your pattern should now look like Fig 6-3.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_sagEdges.png" alt=""><figcaption><p>Fig 6-3 : Opposite Edges with Sag 10% Applied</p></figcaption></figure>
-
-### 6.3 Form and Force Diagrams
-
-Now that we have given RV2 the general topology of the shell and identified the supports, it is time to make our form and force diagrams. Click ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram` followed by ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. You should now see the same thing as in Fig 6-4.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_formandForce.png" alt=""><figcaption><p>Fig 6-4 : Form and Force Diagrams Generated, with Horizontal Equilibrium Found</p></figcaption></figure>
-
-### 6.4 Formfound Geometry without Changes
+### 5.1 Initial Shell without Modification
 
 Before we change the force digram, we will generate our shell **with a Target Height equal to 6** to see the existing concentrations of forces.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_initialShell.png" alt=""><figcaption><p>Fig 6-5 : Initial Shell</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_initialShell.png" alt=""><figcaption><p>Fig 5-5 : Initial Shell</p></figcaption></figure>
 
 Using our new insight on the RV2 settings, let's visualise the forces in the shell to more easily see the forces in the form diagram.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram.png" alt=""><figcaption><p>Fig 6-6 : Color Coded Form and Force Diagrams</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram.png" alt=""><figcaption><p>Fig 5-6 : Color Coded Form and Force Diagrams</p></figcaption></figure>
 
-Now we can clearly see that the longest edges in the force diagram, therefore the largest forces overall, are in the outer edges of the shell. One straightforward way to modify those large forces to be in an inner edge is to limit the amount of forces permitted in the outermost edges.
+Now we can clearly see that the longest edges in the force diagram, therefore the largest forces overall, are in the outer edges of the shell. One straightforward way to modify those large forces to be in an inner edge is to **limit the amount of forces permitted in the outermost edges**.
 
-### 6.5 Limit the Amount of Force in Edges of the Force Diagram
+### 5.2 Modifying the Force Diagram
 
 The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Select the edges of the force diagram which are <mark style="color:red;">**red**</mark>, and press enter.
 
 Click on the value for `lmax` and replace the old value with **1.5**. Press enter, then click `OK`. Your screen should look like this:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram_postMod.png" alt=""><figcaption><p>Fig 6-7 : Thrust Object after Modifying Force Diagram</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_colorForceDiagram_postMod.png" alt=""><figcaption><p>Fig 5-7 : Thrust Object after Modifying Force Diagram</p></figcaption></figure>
 
 You might have noticed that nothing really changed, except the color of the thrust object. It is important to note that the thrust object has now turned <mark style="color:green;">**green**</mark>, indicating that it **needs to be updated**.
 
-### 6.6 Update the Force Diagram and Thrust Object
+### 5.3 Update the Force Diagram and Thrust Object
 
-The first step is to again find the horizontal equilibrium, so click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. It should look like Fig 6-7:
+The first step is to again find the horizontal equilibrium, so click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. It should look like Fig 5-7:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_6_updatedForceDiag_postMod.png" alt=""><figcaption><p>Fig 6-8 : Updated Force Diagram</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_6_updatedForceDiag_postMod.png" alt=""><figcaption><p>Fig 5-8 : Updated Force Diagram</p></figcaption></figure>
 
 We see now that the edges of the force diagram we constrained to have an `lmax` of **1.5** have shrunken significantly and are now green, indicating they are taking less forces. We see now that as a result, the lines for the edge which lies behind the outer edge are now red and taking most of the forces. Let's generate our thrust object to see the effect in 3D by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`.
 
-<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_1.png" alt=""><figcaption><p>Fig 6-9 : Updated Thrust Object Perspective</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_1.png" alt=""><figcaption><p>Fig 5-9 : Updated Thrust Object Perspective</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_2.png" alt=""><figcaption><p>Fig 6-10 : Updated Thrust Object Front View</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_shell_postMod_2.png" alt=""><figcaption><p>Fig 5-10 : Updated Thrust Object Front View</p></figcaption></figure>
 
 We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways.
-
-## 7.0 Holes
+## 6 Holes
 
 Now that we can formfind shells really well, let's go over how to make a hole in one. Of course, as you have seen already, you can have a hole in your pattern, however it is also possible to add holes after you have formfound a shell in equilibrium.
 
-### 7.1 Basic Shell Thrust Object
+### 6.1 Initial Shell
 
 You have been giving a simple square surface. Make your pattern and subdivide the entire mesh by **10**. It should look like this :
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 7-1 : Pattern</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 6-1 : Pattern</p></figcaption></figure>
 
-Next, define the supports as all the boundary vertices...
+Next, define the supports as all the boundary vertices, create the form and force diagrams, and find the horizontal equilibrium and create the thrust object:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_boundaries.png" alt=""><figcaption><p>Fig 7-2 : Defined Supports</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 6-2 : Initial Thrust Object</p></figcaption></figure>
 
-Then create the form and force diagrams, and find the horizontal equilibrium.
+In order to compare our results, make a new layer in rhino named **Initial Shell**. Make a copy of the thrust object and place it on this layer. Hide the layer, and `Clear Scene`.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_formandforce.png" alt=""><figcaption><p>Fig 7-3 : Final Form and Force Diagrams</p></figcaption></figure>
+### 6.2 Modifying the Topology
 
-Now create the thrust object from finding our vertical equilibrium.
+Now that we have our shell in compression we can begin the process of adding a hole to it. Type `Show` in order to show our initial surface again. Then, as before, subdivide it by **10** and press enter. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_modify\_pattern.png) `Modify Pattern`. Click `DeleteVertices` and choose a vertex near one of the corner supports. Press enter. Your pattern should now look similar to Fig 6-3:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 7-4 : Thrust Object</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_deletedVertices.png" alt=""><figcaption><p>Fig 6-3 : Pattern after Deleting Vertex</p></figcaption></figure>
 
-Now that we have our shell in compression we can begin the process of adding a hole to it. Start by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram`. Next, click on `FacesAttributes` then `Manual`. Select whichever faces you want, and then press enter. A `Properties` box will appear with editable value named `_is_loaded`. The value is a **boolean**, so keep in mind that capitalisation is important here. Change the value from `True` to `False`, and click ok.
+Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceSelection.png" alt=""><figcaption><p>Fig 7-5 : Selection of Faces</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceAttributes.png" alt=""><figcaption><p>Fig 7-6 : Settings Box for Face Attributes</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-4 : Selection of Faces</p></figcaption></figure>
 
-After pressing enter, you should see the mesh turn <mark style="color:green;">**green**</mark> (indicating it requires updating) and the faces you selected should disappear...
+You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_hole.png" alt=""><figcaption><p>Fig 7-7 : Hole in the Thrust Object</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
 
-As we have only edited the thrust diagram, we only need to click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` in order to update our thrust object to be in equilibrium again.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_1.png" alt=""><figcaption><p>Fig 7-8 : Thrust Object in Equilbrium with Hole</p></figcaption></figure>
+## 7 Dropdowns
 
-While difficult to tell from this angle, we can see that this hole has significantly affected the shell by orbiting around it. As you can see in Fig 7-9 this hole has caused the shell around it to become flatter as it no longer needs to carry the weight of these faces.
+**Do not clear your scene for this example!** We will now take the hole we created in our shell structure and turn it into a dropdown. Of course if you originally intended to make a drop down, you could have defined the vertices at the edges of the hole as supports at the start of the formfinding process. However, in this scenario we will do this after we have already formfound our shell.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_2_arrow.png" alt=""><figcaption><p>Fig 7-9 : Flattening of Shell around Hole</p></figcaption></figure>
-
-## 8.0 Dropdowns
-
-Do not clear your scene for this example! We will now take the hole we created in our shell structure and turn it into a dropdown.
 
 ### 8.1 Modify Thrust Diagram Vertices
 
