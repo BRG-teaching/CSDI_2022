@@ -102,6 +102,10 @@ Define all the boundary vertices as supports and create the form and force diagr
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
+As you can tell, interacting with the Force diagram of a triangulated pattern is not as easy as with a quad pattern, and the variability in direction and magnitude of the reaction forces can make the design of the supports more demanding.
+
+Instead, triangulation can be a good solution in the case of a complex set of boundaries and features (holes, etc.), since, in this case, the definition of only two clear directions for the flow of forces is not possible.
+
 ## 2 Formfinding of a Shell from a Mesh
 
 Before starting this example, it is important to know the difference between a mesh and a surface.
@@ -250,7 +254,7 @@ We will now modify the force diagram to apply our creases. The first step is to 
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 4-4 : Steps for Modifying the Force Diagram</p></figcaption></figure>
 
-The final force diagram should look something like this :
+Repeat the steps on another group of points. Your final force diagram should look something like this :
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 4-5 : Force Diagram Post-Modifications</p></figcaption></figure>
 
