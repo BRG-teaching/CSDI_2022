@@ -11,6 +11,11 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 
 The tutorial can be organised into these categories:
 
+| Inputs | Features |
+| [Formfinding of a Shell from Lines](_tutorial-5.md#1-formfinding-of-a-shell-from-lines) | [Creases](_tutorial-5.md#4-creases--two-methods) |
+
+
+
 **Inputs**
 - 1 Formfinding of a Shell from **Lines**
 - 2 Formfinding of a Shell from a **Mesh**
