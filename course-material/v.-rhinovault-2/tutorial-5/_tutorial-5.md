@@ -13,8 +13,8 @@ The tutorial can be organised into these categories:
 
 | Inputs | Features  | 
 | --------- | - |
-| [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)  | [Creases](\_tutorial-5.md#4-creases--two-methods)  |
-| [Formfinding of a Shell from a Mesh](_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | [Lip Edges](_tutorial-5.md#5-lip-edges)  |
+| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)  | 4 [Creases](\_tutorial-5.md#4-creases--two-methods)  |
+| 2 [Formfinding of a Shell from a Mesh](_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](_tutorial-5.md#5-lip-edges)  |
 |           |   |
 
 
