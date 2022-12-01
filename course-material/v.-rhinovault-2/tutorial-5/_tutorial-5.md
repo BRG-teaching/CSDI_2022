@@ -209,7 +209,7 @@ If you have forgotten any of the steps, feel free to scroll through the rest of 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
 
 
-## 3.2 Triangulation
+### 3.2 Triangulation
 
 We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
 
@@ -227,49 +227,43 @@ Define all the boundary vertices as supports and create the form and force diagr
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
-## 5.0 Creases : Two Methods
+## 4 Creases : Two Methods
 
 We will now look at methods of interacting with the **force diagram** to affect our formfinding.
 
-### 5.1 Method One : Moving Vertices in the Force Diagram
+### 4.1 Method One : Moving Vertices in the Force Diagram
 
 The first method for adding creases to our shell is to move vertices in the force diagram and recalculate the equilibrium.
 
-#### 5.1.1 Topology Creation
+Start by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on our surface. Click `SubdivideEdgeStrip`, select the left edge, and increase the subdivision to **8**. The result should look like Fig 4-1.
 
-We will start this process by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. Click on our surface. Click `SubdivideEdgeStrip`, select the left edge, and increase the subdivision to **8**. The result should look like Fig 5-1.
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creasePattern1.png" alt=""><figcaption><p>Fig 4-1 : Pattern for Crease</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creasePattern1.png" alt=""><figcaption><p>Fig 5-1 : Pattern for Crease</p></figcaption></figure>
+Next, define all the boundary vertices as supports. It should look like Fig 4-2.
 
-#### 5.1.2 Define Supports
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_boundaryVertices_all.png" alt=""><figcaption><p>Fig 4-2 : Boundary Supports Defined</p></figcaption></figure>
 
-Next, define all the boundary vertices as supports. Do this by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`. It should look like Fig 5-2.
+We will now find the initial shell without the crease applied. Generate the form and force diagrams, and then find the horizontal equilibrium. Then, find the vertical equilibrium. Your result should look like Fig 4-3.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_boundaryVertices_all.png" alt=""><figcaption><p>Fig 5-2 : Boundary Supports Defined</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creases_before.png" alt=""><figcaption><p>Fig 4-3 : Initial Shell Before Crease</p></figcaption></figure>
 
-#### 5.1.3 Find Initial Equilibrium
+#### 4.1.1 Modify the Force Diagram
 
-We will now find the initial shell without the crease applied. Generate the form and force diagrams, and then find the horizontal equilibrium. Then, find the vertical equilibrium. Your result should look like Fig 5-3.
+We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 4-4 to see the steps.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creases_before.png" alt=""><figcaption><p>Fig 5-3 : Initial Shell Before Crease</p></figcaption></figure>
-
-#### 5.1.4 Modify Force Diagram
-
-We will now modify the force diagram to apply our creases. The first step is to click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Then in the Rhino command line, click on `MoveVertices`. Select `Manual` and draw a box around a number of points from the force diagram and hit enter. Then, click on one of the points, and then click again to finalise the movement. See Fig 5-4 to see the steps.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 5-4 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_steps_changeDiagram.png" alt=""><figcaption><p>Fig 4-4 : Steps for Modifying the Force Diagram</p></figcaption></figure>
 
 The final force diagram should look something like this :
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 5-5 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceDiagramModified.png" alt=""><figcaption><p>Fig 4-5 : Force Diagram Post-Modifications</p></figcaption></figure>
 
 Now, we need to recalculate the horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`. Then click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to also recalculate the vertical equilibrium. We now have our shell with two creases in it!
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 5-6 : Initial Shell Before Crease</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_creaseShell1.png" alt=""><figcaption><p>Fig 4-6 : Shell with Two Creases</p></figcaption></figure>
 
-### 5.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram
+### 4.2 Method Two : Setting Force Minimums and Maximums in the Force Diagram
 
-The second method for adding creases is to alter our topology and define the forces in particular edges of the force diagram. For this example, let's make a cross vault. A cross vault can be seen as having two creases which run between supports at the corners which are diagonal from each other, which we can also visualise as being arches within our shell which start and end at these supports.
+The second method for adding creases is to define the forces in particular edges of the force diagram. For this example, let's make a cross vault. A cross vault can be seen as having two creases which run between supports at the corners which are diagonal from each other, which we can also visualise as being arches within our shell which start and end at these supports.
 
 Taking our simplest grid of lines, let's adjust this in order to be the topology required for our cross vault. Currently, there is no way for an arch within our topology to connect the corners diagonally. This indicates that we need to add edges.
 
@@ -277,9 +271,9 @@ Type `Line` and draw a line that goes from the upper left corner of the pattern 
 
 Now, we know that this line needs to be in **segments** for the topology to work. Type `Split` and select both your lines. Then Drag a box to add the other lines in the original pattern which will split our line geometries (see Fig). Press enter. Your line should now be split into ten segments.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 5-7 : Adding Line Edges</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_addedEdges.png" alt=""><figcaption><p>Fig 4-7 : Adding Line Edges</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_FinalPattern.png" alt=""><figcaption><p>Fig 5-8 : Final Pattern</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_FinalPattern.png" alt=""><figcaption><p>Fig 4-8 : Final Pattern</p></figcaption></figure>
 
 Next, go through all the basic steps to create your base thrust object with supports at the corner points and a `TargetHeight` of **6**. Here are the buttons you will need to click :
 
@@ -294,19 +288,19 @@ Next, go through all the basic steps to create your base thrust object with supp
 
 If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_originalObj.png" alt=""><figcaption><p>Fig 5-9 : Unaltered Shell</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_originalObj.png" alt=""><figcaption><p>Fig 4-9 : Unaltered Shell</p></figcaption></figure>
 
 Now, let's modify our force diagram. Click ![](../../../.gitbook/assets/rv2\_toolbar\_force\_settings.png) `Modify Force Diagram`. Next, click `EdgesAttributes` and then `Manual`. Hit enter and the settings box will appear. Click on `lmin` and change the value to **5**. Click Ok.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceEdgesSelected_withSettings.png" alt=""><figcaption><p>Fig 5-10 : Changing Force Edge lmin</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_forceEdgesSelected_withSettings.png" alt=""><figcaption><p>Fig 4-10 : Changing Force Edge lmin</p></figcaption></figure>
 
 Now we need to recalculate our horizontal equilibrium. Click ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`, and your results should look like Fig-11:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_newForceDiag.png" alt=""><figcaption><p>Fig 5-11 : Changing Force Edge lmin</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_newForceDiag.png" alt=""><figcaption><p>Fig 4-11 : Changing Force Edge lmin</p></figcaption></figure>
 
 We see that the forces in the edges we selected have greatly increased, and as a result the forces in the opposite crease have also begun to take more forces. The mesh for our thrust object is <mark style="color:green;">**green**</mark>, indicating that it **needs to be updated**. So click on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to see our results.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_5_crossVault.png" alt=""><figcaption><p>Fig 5-12 : Updated Thrust Object with Creases</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_5_crossVault.png" alt=""><figcaption><p>Fig 4-12 : Updated Thrust Object with Creases</p></figcaption></figure>
 
 Now we can see the creases in our shell, with one exaggerated and the other somewhat more shallow. Feel free to go back throught the stops to make the other crease as exaggerated as the other, or explore different options.
 
