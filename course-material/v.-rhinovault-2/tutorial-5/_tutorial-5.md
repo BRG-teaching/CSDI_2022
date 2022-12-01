@@ -366,30 +366,26 @@ You have been giving a simple square surface. Make your pattern and subdivide th
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 6-1 : Pattern</p></figcaption></figure>
 
-Next, define the supports as all the boundary vertices, create the form and force diagrams, and find the horizontal equilibrium.
+Next, define the supports as all the boundary vertices, create the form and force diagrams, and find the horizontal equilibrium and create the thrust object:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_formandforce.png" alt=""><figcaption><p>Fig 6-2 : Final Form and Force Diagrams</p></figcaption></figure>
-
-Now create the thrust object:
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 6-3 : Initial Thrust Object</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 6-2 : Initial Thrust Object</p></figcaption></figure>
 
 In order to compare our results, make a new layer in rhino named **Initial Shell**. Make a copy of the thrust object and place it on this layer. Hide the layer, and `Clear Scene`.
 
 ### 6.2 Modifying the Topology
 
-Now that we have our shell in compression we can begin the process of adding a hole to it. Type `Show` in order to show our initial surface again. Then, as before, subdivide it by **10** and press enter. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_modify\_pattern.png) `Modify Pattern`. Click `DeleteVertices` and choose a vertex near one of the corner supports. Press enter. Your pattern should now look similar to Fig 6-4:
+Now that we have our shell in compression we can begin the process of adding a hole to it. Type `Show` in order to show our initial surface again. Then, as before, subdivide it by **10** and press enter. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_modify\_pattern.png) `Modify Pattern`. Click `DeleteVertices` and choose a vertex near one of the corner supports. Press enter. Your pattern should now look similar to Fig 6-3:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_deletedVertices.png" alt=""><figcaption><p>Fig 6-4 : Pattern after Deleting Vertex</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_deletedVertices.png" alt=""><figcaption><p>Fig 6-3 : Pattern after Deleting Vertex</p></figcaption></figure>
 
 Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-5 : Selection of Faces</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-4 : Selection of Faces</p></figcaption></figure>
 
 You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-6 : Comparison of the Two Shells</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
 
 
 ## 8.0 Dropdowns
