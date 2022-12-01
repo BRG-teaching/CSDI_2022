@@ -11,12 +11,12 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 
 The tutorial can be organised into these categories:
 
-| Inputs                                                                                            | Features                                           |
-| ------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)        | 4 [Creases](\_tutorial-5.md#4-creases-two-methods) |
-| 2 [Formfinding of a Shell from a Mesh](\_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](\_tutorial-5.md#5-lip-edges)         |
-| 3 [Formfinding of a Shell from Surfaces](\_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface) | 6 [Holes](\_tutorial-5.md#6-holes)                 |
-|                                                                                                   | 7 [Dropdowns](\_tutorial-5.md#8.0-dropdowns)       |
+| Inputs                                                                                            | Features                                   |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)        | 4 [Creases](\_tutorial-5.md#4-creases)     |
+| 2 [Formfinding of a Shell from a Mesh](\_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](\_tutorial-5.md#5-lip-edges) |
+| 3 [Formfinding of a Shell from Surfaces](\_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface) | 6 [Holes](\_tutorial-5.md#6-holes)         |
+|                                                                                                   | 7 [Dropdowns](\_tutorial-5.md#7-dropdowns) |
 
 ## Initialisation
 
@@ -385,7 +385,7 @@ You can see how the shell is trying to accommodate for the hole we have made, an
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
 
-## 8.0 Dropdowns
+## 7 Dropdowns
 
 Do not clear your scene for this example! We will now take the hole we created in our shell structure and turn it into a dropdown.
 
