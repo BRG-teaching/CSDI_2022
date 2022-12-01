@@ -9,8 +9,6 @@
 
 This tutorial will teach you the basic capabilities of RV2. As not all capabilities of the software will be included, feel free to browse [the documentation](https://blockresearchgroup.gitbook.io/rv2/quick-start/tutorial) on your own at a later time and try out the other more advanced tutorials.
 
-## Content Overview
-
 **Inputs**
 - 1 Formfinding of a Shell from **Lines**
 - 2 Formfinding of a Shell from a **Mesh**
