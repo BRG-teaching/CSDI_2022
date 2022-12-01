@@ -26,11 +26,12 @@ As with IGS, the first step is to initiate the RV2 engine which imports all the 
 
 ## 1 Formfinding of a Shell from Lines
 
+### 1.1 From Line Segments
+
 Let's start with the simplest workflow for using RV2, where we will make a simple shell supported at all its boundaries. In RV2, a **Pattern** is a collection of lines that define the topology of the form diagram. For this example we will use a simple grid of lines.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_1_lines.png" alt=""><figcaption><p>Initial grid of lines</p></figcaption></figure>
 
-### 1.1 From Line Segments
 #### 1.1.1 Defining the Topology
 
 Each line in the grid is a **segment**, meaning that these lines cannot run continuously from one side of the pattern to the other side and must instead be segmented into shorter lines per each quadrilateral in the pattern. The next step is to click the button ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromLines`. Next, select the lines of the pattern. It should then look like this.
