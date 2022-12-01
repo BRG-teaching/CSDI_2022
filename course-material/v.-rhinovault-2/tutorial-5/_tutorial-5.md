@@ -11,21 +11,27 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 
 The tutorial can be organised into these categories:
 
-| Inputs | Features |
-| [Formfinding of a Shell from Lines](_tutorial-5.md#1-formfinding-of-a-shell-from-lines) | [Creases](_tutorial-5.md#4-creases--two-methods) |
+| Grey LIne |   |   |
+| --------- | - | - |
+| Line ONe  |   |   |
+|           |   |   |
+|           |   |   |
 
-
+\| Inputs | Features | | [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines) | [Creases](\_tutorial-5.md#4-creases--two-methods) |
 
 **Inputs**
-- 1 Formfinding of a Shell from **Lines**
-- 2 Formfinding of a Shell from a **Mesh**
-- 3 Formfinding of a Shell from **Surfaces**
+
+* 1 Formfinding of a Shell from **Lines**
+* 2 Formfinding of a Shell from a **Mesh**
+* 3 Formfinding of a Shell from **Surfaces**
 
 **Features**
-- 4 **Creases**
-- 5 **Lip Edges**
-- 6 **Holes**
-- 7 **Dropdowns**
+
+* 4 **Creases**
+* 5 **Lip Edges**
+* 6 **Holes**
+* 7 **Dropdowns**
+
 ## Initialisation
 
 As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
@@ -203,7 +209,6 @@ Hit enter until you see the final pattern. Then, click `Define boundary conditio
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_supportsAtEdges.png" alt=""><figcaption><p>Fig 3-5 : Side Vertices as Supports</p></figcaption></figure>
 
-
 * ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`
 * ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`
 * ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`
@@ -212,7 +217,6 @@ Hit enter until you see the final pattern. Then, click `Define boundary conditio
 If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
-
 
 ### 3.2 Triangulation
 
@@ -321,7 +325,7 @@ Generate the topology by creating the pattern from our grid of lines. Next, iden
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_6_supportEdges.png" alt=""><figcaption><p>Fig 5-2 : Edges with Support Vertices Selected</p></figcaption></figure>
 
-Next, click `UpdateBoundaries` and apply a sag of 10% to all boundaries. 
+Next, click `UpdateBoundaries` and apply a sag of 10% to all boundaries.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_6_sagEdges.png" alt=""><figcaption><p>Fig 5-3 : Opposite Edges with Sag 10% Applied</p></figcaption></figure>
 
