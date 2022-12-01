@@ -354,7 +354,6 @@ We see now that the edges of the force diagram we constrained to have an `lmax` 
 <figure><img src="../../../.gitbook/assets/rv2_shell_postMod_2.png" alt=""><figcaption><p>Fig 5-10 : Updated Thrust Object Front View</p></figcaption></figure>
 
 We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways.
-
 ## 6 Holes
 
 Now that we can formfind shells really well, let's go over how to make a hole in one. Of course, as you have seen already, you can have a hole in your pattern, however it is also possible to add holes after you have formfound a shell in equilibrium.
@@ -379,15 +378,18 @@ Now that we have our shell in compression we can begin the process of adding a h
 
 Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
+
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-4 : Selection of Faces</p></figcaption></figure>
 
 You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
 
+
 ## 7 Dropdowns
 
-Do not clear your scene for this example! We will now take the hole we created in our shell structure and turn it into a dropdown.
+**Do not clear your scene for this example!** We will now take the hole we created in our shell structure and turn it into a dropdown. Of course if you originally intended to make a drop down, you could have defined the vertices at the edges of the hole as supports at the start of the formfinding process. However, in this scenario we will do this after we have already formfound our shell.
+
 
 ### 8.1 Modify Thrust Diagram Vertices
 
