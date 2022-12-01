@@ -14,7 +14,7 @@ This tutorial will teach you the basic capabilities of RV2. As not all capabilit
 **Inputs**
 - 1 Formfinding of a Shell from **Lines**
 - 2 Formfinding of a Shell from a **Mesh**
-- 3 Formfinding of a Shell from a **Surface**
+- 3 Formfinding of a Shell from **Surfaces**
 
 **Features**
 - 4 **Creases**
@@ -176,7 +176,7 @@ The final tab `ThrustObject` has numerous helpful visualisation settings. Simila
 
 In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
 
-### 3.1 Subdivision Example 1
+### 3.1 Surface Subdivision
 
 First we will input a surface with a number of curves to it.
 
@@ -194,13 +194,26 @@ We can customise the subdivision further by selecting `SubdivideEdgeStrip` and c
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
 
-## 4 Triangulation
+Hit enter until you see the final pattern. Then, click `Define boundary conditions`, and identify the vertices at the left and right edges as the supports (see Fig 3-5).
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_supportsAtEdges.png" alt=""><figcaption><p>Fig 3-5 : Side Vertices as Supports</p></figcaption></figure>
+
+
+* ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`
+* ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`
+
+If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
+
+<figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
+
+
+## 3.2 Triangulation
 
 We have seen the quadrilateral mesh subdivision of surfaces, and will now explore a different method of subdivision : **triangulation**.
 
-### 4.1 Defining the Topology
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 4-1 : Input Lines</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_initialLines.png" alt=""><figcaption><p>Fig 3-7 : Input Lines</p></figcaption></figure>
 
 We begin with a series of lines to guide our triangulation. First, we select ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromTriangulation`. Next, select the outer outline as the **outer boundary** and press enter. Select the circle as the **inner boundary** and press enter.
 
@@ -208,13 +221,11 @@ An optional input of the triangulation process is to provide a constraint curve.
 
 The final step is to **Specify target edge length** which determines how large the triangles are. We will leave this value as **1** and press enter to finish the triangulation process.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 4-2 : Triangulation</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedPattern.png" alt=""><figcaption><p>Fig 3-8 : Triangulation</p></figcaption></figure>
 
-### 4.2 Identifying the Supports
+Define all the boundary vertices as supports and create the form and force diagrams. Find the horizontal equilibrium, and analyse the results. The shell should look like Fig 3-9.
 
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_define\_boundaries.png) to `Define boundary conditions`. Then in the Rhino command line, click on `IdentifySupports`, `Select`, then `AllBoundaryVertices`.
-
-We will now create our form and force diagrams, find the horizontal equilibrium, and analyse the results.
+<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
 ## 5.0 Creases : Two Methods
 
