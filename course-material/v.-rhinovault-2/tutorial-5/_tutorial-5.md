@@ -15,23 +15,9 @@ The tutorial can be organised into these categories:
 | --------- | - |
 | 1 [Formfinding of a Shell from Lines](\_tutorial-5.md#1-formfinding-of-a-shell-from-lines)  | 4 [Creases](\_tutorial-5.md#4-creases--two-methods)  |
 | 2 [Formfinding of a Shell from a Mesh](_tutorial-5.md#2-formfinding-of-a-shell-from-a-mesh)      | 5 [Lip Edges](_tutorial-5.md#5-lip-edges)  |
-| 3 [Formfinding of a Shell from Surfaces](_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface)          | 6 [Holes](_tutorial-5.md#70-holes)  |
+| 3 [Formfinding of a Shell from Surfaces](_tutorial-5.md#3-formfinding-of-a-shell-from-a-surface)          | 6 [Holes](_tutorial-5.md#6-holes)  |
 |          | 7 [Dropdowns](_tutorial-5.md#80-dropdowns)  |
 
-
-<!-- 
-**Inputs**
-
-* 1 Formfinding of a Shell from **Lines**
-* 2 Formfinding of a Shell from a **Mesh**
-* 3 Formfinding of a Shell from **Surfaces**
-
-**Features**
-
-* 4 **Creases**
-* 5 **Lip Edges**
-* 6 **Holes**
-* 7 **Dropdowns** -->
 
 ## Initialisation
 
@@ -370,45 +356,41 @@ We see now that the edges of the force diagram we constrained to have an `lmax` 
 
 We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways.
 
-## 7.0 Holes
+## 6 Holes
 
 Now that we can formfind shells really well, let's go over how to make a hole in one. Of course, as you have seen already, you can have a hole in your pattern, however it is also possible to add holes after you have formfound a shell in equilibrium.
 
-### 7.1 Basic Shell Thrust Object
+### 6.1 Initial Shell
 
 You have been giving a simple square surface. Make your pattern and subdivide the entire mesh by **10**. It should look like this :
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 7-1 : Pattern</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_pattern.png" alt=""><figcaption><p>Fig 6-1 : Pattern</p></figcaption></figure>
 
-Next, define the supports as all the boundary vertices...
+Next, define the supports as all the boundary vertices, create the form and force diagrams, and find the horizontal equilibrium.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_boundaries.png" alt=""><figcaption><p>Fig 7-2 : Defined Supports</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_formandforce.png" alt=""><figcaption><p>Fig 6-2 : Final Form and Force Diagrams</p></figcaption></figure>
 
-Then create the form and force diagrams, and find the horizontal equilibrium.
+Now create the thrust object:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_formandforce.png" alt=""><figcaption><p>Fig 7-3 : Final Form and Force Diagrams</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 6-3 : Initial Thrust Object</p></figcaption></figure>
 
-Now create the thrust object from finding our vertical equilibrium.
+In order to compare our results, make a new layer in rhino named **Initial Shell**. Make a copy of the thrust object and place it on this layer. Hide the layer, and `Clear Scene`.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_thrust.png" alt=""><figcaption><p>Fig 7-4 : Thrust Object</p></figcaption></figure>
+### 6.2 Modifying the Topology
 
-Now that we have our shell in compression we can begin the process of adding a hole to it. Start by clicking ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram`. Next, click on `FacesAttributes` then `Manual`. Select whichever faces you want, and then press enter. A `Properties` box will appear with editable value named `_is_loaded`. The value is a **boolean**, so keep in mind that capitalisation is important here. Change the value from `True` to `False`, and click ok.
+Now that we have our shell in compression we can begin the process of adding a hole to it. Type `Show` in order to show our initial surface again. Then, as before, subdivide it by **10** and press enter. Next, click ![](../../../.gitbook/assets/rv2\_toolbar\_modify\_pattern.png) `Modify Pattern`. Click `DeleteVertices` and choose a vertex near one of the corner supports. Press enter. Your pattern should now look similar to Fig 6-4:
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceSelection.png" alt=""><figcaption><p>Fig 7-5 : Selection of Faces</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_deletedVertices.png" alt=""><figcaption><p>Fig 6-4 : Pattern after Deleting Vertex</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_faceAttributes.png" alt=""><figcaption><p>Fig 7-6 : Settings Box for Face Attributes</p></figcaption></figure>
+Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
-After pressing enter, you should see the mesh turn <mark style="color:green;">**green**</mark> (indicating it requires updating) and the faces you selected should disappear...
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_hole.png" alt=""><figcaption><p>Fig 7-7 : Hole in the Thrust Object</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-5 : Selection of Faces</p></figcaption></figure>
 
-As we have only edited the thrust diagram, we only need to click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` in order to update our thrust object to be in equilibrium again.
+You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_1.png" alt=""><figcaption><p>Fig 7-8 : Thrust Object in Equilbrium with Hole</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-6 : Comparison of the Two Shells</p></figcaption></figure>
 
-While difficult to tell from this angle, we can see that this hole has significantly affected the shell by orbiting around it. As you can see in Fig 7-9 this hole has caused the shell around it to become flatter as it no longer needs to carry the weight of these faces.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_7_holeFin_2_arrow.png" alt=""><figcaption><p>Fig 7-9 : Flattening of Shell around Hole</p></figcaption></figure>
 
 ## 8.0 Dropdowns
 
