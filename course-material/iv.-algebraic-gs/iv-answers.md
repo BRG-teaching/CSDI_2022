@@ -45,6 +45,7 @@ Compared with the truss in tutorial 2. Analysis of a truss, the members in tensi
 Truss 2: 
 ![Fig-1-2](../../.gitbook/assets/4ex_1.2.png)
 A cantilever truss will have tension in the top chord and compression in the bottom chord. Here are some possible solutions. 
+
 ![Fig-1-3](../../.gitbook/assets/4ex_1.2_1.png)
 ![Fig-1-3](../../.gitbook/assets/4ex_1.2_2.png)
 
@@ -167,3 +168,10 @@ Solution III: This solution follows similar steps as solution II. Firstly solve 
   
 ![Fig-1-3](../../.gitbook/assets/sus_1.png)
 ![Fig-1-3](../../.gitbook/assets/sus_2.png)
+
+
+
+
+
+![Fig-1-3](../../.gitbook/assets/sus_opt22.png)
+![Fig-1-3](../../.gitbook/assets/sus_opt22_pipe.png)
