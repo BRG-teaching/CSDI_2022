@@ -5,8 +5,11 @@ The first tutorial session, in the RV2 gitbook, (link below) provides an overvie
 **What is covered in this tutorial session:**
 
 * Organization and structure of the RV2 workflow; sequence of procedures and solvers
-* Overview of the RV2 user interface: the menu and the toolbar
+* Overview of the RV2 user interface: the menu and the toolbar\
 
-Link to the RV2 gitbook: [https://app.gitbook.com/@blockresearchgroup/s/rv2/quick-start/workflow](https://app.gitbook.com/s/-M5MfAgazp\_fa5cV9Mju/quick-start/workflow)
+
+For installation please follow this [link](../../../tools/rv2.md).&#x20;
+
+Link to the (old) RV2 gitbook: [https://app.gitbook.com/@blockresearchgroup/s/rv2/quick-start/workflow](https://app.gitbook.com/s/-M5MfAgazp\_fa5cV9Mju/quick-start/workflow)
 
 <figure><img src="../../../.gitbook/assets/rv2_ui.png" alt=""><figcaption><p>RV2 Toolbar</p></figcaption></figure>

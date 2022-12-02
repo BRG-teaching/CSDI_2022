@@ -131,7 +131,7 @@ The next step is to click the following series of commands: click the icon ![](.
 
 At this point it is important to note that as a consequence of selecting only the four corners, we must now update our form diagram to accomodate for this choice. In order to understand how we must update our form diagram, we can isolate one vertex and graphically calculate the equilibrium of that node by drawing the force diagram (Fig 2-4 left). In the case on the left (straight boundaries), since the directions of the forces along the opening needs to be horizontal, you can not close the force polygon unless the force perpendicular to the opening is zero. However by updating the form diagram with a sag equal to 10% of the span of the opening, the force polygon can be closed using forces with finite magnitude (Fig 2-4 right).
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_sagDiagram.jpeg" alt=""><figcaption><p>Fig 2-4 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_aleDiagram.jpeg" alt=""><figcaption><p>Fig 2-4 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
 
 This sag feature is available in RV2. In the Rhino command line, click on `UpdateBoundaries`. You will now see that each side of the pattern has received an identification number as in Fig 2-4.
 
