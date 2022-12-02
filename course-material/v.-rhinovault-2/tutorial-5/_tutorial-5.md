@@ -2,12 +2,12 @@
 
 ## Learning goals
 
-* form-find funicular shell structures using Rhino Vault 2
-* explore different shell structures using the features of Rhino Vault 2
+* form-find funicular shell structures using Rhino Vault 3
+* explore different shell structures using the features of Rhino Vault 3
 
 ## Content
 
-This tutorial will teach you the basic capabilities of RV2. As not all capabilities of the software will be included, feel free to browse [the documentation](https://blockresearchgroup.gitbook.io/rv2/quick-start/tutorial) on your own at a later time and try out the other more advanced tutorials.
+This tutorial will teach you the basic capabilities of RV3. As not all capabilities of the software will be included, feel free to browse [the documentation](https://blockresearchgroup.gitbook.io/rv2/quick-start/tutorial) on your own at a later time and try out the other more advanced tutorials.
 
 The tutorial can be organised into these categories:
 
@@ -20,9 +20,12 @@ The tutorial can be organised into these categories:
 
 ## Initialisation
 
-As with IGS, the first step is to initiate the RV2 engine which imports all the relevant packages and activates `compas_cloud` server. This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
+As with IGS, the first step is to initiate the Compas toolbar. Then, it is good to refresh your connection to the compas server using the button which has the cloud and red arrow icon. If you run into any issues using RV3, please start your troubleshooting by refreshing your connection in this way and trying the steps again.
 
-<figure><img src="../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption><p>Screen capture of the RV2 init window</p></figcaption></figure>
+<!-- 
+This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
+
+<figure><img src="../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption><p>Screen capture of the RV2 init window</p></figcaption></figure> -->
 
 ## 1 Formfinding of a Shell from Lines
 
