@@ -13,11 +13,10 @@ The background code for RV2 lives in the Github Repository [which is located her
 
 The installation process for RV3 involves updating the environment which we created during the install of IGS. On Mac, open the **Terminal app**. On Windows, use the **Anaconda Prompt** (**not** the powershell) and run as . If you need a reminder on how to do this, please take a look at the IGS install steps.
 
-Next, run these two lines of code (this makes sure you are not in your `csd1` environment, then updates it):
+Next, run these two lines of code (makes sure you are **not** in your `csd1` environment):
 
 
 ```
-conda deactivate
 conda env update -f https://blockresearchgroup.github.io/compas-RV3/environment.yml
 ```
 
