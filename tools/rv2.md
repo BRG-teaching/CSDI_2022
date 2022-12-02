@@ -11,15 +11,25 @@ The background code for RV2 lives in the Github Repository [which is located her
 
 ## Installation
 
-The installation process for RV2 involves updating the environment which we created during the install of IGS. On Mac, open the **Terminal app**. On Windows, use the **Anaconda Prompt**. If you need a reminder on how to do this, please take a look at the IGS install steps.
+The installation process for RV3 involves updating the environment which we created during the install of IGS. On Mac, open the **Terminal app**. On Windows, use the **Anaconda Prompt** (**not** the powershell) and run as . If you need a reminder on how to do this, please take a look at the IGS install steps.
 
-Next, run this line of code:
+Next, run these two lines of code (this makes sure you are not in your `csd1` environment, then updates it):
 
 
 ```
+conda deactivate
 conda env update -f https://blockresearchgroup.github.io/compas-RV3/environment.yml
 ```
 
-After updating is finished, repeat [3. Installing the Plug-ins in Rhino](igs-plug-in.md#3.-installing-the-plug-ins-in-rhino). Then, follow all the steps from [Loading the Toolbars](igs-plug-in.md#loading-the-toolbars) but instead of typing `IGS2__toolbar` in the Rhino command line, type `RV3__toolbar`.
+After updating is finished, **make sure Rhino is not running** then run these lines of code:
 
-That should be the end of the installation process! If you run into any issues, please post them with screenshots in the slack channel.
+```
+conda activate csd1
+python -m compas_rhino.install -v 7.0
+```
+
+Open Rhino and as before type `EditPythonScript`. Once the window has popped up, close down your Rhino. This just makes sure that Rhino sees your latest changes. Open Rhino and type `COMPAS__toolbar`, then `RV3_toolbar `.
+
+On the COMPAS toolbar, click the button with the cloud with a red arrow. This will refresh your connection to the server. 
+
+This ends the installation process! If you run into any issues, please post them with screenshots in the slack channel.
