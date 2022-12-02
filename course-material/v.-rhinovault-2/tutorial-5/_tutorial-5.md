@@ -98,11 +98,13 @@ The final step is to **Specify target edge length** which determines how large t
 
 Define all the boundary vertices as supports and create the form and force diagrams. Find the horizontal equilibrium, and analyse the results. The shell should look like Fig 3-9.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
+**Coming Soon**
+
+<!-- <figure><img src="../../../.gitbook/assets/rv2_tut_4_triangulatedShell_fin.png" alt=""><figcaption><p>Fig 3-9 : Shell from Triangulation</p></figcaption></figure>
 
 As you can tell, interacting with the Force diagram of a triangulated pattern is not as easy as with a quad pattern, and the variability in direction and magnitude of the reaction forces can make the design of the supports more demanding.
 
-Instead, triangulation can be a good solution in the case of a complex set of boundaries and features (holes, etc.), since, in this case, the definition of only two clear directions for the flow of forces is not possible.
+Instead, triangulation can be a good solution in the case of a complex set of boundaries and features (holes, etc.), since, in this case, the definition of only two clear directions for the flow of forces is not possible. -->
 
 ## 2 Formfinding of a Shell from a Mesh
 
@@ -393,18 +395,20 @@ You can see how the shell is trying to accommodate for the hole we have made, an
 
 **Do not clear your scene for this example!** We will now take the hole we created in our shell structure and turn it into a dropdown. Of course if you originally intended to make a drop down, you could have defined the vertices at the edges of the hole as supports at the start of the formfinding process. However, in this scenario we will do this after we have already formfound our shell.
 
-### 8.1 Modify Thrust Diagram Vertices
+### 7.1 Modify Thrust Diagram Vertices
 
 Begin by clicking on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` again. This time, select `VerticesAttributes` and then `Manual`. Select all the vertices which outline the hole in your shell, then press enter. As before, a box will pop up with the settings options for these vertices.
-
+<!-- 
 <figure><img src="../../../.gitbook/assets/rv2_tut_8_vertices.png" alt=""><figcaption><p>Fig 8-1 : Selected Vertices</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_8_verticesSettings.png" alt=""><figcaption><p>Fig 8-2 : Selected Vertices Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_verticesSettings.png" alt=""><figcaption><p>Fig 8-2 : Selected Vertices Settings</p></figcaption></figure> -->
+
+**Coming Soon**
 
 Click on the value `is_anchor` and modify it to **True**. Click `OK`. The vertices you selected should now turn <mark style="color:red;">**red**</mark>. At this point, it is now as if there are support points for the shell around our void located at those x,y,z coordinates. So, we would like to take those points and move them to the ground.
 
 Click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` and this time select `MoveSupports`. Select the points you want to move. As the points are at different heights, you may also want to move one point at a time to align with the ground. Repeat these steps until all your new support points are at ground level. The result should look something like this :
-
+<!-- 
 <figure><img src="../../../.gitbook/assets/rv2_tut_8_movedSupports.png" alt=""><figcaption><p>Fig 8-3 : New Supports Moved to Ground Plane</p></figcaption></figure>
 
 {% hint style="info" %}
@@ -413,11 +417,13 @@ In Rhino, if you would like to run your last command again you can press the **s
 
 Now that we have changed the supports, we need to also recalculate our horizontal equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`.
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_8_horizEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Horizontal Equilibrium</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_horizEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Horizontal Equilibrium</p></figcaption></figure> -->
 
 Next recalculate the vertical equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`.
+<!-- 
+<figure><img src="../../../.gitbook/assets/rv2_tut_8_vertEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Vertical Equilibrium</p></figcaption></figure> -->
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_8_vertEquilibrium.png" alt=""><figcaption><p>Fig 8-4 : Updated Vertical Equilibrium</p></figcaption></figure>
+**Coming Soon**
 
 Now we can see that the shell has been smoothed out to accommodate for the void we made in it as well as the new supports we specified.
 
