@@ -22,6 +22,9 @@ After updating is finished, **make sure Rhino is not running** then run these li
 
 ```
 conda activate csd1
+```
+
+```
 python -m compas_rhino.install -v 7.0
 ```
 

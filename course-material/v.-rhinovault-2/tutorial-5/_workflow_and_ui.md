@@ -8,7 +8,9 @@ The first tutorial session, in the RV2 gitbook, (link below) provides an overvie
 * Overview of the RV2 user interface: the menu and the toolbar\
 
 
-For installation please follow this [link](../../../tools/rv2.md).&#x20;
+{% hint style="warning" %}
+For installation please follow this [link](../../../tools/rv2.md).
+{% endhint %}
 
 Link to the (old) RV2 gitbook: [https://app.gitbook.com/@blockresearchgroup/s/rv2/quick-start/workflow](https://app.gitbook.com/s/-M5MfAgazp\_fa5cV9Mju/quick-start/workflow)
 
