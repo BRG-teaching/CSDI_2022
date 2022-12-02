@@ -22,11 +22,6 @@ The tutorial can be organised into these categories:
 
 As with IGS, the first step is to initiate the Compas toolbar. Then, it is good to refresh your connection to the compas server using the button which has the cloud and red arrow icon. If you run into any issues using RV3, please start your troubleshooting by refreshing your connection in this way and trying the steps again.
 
-<!-- 
-This requires clicking the ![](../../../.gitbook/assets/rv2\_toolbar\_init.png) icon or typing `_RV2_init`. The startup window also provides various links to useful information, such as the online documentation, tutorials, tutorials and terms of use. By clicking “YES,” you acknowledge that you have read and understood the Terms and Conditions, and the Data Donation Agreement.
-
-<figure><img src="../../../.gitbook/assets/rv2_installRV2_init.png" alt=""><figcaption><p>Screen capture of the RV2 init window</p></figcaption></figure> -->
-
 ## 1 Formfinding of a Shell from Lines
 
 ### 1.1 From Line Segments
@@ -138,7 +133,7 @@ The next step is to click the following series of commands: click the icon ![](.
 
 At this point it is important to note that as a consequence of selecting only the four corners, we must now update our form diagram to accomodate for this choice. In order to understand how we must update our form diagram, we can isolate one vertex and graphically calculate the equilibrium of that node by drawing the force diagram (Fig 2-4 left). In the case on the left (straight boundaries), since the directions of the forces along the opening needs to be horizontal, you can not close the force polygon unless the force perpendicular to the opening is zero. However by updating the form diagram with a sag equal to 10% of the span of the opening, the force polygon can be closed using forces with finite magnitude (Fig 2-4 right).
 
-<figure><img src="../../../.gitbook/assets/rv2_tut_2_aleDiagram.jpeg" alt=""><figcaption><p>Fig 2-4 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv2_tut_2_sagDiagram.jpeg" alt=""><figcaption><p>Fig 2-4 : Pattern with no sag (left) and pattern with 10% sag at the openings (right)</p></figcaption></figure>
 
 This sag feature is available in RV2. In the Rhino command line, click on `UpdateBoundaries`. You will now see that each side of the pattern has received an identification number as in Fig 2-4.
 
@@ -363,6 +358,7 @@ We see now that the edges of the force diagram we constrained to have an `lmax` 
 <figure><img src="../../../.gitbook/assets/rv2_shell_postMod_2.png" alt=""><figcaption><p>Fig 5-10 : Updated Thrust Object Front View</p></figcaption></figure>
 
 We can see the lip which is now a part of the shell form happening over the openings. With more modification, we could turn this into a more dramatic effect by moving the lip more inwards or modifying the force diagram in other ways.
+
 ## 6 Holes
 
 Now that we can formfind shells really well, let's go over how to make a hole in one. Of course, as you have seen already, you can have a hole in your pattern, however it is also possible to add holes after you have formfound a shell in equilibrium.
@@ -387,18 +383,15 @@ Now that we have our shell in compression we can begin the process of adding a h
 
 Now as before, define the supports as the boundary vertices. Make sure you do not accidentally include the vertices of the hole we have created. If you do, you can make use of the `Unselect` function in the `Define boundary conditions` process. Apply a sag to the edges of the new opening, then create the form and force diagrams and the horizontal and vertical equilibrium:
 
-
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_finalShell.png" alt=""><figcaption><p>Fig 6-4 : Selection of Faces</p></figcaption></figure>
 
 You can see how the shell is trying to accommodate for the hole we have made, and in order to do a better comparison you can unhide the initial thrust object on our other layer and change the color of the mesh to distinguish them from one another. This allows you to see the changes throughout the entirety of the shell which happen in order to redirect the forces around the hole while remaining in compression.
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_7_comparison.png" alt=""><figcaption><p>Fig 6-5 : Comparison of the Two Shells</p></figcaption></figure>
 
-
 ## 7 Dropdowns
 
 **Do not clear your scene for this example!** We will now take the hole we created in our shell structure and turn it into a dropdown. Of course if you originally intended to make a drop down, you could have defined the vertices at the edges of the hole as supports at the start of the formfinding process. However, in this scenario we will do this after we have already formfound our shell.
-
 
 ### 8.1 Modify Thrust Diagram Vertices
 

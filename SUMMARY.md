@@ -36,9 +36,9 @@
   * [Workflow + UI](course-material/tutorial-4/workflow-+-ui.md)
   * [Tutorial](course-material/iv.-algebraic-gs/iv.-tutorial.md)
   * [Exercise](course-material/iv.-algebraic-gs/iv-exercise.md)
-* [V. RhinoVAULT 2](course-material/v.-rhinovault-2/README.md)
-  * [Workflow + UI](course-material/v.-rhinovault-2/tutorial-5/_workflow_and_ui.md)
-  * [Tutorial](course-material/v.-rhinovault-2/tutorial-5/_tutorial-5.md)
+* [V. RhinoVAULT 3](course-material/v.-rhinovault-2/README.md)
+  * [Workflow + UI](course-material/v.-rhinovault-2/tutorial-5/\_workflow\_and\_ui.md)
+  * [Tutorial](course-material/v.-rhinovault-2/tutorial-5/\_tutorial-5.md)
 
 ## appendix
 
