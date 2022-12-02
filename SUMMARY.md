@@ -6,7 +6,7 @@
 * [Tools](tools/README.md)
   * [Anaconda 3](tools/anaconda.md)
   * [IGS plug-in](tools/igs-plug-in.md)
-  * [RV2](tools/rv2.md)
+  * [RV3 plug-in](tools/rv2.md)
 * [Cite](cite.md)
 
 ## course material
