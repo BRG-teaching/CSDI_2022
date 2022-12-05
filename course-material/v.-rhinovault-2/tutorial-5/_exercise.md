@@ -13,7 +13,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Tasks
 
-Complete the following five tasks.
+Complete the following three tasks. **A fourth task will be done during the work session**.
 
 {% hint style="info" %}
 Use the Rhinoceros file named CSDI_V_exercise.3dm. Then, answer the questions in the docx file. You will find all these files **here**.&#x20;
