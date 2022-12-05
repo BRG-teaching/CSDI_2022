@@ -15,29 +15,29 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 Complete the following three tasks. **A fourth task will be done during the work session**.
 
+The goals of this task are: 
+1. that you practise the basic computational procedure for form finding with rv3, including generation of input topology, defining supports, calculate horizontal eq and vertical eq. and 
+2. that you study with rv3 how the internals forces flow within a classic cross vault and that you compare this with one cross vault that has an opening in the center right where the diagonals meet.
+
 {% hint style="info" %}
 Use the Rhinoceros file named CSDI\_V\_exercise.3dm. Then, answer the questions in the docx file. You will find all these files **here**.
 {% endhint %}
 
-### 1. Modifying the force diagram
+### 1. Creases
 
-In the first task, you will design a shell with a square footprint which is a cross vault. Use one of the input methods we learned in the tutorial to input a topology which measures **15 m by 15 m** overall, and is subdivided into a **16 by 16 quadrilateral mesh** (a total of 225 quadrilaterals). [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your RV3 session in this format : `V_1_a_jane-smith.ui`.
+In the first task, you will design a shell with a square footprint which is a cross vault. Use one of the input methods we learned in the tutorial to input a topology which measures **15 m by 20 m** overall, is subdivided into a dense quadrilateral mesh, and supported at its four corners. [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your RV3 session in this format : `V_1_a_jane-smith.ui`.
 
-Now, `Clear scene`. Re-use your topology, but this time delete the central vertex by [following the steps in the tutorial](\_tutorial-5.md#6-holes) for modifying a pattern. Finish the formfinding process, then save your RV3 session in this format : `V_1_b_jane-smith.ui`.
-
-The criteria for this task are that you are able to generate the topology and perform the formfinding steps which allow you to generate two cross-vault like shells in compression-only equilibrium wherein one has a hole in the center and the other does not.
+Now, make an opening at the center of the shell by reusing the same topology of your cross vault. Finish the formfinding process, then save your RV3 session in this format: `V_1_b_jane-smith.ui`.
 
 {% hint style="info" %}
-If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`.
+If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`. You can also make a `Mesh` and use `ExtractWireframe` to convert it to a grid of lines.
 {% endhint %}
 
 ### 2. Holes
 
-Create a shell with an **12m by 12m** footprint which is subdivided into **10 by 10** quadrilaterals. Using the same steps as in part b of task 1, remove the central vertex of your pattern and complete your formfinding. Look closely at your results and answer the questions in the `.docx` file for this task.
+Create a shell with an **12m by 12m** footprint which is subdivided into a **10 by 10** quadrilateral mesh and supported at its four corners. Now make two shells with this same initial topology. In one shell make an opening at the center and in the other make an opening near to a corner support.
 
-Next, using the same steps for modifying the pattern, create a hole which is near one of the corner supports. Answer the questions in the `.docx` file.
-
-Now, for comparison, we are going to create the shell with a hole in the center using the **triangulation** input method. Draw the linework and perform the formfinding process. Again, answer the questions in the `.docx` file.
+Next, for comparison, we are going to create the shell with a hole in the center using the **triangulation** input method. Draw the linework and perform the formfinding process. 
 
 ### 3. Lip edges
 
