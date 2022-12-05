@@ -43,7 +43,7 @@ For this task recreate one of the roof modules from the Heinz Isler Tennis Hall 
 
 <figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_1.png" alt=""><figcaption><p>Fig 3-1 : Heinz Isler Heimberg Indoor Tennis Hall<br>Source: https://darquitectura.tumblr.com/post/643438301203857408/heinz-isler-centro-de-tenis-y-piscina-cubierta-en</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_2.png" alt=""><figcaption><p>Fig 3-2 : Heinz Isler on Heimberg Shell Roof<br>Source: https://www.ce.jhu.edu/perspectives/protected/html/lec15/pages/15-76%20Heinz%20Isler%20on%20Heimberg%20Shell%20Roof_150dpi.htm</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_2.jpeg" alt=""><figcaption><p>Fig 3-2 : Heinz Isler on Heimberg Shell Roof<br>Source: https://www.ce.jhu.edu/perspectives/protected/html/lec15/pages/15-76%20Heinz%20Isler%20on%20Heimberg%20Shell%20Roof_150dpi.htm</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_sitePlan_annotated-01.png" alt=""><figcaption><p>Fig 3-3 : Site plan with dimensions</p></figcaption></figure>
 
