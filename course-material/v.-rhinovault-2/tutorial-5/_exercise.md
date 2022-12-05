@@ -25,7 +25,7 @@ In the first task, you will design a shell with a square footprint which is a cr
 
 Now, `Clear scene`. Re-use your topology, but this time delete the central vertex by [following the steps in the tutorial](\_tutorial-5.md#6-holes) for modifying a pattern. Finish the formfinding process, then save your RV3 session in this format : `V_1_b_jane-smith.ui`.
 
-The criteria for this task is that you are able to generate the topology and perform the formfinding steps which allow you to generate two cross-vault like shells in compression-only equilibrium wherein one has a hole in the center and the other does not.
+The criteria for this task are that you are able to generate the topology and perform the formfinding steps which allow you to generate two cross-vault like shells in compression-only equilibrium wherein one has a hole in the center and the other does not.
 
 {% hint style="info" %}
 If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`.
