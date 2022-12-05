@@ -21,25 +21,27 @@ Use the Rhinoceros file named CSDI\_V\_exercise.3dm. Then, answer the questions 
 
 ### 1. Modifying the force diagram
 
-In the first task, you will design a shell with a square footprint which is a cross vault. Use one of the input methods we learned in the tutorial to input a topology which measures 15 m by 15 m overall, and is subdivided into 15 by 15 (a total of 225 quadrilaterals). [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your RV3 session in this format : `V_1_a_jane-smith.ui`.
+In the first task, you will design a shell with a square footprint which is a cross vault. Use one of the input methods we learned in the tutorial to input a topology which measures **15 m by 15 m** overall, and is subdivided into a **16 by 16 quadrilateral mesh** (a total of 225 quadrilaterals). [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your RV3 session in this format : `V_1_a_jane-smith.ui`.
 
 Now, `Clear scene`. Re-use your topology, but this time delete the central vertex by [following the steps in the tutorial](\_tutorial-5.md#6-holes) for modifying a pattern. Finish the formfinding process, then save your RV3 session in this format : `V_1_b_jane-smith.ui`.
 
+The criteria for this task is that you are able to generate the topology and perform the formfinding steps which allow you to generate two cross-vault like shells in compression-only equilibrium wherein one has a hole in the center and the other does not.
+
+{% hint style="info" %}
+If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`.
+{% endhint %}
+
 ### 2. Holes
 
-Create a shell with an 8m by 8m footprint which is subdivided into 16 by 16 quadrilaterals. Using the same steps as in part b of task 1, remove the central vertex of your pattern and complete your formfinding. Look closely at your results and answer the questions in the `.docx` file for this task.
+Create a shell with an **12m by 12m** footprint which is subdivided into **10 by 10** quadrilaterals. Using the same steps as in part b of task 1, remove the central vertex of your pattern and complete your formfinding. Look closely at your results and answer the questions in the `.docx` file for this task.
 
 Next, using the same steps for modifying the pattern, create a hole which is near one of the corner supports. Answer the questions in the `.docx` file.
 
-Now, for comparison, we are going to create the shell with a hole in the center using the **triangulation** input method. Draw the linework and give it to RV3. Again, answer the questions in the `.docx` file.
-
-{% hint style="info" %}
-If you would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`.
-{% endhint %}
+Now, for comparison, we are going to create the shell with a hole in the center using the **triangulation** input method. Draw the linework and perform the formfinding process. Again, answer the questions in the `.docx` file.
 
 ### 3. Lip edges
 
-For this task recreate one of the roof modules from the Heinz Isler Tennis Hall using RV3. The approximate dimensions are shown in Fig 3-3.
+For this task recreate one of the roof modules from the Heinz Isler Tennis Hall using RV3. The approximate dimensions are shown in Fig 3-3. Follow the steps from the Lip edges tutorial.
 
 <figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_1.png" alt=""><figcaption><p>Fig 3-1 : Heinz Isler Heimberg Indoor Tennis Hall<br>Source: https://darquitectura.tumblr.com/post/643438301203857408/heinz-isler-centro-de-tenis-y-piscina-cubierta-en</p></figcaption></figure>
 
@@ -49,4 +51,10 @@ For this task recreate one of the roof modules from the Heinz Isler Tennis Hall 
 
 {% hint style="info" %}
 Sag is a percentage of the edge length.
+{% endhint %}
+
+### 4. Worksession Free Design
+
+{% hint style="warning" %}
+This task is not yet posted
 {% endhint %}
