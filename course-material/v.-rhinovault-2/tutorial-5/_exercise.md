@@ -41,7 +41,9 @@ Next, for comparison, we are going to create the shell with a hole in the center
 
 ### 3. Lip edges
 
-For this task recreate one of the roof modules from the Heinz Isler Tennis Hall using RV3. The approximate dimensions are shown in Fig 3-3. Follow the steps from the Lip edges tutorial.
+For this task recreate one of the roof modules from the Heinz Isler Tennis Hall using RV3. The approximate dimensions are shown in Fig 3-3. Follow the steps from the Lip edges tutorial. Record your steps in the word doc.
+
+<figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_construction.png" alt=""><figcaption><p>Fig 3-1 : Heinz Isler Heimberg Indoor Tennis Hall under Construction<br>Source: https://ascelibrary.org/doi/full/10.1061/%28ASCE%29ST.1943-541X.0000144</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/rv3_heinzIsler_ref_1.png" alt=""><figcaption><p>Fig 3-1 : Heinz Isler Heimberg Indoor Tennis Hall<br>Source: https://darquitectura.tumblr.com/post/643438301203857408/heinz-isler-centro-de-tenis-y-piscina-cubierta-en</p></figcaption></figure>
 
