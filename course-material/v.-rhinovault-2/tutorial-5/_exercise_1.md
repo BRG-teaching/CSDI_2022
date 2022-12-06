@@ -8,12 +8,12 @@ Complete the tasks below, and submit **by 9:00am on Friday, December 16th one zi
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
-#### \*\*\*\*[**Submit here**](https://polybox.ethz.ch/index.php/s/BA60XLsuQJdpWuj)
+#### \*\*\*\*[**Submit here**](https://polybox.ethz.ch/index.php/s/VaipCVMQcJWcAgx)
 {% endhint %}
 
 ## Tasks
 
-Complete the following three tasks. **A fourth task will be done during the work session**.
+Complete the following two tasks. **A third task will be released later this week and done during the work session**.
 
 The goals of this task are: 
 1. that you practise the basic computational procedure for form finding with rv3, including generation of input topology, defining supports, calculate horizontal eq and vertical eq. and 
