@@ -39,7 +39,7 @@
 * [V. RhinoVAULT 3](course-material/v.-rhinovault-2/README.md)
   * [Workflow + UI](course-material/v.-rhinovault-2/tutorial-5/\_workflow\_and\_ui.md)
   * [Tutorial](course-material/v.-rhinovault-2/tutorial-5/\_tutorial-5.md)
-  <!-- * [Exercise](course-material/v.-rhinovault-2/tutorial-5/_exercise.md) -->
+  * [Exercise](course-material/v.-rhinovault-2/tutorial-5/_exercise_1.md)
 
 ## appendix
 
