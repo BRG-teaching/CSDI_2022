@@ -26,9 +26,9 @@ Use the Rhinoceros file named CSDI\_V\_exercise.3dm. Then, answer the questions 
 
 ### 1. Creases
 
-In the first task, you will design a rectangular cross vault supported in its four corners. Follow one of the input methods that you learned in the tutorial to create a quadrilateral mesh topology that measures **15 m by 20 m**. [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your rV3 session in this format : `V_1_a_jane-smith.ui`.
+In the first task, you will design a rectangular cross vault supported in its four corners. Follow one of the input methods that you learned in the tutorial to create a quadrilateral mesh topology that measures **15 m by 20 m** and make the necessary changes to get a topology that is appropriate for a cross vault. [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your rV3 session in this format : `V_1_a_jane-smith.ui`.
 
-After, make an opening at the center of the shell by reusing the same topology of your cross vault. Finish the formfinding process, then save your rV3 session in this format: `V_1_b_jane-smith.ui`.
+After, make an opening at the center of the shell by reusing the same topology of your cross vault. Finish the formfinding process, then save your rV3 session in this format: `V_1_b_jane-smith.ui`. What differences in terms of force flow do you observe between the two shells?&#x20;
 
 {% hint style="info" %}
 If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`. You can also create a mesh in Rhino and use `ExtractWireframe` to convert it to a grid of lines.
@@ -36,12 +36,12 @@ If you are using the `FromLines` input method and would like to make your own gr
 
 ### 2. Holes
 
-Create a shell with an **12m by 12m** footprint which is subdivided into a **10 by 10** quadrilateral mesh and supported at its four corners. Now make two shells with this same initial topology. In one shell make an opening at the center and in the other make an opening near to a corner support.
+Form find two shells supported at the four corners, one with an opening in the center and the other with an opening close to the supports. The footprint of the shell should be **12m by 12m** and the topology should be subdivided into a **10 by 10** quadrilateral mesh. What differences in terms of force flow do you observe between the two shells?&#x20;
 
-Next, for comparison, we are going to create the shell with a hole in the center using the **triangulation** input method. Draw the linework and perform the formfinding process.
+After, create a third shell with a hole in the center but this time using the **triangulation** input method. Draw the linework and perform the form-finding process. What differences do you observe between this third shell and the two previous ones?&#x20;
 
-### 3. Worksession Free Design
+### 3. Free Design
 
 {% hint style="warning" %}
-This task is not yet posted
+This task will be posted during Friday's work session.
 {% endhint %}
