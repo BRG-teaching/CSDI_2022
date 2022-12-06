@@ -40,7 +40,7 @@ Form find two shells supported at the four corners, one with an opening in the c
 
 After, create a third shell with a hole in the center but this time using the **triangulation** input method. Draw the linework and perform the form-finding process. What differences do you observe between this third shell and the two previous ones?&#x20;
 
-### 3. Free Design
+### 3. Design exploration
 
 {% hint style="warning" %}
 This task will be posted during Friday's work session.
