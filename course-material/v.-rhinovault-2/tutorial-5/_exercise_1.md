@@ -26,12 +26,12 @@ Use the Rhinoceros file named CSDI\_V\_exercise.3dm. Then, answer the questions 
 
 ### 1. Creases
 
-In the first task, you will design a shell with a square footprint which is a cross vault. Use one of the input methods we learned in the tutorial to input a topology which measures **15 m by 20 m** overall, is subdivided into a dense quadrilateral mesh, and supported at its four corners. [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your RV3 session in this format : `V_1_a_jane-smith.ui`.
+In the first task, you will design a rectangular cross vault supported in its four corners. Use one of the input methods that you learned in the tutorial to input a quadrilateral mesh topology that measures **15 m by 20 m**. [Follow the steps from the tutorial](\_tutorial-5.md#4-creases) to make your cross vault using either of the two methods. Save your rV3 session in this format : `V_1_a_jane-smith.ui`.
 
-Now, make an opening at the center of the shell by reusing the same topology of your cross vault. Finish the formfinding process, then save your RV3 session in this format: `V_1_b_jane-smith.ui`.
+After, make an opening at the center of the shell by reusing the same topology of your cross vault. Finish the formfinding process, then save your rV3 session in this format: `V_1_b_jane-smith.ui`.
 
 {% hint style="info" %}
-If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`. You can also make a `Mesh` and use `ExtractWireframe` to convert it to a grid of lines.
+If you are using the `FromLines` input method and would like to make your own grids of lines, some helpful Rhino commands might be `Divide`, `ArrayLinear`, and `Split`. You can also create a mesh in Rhino and use `ExtractWireframe` to convert it to a grid of lines.
 {% endhint %}
 
 ### 2. Holes
