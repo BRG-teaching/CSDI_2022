@@ -53,13 +53,15 @@ Each of these characteristics should be present in at least one of the shells :
 - [ ] an edge which is fully supported
 - [ ] two edges supported only at the corner
 
-We recommend that you start by making a hand sketch of the scheme for your shells. When you finish formfinding a shell, save out your compas `.ui` file. Also save your final Rhino file with the meshes of your three shells. 
-
-Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`. 
 
 {% hint style="warning" %}
 IMPORTANT: We recommend you start by making a hand sketch of the scheme for your shells. This will save you a lot of time.
 {% endhint %}
+
+When you finish formfinding a shell, save out your compas `.ui` file. Also save your final Rhino file with the meshes of your three shells. 
+
+Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`. 
+
 
 
 <figure><img src="../../../.gitbook/assets/rv3_exercise_task3_sitePlan.png" alt=""><figcaption><p>Fig 1 : Site Plan for the Design</p></figcaption></figure>
