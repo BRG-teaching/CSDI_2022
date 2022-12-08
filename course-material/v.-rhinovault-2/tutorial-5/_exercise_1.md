@@ -47,7 +47,7 @@ The final task is a free design task. We have three cinema halls with a freestan
 
 The shells can anchor anywhere on the <mark style="color:red;">**red**</mark> surfaces in the Rhino exercise file. This includes some of the walls of the cinema halls, as well as the entirety of the ticket and snack booth. 
 
-Each of these characteristics should be present in at least on of the shells : 
+Each of these characteristics should be present in at least one of the shells : 
 - [ ] Hole
 - [ ] Dropdown
 - [ ] Crease
