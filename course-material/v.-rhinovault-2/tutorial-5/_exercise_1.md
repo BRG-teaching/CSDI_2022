@@ -42,6 +42,17 @@ After, create a third shell with a hole in the center but this time using the **
 
 ### 3. Design exploration
 
-{% hint style="warning" %}
-This task will be posted during Friday's work session.
-{% endhint %}
+The final task is a free design task. We have three cinema halls with a freestanding, circular ticket and snack booth. We would like to build a series of 2 or more shells to cover the space between the halls. There are a number of features we would like these shells to have, and a few constraints.
+
+The shells can anchor anywhere on the <mark style="color:red;">**red**</mark> surfaces in the Rhino exercise file. This includes some of the walls of the cinema halls, as well as the entirety of the ticket and snack booth. 
+
+Each of these characteristics should be present in at least on of the shells : 
+- [ ] Hole
+- [ ] Dropdown
+- [ ] Crease
+- [ ] an edge which is fully supported
+- [ ] two edges supported only at the corner
+
+We recommend that you start by making a hand sketch of the scheme for your shells. When you finish formfinding a shell, save out your compas `.ui` file. Also save your final Rhino file with the meshes of your three shells. 
+
+Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`.
