@@ -40,6 +40,7 @@ Form find two shells supported at the four corners, one with an opening in the c
 
 After, create a third shell with a hole in the center but this time using the **triangulation** input method. Draw the linework and perform the form-finding process. What differences do you observe between this third shell and the two previous ones?&#x20;
 
+<!-- 
 ### 3. Design exploration
 
 The final task is a free design task. We have three cinema halls with a freestanding, circular ticket and snack booth. We would like to build a series of 2 or more shells to cover the space between the halls. There are a number of features we would like these shells to have, and a few constraints.
@@ -55,4 +56,4 @@ Each of these characteristics should be present in at least on of the shells :
 
 We recommend that you start by making a hand sketch of the scheme for your shells. When you finish formfinding a shell, save out your compas `.ui` file. Also save your final Rhino file with the meshes of your three shells. 
 
-Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`.
+Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`. -->
