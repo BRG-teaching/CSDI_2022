@@ -46,6 +46,8 @@ The final task is a free design task. We have three cinema halls with a freestan
 
 The shells can anchor anywhere on the <mark style="color:red;">**red**</mark> surfaces in the Rhino exercise file (some walls of the cinema halls and the entirety of the ticket and snack booth) or the ground. The blue outline in Fig-1 indicates the approximate area that you should try to cover with your design, however you do not have to follow this one-to-one. 
 
+<figure><img src="../../../.gitbook/assets/rv3_exercise_task3_sitePlan.png" alt=""><figcaption><p>Fig 1 : Site Plan for the Design</p></figcaption></figure>
+
 Each of these characteristics should be present in at least one of the shells : 
 - [ ] Hole
 - [ ] Dropdown
@@ -64,4 +66,4 @@ Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`
 
 
 
-<figure><img src="../../../.gitbook/assets/rv3_exercise_task3_sitePlan.png" alt=""><figcaption><p>Fig 1 : Site Plan for the Design</p></figcaption></figure>
+
