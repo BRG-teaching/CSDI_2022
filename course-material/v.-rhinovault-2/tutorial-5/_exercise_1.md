@@ -45,7 +45,7 @@ After, create a third shell with a hole in the center but this time using the **
 
 The final task is a free design task. We have three cinema halls with a freestanding, circular ticket and snack booth. We would like to build one or more shells to cover the space between the halls. There are a number of features we would like these shells to have, and a few constraints.
 
-The shells can anchor anywhere on the <mark style="color:red;">**red**</mark> surfaces in the Rhino exercise file (some walls of the cinema halls and the entirety of the ticket and snack booth) or the ground. The blue outline in Fig-1 indicates the approximate area that you should try to cover with your design, however you do not have to follow this one-to-one. 
+The shells can anchor anywhere on the <mark style="color:red;">**red**</mark> surfaces in the Rhino exercise file (some walls of the cinema halls and the entirety of the ticket and snack booth) or the ground. The <mark style="color:blue;">**blue**</mark> outline in Fig-1 indicates the approximate area that you should try to cover with your design, however you do not have to follow this one-to-one. 
 
 <figure><img src="../../../.gitbook/assets/rv3_exercise_task3_sitePlan.png" alt=""><figcaption><p>Fig 1 : Site Plan for the Design</p></figcaption></figure>
 
