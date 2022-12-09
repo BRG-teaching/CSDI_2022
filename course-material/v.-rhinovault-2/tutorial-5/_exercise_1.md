@@ -14,7 +14,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 ## Tasks
 
-Complete the following two tasks. **A third task will be released later this week and done during the work session**.
+Complete the following three tasks.
 
 The goals of this exercise are:
 
