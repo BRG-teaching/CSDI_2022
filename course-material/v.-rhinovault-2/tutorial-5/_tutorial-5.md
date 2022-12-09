@@ -189,41 +189,6 @@ The final tab `ThrustObject` has numerous helpful visualisation settings. Simila
 
 <figure><img src="../../../.gitbook/assets/rv2_tut_2_settings_ThrustObject.png" alt=""><figcaption><p>Fig 2-16 : FormObject Settings</p></figcaption></figure>
 
-## 3 Formfinding of a Shell from a Surface
-
-In order to use a surface, it must first be subdivided into a mesh object. In this example we will use **quadrilateral meshes** as they easier for RV2 to use, while there are also advantages and disadvantages to using this type of method versus **triangulation** (Example 4.0).
-
-### 3.1 Surface Subdivision
-
-First we will input a surface with a number of curves to it.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_input.png" alt=""><figcaption><p>Fig 3-1 : Input Surface</p></figcaption></figure>
-
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_make\_pattern.png) `Create pattern` and select the option `FromSurfaces`. RV2 will show you a grey linework representing a standard quadrilateral subdivision of the mesh (Fig 3-1), from which we will make adjustments.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivisionStep1.png" alt=""><figcaption><p>Fig 3-2 : Simple Subdivision</p></figcaption></figure>
-
-We can now explore the different subdivision options. Click `SubdivideEntireMesh` and enter **8**. Now we can see the grey subdivision become much denser (Fig 3-3).
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8.png" alt=""><figcaption><p>Fig 3-3 : Densified Subdivision</p></figcaption></figure>
-
-We can customise the subdivision further by selecting `SubdivideEdgeStrip` and clicking on the **black line** which represents the left edge of the surface. Type **4** and press enter. Now, we can see that RV2 has changed the subdivision in the direction of that edge to 4, and left the subdivision in the opposite direction unchanged.
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_subdivision_8_4.png" alt=""><figcaption><p>Fig 3-4 : Edge Strip Subdivision</p></figcaption></figure>
-
-Hit enter until you see the final pattern. Then, click `Define boundary conditions`, and identify the vertices at the left and right edges as the supports (see Fig 3-5).
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_supportsAtEdges.png" alt=""><figcaption><p>Fig 3-5 : Side Vertices as Supports</p></figcaption></figure>
-
-* ![](../../../.gitbook/assets/rv2\_toolbar\_form\_diagram.png) `Create form diagram`
-* ![](../../../.gitbook/assets/rv2\_toolbar\_force\_diagram.png) `Create force diagram`
-* ![](../../../.gitbook/assets/rv2\_toolbar\_horiz\_equilibrium.png) `Horizontal equilibrium`
-* ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`
-
-If you have forgotten any of the steps, feel free to scroll through the rest of the tutorial. Your results should look something like this:
-
-<figure><img src="../../../.gitbook/assets/rv2_tut_3_thrustObj.png" alt=""><figcaption><p>Fig 3-6 : Shell from Subdivided Surface</p></figcaption></figure>
-
 ## 4 Creases
 
 We will now look at methods of interacting with the **force diagram** to affect our formfinding.
