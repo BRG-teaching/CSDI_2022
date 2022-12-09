@@ -4,7 +4,8 @@
 Complete the three tasks below, and submit **by 9:00am on Friday, December 16th one zipped folder** that includes:
 
 1. COMPAS .ui files for each task answer
-2. and the PDF
+2. Rhino files with final shell mesh geometries
+3. and the PDF
 
 Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md#submissions).
 
