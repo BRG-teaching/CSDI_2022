@@ -354,27 +354,17 @@ You can see how the shell is trying to accommodate for the hole we have made, an
 
 ## 7 Dropdowns
 
-**Do not clear your scene for this example!** We will now take the hole we created in our shell structure and turn it into a dropdown. Of course if you originally intended to make a drop down, you could have defined the vertices at the edges of the hole as supports at the start of the formfinding process. However, in this scenario we will do this after we have already formfound our shell.
+Now we would like to anchor our hole to the ground plane. In order to do this, we must clear our scene and perform the same steps as for the Hole example with one key difference.
 
-### 7.1 Modify Thrust Diagram Vertices
+When defining the boundary conditions, select some of the vertices at the edge of the hole to be **supports.**
 
-Begin by clicking on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` again. This time, select `VerticesAttributes` and then `Manual`. Select all the vertices which outline the hole in your shell, then press enter. As before, a box will pop up with the settings options for these vertices.
+Now, repeat the typical workflow steps to produce the form, force, and thrust diagrams. 
 
-{% hint style="warning" %}
-The rest of the steps will be updated soon
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/rv3_tut_7_dropdown_1.png" alt=""><figcaption><p>Fig 7-1 : Initial Dropdown</p></figcaption></figure>
 
-Click on the value `is_anchor` and modify it to **True**. Click `OK`. The vertices you selected should now turn <mark style="color:red;">**red**</mark>. At this point, it is now as if there are support points for the shell around our void located at those x,y,z coordinates. So, we would like to take those points and move them to the ground.
+It is now possible to move the supports vertically in order to do things like anchor to walls or columns, anywhere not on the ground plane. To do this, click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` again. This time, select `VerticesAttributes` and then `MoveSupports`. Select the supports at the edge of the hole, then press enter. Click on one of the points to be the start position, and then click at the second position you would like to move to. Press enter, then click on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to update your shell. You can continue this process to change different supports, making sure to always update your thrust object as the final step.
 
-Click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` and this time select `MoveSupports`. Select the points you want to move. As the points are at different heights, you may also want to move one point at a time to align with the ground. Repeat these steps until all your new support points are at ground level. The result should look something like this :
-
-Next recalculate the vertical equilibrium. Click the button ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium`.
-
-{% hint style="warning" %}
-The rest of the steps will be updated soon
-{% endhint %}
-
-Now we can see that the shell has been smoothed out to accommodate for the void we made in it as well as the new supports we specified.
+<figure><img src="../../../.gitbook/assets/rv3_tut_7_dropdown_2.png" alt=""><figcaption><p>Fig 7-2 : Final Dropdown</p></figcaption></figure>
 
 ## This marks the end of the tutorial!
 
