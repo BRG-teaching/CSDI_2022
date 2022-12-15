@@ -360,11 +360,11 @@ When defining the boundary conditions, select some of the vertices at the edge o
 
 Now, repeat the typical workflow steps to produce the form, force, and thrust diagrams. 
 
-<figure><img src="../../../.gitbook/assets/rv3_tut_7_dropdown_1.png" alt=""><figcaption><p>Fig 7-1 : Initial Dropdown</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv3_tut_dropdown_1.png" alt=""><figcaption><p>Fig 7-1 : Initial Dropdown</p></figcaption></figure>
 
 It is now possible to move the supports vertically in order to do things like anchor to walls or columns, anywhere not on the ground plane. To do this, click ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_settings.png) `Modify Thrust Diagram` again. This time, select `VerticesAttributes` and then `MoveSupports`. Select the supports at the edge of the hole, then press enter. Click on one of the points to be the start position, and then click at the second position you would like to move to. Press enter, then click on ![](../../../.gitbook/assets/rv2\_toolbar\_vert\_equilibrium.png) `Vertical equilibrium` to update your shell. You can continue this process to change different supports, making sure to always update your thrust object as the final step.
 
-<figure><img src="../../../.gitbook/assets/rv3_tut_7_dropdown_2.png" alt=""><figcaption><p>Fig 7-2 : Final Dropdown</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rv3_tut_dropdown_2.png" alt=""><figcaption><p>Fig 7-2 : Final Dropdown</p></figcaption></figure>
 
 ## This marks the end of the tutorial!
 
