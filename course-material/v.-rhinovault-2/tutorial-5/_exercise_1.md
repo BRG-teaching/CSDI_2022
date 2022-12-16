@@ -65,5 +65,91 @@ When you finish formfinding a shell, save out your compas `.ui` file. Also save 
 
 Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`. 
 
+# Answers
+
+Here are the answers to the RV3 Exercise :
+
+### 1. Creases
+
+**A) Cross vault**
+<figure><img src="../../../.gitbook/assets/rv3_exercise_A1_a.png" alt=""><figcaption><p>shell, form and force diagrams before modifying the force diagram</p></figcaption></figure>
 
 
+<figure><img src="../../../.gitbook/assets/rv3_exercise_A1_b.png" alt=""><figcaption><p>shell, form and force diagrams after modifying the force diagram</p></figcaption></figure>
+
+**B) Cross vault with central opening**
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_A2.png" alt=""><figcaption><p>shell, form and force diagrams after modifying the force diagram</p></figcaption></figure>
+
+**C)** What is the difference in terms of force flow between a shell with supports at the four corners and a cross vault? (max 50 words).
+
+The extra edges in the cross vault allow the forces to flow directly to the corners. The effect is like adding two arches which then provide more efficient paths for the forces to flow to the supports.
+
+
+**D)** What differences in terms of force flow do you observe between the cross vaults from A) and B) ? (max 50 words).
+
+When adding a hole at the intersection of the cross vaults, the forces are then directed around the edges of that hole and to the supports. It also interrupts the arches which are meant to provide more efficient paths to the supports, and therefore hinders the overall structural performance.
+
+### 2. Holes
+
+**A)**
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B1_a.png" alt=""><figcaption><p>shell, form and force diagrams with the central hole (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B1_b.png" alt=""><figcaption><p>shell, form and force diagrams with the central hole (visualisation)</p></figcaption></figure>
+
+**B)**
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B2_a.png" alt=""><figcaption><p>shell, form and force diagrams with the central hole near a support (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B2_b.png" alt=""><figcaption><p>shell, form and force diagrams with the central hole near a support (visualisation)</p></figcaption></figure>
+
+**C)**
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B3_a.png" alt=""><figcaption><p>shell, form and force diagrams of the triangulated shell with the central hole (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_B3_b.png" alt=""><figcaption><p>shell, form and force diagrams of the triangulated shell with the central hole (visualisation)</p></figcaption></figure>
+
+**D)** What differences in terms of force flow do you observe between the three cases? (max 50 words).
+
+A central hole has even force distribution, while a hole near a support results in the shell loads concentrating in other edges. Triangulation means the forces do not have to flow to the edge and then down to the supports, meaning reactions are concentrated directly at the support corners. 
+
+**E)** What are the advantages and disadvantages of creating a hole in your shell when using a quadmesh versus a triangulated mesh? (max 50 words).
+
+Triangulation allows forces to flow around holes easily, and it efficiently redirects the forces to the supports. However, this results in an uneven force flow. Quadrilaterals are a more evenly distributed case where the edges are activated throughout. However, they are bidirectional therefore making it more difficult for the forces to flow around a hole.
+
+
+### 3. Design exploration
+
+Here is just one example of a valid solution to the third task. 
+
+**A) Shell 1**
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A1_a.png" alt=""><figcaption><p>input topology/pattern of the shell (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A1_b_1.png" alt=""><figcaption><p>final shell, form and force diagrams (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A1_b_2.png" alt=""><figcaption><p>final shell, form and force diagrams (visualisation)</p></figcaption></figure>
+
+**B)**
+
+**Shell 2**
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A2_a.png" alt=""><figcaption><p>input topology/pattern of the shell (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A2_b_1.png" alt=""><figcaption><p>final shell, form and force diagrams (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A2_b_2.png" alt=""><figcaption><p>final shell, form and force diagrams (visualisation)</p></figcaption></figure>
+
+**Shell 3**
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A3_a.png" alt=""><figcaption><p>input topology/pattern of the shell (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A3_b_1.png" alt=""><figcaption><p>final shell, form and force diagrams (answer)</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/rv3_exercise_3_A3_b_2.png" alt=""><figcaption><p>final shell, form and force diagrams (visualisation)</p></figcaption></figure>
+
+
+**C)** From an architectural perspective, what is your motivation in choosing this design? (max 50 words)
+
+The intent was to create a series of shells which flow throughout the space, sometimes overlapping. Some more simple, some more complex. Some of them are also to be more arched and higher while others are flatter.
+
+**D)** From a structural perspective, what is your motivation in choosing this design? (max 50 words)
+
+Segmenting the space which needs to be covered helped control the resultant forces of the shells and make it smaller than if there was one large shell. Additionally, dropdowns and high percentages of slack were used to bridge larger distances or have more complex forms.
