@@ -70,7 +70,7 @@ Answer the questions in the separate word doc titled `CSDI_V_exercise_task3.doc`
 Here are the answers to the RV3 Exercise. 
 
 {% hint style="warning" %}
-**The screenshots showing the form and force diagram color-coded is just meant to help you understand the answers. This was not required to be turned in.**
+**The screenshots showing the form and force diagram color-coded are just meant to help you understand the answers. This was not required to be turned in.**
 {% endhint %}
 
 
